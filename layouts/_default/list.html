@@ -21,8 +21,10 @@
           {{ with .Section }}
           <span class="section-badge">{{ . | humanize | title }}</span>
           {{ end }}
-          {{ range first 1 .Params.categories }}
+          {{ with .Params.categories }}
+          {{ range first 1 . }}
           <span class="category-pill">{{ . }}</span>
+          {{ end }}
           {{ end }}
         </div>
         <h2 class="card-title">

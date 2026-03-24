@@ -3,7 +3,8 @@ languageCode = "en-us"
 title = "AI Solutions Wiki"
 enableRobotsTXT = true
 enableGitInfo = false
-paginate = 20
+[pagination]
+  pagerSize = 20
 
 [markup]
   [markup.goldmark]
