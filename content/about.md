@@ -1,0 +1,47 @@
+---
+title: "About This Wiki"
+description: "What the AI Solutions Wiki is, who it is for, and how the content is organized."
+date: 2026-03-24
+---
+
+## What This Wiki Is
+
+The AI Solutions Wiki is a practical knowledge base for teams building AI-powered products and workflows. The focus is on applied AI - not theoretical research, not vendor marketing, but the real patterns, tools, and decisions that come up when you are turning an idea into a working system.
+
+Every article here is written to be immediately useful. Definitions include context about when and why you would use something, not just what it is. Guides include real trade-offs. Comparisons are honest about where each option falls short.
+
+## Who It Is For
+
+This wiki is useful at two career stages:
+
+**Practitioners who are new to AI** - engineers, product managers, and architects who understand software but are mapping a new terrain. The glossary, guides, and frameworks sections give you the vocabulary and structure to navigate AI decisions confidently.
+
+**Experienced AI builders** - people who have shipped AI systems and want a reference for patterns, tools, and comparisons without re-reading vendor documentation. The patterns, case-patterns, and comparisons sections are aimed at you.
+
+The content is also useful for anyone who needs to explain AI decisions to stakeholders - the frameworks and comparisons are written to support clear communication, not just technical implementation.
+
+## How the Content Is Organized
+
+**Guides** - step-by-step implementations, from getting a first Bedrock prototype running to designing a multi-agent architecture.
+
+**Solutions** - industry-specific AI applications covering finance, insurance, media, logistics, healthcare, and more. Each solution article describes the problem, the architecture, the tools, and the operational considerations.
+
+**Patterns** - reusable technical patterns that appear across many different AI projects: RAG, agent orchestration, data pipelines, prompt design.
+
+**Case Patterns** - real-world deployment patterns drawn from production use cases. Anonymized, with details focused on what makes the architecture work.
+
+**Tools** - practical coverage of AI platforms and frameworks: what they do well, what they do not, pricing, and when to use them.
+
+**Comparisons** - side-by-side analysis for common decision points: Bedrock vs Azure OpenAI, RAG vs fine-tuning, Claude vs GPT.
+
+**Frameworks** - structured thinking tools for AI project planning: use-case scoring, readiness assessment, workshop methodology.
+
+**Glossary** - plain-English definitions for AI, ML, and cloud terms.
+
+**Ideas** - short concept pieces for automation use cases worth exploring.
+
+## How the Content Is Maintained
+
+Articles are reviewed and updated as tools evolve and new patterns emerge. Pricing information and model capabilities change frequently - always verify current pricing at the provider's official documentation before making architecture decisions based on figures quoted here.
+
+If you find an error or a gap, the best way to contribute is through the GitHub repository at [github.com/mzzavaa/ai-solutions-wiki](https://github.com/mzzavaa/ai-solutions-wiki).
