@@ -1,0 +1,42 @@
+---
+title: "Tokenization in AI"
+description: "What tokens are, how different models tokenize text, why token count matters for cost and context limits."
+date: 2026-03-24
+categories: [Glossary]
+tags: [tokenization, tokens, context-window, cost, LLM]
+---
+
+Tokenization is the process of breaking text into units (tokens) that a language model can process. Models do not read text character by character or word by word - they operate on tokens, which are typically word fragments determined by statistical patterns in training data.
+
+## What a Token Is
+
+A token is a piece of text that maps to a single entry in the model's vocabulary. In English, common words are often single tokens: "the" is one token, "cat" is one token. Less common words and longer words are typically split: "tokenization" might be two or three tokens ("token", "ization" or "token", "iz", "ation"). Non-English languages are often less efficiently tokenized - a word in Finnish or Turkish might require 3-5 tokens that would be 1-2 tokens in English.
+
+As a rough rule of thumb for English text: 1 token is approximately 4 characters or 0.75 words. A 1,000-word document is approximately 1,300-1,500 tokens.
+
+## Why Token Count Matters
+
+**Cost** - AI API pricing is per token. Both input tokens (your prompt and context) and output tokens (the model's response) are charged. A call with a 10,000-token input prompt costs 10x more than one with a 1,000-token input prompt, assuming the same model. Understanding token counts is essential for cost estimation and optimization.
+
+**Context window limits** - Models have a maximum context size measured in tokens. Claude 3.5 Sonnet supports up to 200,000 tokens. Documents, conversation histories, and retrieved context must all fit within this limit. Exceeding it requires truncation, summarization, or retrieval-based context management.
+
+**Latency** - Generating more output tokens takes more time. A request for a 2,000-token response takes roughly twice as long to complete as one for a 1,000-token response.
+
+## Tokenization Across Models
+
+Different models use different tokenizers, meaning the same text will tokenize to different numbers of tokens. GPT models use a BPE (Byte Pair Encoding) tokenizer called tiktoken. Claude uses a different tokenizer. Comparing token counts between models requires using each model's specific tokenizer.
+
+**Practical implication:** A document that fits in GPT-4's 128,000-token context window may fit differently in Claude's 200,000-token context - not because of the raw limit difference, but because tokenization of the same text may vary by 10-20% between tokenizers.
+
+## Counting Tokens Before API Calls
+
+Checking token counts before making API calls allows:
+- Accurate cost estimation
+- Pre-emptive truncation of inputs that would exceed context limits
+- Batching optimization
+
+Claude's API returns token counts in response metadata. For pre-call estimation, Anthropic provides a token counting endpoint. The AWS Bedrock SDK includes utilities for token estimation.
+
+## Special Tokens
+
+Tokenizers include special tokens beyond regular text tokens: beginning-of-sequence tokens, end-of-sequence tokens, role markers for multi-turn conversations, and tool-use formatting tokens. These consume context and cost, even though they do not represent user-provided text. System prompts and conversation formatting (the role markers around each message) typically add 50-200 tokens of overhead per request.
