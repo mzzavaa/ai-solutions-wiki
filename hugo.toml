@@ -1,7 +1,6 @@
 baseURL = "https://ai-solutions.wiki"
 languageCode = "en-us"
 title = "AI Solutions Wiki"
-theme = ""
 enableRobotsTXT = true
 enableGitInfo = false
 paginate = 20
