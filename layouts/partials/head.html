@@ -1,0 +1,47 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+<title>{{ if .IsHome }}{{ .Site.Title }} - AI Knowledge Base{{ else }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+{{ with .Description }}
+  <meta name="description" content="{{ . }}">
+{{ else }}
+  {{ with .Site.Params.description }}
+    <meta name="description" content="{{ . }}">
+  {{ end }}
+{{ end }}
+
+{{ if .IsPage }}
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="{{ .Title }}">
+  {{ with .Description }}<meta property="og:description" content="{{ . }}">{{ end }}
+  {{ with .Params.image }}<meta property="og:image" content="{{ . | absURL }}">{{ end }}
+  <meta property="article:published_time" content="{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}">
+  {{ with .Lastmod }}<meta property="article:modified_time" content="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ end }}
+{{ else }}
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ .Title }}">
+{{ end }}
+<meta property="og:site_name" content="{{ .Site.Title }}">
+<meta property="og:url" content="{{ .Permalink }}">
+
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{{ .Title }}">
+{{ with .Description }}<meta name="twitter:description" content="{{ . }}">{{ end }}
+
+<link rel="canonical" href="{{ .Permalink }}">
+
+{{ $css := resources.Get "css/wiki.css" | minify }}
+<link rel="stylesheet" href="{{ $css.RelPermalink }}">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+{{ range .AlternativeOutputFormats -}}
+  {{ printf `<link rel="%s" type="%s" href="%s" title="%s">` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+{{ end }}
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="icon" type="image/png" href="/favicon.png">
