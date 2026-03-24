@@ -2,7 +2,7 @@
   <div class="footer-container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="/" class="footer-logo">
+        <a href="{{ "/" | relURL }}" class="footer-logo">
           <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
           <span>AI Solutions Wiki</span>
         </a>
@@ -11,27 +11,27 @@
       <div class="footer-col">
         <h4>Learn</h4>
         <ul>
-          <li><a href="/guides/">Getting Started Guides</a></li>
-          <li><a href="/frameworks/">Frameworks</a></li>
-          <li><a href="/patterns/">Design Patterns</a></li>
-          <li><a href="/glossary/">Glossary</a></li>
+          <li><a href="{{ "guides/" | relURL }}">Getting Started Guides</a></li>
+          <li><a href="{{ "frameworks/" | relURL }}">Frameworks</a></li>
+          <li><a href="{{ "patterns/" | relURL }}">Design Patterns</a></li>
+          <li><a href="{{ "glossary/" | relURL }}">Glossary</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Explore</h4>
         <ul>
-          <li><a href="/solutions/">Industry Solutions</a></li>
-          <li><a href="/tools/">Tool Reviews</a></li>
-          <li><a href="/comparisons/">Comparisons</a></li>
-          <li><a href="/ideas/">AI Ideas</a></li>
+          <li><a href="{{ "solutions/" | relURL }}">Industry Solutions</a></li>
+          <li><a href="{{ "tools/" | relURL }}">Tool Reviews</a></li>
+          <li><a href="{{ "comparisons/" | relURL }}">Comparisons</a></li>
+          <li><a href="{{ "ideas/" | relURL }}">AI Ideas</a></li>
         </ul>
       </div>
       <div class="footer-col">
         <h4>Ecosystem</h4>
         <ul>
           <li><a href="{{ .Site.Params.workshopsURL }}" target="_blank" rel="noopener">AI Workshops Online</a></li>
-          <li><a href="/case-patterns/">Case Patterns</a></li>
-          <li><a href="/about/">About This Wiki</a></li>
+          <li><a href="{{ "case-patterns/" | relURL }}">Case Patterns</a></li>
+          <li><a href="{{ "about/" | relURL }}">About This Wiki</a></li>
         </ul>
       </div>
     </div>
