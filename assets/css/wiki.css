@@ -1118,7 +1118,6 @@ img { max-width: 100%; height: auto; display: block; }
     grid-template-columns: 1fr 1fr;
   }
   .nav-links { display: none; }
-  .search-bar input { width: 160px; }
 }
 
 @media (max-width: 640px) {
@@ -1132,7 +1131,40 @@ img { max-width: 100%; height: auto; display: block; }
   .list-layout { padding: 24px 16px 60px; }
   .nav-container { padding: 0 16px; }
   .cta-banner { padding: 28px 20px; }
-  .mobile-search { display: block; padding: 10px 16px; border-bottom: 1px solid var(--border); }
-  .nav-right .search-bar { display: none; }
   .cta-inner { flex-direction: column; }
+}
+
+/* Pagefind search */
+:root {
+  --pagefind-ui-scale: 0.9;
+  --pagefind-ui-primary: #2563eb;
+  --pagefind-ui-text: #1e293b;
+  --pagefind-ui-background: #ffffff;
+  --pagefind-ui-border: #e2e8f0;
+  --pagefind-ui-tag: #f1f5f9;
+  --pagefind-ui-border-width: 1px;
+  --pagefind-ui-border-radius: 8px;
+  --pagefind-ui-image-border-radius: 8px;
+  --pagefind-ui-image-box-ratio: 3 / 2;
+  --pagefind-ui-font: "Inter", system-ui, sans-serif;
+}
+[data-theme="dark"] {
+  --pagefind-ui-primary: #3b82f6;
+  --pagefind-ui-text: #e2e8f0;
+  --pagefind-ui-background: #0f172a;
+  --pagefind-ui-border: #1e293b;
+  --pagefind-ui-tag: #1e293b;
+}
+
+.pagefind-ui__search-input {
+  font-weight: 400 !important;
+}
+
+#search .pagefind-ui {
+  max-width: 400px;
+}
+
+#hero-search .pagefind-ui {
+  max-width: 600px;
+  margin: 0 auto;
 }

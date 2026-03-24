@@ -34,6 +34,7 @@
 
 {{ $css := resources.Get "css/wiki.css" | minify }}
 <link rel="stylesheet" href="{{ $css.RelPermalink }}">
+<link rel="stylesheet" href="{{ "pagefind/pagefind-ui.css" | relURL }}">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

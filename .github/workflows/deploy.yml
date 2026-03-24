@@ -52,6 +52,9 @@ jobs:
             --minify \
             --baseURL "$PAGES_BASE_URL/"
 
+      - name: Index with Pagefind
+        run: npx -y pagefind@latest --site public --output-subdir pagefind
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

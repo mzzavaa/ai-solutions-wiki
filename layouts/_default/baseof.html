@@ -10,6 +10,25 @@
   </main>
   {{ partial "footer.html" . }}
 
+  <script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
+  <script>
+    window.addEventListener('DOMContentLoaded', function() {
+      new PagefindUI({
+        element: "#search",
+        showSubResults: true,
+        showImages: false,
+        baseUrl: "{{ "" | relURL }}"
+      });
+      if (document.getElementById('hero-search')) {
+        new PagefindUI({
+          element: "#hero-search",
+          showSubResults: false,
+          showImages: false,
+          baseUrl: "{{ "" | relURL }}"
+        });
+      }
+    });
+  </script>
   <script>
     // Dark mode toggle
     const toggle = document.getElementById('theme-toggle');
