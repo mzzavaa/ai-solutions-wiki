@@ -1166,16 +1166,65 @@ img { max-width: 100%; height: auto; display: block; }
   border-color: #334155 !important;
 }
 
+[data-theme="dark"] .pagefind-ui__search-clear {
+  color: #e2e8f0 !important;
+  background-color: transparent !important;
+}
+
+[data-theme="dark"] .pagefind-ui__search-clear::before {
+  color: #e2e8f0 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__search-clear:focus {
+  outline-color: #3b82f6 !important;
+}
+
 [data-theme="dark"] .pagefind-ui__result {
   background-color: #0f172a !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result-title {
+  color: #e2e8f0 !important;
 }
 
 [data-theme="dark"] .pagefind-ui__result-link {
-  color: #e2e8f0 !important;
+  color: #93c5fd !important;
 }
 
 [data-theme="dark"] .pagefind-ui__result-excerpt {
   color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result-nested {
+  color: #cbd5e1 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__message {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__results-area {
+  background-color: #0f172a !important;
+}
+
+[data-theme="dark"] .pagefind-ui__result-thumb {
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__button {
+  color: #e2e8f0 !important;
+  background-color: #1e293b !important;
+  border-color: #334155 !important;
+}
+
+[data-theme="dark"] .pagefind-ui__button:hover {
+  background-color: #334155 !important;
+}
+
+[data-theme="dark"] .pagefind-ui mark {
+  color: #0f172a !important;
+  background-color: #fbbf24 !important;
 }
 
 #search .pagefind-ui {
