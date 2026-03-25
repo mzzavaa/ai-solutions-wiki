@@ -1,7 +1,7 @@
 ---
 title: "AWS Elemental MediaConvert - Video Processing at Scale"
 description: "Using AWS Elemental MediaConvert for transcoding, format conversion, and video processing in AI media pipelines."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [aws-mediaconvert, video, transcoding, media, AWS]
 ---
@@ -44,7 +44,9 @@ For cost optimization, run analysis against SD proxies rather than HD originals 
 
 MediaConvert handles files of any size without Lambda's 15-minute timeout or 10 GB /tmp storage constraint. It also provides managed scaling - submit 100 jobs simultaneously and they process in parallel without managing infrastructure. However, MediaConvert has a higher per-minute cost than FFmpeg on a long-running EC2 instance for very high volumes.
 
-See the [Remotion vs FFmpeg comparison]({{< relref "remotion-vs-ffmpeg.md" >}}) for more context on video processing trade-offs.
+## Cross-Cloud Comparison
+
+Azure Media Services offers comparable transcoding with tight integration into Azure CDN and Azure Video Indexer for AI analysis. GCP Cloud Transcoder API is more limited in codec support but simpler to configure for standard H.264 outputs. MediaConvert has the broadest format support and deepest integration with AWS AI services.
 
 ## Related Articles
 

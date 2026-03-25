@@ -1,7 +1,7 @@
 ---
 title: "Amazon Translate - Neural Machine Translation"
 description: "Using Amazon Translate for real-time and batch document translation in multilingual AI applications."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [amazon-translate, translation, NLP, multilingual, AWS]
 ---

@@ -1,14 +1,14 @@
 ---
-title: "Strands Agents - AWS-Native Agent Framework"
+title: "Strands Agents - AWS-Native Agent SDK"
 description: "What Strands Agents is, how it differs from CrewAI and LangGraph, and when to use it for AWS-hosted agent applications."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [strands-agents, agents, AWS, bedrock, AI-frameworks]
 ---
 
 Strands Agents is an open-source Python framework for building AI agents, developed by AWS to integrate natively with Bedrock and the broader AWS service ecosystem. Unlike frameworks designed for multi-cloud use, Strands is opinionated about running on AWS and integrates directly with Bedrock AgentCore for deployment.
 
-Official repository: https://github.com/strands-agents/strands-agents
+Official documentation: https://strandsagents.com/
 
 ## Core Design
 
@@ -59,5 +59,5 @@ Strands agents deploy to Bedrock AgentCore without modification. The same agent 
 ## Related Articles
 
 - [Bedrock AgentCore]({{< relref "bedrock-agentcore.md" >}}) - deployment target for Strands agents
-- [CrewAI vs Strands]({{< relref "/comparisons/crewai-vs-strands.md" >}}) - detailed framework comparison
 - [MCP Protocol]({{< relref "mcp-protocol.md" >}}) - tool interface used by Strands
+- [Amazon Bedrock]({{< relref "amazon-bedrock.md" >}}) - foundation models for Strands agents

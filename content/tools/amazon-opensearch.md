@@ -1,7 +1,7 @@
 ---
-title: "Amazon OpenSearch Service - Search and Analytics"
+title: "Amazon OpenSearch Service - Search and Analytics for AI"
 description: "Using Amazon OpenSearch Service for vector search, full-text search, and log analytics in AI-powered applications."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [amazon-opensearch, vector-search, search, analytics, AWS]
 ---
@@ -10,7 +10,7 @@ Amazon OpenSearch Service is a managed deployment of OpenSearch (the open-source
 
 Official documentation: https://aws.amazon.com/opensearch-service/
 
-**Azure equivalent:** Azure AI Search (formerly Cognitive Search). **GCP equivalent:** Vertex AI Search / Google Cloud Elasticsearch.
+**Azure equivalent:** Azure AI Search (formerly Cognitive Search). **GCP equivalent:** Vertex AI Search.
 
 ## OpenSearch Serverless vs Managed Clusters
 
@@ -43,6 +43,10 @@ OpenSearch's full-text capabilities handle:
 OpenSearch Dashboards (the open-source Kibana equivalent) provides visualization for log data. Standard use: index Lambda logs, CloudWatch metrics, or application events, then build dashboards showing error rates, latency percentiles, and throughput.
 
 For AI applications, this means you can index LLM traces (from Langfuse or custom logging) into OpenSearch and query patterns across thousands of calls.
+
+## Cross-Cloud Comparison
+
+Azure AI Search offers built-in semantic ranking, hybrid search, and a managed indexer pipeline. Vertex AI Search integrates tightly with Google's foundation models for grounded answers. OpenSearch's advantage is the open-source ecosystem and its dual role as both a search engine and a log analytics platform within AWS.
 
 ## Related Articles
 

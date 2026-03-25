@@ -1,7 +1,7 @@
 ---
-title: "MCP - Model Context Protocol for AI Agents"
+title: "Model Context Protocol (MCP) - Universal Tool Interface for AI Agents"
 description: "What the Model Context Protocol is, how it enables AI agents to use tools through a standard interface, and server/client architecture."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [mcp, agents, tools, protocol, AI-frameworks]
 ---
@@ -60,7 +60,7 @@ async def call_tool(name, arguments):
 
 ## MCP in AI Pipelines on AWS
 
-MCP servers can expose AWS services as tools for agents. A Bedrock agent with an attached MCP server gains access to DynamoDB, S3, and custom Lambda functions through a uniform tool interface, without hardcoding API calls in the agent framework.
+MCP servers can expose AWS services as tools for agents. A Bedrock agent with an attached MCP server gains access to DynamoDB, S3, and custom Lambda functions through a uniform tool interface, without hardcoding API calls in the agent framework. Strands Agents supports MCP servers natively, making this a practical pattern for AWS-native agent development.
 
 ## Related Articles
 

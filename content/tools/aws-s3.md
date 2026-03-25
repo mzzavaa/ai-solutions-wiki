@@ -1,7 +1,7 @@
 ---
 title: "Amazon S3 - Object Storage for AI Pipelines"
 description: "How Amazon S3 functions as the storage backbone for AI data pipelines: ingest, staging, output, and lifecycle management."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [aws-s3, storage, AWS, data-pipeline, object-storage]
 ---
@@ -16,7 +16,7 @@ Official documentation: https://aws.amazon.com/s3/
 
 S3 organizes data into **buckets** (top-level containers, globally unique names) and **objects** (files plus metadata). There is no real directory hierarchy - the slash in `data/2024/batch1/file.json` is part of the key name - but the console and SDK treat prefixes as folders for usability.
 
-**Storage classes** affect cost and retrieval speed. S3 Standard is the default for frequently accessed data. S3 Standard-IA (Infrequent Access) costs less per GB but charges per retrieval - good for model training datasets accessed monthly. S3 Glacier and Glacier Deep Archive are for archival: retrieval takes minutes to hours but costs are very low. Intelligent-Tiering automatically moves objects between classes based on access patterns.
+**Storage classes** affect cost and retrieval speed. S3 Standard is the default for frequently accessed data. S3 Standard-IA (Infrequent Access) costs less per GB but charges per retrieval, good for model training datasets accessed monthly. S3 Glacier and Glacier Deep Archive are for archival: retrieval takes minutes to hours but costs are very low. Intelligent-Tiering automatically moves objects between classes based on access patterns.
 
 ## S3 as the AI Pipeline Backbone
 

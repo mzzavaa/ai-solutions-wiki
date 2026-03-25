@@ -1,7 +1,7 @@
 ---
 title: "Pydantic AI - Type-Safe Agent Development"
 description: "Using Pydantic AI to build AI agents with validated inputs and outputs, Bedrock backend support, and Python type annotations."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [pydantic-ai, agents, type-safety, python, AI-frameworks]
 ---
@@ -51,11 +51,23 @@ Pydantic AI supports Amazon Bedrock as a model backend using the `bedrock:` pref
 
 Supported Bedrock models include Claude (all versions), Titan, Llama, and Mistral - any model Bedrock supports for the Converse API.
 
-## Testing Support
+## Dependency Injection
 
-Pydantic AI includes a `TestModel` that replaces the real model in tests. It returns configurable responses without API calls, enabling fast unit tests for agent logic. Dependency injection (via `RunContext`) allows swapping real tool implementations for test fakes.
+Pydantic AI uses a `RunContext` dependency injection pattern. Tool functions receive a context object typed to a user-defined dependencies class. This allows swapping real implementations for test fakes:
 
-This makes Pydantic AI agents significantly easier to unit test than frameworks that hardwire model calls into the agent loop.
+```python
+@dataclass
+class Deps:
+    db: Database
+
+agent = Agent("bedrock:...", deps_type=Deps)
+
+@agent.tool
+async def fetch_record(ctx: RunContext[Deps], id: str) -> Record:
+    return await ctx.deps.db.get(id)
+```
+
+In tests, pass a mock `Database` object. In production, pass the real one. No mocking libraries needed.
 
 ## When to Choose Pydantic AI
 

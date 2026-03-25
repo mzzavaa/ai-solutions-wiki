@@ -1,7 +1,7 @@
 ---
 title: "AWS Bedrock AgentCore - Serverless AI Agent Hosting"
 description: "How AWS Bedrock AgentCore provides managed infrastructure for running AI agents at scale without managing servers."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [bedrock-agentcore, agents, serverless, AWS, bedrock]
 ---
@@ -22,13 +22,15 @@ Official documentation: https://aws.amazon.com/bedrock/agentcore/
 
 ## Supported Frameworks
 
-AgentCore is framework-agnostic at the runtime level but has first-class support for:
+AgentCore has first-class support for several frameworks:
 
 - **Strands Agents** - the AWS-native agent framework designed specifically for AgentCore deployment
 - **LangGraph** - state machine-based agent framework; AgentCore can host LangGraph workflows
-- **Custom implementations** - any agent that conforms to the AgentCore tool-use interface
+- **CrewAI** - multi-agent crew orchestration with adapter support
+- **LlamaIndex** - RAG-focused framework with AgentCore deployment path
+- **Pydantic AI** - type-safe agent framework with Bedrock backend support
 
-Frameworks that manage their own execution loop (CrewAI with its own orchestration, AutoGen) require an adapter layer to fit the AgentCore model.
+Any agent that conforms to the AgentCore tool-use interface can run on the platform regardless of the underlying framework.
 
 ## When to Use AgentCore vs Self-Hosted
 

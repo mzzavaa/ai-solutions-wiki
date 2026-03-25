@@ -1,7 +1,7 @@
 ---
 title: "Amazon Polly - Text-to-Speech for Applications"
 description: "Using Amazon Polly to generate natural-sounding speech from text in AI applications, with SSML control and neural voice options."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [amazon-polly, text-to-speech, TTS, voice, AWS]
 ---

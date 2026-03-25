@@ -1,7 +1,7 @@
 ---
 title: "Amazon EventBridge - Event-Driven AI Orchestration"
 description: "Using Amazon EventBridge to connect AWS AI services, trigger pipelines from S3 events, and build loosely coupled multi-step workflows."
-date: 2026-03-24
+date: 2026-03-25
 categories: [Tools]
 tags: [aws-eventbridge, event-driven, orchestration, AWS, serverless]
 ---
@@ -51,7 +51,7 @@ Content filtering at the rule level means Lambda functions are invoked only for 
 
 ## Cross-Cloud Comparison
 
-Azure Event Grid uses topics and subscriptions with a similar pattern-matching model. GCP Eventarc routes events from Cloud Storage, Pub/Sub, and Audit Logs to Cloud Run or Cloud Functions. EventBridge has the most extensive native AWS service integration.
+Azure Event Grid uses topics and subscriptions with a similar pattern-matching model. GCP Eventarc routes events from Cloud Storage, Pub/Sub, and Audit Logs to Cloud Run or Cloud Functions. EventBridge has the most extensive native AWS service integration of the three.
 
 ## Related Articles
 
