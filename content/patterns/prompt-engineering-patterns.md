@@ -4,6 +4,12 @@ description: "Proven prompt patterns for enterprise AI applications: structured 
 date: 2026-03-24
 categories: [Patterns]
 tags: [prompt-engineering, patterns, enterprise, llm, structured-output]
+related:
+  - glossary/prompt-engineering
+  - glossary/llm
+  - tools/claude-anthropic
+  - tools/amazon-bedrock
+  - guides/getting-started-with-bedrock
 ---
 
 Prompt engineering is the practice of designing inputs to language models to reliably produce useful outputs. In enterprise applications, prompts are not one-off experiments - they are code. They need to be versioned, tested, and maintained. These patterns reflect what works at scale.

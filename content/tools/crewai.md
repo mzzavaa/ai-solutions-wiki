@@ -4,6 +4,13 @@ description: "What CrewAI is, how it models multi-agent systems as crews with ro
 date: 2026-03-24
 categories: [Tools]
 tags: [crewai, multi-agent, orchestration, ai-agents, framework, llm]
+related:
+  - glossary/ai-agents
+  - glossary/multi-agent-systems
+  - tools/strands-agents
+  - comparisons/crewai-vs-strands
+  - patterns/agentic-workflows
+  - guides/multi-agent-systems-101
 ---
 
 CrewAI is a Python framework for building multi-agent AI systems. It models agent collaboration using a crew metaphor: agents have defined roles, goals, and backstories; tasks are assigned to agents; crews execute tasks in sequence or in parallel to achieve a broader objective.

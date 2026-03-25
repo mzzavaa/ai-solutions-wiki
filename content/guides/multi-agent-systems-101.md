@@ -4,6 +4,13 @@ description: "A practical introduction to multi-agent AI architectures: when to 
 date: 2026-03-24
 categories: [Guides]
 tags: [multi-agent, LangGraph, CrewAI, architecture, AWS-AgentCore]
+related:
+  - glossary/ai-agents
+  - glossary/multi-agent-systems
+  - tools/strands-agents
+  - tools/crewai
+  - patterns/agentic-workflows
+  - comparisons/crewai-vs-strands
 ---
 
 Most AI use cases can be handled by a single model call with a well-constructed prompt. But as workflows grow in complexity - involving multiple tools, conditional logic, long chains of reasoning, or specialized domain tasks - single-model architectures start to show limits. Multi-agent systems address this by coordinating multiple AI models, each focused on a specific part of the problem.

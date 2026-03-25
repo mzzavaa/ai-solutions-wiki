@@ -7,7 +7,7 @@
       <header class="article-header">
         <div class="article-meta-top">
           {{ with .Section }}
-          <a href="{{ "/" | relURL }}{{ . }}/" class="section-badge">{{ . | humanize | title }}</a>
+          <a href="{{ printf "%s/" . | relURL }}" class="section-badge">{{ . | humanize | title }}</a>
           {{ end }}
           {{ with .Params.categories }}{{ range first 2 . }}
           <a href="{{ "/categories/" | relURL }}{{ . | urlize }}/" class="category-pill">{{ . }}</a>

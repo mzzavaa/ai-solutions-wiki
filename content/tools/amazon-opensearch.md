@@ -4,6 +4,12 @@ description: "Using Amazon OpenSearch Service for vector search, full-text searc
 date: 2026-03-25
 categories: [Tools]
 tags: [amazon-opensearch, vector-search, search, analytics, AWS]
+related:
+  - glossary/rag
+  - glossary/vector-database
+  - patterns/rag-implementation
+  - guides/building-rag-systems
+  - tools/amazon-bedrock
 ---
 
 Amazon OpenSearch Service is a managed deployment of OpenSearch (the open-source fork of Elasticsearch). It handles cluster provisioning, patching, scaling, and backups. For AI applications, its primary use cases are vector similarity search (for RAG and semantic search), full-text search over document collections, and log/event analytics.

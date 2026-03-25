@@ -4,6 +4,12 @@ description: "When to use SageMaker for custom ML versus Bedrock for managed fou
 date: 2026-03-24
 categories: [Comparisons]
 tags: [sagemaker, bedrock, aws, comparison, foundation-models, ml-training]
+related:
+  - tools/amazon-sagemaker
+  - tools/amazon-bedrock
+  - comparisons/bedrock-vs-azure-openai
+  - guides/getting-started-with-bedrock
+  - glossary/foundation-models
 ---
 
 SageMaker and Bedrock are both AWS AI services but they serve fundamentally different purposes. Choosing between them - or deciding to use both - is one of the first architecture decisions in any enterprise AI project on AWS.

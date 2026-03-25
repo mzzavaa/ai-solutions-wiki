@@ -4,6 +4,13 @@ description: "Practical patterns for building production RAG systems: chunking s
 date: 2026-03-24
 categories: [Patterns]
 tags: [RAG, retrieval, vector-search, embeddings, patterns, production]
+related:
+  - glossary/rag
+  - guides/building-rag-systems
+  - tools/amazon-opensearch
+  - tools/amazon-bedrock
+  - glossary/embeddings
+  - glossary/vector-database
 ---
 
 Retrieval Augmented Generation (RAG) is the most commonly deployed AI pattern in enterprise settings. It solves a fundamental limitation of LLMs: they do not know about your private data, your recent documents, or your organization's specific knowledge. RAG provides that knowledge at query time by retrieving relevant documents and passing them to the model along with the question.

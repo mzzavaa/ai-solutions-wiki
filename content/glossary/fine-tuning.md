@@ -4,6 +4,12 @@ description: "The three main approaches to customizing LLM behavior for specific
 date: 2026-03-24
 categories: [Glossary]
 tags: [fine-tuning, prompt-engineering, RAG, customization, LLM, comparison]
+related:
+  - glossary/llm
+  - glossary/foundation-models
+  - comparisons/rag-vs-fine-tuning
+  - tools/amazon-sagemaker
+  - tools/amazon-bedrock
 ---
 
 When an LLM does not perform well enough out of the box for your specific use case, you have three main options: change how you ask (prompt engineering), give it relevant information at query time (RAG), or change the model itself (fine-tuning). Understanding when each approach is appropriate is one of the most important decisions in AI system design.

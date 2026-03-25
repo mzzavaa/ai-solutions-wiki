@@ -4,6 +4,12 @@ description: "Practical patterns for building reliable data pipelines that feed 
 date: 2026-03-24
 categories: [Patterns]
 tags: [data-pipeline, mlops, feature-engineering, aws, patterns, data-quality]
+related:
+  - glossary/event-driven-architecture
+  - tools/aws-eventbridge
+  - tools/amazon-step-functions
+  - tools/aws-s3
+  - tools/amazon-sagemaker
 ---
 
 AI systems are only as good as the data that feeds them. Most AI project failures trace back to data problems - not model problems. These patterns address the most common data pipeline challenges in production AI workloads.

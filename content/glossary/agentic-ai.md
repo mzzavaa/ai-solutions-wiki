@@ -4,6 +4,13 @@ description: "What makes AI agentic vs assistive, autonomous task execution, too
 date: 2026-03-24
 categories: [Glossary]
 tags: [agentic-AI, autonomous-AI, tool-use, planning, AI-agents]
+related:
+  - glossary/ai-agents
+  - glossary/multi-agent-systems
+  - patterns/agentic-workflows
+  - tools/strands-agents
+  - tools/crewai
+  - guides/multi-agent-systems-101
 ---
 
 Agentic AI refers to AI systems that can pursue goals autonomously - taking sequences of actions, using tools, and adapting based on intermediate results - rather than responding to individual queries. The distinction between "agentic" and "assistive" AI is not binary; it is a spectrum based on the degree of autonomy and the length of the action sequence the system can execute independently.

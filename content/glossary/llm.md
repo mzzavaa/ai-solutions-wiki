@@ -4,6 +4,13 @@ description: "What large language models are, how they work at a high level, key
 date: 2026-03-24
 categories: [Glossary]
 tags: [LLM, foundation-models, AI-basics, language-model, transformer]
+related:
+  - glossary/foundation-models
+  - glossary/prompt-engineering
+  - glossary/fine-tuning
+  - tools/claude-anthropic
+  - tools/amazon-bedrock
+  - guides/getting-started-with-bedrock
 ---
 
 A Large Language Model (LLM) is a type of AI model trained on large volumes of text to understand and generate language. LLMs are the technology behind products like Claude, ChatGPT, and Gemini, and they power most practical AI applications in enterprise settings today.

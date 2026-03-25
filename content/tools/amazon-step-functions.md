@@ -4,6 +4,12 @@ description: "How Step Functions orchestrates multi-step AI workflows, handles r
 date: 2026-03-24
 categories: [Tools]
 tags: [aws-step-functions, orchestration, workflow, aws, pipelines, ai-agents]
+related:
+  - glossary/serverless
+  - patterns/data-pipeline-patterns
+  - tools/amazon-lambda
+  - comparisons/step-functions-vs-lambda-chains
+  - patterns/agentic-workflows
 ---
 
 AWS Step Functions is a serverless workflow orchestration service that coordinates sequences of AWS service calls, Lambda functions, and external APIs. For AI pipelines - which typically involve multiple stages (ingest, process, model call, store results) - Step Functions provides the glue layer that handles sequencing, error handling, retries, and parallel execution.

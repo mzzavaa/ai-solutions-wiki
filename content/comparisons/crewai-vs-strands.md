@@ -4,6 +4,13 @@ description: "Architecture differences, AWS integration, and decision criteria f
 date: 2026-03-24
 categories: [Comparisons]
 tags: [crewai, strands-agents, agents, comparison, AI-frameworks]
+related:
+  - tools/crewai
+  - tools/strands-agents
+  - glossary/ai-agents
+  - glossary/multi-agent-systems
+  - patterns/agentic-workflows
+  - guides/multi-agent-systems-101
 ---
 
 CrewAI and Strands Agents are both Python frameworks for building AI agent systems, but they have meaningfully different architectures and AWS integration stories. This comparison helps teams choose the right framework for their use case.

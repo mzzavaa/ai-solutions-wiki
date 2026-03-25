@@ -4,6 +4,12 @@ description: "What vector databases are, how they enable semantic search, popula
 date: 2026-03-24
 categories: [Glossary]
 tags: [vector-database, semantic-search, embeddings, RAG, pgvector, OpenSearch]
+related:
+  - glossary/rag
+  - glossary/embeddings
+  - tools/amazon-opensearch
+  - patterns/rag-implementation
+  - guides/building-rag-systems
 ---
 
 A vector database stores and retrieves high-dimensional vectors - numerical representations of data - using similarity search rather than exact matching. In AI applications, vectors represent the semantic meaning of text (or images, or audio) as computed by embedding models. A vector database answers the question: "what content is most similar in meaning to this query?"

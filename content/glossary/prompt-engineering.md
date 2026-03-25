@@ -4,6 +4,12 @@ description: "What prompt engineering is, why it matters in enterprise AI applic
 date: 2026-03-24
 categories: [Glossary]
 tags: [prompt-engineering, LLM, prompts, enterprise, instructions]
+related:
+  - patterns/prompt-engineering-patterns
+  - glossary/llm
+  - glossary/fine-tuning
+  - tools/claude-anthropic
+  - tools/amazon-bedrock
 ---
 
 Prompt engineering is the discipline of designing and refining the text inputs sent to a language model to produce useful, accurate, and consistent outputs. As AI systems move from demos to production, prompt quality becomes a primary determinant of system quality - more than model choice for most applications.

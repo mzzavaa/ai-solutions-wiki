@@ -4,6 +4,13 @@ description: "What RAG is, how it works, when to use it, and the common implemen
 date: 2026-03-24
 categories: [Glossary]
 tags: [RAG, retrieval, vector-search, knowledge-base, embeddings]
+related:
+  - guides/building-rag-systems
+  - patterns/rag-implementation
+  - tools/amazon-bedrock
+  - tools/amazon-opensearch
+  - glossary/embeddings
+  - glossary/vector-database
 ---
 
 Retrieval Augmented Generation (RAG) is an architecture pattern that improves the accuracy and relevance of AI-generated responses by providing the model with relevant source documents at query time, rather than relying solely on knowledge learned during training.

@@ -4,6 +4,13 @@ description: "What AI agents are, how they differ from simple LLM calls, the key
 date: 2026-03-24
 categories: [Glossary]
 tags: [ai-agents, agents, autonomous, tool-use, multi-step, agentic]
+related:
+  - glossary/agentic-ai
+  - glossary/multi-agent-systems
+  - patterns/agentic-workflows
+  - tools/strands-agents
+  - tools/crewai
+  - guides/multi-agent-systems-101
 ---
 
 An AI agent is a system where a language model reasons about a task, decides on actions to take, executes those actions using tools, observes the results, and continues reasoning until the task is complete. Unlike a single LLM call that produces one response, an agent loop runs repeatedly until a completion condition is met.

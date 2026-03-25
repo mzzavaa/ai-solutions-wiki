@@ -5,6 +5,13 @@ date: 2026-03-24
 categories: [Patterns]
 tags: [agentic-AI, orchestration, workflow-patterns, error-handling, multi-agent]
 tools: [amazon-bedrock, amazon-step-functions, langgraph]
+related:
+  - glossary/ai-agents
+  - glossary/agentic-ai
+  - tools/strands-agents
+  - tools/langgraph
+  - tools/crewai
+  - tools/amazon-step-functions
 ---
 
 Agentic AI workflows go beyond single model calls. An agent can use tools, take actions, and decide what to do next based on results. But "agentic" covers a wide range of architectural patterns with very different complexity profiles. Choosing the right pattern for the problem avoids over-engineering simple workflows and under-engineering complex ones.

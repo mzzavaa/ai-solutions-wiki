@@ -4,6 +4,13 @@ description: "A practical framework for deciding between retrieval augmented gen
 date: 2026-03-24
 categories: [Comparisons]
 tags: [RAG, fine-tuning, comparison, customization, LLM, enterprise]
+related:
+  - glossary/rag
+  - glossary/fine-tuning
+  - patterns/rag-implementation
+  - guides/building-rag-systems
+  - tools/amazon-bedrock
+  - tools/amazon-sagemaker
 ---
 
 RAG and fine-tuning are both approaches to improving LLM performance on specific tasks beyond what prompting alone achieves. They solve different problems, have very different cost and complexity profiles, and are often used together in mature systems. Understanding which to use - and when - is a fundamental skill for enterprise AI architects.

@@ -5,6 +5,13 @@ date: 2026-03-24
 categories: [Guides]
 tags: [RAG, vector-search, embeddings, document-processing, knowledge-base]
 tools: [amazon-bedrock, amazon-opensearch]
+related:
+  - glossary/rag
+  - patterns/rag-implementation
+  - tools/amazon-bedrock
+  - tools/amazon-opensearch
+  - glossary/embeddings
+  - glossary/vector-database
 ---
 
 Retrieval-Augmented Generation (RAG) is the standard architecture for giving AI models access to private knowledge without fine-tuning. Instead of baking knowledge into model weights, RAG retrieves relevant documents at query time and includes them in the model's context. The concept is simple; building a production system that works reliably is not.

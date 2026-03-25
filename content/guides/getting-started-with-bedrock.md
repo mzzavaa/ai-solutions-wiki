@@ -5,6 +5,12 @@ date: 2026-03-24
 categories: [Guides]
 tags: [amazon-bedrock, AWS, foundation-models, getting-started]
 tools: [amazon-bedrock]
+related:
+  - tools/amazon-bedrock
+  - glossary/foundation-models
+  - glossary/llm
+  - guides/building-rag-systems
+  - comparisons/sagemaker-vs-bedrock
 ---
 
 Amazon Bedrock is AWS's fully managed service for accessing large language models and foundation models through a single API. For enterprise teams, it offers a compelling alternative to managing model infrastructure directly: you pay per token consumed, your data stays within your AWS account, and model access is governed through IAM just like any other AWS resource.

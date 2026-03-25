@@ -4,6 +4,13 @@ description: "A comprehensive reference for Amazon Bedrock: available models, ke
 date: 2026-03-24
 categories: [Tools]
 tags: [amazon-bedrock, AWS, foundation-models, agents, guardrails, knowledge-bases]
+related:
+  - tools/amazon-sagemaker
+  - tools/amazon-opensearch
+  - tools/claude-anthropic
+  - comparisons/sagemaker-vs-bedrock
+  - comparisons/bedrock-vs-azure-openai
+  - guides/getting-started-with-bedrock
 ---
 
 Amazon Bedrock is AWS's managed service for foundation model access. It provides a single API to call multiple large language models from different providers, alongside managed infrastructure for knowledge bases, agents, and output safety controls. For enterprise teams building on AWS, it is the primary integration point for generative AI capabilities.
