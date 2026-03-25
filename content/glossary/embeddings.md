@@ -59,3 +59,12 @@ Before embedding, documents must be split into chunks of appropriate size. Chunk
 Embed the chunk text plus its surrounding context (section heading, document title). This metadata enriches the embedding and improves retrieval for queries that include contextual terms not present in the chunk itself.
 
 For multilingual content, use a multilingual embedding model and ensure queries are embedded with the same model, regardless of language.
+
+## Sources and Further Reading
+
+- Reimers, N., and Gurevych, I. (2019). "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks." *arXiv:1908.10084*. [https://arxiv.org/abs/1908.10084](https://arxiv.org/abs/1908.10084) - The paper that established the sentence embedding approach used by most modern embedding models.
+- AWS Documentation: Amazon Titan Embeddings models. [https://docs.aws.amazon.com/bedrock/latest/userguide/titan-embedding-models.html](https://docs.aws.amazon.com/bedrock/latest/userguide/titan-embedding-models.html)
+- AWS Documentation: Amazon Bedrock Knowledge Bases (managed RAG with embeddings). [https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)
+- Sentence-Transformers library documentation: [https://www.sbert.net/](https://www.sbert.net/)
+- MTEB Leaderboard - Massive Text Embedding Benchmark: [https://huggingface.co/spaces/mteb/leaderboard](https://huggingface.co/spaces/mteb/leaderboard)
+- Cohere Embed documentation: [https://docs.cohere.com/docs/embeddings](https://docs.cohere.com/docs/embeddings)

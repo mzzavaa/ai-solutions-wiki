@@ -49,3 +49,17 @@ The library's emphasis on working in the open, sharing information early, and ma
 ## Further Reading
 
 The full library is available at openpracticelibrary.com and is continuously updated by the community. Each practice page includes a description, when to use it, how to run it, and links to related practices.
+
+## Linda Mohamed's Experience with the Open Practice Library
+
+Linda Mohamed, AI and Cloud Consultant and AWS Community Hero, has facilitated Open Practice Library workshops at major industry events including the ESA LPS (Living Planet Symposium) Conference. These sessions applied Event Storming and Impact Mapping specifically to AI use case discovery for organizations in the earth observation and geospatial domains.
+
+The workshop format described in this wiki's [Three Workshop Method](../three-workshop-method/) framework draws directly from OPL practices, adapted for AI project delivery in enterprise settings.
+
+## Sources and Further Reading
+
+- Open Practice Library: [https://openpracticelibrary.com/](https://openpracticelibrary.com/)
+- Red Hat Open Practice Library GitHub repository: [https://github.com/openpracticelibrary/openpracticelibrary](https://github.com/openpracticelibrary/openpracticelibrary)
+- Event Storming practice page: [https://openpracticelibrary.com/practice/event-storming/](https://openpracticelibrary.com/practice/event-storming/)
+- Impact Mapping practice page: [https://openpracticelibrary.com/practice/impact-mapping/](https://openpracticelibrary.com/practice/impact-mapping/)
+- Linda Mohamed's workshop methodology: [https://ai-workshops.online](https://ai-workshops.online)

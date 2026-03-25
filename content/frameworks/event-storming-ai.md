@@ -81,3 +81,11 @@ This output feeds directly into Impact Mapping (to confirm business value) and t
 **Skipping the policy phase** - The policies are where the AI opportunities live. Do not end the session at commands and events.
 
 **Running too long** - Cognitive fatigue sets in after 4 hours. Break earlier and schedule a follow-up session rather than pushing through to a lower-quality output.
+
+## Sources and Further Reading
+
+- Brandolini, A. (2021). *Introducing EventStorming: An act of deliberate collective sensemaking.* Leanpub. Available at [https://www.eventstorming.com/book/](https://www.eventstorming.com/book/)
+- Alberto Brandolini's Event Storming website: [https://www.eventstorming.com/](https://www.eventstorming.com/)
+- Open Practice Library - Event Storming practice: [https://openpracticelibrary.com/practice/event-storming/](https://openpracticelibrary.com/practice/event-storming/)
+- Related framework: [Impact Mapping for AI Projects](../impact-mapping-ai/) - follows Event Storming to confirm business value of identified opportunities.
+- Linda Mohamed's AI Workshop Methodology (which incorporates Event Storming): [https://ai-workshops.online](https://ai-workshops.online)

@@ -57,3 +57,51 @@ RAG is not the right pattern when:
 **Not attributing sources** - A RAG system that does not return source references with its answers removes the ability for users to verify responses. Always include source metadata in the retrieval output and include it in the response.
 
 **Stale index** - If your source documents are updated but the vector index is not refreshed, the system returns outdated information confidently. Implement incremental indexing tied to your document update workflow.
+
+## Chunking Strategies
+
+Chunking is one of the highest-leverage decisions in a RAG implementation. Common strategies:
+
+**Fixed-size chunking** - Split every N tokens with M tokens of overlap. Simple to implement. Works adequately for uniform document types (product descriptions, FAQs) but breaks poorly across paragraph and section boundaries.
+
+**Semantic chunking** - Split at natural language boundaries (sentences, paragraphs, section headings). Produces more coherent chunks. Requires a parser that understands document structure. Preferred for narrative documents like policies, reports, and technical documentation.
+
+**Recursive character splitting** - Tries a hierarchy of separators (double newline, single newline, sentence boundary, word boundary) until chunks fall within the target size. A practical middle ground between fixed-size and fully semantic chunking.
+
+**Document-aware chunking** - Respects document structure: split PDFs at page boundaries, HTML at heading tags, Markdown at `##` headers. Tables and code blocks are kept intact and not split mid-structure.
+
+**Parent-child chunking** - Small child chunks (100-200 tokens) are used for retrieval precision; the larger parent chunk (500-1000 tokens) is passed to the generation model for context. Retrieves specific passages but provides the model with sufficient surrounding context.
+
+## Embedding Models
+
+The embedding model is a significant driver of retrieval quality. It must be fixed for the lifetime of the index - changing the model requires re-embedding the entire corpus.
+
+**Amazon Titan Embeddings v2** - Available via Amazon Bedrock. Supports embedding dimensions of 256, 512, or 1024. Good general-purpose performance with native integration into Bedrock Knowledge Bases.
+
+**Cohere Embed v3** - Strong retrieval performance on benchmarks. Supports multilingual embeddings across 100+ languages. Available via Bedrock and directly from Cohere.
+
+**Sentence-BERT family** - Open-source models from Reimers and Gurevych (2019) that produce semantically meaningful sentence embeddings. Models like `all-mpnet-base-v2` and `all-MiniLM-L6-v2` are widely used baselines. Run on your own infrastructure.
+
+**OpenAI text-embedding-3-large** - Strong benchmark performance, available via OpenAI API. 3072 dimensions (can be reduced via Matryoshka representation).
+
+Test embedding model performance on a held-out set of your actual queries and documents before committing. Benchmark performance on MTEB (Massive Text Embedding Benchmark) does not always transfer to domain-specific enterprise content.
+
+## Reranking
+
+A reranker is a cross-encoder model that takes the query and each retrieved chunk as a pair and produces a relevance score. Unlike bi-encoder embeddings (which encode query and document independently), cross-encoders compare them jointly, producing more accurate relevance scores at the cost of higher latency.
+
+The standard pattern: retrieve top 20 chunks via vector similarity, rerank to get the top 5, pass those 5 to the generation model. The expanded initial retrieval (20 vs 5) compensates for the approximate nature of ANN search; the reranker provides the precision.
+
+**Cohere Rerank** - Available via API and via Amazon Bedrock. Strong out-of-the-box performance with no fine-tuning required.
+
+**Cross-encoder/ms-marco** - Open-source cross-encoder models from the sentence-transformers library, trained on the MS MARCO passage ranking dataset. Deployable on your own infrastructure.
+
+**Amazon Bedrock Reranking** - Managed reranking integrated directly into Bedrock Knowledge Bases retrieval pipelines.
+
+## Sources and Further Reading
+
+- Lewis, P., Perez, E., Piktus, A., et al. (2020). "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." *arXiv:2005.11401*. [https://arxiv.org/abs/2005.11401](https://arxiv.org/abs/2005.11401)
+- AWS Documentation: Amazon Bedrock Knowledge Bases. [https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html](https://docs.aws.amazon.com/bedrock/latest/userguide/knowledge-base.html)
+- AWS Documentation: Amazon Bedrock Reranking. [https://docs.aws.amazon.com/bedrock/latest/userguide/rerank.html](https://docs.aws.amazon.com/bedrock/latest/userguide/rerank.html)
+- Reimers, N., and Gurevych, I. (2019). "Sentence-BERT: Sentence Embeddings using Siamese BERT-Networks." *arXiv:1908.10084*. [https://arxiv.org/abs/1908.10084](https://arxiv.org/abs/1908.10084)
+- MTEB Leaderboard (Massive Text Embedding Benchmark): [https://huggingface.co/spaces/mteb/leaderboard](https://huggingface.co/spaces/mteb/leaderboard)

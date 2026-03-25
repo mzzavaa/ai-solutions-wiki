@@ -46,3 +46,13 @@ A single agent with access to multiple tools handles a large proportion of real-
 ## Observability
 
 Multi-agent systems are harder to debug than single-model calls because errors can originate at any point in the agent chain and compound through subsequent steps. Every agent action, tool call result, and inter-agent message should be logged with a shared trace ID. When output quality issues appear, the trace is the primary diagnostic tool.
+
+## Sources and Further Reading
+
+- CrewAI Documentation: [https://docs.crewai.com/](https://docs.crewai.com/)
+- CrewAI GitHub repository: [https://github.com/crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)
+- LangGraph Documentation: [https://langchain-ai.github.io/langgraph/](https://langchain-ai.github.io/langgraph/)
+- LangGraph GitHub repository: [https://github.com/langchain-ai/langgraph](https://github.com/langchain-ai/langgraph)
+- AWS Documentation: Amazon Bedrock Multi-Agent Collaboration. [https://docs.aws.amazon.com/bedrock/latest/userguide/agents-multi-agent.html](https://docs.aws.amazon.com/bedrock/latest/userguide/agents-multi-agent.html)
+- Microsoft AutoGen Documentation: [https://microsoft.github.io/autogen/](https://microsoft.github.io/autogen/)
+- AWS Documentation: Amazon Bedrock Agents. [https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html)

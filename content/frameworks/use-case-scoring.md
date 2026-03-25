@@ -6,6 +6,8 @@ categories: [Frameworks]
 tags: [prioritization, WSJF, scoring, workshops]
 ---
 
+This framework was developed by Linda Mohamed based on WSJF (Weighted Shortest Job First) principles adapted for AI use case prioritization across dozens of enterprise workshops. The full workshop methodology is available at [ai-workshops.online](https://ai-workshops.online).
+
 When organizations run their first AI ideation workshop, they rarely leave with too few ideas. They leave with too many - Post-it notes covering three whiteboards, a shared document with 57 bullet points, and no clear path forward. The Use Case Scoring Framework exists to solve exactly that problem.
 
 ## Why Generic Prioritization Fails for AI
@@ -43,3 +45,10 @@ The top-right quadrant (high value, low effort) becomes your prototype shortlist
 This framework is most effective after a discovery workshop where use cases have already been loosely defined. It is not a replacement for discovery - it is the filter that follows it. Use it when you have more viable ideas than capacity to prototype, and when you need a defensible, documented rationale for what you chose to build first.
 
 For organizations running their first AI program, the scoring session itself is valuable beyond the output: it forces business and technical stakeholders to agree on what good looks like before any code is written.
+
+## Sources and Further Reading
+
+- Reinertsen, D. G. (2009). *The Principles of Product Development Flow: Second Generation Lean Product Development.* Celeritas Publishing. - The source of WSJF (Weighted Shortest Job First) principles on which this framework's scoring approach is based.
+- Scaled Agile Framework (SAFe) documentation on WSJF: [https://scaledagileframework.com/wsjf/](https://scaledagileframework.com/wsjf/)
+- Linda Mohamed's AI Workshop Methodology: [https://ai-workshops.online](https://ai-workshops.online)
+- Related framework: [Three Workshop Method](../three-workshop-method/) - the structured workshop process in which this scoring tool is used.

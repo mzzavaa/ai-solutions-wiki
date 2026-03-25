@@ -60,3 +60,12 @@ Current limitations:
 **Cost** - Agentic workflows consume more tokens than single-shot calls. A research agent processing a complex question might use 50,000-200,000 tokens across its execution.
 
 The rate of improvement in agentic capabilities has been rapid. Tasks that required significant human oversight in 2023 can run autonomously in 2025. The threshold for "reliably autonomous" continues to shift toward more complex tasks.
+
+## Sources and Further Reading
+
+- AWS Documentation: Amazon Bedrock Agents. [https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html](https://docs.aws.amazon.com/bedrock/latest/userguide/agents.html)
+- AWS Documentation: Amazon Bedrock AgentCore. [https://docs.aws.amazon.com/bedrock/latest/userguide/agentcore.html](https://docs.aws.amazon.com/bedrock/latest/userguide/agentcore.html)
+- Anthropic Documentation: Tool use with Claude. [https://docs.anthropic.com/en/docs/build-with-claude/tool-use](https://docs.anthropic.com/en/docs/build-with-claude/tool-use)
+- Anthropic Documentation: Building with Claude agents. [https://docs.anthropic.com/en/docs/build-with-claude/agents](https://docs.anthropic.com/en/docs/build-with-claude/agents)
+- Yao, S., Zhao, J., et al. (2022). "ReAct: Synergizing Reasoning and Acting in Language Models." *arXiv:2210.03629*. [https://arxiv.org/abs/2210.03629](https://arxiv.org/abs/2210.03629) - Introduced the ReAct pattern used in most modern agentic frameworks.
+- Wei, J., et al. (2022). "Chain-of-Thought Prompting Elicits Reasoning in Large Language Models." *arXiv:2201.11903*. [https://arxiv.org/abs/2201.11903](https://arxiv.org/abs/2201.11903)

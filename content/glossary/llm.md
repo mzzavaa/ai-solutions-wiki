@@ -56,3 +56,11 @@ The "large" in LLM refers to the number of parameters: modern models range from 
 **Context window** - The maximum amount of text the model can process in a single call (input plus output). Modern models range from 8,000 to 200,000+ tokens. One token is approximately 0.75 English words.
 
 **Tokens** - The basic unit of text processing. LLMs do not process characters or words directly; they process tokens (subword units). Pricing for LLM APIs is always per token.
+
+## Sources and Further Reading
+
+- Vaswani, A., Shazeer, N., Parmar, N., et al. (2017). "Attention Is All You Need." *arXiv:1706.03762*. [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762) - The foundational paper introducing the transformer architecture that underlies all modern LLMs.
+- Anthropic Claude Documentation: [https://docs.anthropic.com/](https://docs.anthropic.com/)
+- AWS Documentation: Supported foundation models in Amazon Bedrock. [https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html](https://docs.aws.amazon.com/bedrock/latest/userguide/models-supported.html)
+- Brown, T., Mann, B., et al. (2020). "Language Models are Few-Shot Learners" (GPT-3 paper). *arXiv:2005.14165*. [https://arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165)
+- Anthropic Model Documentation (Claude API): [https://docs.anthropic.com/en/docs/about-claude/models/overview](https://docs.anthropic.com/en/docs/about-claude/models/overview)

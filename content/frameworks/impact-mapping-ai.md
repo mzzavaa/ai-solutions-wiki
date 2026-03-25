@@ -109,3 +109,11 @@ Impact Maps also reveal when the goal is achievable without AI. If the How colum
 **What (for partners):** AI-generated review summary that includes associate annotations and AI-flagged items side by side.
 
 The Impact Map makes the scope clear: the AI needs to produce flagged clause summaries and document comparisons. It does not need to generate legal opinions, draft responses, or automate approval decisions - those are not in any How column.
+
+## Sources and Further Reading
+
+- Adzic, G. (2012). *Impact Mapping: Making a Big Impact with Software Products and Projects.* Provoking Thoughts. Available at [https://www.impactmapping.org/](https://www.impactmapping.org/)
+- Gojko Adzic's Impact Mapping website: [https://www.impactmapping.org/](https://www.impactmapping.org/)
+- Open Practice Library - Impact Mapping practice: [https://openpracticelibrary.com/practice/impact-mapping/](https://openpracticelibrary.com/practice/impact-mapping/)
+- Related framework: [Event Storming for AI Use Case Discovery](../event-storming-ai/) - typically precedes Impact Mapping to surface domain events before defining business outcomes.
+- Related framework: [Use Case Scoring](../use-case-scoring/) - used after Impact Mapping to prioritize the deliverables identified in the What column.
