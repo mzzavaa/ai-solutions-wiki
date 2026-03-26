@@ -1,104 +1,63 @@
 ---
-title: "Programming Languages for AI - Python, TypeScript, HCL, and When to Use Each"
-description: "A practical guide to the languages used in AI development: Python for models and agents, TypeScript for frontends and infrastructure, HCL for Terraform, and SQL for data."
+title: "Programming Languages for AI - Python, TypeScript, HCL"
+description: "A practical guide to the three languages used across a modern AI stack: Python for agents and models, TypeScript for frontends and video rendering, and HCL for infrastructure."
 date: 2026-03-26
 categories: [Guides]
-tags: [guides, programming, python, typescript, terraform, fundamentals]
+tags: [guides, programming, python, typescript, terraform, hcl, fundamentals]
 related:
   - glossary/object-oriented-programming
   - glossary/api
-  - guides/aws-bedrock-101
-  - tools/crewai
+  - guides/infrastructure-as-code-ai
+  - guides/multi-agent-systems-101
 ---
 
-AI systems rarely live in a single language. A production AI pipeline might use Python to call Bedrock, TypeScript to render the output as video, HCL to provision the infrastructure, and SQL to query the source data. Understanding which language belongs where - and why - is fundamental to building maintainable AI systems.
+Modern AI systems rarely live in a single language. A production pipeline might use Python to call a model API, TypeScript to render the output as video, and HCL to provision the infrastructure that runs it all. Each language has a defined role. Understanding that division prevents the wrong-tool-for-the-job failures that make AI systems fragile.
 
-## Python: The AI-Native Language
+## Python: The Language of AI Agents
 
-Python has become the lingua franca of AI and machine learning. This is not accidental: the language prioritizes readability and rapid prototyping over raw performance, which aligns well with the iterative nature of AI development.
+Python is the standard language for AI and machine learning work. The library ecosystem is the primary reason: PyTorch, Hugging Face Transformers, LangChain, CrewAI, Strands, and the AWS Bedrock SDK (boto3) are all Python-first. Virtually every AI framework publishes a Python package before anything else.
 
-**Core strengths for AI:**
+Python's syntax is readable enough that non-engineers can review pipelines and prompts without a long ramp-up. The REPL and Jupyter notebooks support iterative development where you run a cell, inspect output, and adjust. This workflow fits AI development well because so much of the work is exploratory.
 
-- **Library ecosystem**: PyTorch, TensorFlow, Hugging Face Transformers, LangChain, CrewAI, the AWS Bedrock SDK (boto3), LlamaIndex, and virtually every AI framework has a Python-first implementation.
-- **Readability**: Python's syntax is close to pseudocode. Sharing a pipeline with a collaborator who is not a full-time engineer is realistic.
-- **REPL and notebooks**: Jupyter notebooks enable exploratory AI development - you run a cell, see results, and iterate. This workflow is poorly supported in compiled languages.
-- **Rapid prototyping**: An agent that would take days to build in Java can be tested in Python in hours.
+The weaknesses are real. Python is slow for CPU-bound computation, which is why ML frameworks offload the heavy work to C++ backends. The Global Interpreter Lock limits CPU parallelism in a single process. Deployment requires careful dependency management, often handled with Docker or virtual environments.
 
-**Weaknesses:**
-
-- **Speed**: Python is interpreted and significantly slower than C++, Rust, or Go for CPU-bound tasks. ML frameworks work around this by calling into C/C++ extensions (PyTorch's backend is C++).
-- **The GIL**: The Global Interpreter Lock prevents true CPU parallelism in a single Python process. Workarounds exist (multiprocessing, async IO), but they add complexity.
-- **Deployment complexity**: Shipping Python to production requires managing virtual environments, dependency conflicts, and sometimes heavy Docker images.
-
-**Where Python is used**: All model training and fine-tuning, agent frameworks (CrewAI, LangChain, Strands), Bedrock API calls, data preprocessing, AWS Lambda functions for AI pipelines, Rekognition and Transcribe integrations.
+For agents specifically, Python is where orchestration logic lives: deciding which tool to call, passing results between steps, handling retries, formatting model outputs. Linda Mohamed uses Python for all agent work, including Bedrock API calls, CrewAI orchestration, Rekognition integrations, and AWS Lambda functions in AI pipelines.
 
 Documentation: https://docs.python.org/3/
 
-## TypeScript: Type-Safe JavaScript
+## TypeScript: Type-Safe JavaScript for the Presentation Layer
 
-TypeScript is JavaScript with static types. It compiles to JavaScript and runs in browsers and Node.js. TypeScript has become the default for serious frontend and full-stack development.
+TypeScript is JavaScript with static types. It compiles to JavaScript and runs in browsers and Node.js. The type system is the core value: type errors surface at compile time rather than runtime, which matters when parsing structured model outputs or building interfaces that depend on specific response shapes.
 
-**Core strengths:**
+Tooling quality is high because editors have full type information. Autocompletion, rename refactoring, and inline documentation work reliably in a way they do not in plain JavaScript.
 
-- **Type system**: TypeScript catches type errors at compile time rather than runtime. For AI applications that process structured outputs from models, this matters - a Bedrock response parsed into a TypeScript interface will fail loudly if the structure changes, rather than silently propagating wrong data.
-- **Tooling**: Autocompletion, refactoring, and documentation are dramatically better than in plain JavaScript because the type system gives editors full information about what exists.
-- **Browser and Node runtime**: TypeScript runs everywhere JavaScript runs. Building a web interface for an AI tool, a Remotion video rendering job, or a CDK infrastructure definition all use the same language.
-- **AWS CDK**: The AWS Cloud Development Kit uses TypeScript (and Python) to define infrastructure as code. CDK constructs are TypeScript classes - this is OOP applied to infrastructure.
+TypeScript is not a machine learning language. Running inference from TypeScript means calling an API. That is not a limitation for most product work: the AI logic lives in Python, and TypeScript handles the interface.
 
-**Weaknesses:**
-
-- **Not native to ML**: There is no TypeScript equivalent of PyTorch. Running ML inference from TypeScript means calling an API (like Bedrock) or using a small subset of ONNX/TensorFlow.js, which covers only simple models.
-- **Build step required**: TypeScript must be compiled to JavaScript before running, adding build tooling complexity.
-- **Type system complexity**: TypeScript's type system is expressive but can become arcane. Overengineered type definitions are a common failure mode.
-
-**Where TypeScript is used**: Remotion video templates (React components that render to MP4), Next.js web applications, AWS CDK infrastructure definitions, browser-based AI interfaces.
+Remotion is the clearest example. Remotion renders React components to video. A TypeScript component describes what the video frame looks like; Python upstream handles what goes into it. Linda uses TypeScript for all Remotion video templates and Next.js web applications that surface AI outputs.
 
 Documentation: https://www.typescriptlang.org/docs/
 
-## HCL/Terraform: Infrastructure as Declarations
+## HCL: Declarative Infrastructure
 
-HCL (HashiCorp Configuration Language) is the language of Terraform, the dominant infrastructure-as-code tool. It is not a general-purpose language - it is a declarative configuration format designed specifically to describe infrastructure resources.
+HCL (HashiCorp Configuration Language) is the language of Terraform. It is not a general-purpose language. It describes the desired state of infrastructure resources, and Terraform determines what to create, modify, or destroy to reach that state.
 
-**Core strengths:**
+The plan/apply cycle is the key feature. Running `terraform plan` shows exactly what will change before any action is taken. This makes infrastructure changes reviewable in code review the same way application code is reviewed.
 
-- **Declarative**: You describe the desired state of infrastructure, not the steps to get there. Terraform determines what needs to be created, modified, or destroyed.
-- **Plan/apply cycle**: `terraform plan` shows exactly what will change before anything happens. This makes infrastructure changes reviewable and auditable.
-- **State management**: Terraform tracks what it has created in a state file, enabling it to manage resources across their full lifecycle.
-- **Provider ecosystem**: Terraform providers exist for AWS, GCP, Azure, GitHub, Datadog, and hundreds of other services.
+HCL has limited logic. It supports conditionals and loops, but complex dynamic behavior quickly becomes unreadable. For those cases, AWS CDK in Python or TypeScript offers more flexibility. For straightforward infrastructure declarations, HCL is clearer than a general-purpose language.
 
-**Weaknesses:**
-
-- **Limited logic**: HCL supports conditionals and loops, but complex logic quickly becomes unreadable. For dynamic infrastructure, AWS CDK (Python or TypeScript) is often clearer.
-- **Not a programming language**: HCL cannot call APIs, run functions, or do arbitrary computation. It describes resources, not procedures.
-- **State file management**: The Terraform state file is a critical artifact. Loss or corruption requires careful recovery.
-
-**Where HCL is used**: Provisioning AWS infrastructure (S3 buckets, Lambda functions, SQS queues, IAM roles, VPCs), declaring ECS task definitions, setting up DynamoDB tables and Bedrock endpoints.
+HCL provisions the foundation that AI systems run on: S3 buckets, Lambda functions, SQS queues, IAM roles, VPCs, DynamoDB tables, and Bedrock endpoint configurations. Linda uses Terraform and HCL for all AWS infrastructure across AI projects.
 
 Documentation: https://developer.hashicorp.com/terraform/docs
 
-## SQL: The Language of Data
+## How the Three Layers Fit Together
 
-SQL (Structured Query Language) is the universal language for querying relational databases and, increasingly, data warehouses. AI pipelines almost always have an upstream data source that SQL queries.
+| Layer | Language | Examples |
+|-------|----------|---------|
+| Intelligence | Python | Bedrock calls, CrewAI agents, Lambda pipeline logic |
+| Presentation | TypeScript | Remotion video, Next.js web UI |
+| Infrastructure | HCL | Terraform, AWS resources |
 
-**Where SQL is used**: Querying source data for AI training, retrieving records for RAG pipelines, storing structured AI outputs (scores, classifications, metadata), analytics on AI pipeline results.
-
-## Linda Mohamed's Language Stack
-
-Linda Mohamed uses Python for all AI and agent work: Bedrock API calls, CrewAI agents, Rekognition and Transcribe integrations, AWS Lambda pipeline logic. TypeScript is her choice for Remotion video templates (which are React components) and Next.js web applications. All AWS infrastructure is defined in HCL with Terraform.
-
-This separation is deliberate: each language does what it is best at. Python handles the intelligence layer, TypeScript handles the presentation layer, and HCL handles the infrastructure layer. They communicate through APIs and S3 artifacts rather than sharing codebases.
-
-## Choosing the Right Language
-
-| Task | Language |
-|------|----------|
-| AI model inference | Python (boto3/Bedrock SDK) |
-| Agent frameworks | Python (CrewAI, LangChain, Strands) |
-| Video rendering | TypeScript (Remotion) |
-| Web UI | TypeScript (Next.js, React) |
-| AWS infrastructure | HCL (Terraform) or TypeScript (CDK) |
-| Data queries | SQL |
-| High-performance inference server | C++, Rust, or Go |
+Each layer communicates with the others through APIs and S3 artifacts rather than sharing codebases. Python produces output, TypeScript renders it, HCL provisions the services that run both. The separation keeps each layer independently deployable and testable.
 
 ## Sources
 
