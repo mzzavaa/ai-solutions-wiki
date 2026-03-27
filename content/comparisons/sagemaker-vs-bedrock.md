@@ -3,7 +3,7 @@ title: "Amazon SageMaker vs Bedrock - Build vs Buy"
 description: "When to use SageMaker for custom ML versus Bedrock for managed foundation models - a practical comparison for enterprise AI teams."
 date: 2026-03-24
 categories: [Comparisons]
-tags: [sagemaker, bedrock, aws, comparison, foundation-models, ml-training]
+tags: [cloud-computing, intermediate, sagemaker, bedrock, aws, comparison, foundation-models]
 related:
   - tools/amazon-sagemaker
   - tools/amazon-bedrock

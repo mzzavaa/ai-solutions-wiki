@@ -3,7 +3,7 @@ title: "API - Application Programming Interface"
 description: "What an API is, REST vs GraphQL vs gRPC, authentication patterns, rate limiting, and how AI services are accessed through standardized API contracts."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, fundamentals, api, rest, integration]
+tags: [cs-fundamentals, beginner, api, rest, integration, http]
 related:
   - guides/programming-languages-for-ai
   - glossary/hardware-constraints

@@ -3,7 +3,7 @@ title: "Event Storming for AI Use Case Discovery"
 description: "How to run an Event Storming workshop specifically for discovering AI automation opportunities: domain events, commands, policies, and identifying where AI adds the most value."
 date: 2026-03-25
 categories: [Frameworks]
-tags: [event-storming, discovery, workshop, facilitation, use-case-discovery, domain-events]
+tags: [project-management, intermediate, event-storming, discovery, workshop, facilitation, domain-events]
 related:
   - glossary/open-practice-library
   - frameworks/impact-mapping-ai

@@ -3,7 +3,7 @@ title: "Sorting and Search Algorithms - Why They Matter for AI Pipelines"
 description: "How sorting and search algorithms underpin AI pipeline design, with a real-world example from Linda Mohamed's multi-signal video scoring system."
 date: 2026-03-26
 categories: [Guides]
-tags: [guides, algorithms, sorting, search, video-processing, fundamentals]
+tags: [cs-fundamentals, intermediate, sorting, algorithms, search, video-processing]
 related:
   - glossary/time-complexity
   - glossary/data-structures

@@ -3,7 +3,7 @@ title: "Fine-Tuning vs Prompt Engineering vs RAG"
 description: "The three main approaches to customizing LLM behavior for specific use cases - when each is appropriate and how they compare."
 date: 2026-03-24
 categories: [Glossary]
-tags: [fine-tuning, prompt-engineering, RAG, customization, LLM, comparison]
+tags: [ai-ml, intermediate, fine-tuning, rag, llm, customization, comparison]
 related:
   - glossary/llm
   - glossary/foundation-models

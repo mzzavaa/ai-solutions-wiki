@@ -3,7 +3,7 @@ title: "Getting Started with Amazon Bedrock for Enterprise AI"
 description: "A practical introduction to Amazon Bedrock: what it is, which models are available, how pricing works, and how to get your first use case running."
 date: 2026-03-24
 categories: [Guides]
-tags: [amazon-bedrock, AWS, foundation-models, getting-started]
+tags: [cloud-computing, beginner, amazon-bedrock, aws, foundation-models, getting-started]
 tools: [amazon-bedrock]
 related:
   - tools/amazon-bedrock

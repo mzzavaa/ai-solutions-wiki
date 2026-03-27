@@ -3,7 +3,7 @@ title: "AWS AI Services vs Azure AI - Complete Comparison"
 description: "A service-by-service map of AWS AI and ML services to their Azure AI equivalents, covering language models, speech, vision, and MLOps."
 date: 2026-03-24
 categories: [Comparisons]
-tags: [AWS, Azure, AI-services, comparison, cloud]
+tags: [cloud-computing, intermediate, aws, azure, ai-services, comparison]
 ---
 
 AWS and Azure both offer comprehensive AI service portfolios. Teams evaluating or migrating between clouds need a clear service mapping. This article maps AWS AI services to their Azure equivalents across every major category.

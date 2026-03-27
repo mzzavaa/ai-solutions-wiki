@@ -3,7 +3,7 @@ title: "Event Sourcing and CQRS for AI Pipelines"
 description: "Using event-driven architecture patterns for AI data pipelines: immutable event logs, replay capability, audit trails, and CQRS for separating read and write models."
 date: 2026-03-25
 categories: [Patterns]
-tags: [event-sourcing, CQRS, data-pipeline, audit, ai-engineering, event-driven]
+tags: [architecture, intermediate, event-sourcing, cqrs, audit, event-driven]
 related:
   - glossary/event-sourcing
   - glossary/event-driven-architecture

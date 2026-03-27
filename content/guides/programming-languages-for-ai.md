@@ -3,7 +3,7 @@ title: "Programming Languages for AI - Python, TypeScript, HCL"
 description: "A practical guide to the three languages used across a modern AI stack: Python for agents and models, TypeScript for frontends and video rendering, and HCL for infrastructure."
 date: 2026-03-26
 categories: [Guides]
-tags: [guides, programming, python, typescript, terraform, hcl, fundamentals]
+tags: [cs-fundamentals, beginner, python, typescript, terraform, hcl, programming]
 related:
   - glossary/object-oriented-programming
   - glossary/api

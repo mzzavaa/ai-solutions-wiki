@@ -3,7 +3,7 @@ title: "RAG Implementation Patterns - Retrieval Augmented Generation in Practice
 description: "Practical patterns for building production RAG systems: chunking strategies, retrieval optimization, re-ranking, and the most common failure modes."
 date: 2026-03-24
 categories: [Patterns]
-tags: [RAG, retrieval, vector-search, embeddings, patterns, production]
+tags: [ai-agents, advanced, rag, retrieval, vector-search, embeddings, production]
 related:
   - glossary/rag
   - guides/building-rag-systems

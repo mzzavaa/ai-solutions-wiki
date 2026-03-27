@@ -3,7 +3,7 @@ title: "Data Pipeline Patterns for AI/ML Workloads"
 description: "Practical patterns for building reliable data pipelines that feed AI and ML systems - ingestion, transformation, feature engineering, and monitoring."
 date: 2026-03-24
 categories: [Patterns]
-tags: [data-pipeline, mlops, feature-engineering, aws, patterns, data-quality]
+tags: [data-engineering, intermediate, data-pipeline, mlops, feature-engineering, aws, data-quality]
 related:
   - glossary/event-driven-architecture
   - tools/aws-eventbridge

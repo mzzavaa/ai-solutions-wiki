@@ -3,7 +3,7 @@ title: "The Use Case Scoring Framework - From 57 Ideas to 3 Prototypes"
 description: "A structured WSJF-inspired scoring methodology to cut through workshop noise and identify the AI use cases worth building first."
 date: 2026-03-24
 categories: [Frameworks]
-tags: [prioritization, WSJF, scoring, workshops]
+tags: [project-management, intermediate, prioritization, wsjf, scoring, use-cases]
 ---
 
 This framework was developed by Linda Mohamed based on WSJF (Weighted Shortest Job First) principles adapted for AI use case prioritization across dozens of enterprise workshops. The full workshop methodology is available at [ai-workshops.online](https://ai-workshops.online).

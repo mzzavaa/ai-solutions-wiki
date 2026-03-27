@@ -3,7 +3,7 @@ title: "Why Your AI Output Sounds Generic - And How to Fix It With Your Own Data
 description: "The difference between prompting and grounding. Five stages from zero context to production-ready assets. The Personal Inference Pack concept."
 date: 2026-03-24
 categories: [Guides]
-tags: [grounding, RAG, context, prompting, inference, personalization]
+tags: [ai-agents, intermediate, rag, grounding, context, prompting, personalization]
 tools: [amazon-bedrock]
 ---
 

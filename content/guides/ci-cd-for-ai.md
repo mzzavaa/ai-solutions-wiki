@@ -3,7 +3,7 @@ title: "CI/CD Pipelines for AI Projects"
 description: "Building reliable CI/CD pipelines for AI projects: model artifact management, automated evaluation gates, GitHub Actions workflows, and deployment strategies that prevent quality regressions."
 date: 2026-03-25
 categories: [Guides]
-tags: [ci-cd, github-actions, mlops, deployment, evaluation, ai-engineering, automation]
+tags: [devops, intermediate, ci-cd, mlops, deployment, evaluation, automation]
 related:
   - glossary/ci-cd
   - guides/testing-ai-systems

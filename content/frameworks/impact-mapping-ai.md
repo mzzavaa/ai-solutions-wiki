@@ -3,7 +3,7 @@ title: "Impact Mapping for AI Projects"
 description: "Applying the Why-Who-How-What Impact Mapping framework to AI projects: grounding AI initiatives in measurable business outcomes and avoiding technology-first thinking."
 date: 2026-03-25
 categories: [Frameworks]
-tags: [impact-mapping, discovery, value, business-outcomes, ai-strategy, product-management]
+tags: [project-management, intermediate, impact-mapping, discovery, business-outcomes, ai-strategy]
 related:
   - glossary/open-practice-library
   - frameworks/event-storming-ai

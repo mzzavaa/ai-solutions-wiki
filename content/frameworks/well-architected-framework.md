@@ -3,7 +3,7 @@ title: "The Well-Architected Framework - Why Every Cloud Provider Has One"
 description: "What the Well-Architected Framework is, its origins at AWS, how Azure and GCP adopted it, its six pillars, and why it matters especially for AI workloads."
 date: 2026-03-26
 categories: [Frameworks]
-tags: [frameworks, well-architected, aws, azure, gcp, cloud-architecture]
+tags: [cloud-computing, intermediate, well-architected, aws, cloud-architecture, pillars]
 related:
   - frameworks/well-architected-ai-ml-lens
   - glossary/operational-excellence

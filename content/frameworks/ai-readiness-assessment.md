@@ -3,7 +3,7 @@ title: "AI Readiness Assessment - Is Your Organization Ready?"
 description: "A five-dimension self-assessment to understand where your organization stands before committing to an AI program."
 date: 2026-03-24
 categories: [Frameworks]
-tags: [readiness, assessment, strategy, data-maturity]
+tags: [project-management, intermediate, ai-strategy, assessment, data-maturity, organization]
 ---
 
 The most common reason AI projects stall is not the technology - it is organizational unreadiness. A team that starts building before assessing its foundations tends to discover blockers mid-project: data that cannot be accessed, a security review that adds six months, or executives who withdraw support when the first prototype does not match their expectations. This assessment is designed to surface those issues before they become blockers.

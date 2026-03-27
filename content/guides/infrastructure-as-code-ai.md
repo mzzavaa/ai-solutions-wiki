@@ -3,7 +3,7 @@ title: "Infrastructure as Code for AI Projects"
 description: "Why IaC matters for AI reproducibility, multi-environment consistency, and cost tracking. Terraform and CDK patterns for Bedrock agents, Lambda, Step Functions, and Amplify AI apps."
 date: 2026-03-25
 categories: [Guides]
-tags: [infrastructure-as-code, terraform, cdk, devops, reproducibility, cost, multi-environment, AI-engineering]
+tags: [devops, intermediate, iac, terraform, cdk, reproducibility, multi-environment]
 related:
   - guides/ci-cd-ai-detailed
   - guides/deployment-models-ai

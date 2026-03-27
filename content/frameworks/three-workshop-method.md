@@ -3,7 +3,7 @@ title: "From AI Idea to Working Prototype in 3 Workshops"
 description: "A structured three-workshop methodology that takes an organization from AI curiosity to a validated, buildable prototype with stakeholder alignment."
 date: 2026-03-24
 categories: [Frameworks]
-tags: [workshops, methodology, prototyping, stakeholder-alignment]
+tags: [project-management, beginner, workshops, methodology, prototyping, stakeholder-alignment]
 ---
 
 The 3-Workshop Method was developed by Linda Mohamed, AWS Community Hero and AI and Cloud Consultant, as a structured approach to taking enterprises from AI idea to working prototype. The full methodology and facilitation resources are available at [ai-workshops.online](https://ai-workshops.online).

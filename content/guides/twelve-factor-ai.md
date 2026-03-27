@@ -3,7 +3,7 @@ title: "Twelve-Factor AI - Applying 12-Factor App Principles to AI Systems"
 description: "How each of the 12 original 12-factor app principles applies to AI and LLM-based systems: model configuration, artifact management, vector store backing services, build-release-run for model versioning, and more."
 date: 2026-03-25
 categories: [Guides]
-tags: [12-factor, architecture, best-practices, AI-systems, MLOps, configuration, deployment]
+tags: [software-engineering, advanced, twelve-factor, architecture, best-practices, mlops]
 related:
   - guides/ai-architecture-patterns
   - patterns/microservices-for-ai

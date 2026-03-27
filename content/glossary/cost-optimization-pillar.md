@@ -3,7 +3,7 @@ title: "Cost Optimization (Well-Architected Pillar)"
 description: "The Well-Architected pillar covering right-sizing, reserved capacity, spot instances, and cost allocation - and how it applies to AI workloads including model selection tradeoffs, Bedrock pricing, and caching strategies."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, well-architected, cost-optimization, finops]
+tags: [cloud-computing, intermediate, cost-optimization, well-architected, finops, aws]
 related:
   - frameworks/well-architected-framework
   - frameworks/well-architected-ai-ml-lens

@@ -3,7 +3,7 @@ title: "RAG vs Fine-Tuning - When to Use Each"
 description: "A practical framework for deciding between retrieval augmented generation and fine-tuning to customize LLM behavior for enterprise applications."
 date: 2026-03-24
 categories: [Comparisons]
-tags: [RAG, fine-tuning, comparison, customization, LLM, enterprise]
+tags: [ai-ml, intermediate, rag, fine-tuning, llm, comparison, enterprise]
 related:
   - glossary/rag
   - glossary/fine-tuning

@@ -3,7 +3,7 @@ title: "Retry and Backoff Patterns for AI Services"
 description: "Exponential backoff with jitter, retry budgets, and idempotency patterns for production AI systems. Why AI services require different retry logic than conventional APIs."
 date: 2026-03-26
 categories: [Patterns]
-tags: [patterns, retry, backoff, resilience, lambda, bedrock]
+tags: [architecture, intermediate, retry, backoff, resilience, lambda, bedrock]
 related:
   - patterns/circuit-breaker-ai
   - patterns/observability-ai
