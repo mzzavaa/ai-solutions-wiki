@@ -3,7 +3,7 @@ title: "Microservices Architecture for AI Systems"
 description: "How to decompose AI systems into independent services with clear boundaries, API contracts, and independent deployability - treating AI components as first-class software services."
 date: 2026-03-25
 categories: [Patterns]
-tags: [microservices, architecture, ai-engineering, software-design, api-design, deployment]
+tags: ["architecture", "advanced", "microservices", "ai-architecture", "decomposition", "scalability", "distributed"]
 related:
   - patterns/circuit-breaker-ai
   - patterns/event-sourcing-ai

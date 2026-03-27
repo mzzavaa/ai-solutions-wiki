@@ -3,7 +3,7 @@ title: "Circuit Breaker Pattern for AI Services"
 description: "Handling model failures gracefully in production AI systems: fallback strategies, degraded mode operation, retry with backoff, and protecting downstream services from cascade failure."
 date: 2026-03-25
 categories: [Patterns]
-tags: [circuit-breaker, resilience, ai-engineering, error-handling, fallback, production]
+tags: ["architecture", "intermediate", "circuit-breaker", "resilience", "fault-tolerance", "ai-services", "api"]
 related:
   - glossary/circuit-breaker
   - patterns/microservices-for-ai

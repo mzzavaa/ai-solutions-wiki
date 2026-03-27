@@ -3,7 +3,7 @@ title: "Strangler Fig Pattern for AI Migration"
 description: "How to gradually replace manual processes and legacy rule-based systems with AI using the strangler fig pattern: routing traffic incrementally, maintaining fallback paths, and validating quality before full cutover."
 date: 2026-03-25
 categories: [Patterns]
-tags: [strangler-fig, migration, AI-adoption, patterns, architecture, gradual-rollout]
+tags: ["architecture", "advanced", "strangler-fig", "migration", "legacy-modernization", "ai-integration", "refactoring"]
 related:
   - guides/ai-architecture-patterns
   - patterns/feature-flags-ai

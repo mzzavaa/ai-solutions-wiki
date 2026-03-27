@@ -3,7 +3,7 @@ title: "Prompt Engineering Patterns for Enterprise Applications"
 description: "Proven prompt patterns for enterprise AI applications: structured output, chain-of-thought, few-shot examples, guardrails, and system prompt design."
 date: 2026-03-24
 categories: [Patterns]
-tags: [prompt-engineering, patterns, enterprise, llm, structured-output]
+tags: ["ai-ml", "intermediate", "prompt-engineering", "few-shot", "chain-of-thought", "llm", "patterns"]
 related:
   - glossary/prompt-engineering
   - glossary/llm

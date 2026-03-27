@@ -1,7 +1,7 @@
 ---
 title: "Time Complexity and Big-O Notation"
 description: "An introduction to Big-O notation and how it describes the asymptotic behavior of algorithms."
-tags: ["algorithms", "computer-science", "fundamentals", "big-o"]
+tags: ["cs-fundamentals", "beginner", "time-complexity", "big-o", "algorithms", "computer-science", "fundamentals"]
 sources:
   - title: "Introduction to Algorithms, 4th Edition"
     authors: ["Thomas H. Cormen", "Charles E. Leiserson", "Ronald L. Rivest", "Clifford Stein"]

@@ -3,7 +3,7 @@ title: "Amazon Textract - Document Data Extraction"
 description: "A reference guide to Amazon Textract: OCR capabilities, table and form extraction, query-based extraction, and integration patterns for document processing pipelines."
 date: 2026-03-24
 categories: [Tools]
-tags: [amazon-textract, OCR, document-processing, forms, tables]
+tags: ["ai-ml", "intermediate", "amazon-textract", "document-extraction", "ocr", "aws", "structured-data"]
 tools: [amazon-textract]
 ---
 

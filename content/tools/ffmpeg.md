@@ -3,7 +3,7 @@ title: "FFmpeg - Video Processing Swiss Army Knife"
 description: "Using FFmpeg in AWS Lambda layers and EC2 for video processing in AI pipelines, including common operations and integration with Rekognition and Bedrock."
 date: 2026-03-24
 categories: [Tools]
-tags: [ffmpeg, video, processing, lambda, media]
+tags: ["media-processing", "beginner", "ffmpeg", "video-processing", "audio", "transcoding", "cli"]
 ---
 
 FFmpeg is a command-line tool and library collection for video, audio, and media processing. It handles format conversion, trimming, concatenation, frame extraction, thumbnail generation, codec transcoding, and hundreds of other operations. In AI pipelines it is the standard tool for video manipulation before and after AI analysis steps.

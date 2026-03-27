@@ -3,7 +3,7 @@ title: "AI Governance Patterns for Enterprise"
 description: "Model cards, decision logging, bias detection, approval workflows, audit trails, compliance documentation, and EU AI Act considerations."
 date: 2026-03-24
 categories: [Patterns]
-tags: [AI-governance, EU-AI-Act, model-cards, audit-trail, compliance, bias-detection]
+tags: ["architecture", "advanced", "ai-governance", "compliance", "responsible-ai", "policy", "risk"]
 tools: [amazon-bedrock, amazon-sagemaker]
 ---
 

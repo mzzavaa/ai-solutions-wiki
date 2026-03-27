@@ -3,7 +3,7 @@ title: "Case Pattern: Automated Content Generation for a News Agency"
 description: "How a news agency automated structured report generation from data feeds - producing hundreds of articles per day from financial, sports, and weather data sources."
 date: 2026-03-24
 categories: [Case Patterns]
-tags: [content-generation, media, journalism, automation, nlg]
+tags: ["ai-ml", "advanced", "content-generation", "news", "llm", "automation", "media"]
 ---
 
 A regional news agency automated the production of structured data-driven articles: financial results summaries, sports match reports, weather briefings, and local government data roundups. These articles follow predictable formats and are produced in high volume - work well suited to AI generation, freeing journalists for investigative and analytical work.

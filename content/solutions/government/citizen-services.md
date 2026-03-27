@@ -3,7 +3,7 @@ title: "AI for Citizen Services - Modernizing Government Interactions"
 description: "Chatbot-based citizen inquiries, form pre-filling, status tracking, and multilingual support for government agencies."
 date: 2026-03-24
 categories: [Solutions]
-tags: [citizen-services, chatbot, government, multilingual, form-automation]
+tags: ["ai-ml", "intermediate", "citizen-services", "government", "nlp", "chatbot", "automation"]
 industries: [government]
 tools: [amazon-bedrock, amazon-lex, amazon-translate]
 ---

@@ -3,7 +3,7 @@ title: "CrewAI - Multi-Agent Orchestration Framework"
 description: "What CrewAI is, how it models multi-agent systems as crews with roles and tasks, integration with LLM backends, and when to use it versus alternatives."
 date: 2026-03-24
 categories: [Tools]
-tags: [crewai, multi-agent, orchestration, ai-agents, framework, llm]
+tags: ["ai-agents", "intermediate", "crewai", "multi-agent", "orchestration", "llm", "framework"]
 related:
   - glossary/ai-agents
   - glossary/multi-agent-systems

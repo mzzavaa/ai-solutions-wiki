@@ -3,7 +3,7 @@ title: "How to Facilitate an AI Workshop - A Practitioner's Guide"
 description: "Preparation, agenda design, stakeholder management, use case brainstorming techniques, prioritization exercises, and gap management between sessions."
 date: 2026-03-24
 categories: [Guides]
-tags: [workshops, facilitation, use-cases, stakeholder-management, prioritization]
+tags: ["project-management", "intermediate", "workshop", "facilitation", "ai-adoption", "discovery", "stakeholders"]
 ---
 
 An AI workshop is typically a half-day or full-day session with a mixed group: operational staff who know what problems exist, technical staff who know what AI can do, and leadership who need to make investment decisions. Making that combination productive is a facilitation challenge as much as a technical one.

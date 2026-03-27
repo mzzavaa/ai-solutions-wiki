@@ -3,7 +3,7 @@ title: "Custom ML Models vs Foundation Models - When to Build vs Buy"
 description: "SageMaker custom training vs Bedrock foundation models. Data requirements, cost, accuracy trade-offs, and maintenance burden."
 date: 2026-03-24
 categories: [Comparisons]
-tags: [custom-ML, foundation-models, SageMaker, Bedrock, model-training, build-vs-buy]
+tags: ["ai-ml", "intermediate", "custom-ml", "foundation-models", "comparison", "build-vs-buy", "llm"]
 tools: [amazon-sagemaker, amazon-bedrock]
 ---
 

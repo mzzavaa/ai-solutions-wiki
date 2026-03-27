@@ -3,7 +3,7 @@ title: "Strands Agents - AWS-Native Agent SDK"
 description: "What Strands Agents is, how it differs from CrewAI and LangGraph, and when to use it for AWS-hosted agent applications."
 date: 2026-03-25
 categories: [Tools]
-tags: [strands-agents, agents, AWS, bedrock, AI-frameworks]
+tags: ["ai-agents", "intermediate", "strands", "multi-agent", "orchestration", "aws", "framework"]
 related:
   - glossary/ai-agents
   - glossary/agentic-ai

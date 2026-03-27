@@ -3,7 +3,7 @@ title: "Inference - Running AI Models in Production"
 description: "What inference means in AI context, the key operational parameters that matter (latency, throughput, cost), and the main deployment options for enterprise workloads."
 date: 2026-03-24
 categories: [Glossary]
-tags: [inference, deployment, latency, throughput, production, mlops]
+tags: ["ai-ml", "beginner", "inference", "model-serving", "prediction", "llm", "latency"]
 ---
 
 Inference is the process of running a trained AI model to produce an output (a prediction, a generated text response, a classification) given a new input. Training is what happens before deployment; inference is what happens when users and applications actually use the model.

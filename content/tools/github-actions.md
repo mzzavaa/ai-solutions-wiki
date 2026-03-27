@@ -3,7 +3,7 @@ title: "GitHub Actions - CI/CD for AI Projects"
 description: "GitHub Actions workflow syntax, Hugo deployment pattern, Python testing pipelines, Docker builds, Terraform plan/apply, and model evaluation as a CI step for AI projects."
 date: 2026-03-25
 categories: [Tools]
-tags: [github-actions, ci-cd, devops, hugo, docker, terraform, python, ai-engineering, deployment]
+tags: ["devops", "beginner", "github-actions", "ci-cd", "automation", "pipelines", "deployment"]
 related:
   - guides/ci-cd-ai-detailed
   - guides/infrastructure-as-code-ai

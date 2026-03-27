@@ -3,7 +3,7 @@ title: "Model Context Protocol (MCP) - Universal Tool Interface for AI Agents"
 description: "What the Model Context Protocol is, how it enables AI agents to use tools through a standard interface, and server/client architecture."
 date: 2026-03-25
 categories: [Tools]
-tags: [mcp, agents, tools, protocol, AI-frameworks]
+tags: ["ai-agents", "intermediate", "mcp", "tool-use", "agents", "protocol", "integration"]
 ---
 
 Model Context Protocol (MCP) is an open standard for connecting AI models to external tools, data sources, and services. Developed by Anthropic and released as open source, it defines a uniform interface through which any AI model can discover and invoke capabilities without bespoke integration code per tool.

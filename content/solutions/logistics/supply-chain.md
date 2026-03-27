@@ -3,7 +3,7 @@ title: "AI for Supply Chain Optimization"
 description: "AI applications in supply chain: demand forecasting, inventory optimization, route planning, and disruption detection - with practical architecture guidance."
 date: 2026-03-24
 categories: [Solutions]
-tags: [logistics, supply-chain, demand-forecasting, optimization, inventory, aws]
+tags: ["ai-ml", "advanced", "supply-chain", "logistics", "forecasting", "optimization", "ai"]
 ---
 
 Supply chain operations generate enormous amounts of data and operate with narrow margins for error. AI improves supply chain performance primarily through better forecasting (predicting what will be needed, when, and where) and better optimization (finding more efficient paths, inventory levels, and resource allocations given real-world constraints).

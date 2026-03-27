@@ -3,7 +3,7 @@ title: "Vector Database"
 description: "What vector databases are, how they enable semantic search, popular options including Pinecone, Weaviate, and pgvector, and when to use them."
 date: 2026-03-24
 categories: [Glossary]
-tags: [vector-database, semantic-search, embeddings, RAG, pgvector, OpenSearch]
+tags: ["ai-ml", "intermediate", "vector-database", "embeddings", "similarity-search", "rag", "storage"]
 related:
   - glossary/rag
   - glossary/embeddings

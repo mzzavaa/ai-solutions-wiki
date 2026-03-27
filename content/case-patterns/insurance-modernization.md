@@ -3,7 +3,7 @@ title: "Case Pattern: Insurance Claims Modernization with AI"
 description: "Architecture and lessons from modernizing an insurance claims processing workflow using AI for document extraction, fraud detection, and automated adjudication."
 date: 2026-03-24
 categories: [Case Patterns]
-tags: [insurance, claims-processing, document-extraction, fraud-detection, aws]
+tags: ["ai-ml", "advanced", "insurance", "modernization", "document-processing", "automation", "legacy"]
 ---
 
 A mid-size property and casualty insurer modernized its claims processing workflow to reduce settlement cycle time and improve fraud detection. The previous workflow was heavily manual: adjusters received claim packets by email, manually entered data into the claims management system, and escalated fraud concerns based on individual judgment. Average cycle time from first notice of loss to settlement was 18 days.

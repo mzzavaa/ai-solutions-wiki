@@ -3,7 +3,7 @@ title: "Caching Patterns for AI Applications"
 description: "Semantic caching, Anthropic prompt caching, response caching, and embedding caching for AI applications. Cost savings analysis and implementation guidance."
 date: 2026-03-26
 categories: [Patterns]
-tags: [patterns, caching, performance, cost-optimization, bedrock]
+tags: ["architecture", "intermediate", "caching", "latency", "cost-reduction", "semantic-cache", "llm"]
 related:
   - patterns/cost-optimization
   - patterns/rag-implementation

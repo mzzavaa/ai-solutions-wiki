@@ -3,7 +3,7 @@ title: "Event Sourcing"
 description: "What event sourcing is, why it matters for AI audit trails and pipeline replay, its relationship to CQRS, and when to apply it in AI systems."
 date: 2026-03-25
 categories: [Glossary]
-tags: [event-sourcing, CQRS, audit, data-pipeline, ai-engineering, architecture]
+tags: ["software-engineering", "intermediate", "event-sourcing", "event-driven", "audit-log", "cqrs", "architecture"]
 related:
   - patterns/event-sourcing-ai
   - glossary/event-driven-architecture

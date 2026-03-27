@@ -3,7 +3,7 @@ title: "Pydantic AI - Type-Safe Agent Development"
 description: "Using Pydantic AI to build AI agents with validated inputs and outputs, Bedrock backend support, and Python type annotations."
 date: 2026-03-25
 categories: [Tools]
-tags: [pydantic-ai, agents, type-safety, python, AI-frameworks]
+tags: ["ai-agents", "intermediate", "pydantic-ai", "agents", "python", "type-safety", "framework"]
 ---
 
 Pydantic AI is a Python agent framework built by the team behind Pydantic, the data validation library used in FastAPI and LangChain. Its core differentiator is type safety: agent inputs, tool parameters, and model outputs are defined with Python type annotations and validated by Pydantic models at runtime. This makes agent code more maintainable and catches integration errors early.

@@ -3,7 +3,7 @@ title: "Data Structures for AI Applications"
 description: "Arrays, hash maps, trees, graphs, queues, and vector stores - how the choice of data structure shapes the performance of AI pipelines."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, fundamentals, data-structures, algorithms]
+tags: ["cs-fundamentals", "beginner", "data-structures", "arrays", "trees", "graphs", "algorithms"]
 related:
   - glossary/time-complexity
   - guides/sorting-algorithms-for-ai

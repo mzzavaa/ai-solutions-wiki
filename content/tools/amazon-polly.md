@@ -3,7 +3,7 @@ title: "Amazon Polly - Text-to-Speech for Applications"
 description: "Using Amazon Polly to generate natural-sounding speech from text in AI applications, with SSML control and neural voice options."
 date: 2026-03-25
 categories: [Tools]
-tags: [amazon-polly, text-to-speech, TTS, voice, AWS]
+tags: ["ai-ml", "beginner", "amazon-polly", "text-to-speech", "audio", "aws", "speech"]
 ---
 
 Amazon Polly converts text to lifelike speech using deep learning. It offers 60+ voices across 30+ languages, with two tiers: standard voices (concatenative synthesis, faster, cheaper) and neural voices (deep learning, more natural prosody). For AI applications that generate audio output - narration, accessibility features, voice assistants - Polly removes the need for third-party TTS vendors.

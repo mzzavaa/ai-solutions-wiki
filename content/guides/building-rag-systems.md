@@ -3,7 +3,7 @@ title: "Building RAG Systems - A Step-by-Step Guide"
 description: "Document ingestion, chunking strategies, embedding models, vector stores, retrieval tuning, and generation with context for production RAG implementations."
 date: 2026-03-24
 categories: [Guides]
-tags: [RAG, vector-search, embeddings, document-processing, knowledge-base]
+tags: ["ai-agents", "advanced", "rag", "retrieval", "vector-search", "embeddings", "knowledge-base"]
 tools: [amazon-bedrock, amazon-opensearch]
 related:
   - glossary/rag

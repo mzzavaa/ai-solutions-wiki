@@ -3,7 +3,7 @@ title: "Amazon OpenSearch Service - Search and Analytics for AI"
 description: "Using Amazon OpenSearch Service for vector search, full-text search, and log analytics in AI-powered applications."
 date: 2026-03-25
 categories: [Tools]
-tags: [amazon-opensearch, vector-search, search, analytics, AWS]
+tags: ["data-engineering", "intermediate", "amazon-opensearch", "search", "vector-search", "aws", "elasticsearch"]
 related:
   - glossary/rag
   - glossary/vector-database

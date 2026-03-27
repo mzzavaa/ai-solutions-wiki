@@ -2,6 +2,7 @@
 title: "About This Wiki"
 description: "What the AI Solutions Wiki is, who it is for, and how the content is organized."
 date: 2026-03-24
+tags: ["project-management", "beginner", "about", "wiki", "ai-solutions"]
 ---
 
 ## What This Wiki Is

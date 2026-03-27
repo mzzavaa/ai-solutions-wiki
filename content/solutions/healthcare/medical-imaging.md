@@ -3,7 +3,7 @@ title: "AI for Medical Imaging Analysis"
 description: "Radiology assistance, pathology screening, imaging quality assessment, and clinical decision support using AI."
 date: 2026-03-24
 categories: [Solutions]
-tags: [medical-imaging, radiology, pathology, clinical-decision-support, healthcare-AI]
+tags: ["ai-ml", "advanced", "medical-imaging", "computer-vision", "healthcare", "radiology", "diagnostics"]
 industries: [healthcare]
 tools: [amazon-sagemaker, amazon-bedrock, amazon-rekognition]
 ---

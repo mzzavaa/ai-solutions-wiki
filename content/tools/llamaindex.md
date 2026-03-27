@@ -3,7 +3,7 @@ title: "LlamaIndex - RAG and Agent Framework"
 description: "Using LlamaIndex for retrieval-augmented generation, data connectors, and agent workflows, with Bedrock and OpenSearch integration."
 date: 2026-03-24
 categories: [Tools]
-tags: [llamaindex, RAG, agents, python, AI-frameworks]
+tags: ["ai-agents", "intermediate", "llamaindex", "rag", "data-connectors", "indexing", "retrieval"]
 ---
 
 LlamaIndex is a Python data framework for building LLM applications over your own data. Its focus is connecting models to external data sources through retrieval-augmented generation (RAG), with a comprehensive set of data connectors, index types, and query pipelines. It also supports agent workflows, though its primary strength is data-heavy applications.

@@ -3,7 +3,7 @@ title: "AI Guardrails - Safety and Compliance Controls"
 description: "What AI guardrails are, the types of controls they enforce, how to implement them in enterprise applications, and Amazon Bedrock Guardrails specifically."
 date: 2026-03-24
 categories: [Glossary]
-tags: [guardrails, safety, compliance, bedrock-guardrails, content-filtering, enterprise]
+tags: ["ai-agents", "intermediate", "guardrails", "safety", "responsible-ai", "content-filtering", "llm"]
 ---
 
 AI guardrails are controls that constrain the inputs and outputs of AI systems to enforce safety, compliance, and quality requirements. In enterprise applications, guardrails are not optional - they are the mechanism by which organizations meet regulatory obligations, brand standards, and operational quality requirements for AI-generated content.

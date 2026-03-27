@@ -3,7 +3,7 @@ title: "AI for Power Grid Optimization"
 description: "Load balancing, renewable energy integration, demand forecasting, and smart grid management with AI."
 date: 2026-03-24
 categories: [Solutions]
-tags: [grid-optimization, demand-forecasting, renewables, load-balancing, smart-grid]
+tags: ["ai-ml", "advanced", "grid-optimization", "energy", "forecasting", "optimization", "timeseries"]
 industries: [energy]
 tools: [amazon-sagemaker, amazon-bedrock]
 ---

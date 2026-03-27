@@ -3,7 +3,7 @@ title: "Remotion - Programmatic Video Creation with React"
 description: "Using Remotion to generate videos programmatically from React components, with Lambda rendering for scalable AI-driven video production."
 date: 2026-03-24
 categories: [Tools]
-tags: [remotion, video, react, programmatic-video, rendering]
+tags: ["media-processing", "intermediate", "remotion", "video-generation", "react", "programmatic-video", "javascript"]
 ---
 
 Remotion lets you create videos using React components. Instead of editing in a timeline, you write TypeScript/JavaScript that describes what appears on screen at each frame. This approach makes video creation programmable: AI-generated content, dynamic data, and template-driven production all become straightforward.

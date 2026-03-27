@@ -3,7 +3,7 @@ title: "LangGraph - Stateful AI Agent Graphs"
 description: "How LangGraph models AI agent workflows as stateful graphs, enabling cyclic execution, human-in-the-loop, and complex multi-step agent patterns."
 date: 2026-03-24
 categories: [Tools]
-tags: [langgraph, ai-agents, langchain, stateful, orchestration, framework]
+tags: ["ai-agents", "intermediate", "langgraph", "stateful-agents", "graphs", "langchain", "orchestration"]
 ---
 
 LangGraph is a library from the LangChain team for building stateful, multi-step AI agent workflows modeled as directed graphs. Unlike linear pipelines, LangGraph workflows can cycle - an agent can reason, take an action, observe the result, and decide whether to continue or loop back - enabling more sophisticated agent behavior than sequential chains allow.

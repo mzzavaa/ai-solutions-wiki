@@ -3,7 +3,7 @@ title: "Canary Deployment"
 description: "What canary deployment is, how gradual traffic shifting works, which metrics to watch, and how to configure automatic rollback triggers for AI model releases."
 date: 2026-03-25
 categories: [Glossary]
-tags: [canary, deployment, gradual-rollout, rollback, ai-engineering, devops, traffic-shifting]
+tags: ["devops", "intermediate", "canary-deployment", "progressive-rollout", "deployment", "risk-management", "release"]
 related:
   - patterns/canary-deployment
   - patterns/blue-green-deployment

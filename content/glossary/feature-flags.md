@@ -3,7 +3,7 @@ title: "Feature Flags"
 description: "What feature flags are, how they enable safe AI model rollouts, A/B testing, and instant rollback - and the tools available for implementing them."
 date: 2026-03-25
 categories: [Glossary]
-tags: [feature-flags, deployment, ab-testing, canary, model-deployment, ai-engineering]
+tags: ["software-engineering", "intermediate", "feature-flags", "progressive-delivery", "rollout", "experimentation", "deployment"]
 related:
   - patterns/feature-flags-ai
   - guides/ci-cd-for-ai

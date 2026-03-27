@@ -3,7 +3,7 @@ title: "AWS Well-Architected AI/ML Lens - Applying Best Practices to Machine Lea
 description: "The AWS ML Lens extends the Well-Architected Framework to cover ML lifecycle phases, ML pipeline automation, model security, inference reliability, and AI-specific cost and sustainability patterns."
 date: 2026-03-26
 categories: [Frameworks]
-tags: [frameworks, well-architected, aws, ai, ml, sagemaker, bedrock]
+tags: ["architecture", "intermediate", "well-architected", "ai-ml-lens", "aws", "mlops", "best-practices"]
 related:
   - frameworks/well-architected-framework
   - glossary/operational-excellence

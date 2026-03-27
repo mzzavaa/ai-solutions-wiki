@@ -3,7 +3,7 @@ title: "Context Window Management Patterns"
 description: "Summarization, sliding window, retrieval-augmented, and hierarchical context patterns for handling conversations and documents that exceed model limits."
 date: 2026-03-24
 categories: [Patterns]
-tags: [context-window, summarization, RAG, token-management, long-context]
+tags: ["ai-ml", "intermediate", "context-window", "prompt-management", "llm", "chunking", "memory"]
 tools: [amazon-bedrock]
 ---
 

@@ -3,7 +3,7 @@ title: "Amazon EventBridge - Event-Driven AI Orchestration"
 description: "Using Amazon EventBridge to connect AWS AI services, trigger pipelines from S3 events, and build loosely coupled multi-step workflows."
 date: 2026-03-25
 categories: [Tools]
-tags: [aws-eventbridge, event-driven, orchestration, AWS, serverless]
+tags: ["cloud-computing", "intermediate", "aws-eventbridge", "event-driven", "orchestration", "serverless", "workflow"]
 ---
 
 Amazon EventBridge is a serverless event bus that routes events between AWS services, SaaS applications, and your own code. In AI pipelines it acts as the connective tissue between loosely coupled steps - decoupling event producers (S3 uploads, API calls, scheduled jobs) from event consumers (Lambda functions, Step Functions workflows, SQS queues).

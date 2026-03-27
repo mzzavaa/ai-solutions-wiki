@@ -3,7 +3,7 @@ title: "AI Spark: Auto-Classify and Route Incoming Emails"
 description: "Use AI to classify incoming emails by type, urgency, and intent, then route them to the right team or workflow automatically."
 date: 2026-03-24
 categories: [Ideas]
-tags: [email-classification, routing, automation, customer-support, nlp]
+tags: ["ai-ml", "beginner", "email-classification", "nlp", "automation", "routing", "productivity"]
 ---
 
 High-volume email inboxes - customer support queues, procurement inboxes, HR inquiry mailboxes - spend significant human time doing triage: reading each email, deciding what type it is, and forwarding it to the right person or team. AI classification handles this triage layer reliably and at scale.

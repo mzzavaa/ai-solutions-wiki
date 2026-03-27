@@ -13,15 +13,15 @@
     </div>
     <div class="hero-stats">
       <div class="stat">
-        <strong>200+</strong>
+        <strong>{{ len .Site.RegularPages }}</strong>
         <span>Articles</span>
       </div>
       <div class="stat">
-        <strong>9</strong>
+        <strong>{{ len .Site.Sections }}</strong>
         <span>Sections</span>
       </div>
       <div class="stat">
-        <strong>15+</strong>
+        <strong>{{ with .Site.GetPage "solutions" }}{{ len .Sections }}{{ end }}</strong>
         <span>Industries</span>
       </div>
       <div class="stat">

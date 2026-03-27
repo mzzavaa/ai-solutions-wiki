@@ -3,7 +3,7 @@ title: "AI Agents - Autonomous Task Execution"
 description: "What AI agents are, how they differ from simple LLM calls, the key design patterns, and what makes agents fail in production."
 date: 2026-03-24
 categories: [Glossary]
-tags: [ai-agents, agents, autonomous, tool-use, multi-step, agentic]
+tags: ["ai-agents", "beginner", "ai-agents", "autonomous", "tool-use", "planning", "llm"]
 related:
   - glossary/agentic-ai
   - glossary/multi-agent-systems

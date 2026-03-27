@@ -3,7 +3,7 @@ title: "LLM - Large Language Model"
 description: "What large language models are, how they work at a high level, key characteristics, and what they can and cannot do reliably."
 date: 2026-03-24
 categories: [Glossary]
-tags: [LLM, foundation-models, AI-basics, language-model, transformer]
+tags: ["ai-ml", "beginner", "llm", "large-language-model", "transformers", "pre-training", "foundation-models"]
 related:
   - glossary/foundation-models
   - glossary/prompt-engineering

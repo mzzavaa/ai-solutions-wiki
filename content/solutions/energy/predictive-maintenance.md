@@ -3,7 +3,7 @@ title: "AI Predictive Maintenance for Energy Infrastructure"
 description: "Sensor data analysis, failure prediction, maintenance scheduling, and cost optimization for energy infrastructure operators."
 date: 2026-03-24
 categories: [Solutions]
-tags: [predictive-maintenance, IoT, sensor-data, infrastructure, energy]
+tags: ["ai-ml", "advanced", "predictive-maintenance", "anomaly-detection", "iot", "energy", "timeseries"]
 industries: [energy]
 tools: [amazon-sagemaker, amazon-bedrock]
 ---

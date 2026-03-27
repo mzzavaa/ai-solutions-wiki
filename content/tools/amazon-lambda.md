@@ -3,7 +3,7 @@ title: "AWS Lambda for AI Pipelines"
 description: "Serverless inference, event-driven processing, and integration patterns with Bedrock, SageMaker, and Step Functions. Cost optimization for AI workloads."
 date: 2026-03-24
 categories: [Tools]
-tags: [AWS-Lambda, serverless, event-driven, AI-pipelines, integration]
+tags: ["cloud-computing", "intermediate", "aws-lambda", "serverless", "functions", "aws", "event-driven"]
 tools: [amazon-lambda, amazon-bedrock, amazon-sagemaker, amazon-step-functions]
 ---
 

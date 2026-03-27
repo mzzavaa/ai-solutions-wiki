@@ -3,7 +3,7 @@ title: "Blue-Green Deployment"
 description: "What blue-green deployment is, how it works, why it matters for zero-downtime AI model updates, and how it compares to canary and rolling deployments."
 date: 2026-03-25
 categories: [Glossary]
-tags: [blue-green, deployment, zero-downtime, rollback, ai-engineering, devops]
+tags: ["devops", "intermediate", "blue-green-deployment", "zero-downtime", "deployment", "release", "rollback"]
 related:
   - patterns/blue-green-deployment
   - patterns/canary-deployment

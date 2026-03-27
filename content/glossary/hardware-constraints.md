@@ -3,7 +3,7 @@ title: "Hardware Constraints for AI Systems"
 description: "CPU vs GPU, VRAM limits, memory bandwidth, and how hardware choices determine what AI models you can run and at what cost."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, fundamentals, hardware, gpu, performance]
+tags: ["cs-fundamentals", "intermediate", "hardware-constraints", "memory", "cpu", "gpu", "performance"]
 related:
   - glossary/floating-point
   - glossary/binary-system

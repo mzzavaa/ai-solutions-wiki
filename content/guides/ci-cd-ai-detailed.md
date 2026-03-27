@@ -3,7 +3,7 @@ title: "CI/CD for AI Projects - A Complete Pipeline Guide"
 description: "A detailed walkthrough of a CI/CD pipeline for AI: source control, Docker builds, model evaluation, staged deployment, and drift monitoring with GitHub Actions and Terraform."
 date: 2026-03-25
 categories: [Guides]
-tags: [ci-cd, github-actions, devops, model-versioning, testing, deployment, terraform, AI-engineering]
+tags: ["devops", "advanced", "ci-cd", "mlops", "automation", "deployment", "testing"]
 related:
   - glossary/ci-cd
   - guides/infrastructure-as-code-ai

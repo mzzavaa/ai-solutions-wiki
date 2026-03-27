@@ -3,7 +3,7 @@ title: "Intelligent Document Processing with AI"
 description: "A practical architecture for extracting structured data from invoices, contracts, and forms - combining OCR, classification, and LLM-based extraction."
 date: 2026-03-24
 categories: [Solutions]
-tags: [document-processing, OCR, invoice-extraction, textract, IDP]
+tags: ["ai-ml", "intermediate", "document-processing", "finance", "extraction", "automation", "ocr"]
 industries: [finance, insurance, legal]
 tools: [amazon-textract, amazon-bedrock]
 ---
