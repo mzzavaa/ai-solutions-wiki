@@ -5,6 +5,10 @@ date: 2026-03-24
 categories: [Tools]
 tags: [NLP, sentiment-analysis, entity-extraction, topic-modeling, AWS]
 tools: [amazon-comprehend, amazon-bedrock]
+related:
+  - tools/azure-cognitive-services
+  - tools/google-cloud-natural-language
+  - tools/spacy
 ---
 
 Amazon Comprehend is a managed NLP service that provides trained models for common text analysis tasks without requiring ML expertise or model training. It handles the high-volume, structured NLP tasks that would otherwise require either custom model development or expensive LLM calls.

@@ -8,6 +8,9 @@ related:
   - tools/aws-lambda
   - tools/aws-s3
   - tools/amazon-eventbridge
+  - tools/azure-event-hubs
+  - tools/google-cloud-pub-sub
+  - tools/apache-kafka
 ---
 
 Amazon Managed Streaming for Apache Kafka (MSK) is a fully managed service for running Apache Kafka on AWS. Kafka is the industry standard for real-time event streaming, and MSK removes the operational burden of managing Kafka clusters: broker provisioning, patching, replication, and failure recovery are handled automatically. For AI projects, MSK serves as the real-time data backbone that feeds events into ML feature stores, inference pipelines, and analytics systems.

@@ -4,6 +4,10 @@ description: "Using AWS Amplify to deploy front-end applications, host static si
 date: 2026-03-24
 categories: [Tools]
 tags: [aws-amplify, hosting, full-stack, deployment, AWS]
+related:
+  - tools/azure-static-web-apps
+  - tools/google-firebase
+  - tools/supabase
 ---
 
 AWS Amplify is a platform for building and deploying full-stack web and mobile applications on AWS. It provides hosting for static and server-side rendered apps, CI/CD pipelines connected to Git repositories, and a library for connecting front-end code to AWS services. For AI application front-ends, Amplify is the fastest path from a React or Next.js codebase to a deployed, scalable application.

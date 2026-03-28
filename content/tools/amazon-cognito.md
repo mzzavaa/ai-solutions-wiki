@@ -4,6 +4,10 @@ description: "Using Amazon Cognito for user sign-up, sign-in, and access control
 date: 2026-03-24
 categories: [Tools]
 tags: [amazon-cognito, authentication, security, identity, AWS]
+related:
+  - tools/azure-ad-b2c
+  - tools/google-firebase
+  - tools/keycloak
 ---
 
 Amazon Cognito provides user authentication, authorization, and user management for web and mobile applications. It handles sign-up flows, password policies, MFA, social identity providers (Google, Apple, Facebook), and enterprise federation (SAML, OIDC). For AI applications, it secures the front-end layer and generates the credentials that authorize calls to AWS services.

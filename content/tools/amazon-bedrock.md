@@ -11,6 +11,10 @@ related:
   - comparisons/sagemaker-vs-bedrock
   - comparisons/bedrock-vs-azure-openai
   - guides/getting-started-with-bedrock
+  - tools/azure-openai
+  - tools/google-vertex-ai
+  - tools/ollama
+  - tools/vllm
 ---
 
 Amazon Bedrock is AWS's managed service for foundation model access. It provides a single API to call multiple large language models from different providers, alongside managed infrastructure for knowledge bases, agents, and output safety controls. For enterprise teams building on AWS, it is the primary integration point for generative AI capabilities.

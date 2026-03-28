@@ -5,6 +5,12 @@ date: 2026-03-24
 categories: [Tools]
 tags: [AWS-Lambda, serverless, event-driven, AI-pipelines, integration]
 tools: [amazon-lambda, amazon-bedrock, amazon-sagemaker, amazon-step-functions]
+related:
+  - tools/azure-functions
+  - tools/google-cloud-functions
+  - tools/knative
+  - tools/openfaas
+  - comparisons/lambda-vs-fargate-ai
 ---
 
 AWS Lambda is the glue that connects AI services in event-driven pipelines. It is not an AI service itself - it is a serverless compute environment where you run the orchestration logic, pre-processing, and post-processing code that sits between your data and your AI services. For many AI architectures, Lambda is the cheapest and simplest way to build event-driven processing.

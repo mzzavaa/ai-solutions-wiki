@@ -4,6 +4,10 @@ description: "How Amazon S3 functions as the storage backbone for AI data pipeli
 date: 2026-03-25
 categories: [Tools]
 tags: [aws-s3, storage, AWS, data-pipeline, object-storage]
+related:
+  - tools/azure-blob-storage
+  - tools/google-cloud-storage
+  - tools/minio
 ---
 
 Amazon S3 (Simple Storage Service) is object storage built to store and retrieve any amount of data from anywhere. In AI pipelines it serves as the primary layer for raw data ingest, intermediate processing artifacts, model inputs, and final outputs. Because almost every AWS AI service integrates natively with S3, it is typically the first and last stop in any data workflow.

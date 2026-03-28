@@ -10,6 +10,8 @@ related:
   - patterns/rag-implementation
   - guides/building-rag-systems
   - tools/amazon-bedrock
+  - tools/azure-search
+  - tools/elasticsearch
 ---
 
 Amazon OpenSearch Service is a managed deployment of OpenSearch (the open-source fork of Elasticsearch). It handles cluster provisioning, patching, scaling, and backups. For AI applications, its primary use cases are vector similarity search (for RAG and semantic search), full-text search over document collections, and log/event analytics.
