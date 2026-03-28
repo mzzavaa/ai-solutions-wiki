@@ -5,7 +5,7 @@ date: 2026-03-28
 categories: [Tools]
 tags: [amazon-glue, AWS, ETL, data-integration, data-catalog, serverless]
 related:
-  - tools/amazon-s3
+  - tools/aws-s3
   - tools/amazon-athena
   - tools/amazon-sagemaker
   - tools/amazon-redshift

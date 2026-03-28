@@ -51,6 +51,21 @@ Hugo's taxonomy system automatically generates listing pages for any front matte
 
 Hugo is consistently the fastest static site generator. Competing tools like Jekyll (Ruby), Gatsby (React), and Next.js (Node.js) take seconds to minutes for large sites. Hugo builds 10,000 pages in under 10 seconds. This matters for development iteration speed and CI/CD pipeline time.
 
+## Origins and History
+
+Hugo was created by Steve Francia (known online as spf13) and first released on July 5, 2013. Francia's motivation was frustration with the maintenance costs and performance limitations of dynamic content management systems like WordPress, as well as the slow build times of existing static site generators like Jekyll, which is written in Ruby.
+
+Francia chose Go as the implementation language specifically for its concurrency features and compiled binary performance. The initial prototype was built during a focused weekend coding session, and Francia validated the concept by migrating his own WordPress blog, which contained over two hundred posts, to Hugo. The speed improvement was immediate and dramatic.
+
+Since version 0.14 in 2015, Hugo has been led by Bjorn Erik Pedersen, with Francia moving on to join the core Go team at Google. The project is licensed under the Apache License 2.0 and has accumulated over 87,000 GitHub stars as of early 2026.
+
+## Sources
+
+1. Hugo (software) - Wikipedia. [https://en.wikipedia.org/wiki/Hugo_(software)](https://en.wikipedia.org/wiki/Hugo_(software))
+2. Hugo GitHub Repository. [https://github.com/gohugoio/hugo](https://github.com/gohugoio/hugo)
+3. Hugo Official Site. [https://gohugo.io/](https://gohugo.io/)
+4. LWN.net (2020). "Hugo: a static-site generator." [https://lwn.net/Articles/825507/](https://lwn.net/Articles/825507/)
+
 ## Related Articles
 
 - [AWS Amplify]({{< relref "aws-amplify.md" >}}) - hosting for Hugo sites on AWS

@@ -62,3 +62,18 @@ Lambda pricing is based on invocation count and execution duration times memory 
 **Concurrency limits** - Without explicit limits, Lambda can scale to thousands of concurrent invocations instantly. For AI pipelines connected to AI services with rate limits or quota, set Lambda reserved concurrency to match your AI service quota, preventing Lambda from overwhelming the downstream service.
 
 Lambda costs for AI pipeline orchestration are typically 1-5% of total AI workload cost. The AI service calls dominate. Optimize Lambda for reliability and simplicity rather than for Lambda-specific cost.
+
+## Origins and History
+
+AWS Lambda was announced at AWS re:Invent 2014 by Dr. Tim Wagner, who had joined AWS in 2012 and conceived the service. In a 2013 meeting, Jeff Barr and Wagner discussed ways to let developers focus on code rather than infrastructure. Barr later recalled "throwing my arms skyward and indicating that it would be cool to simply toss the code into the air and have the cloud grab, store, and run it." Wagner wrote an internal PRFAQ proposing exactly that, and Lambda was greenlit -- sponsored by the S3 team and approved by Andy Jassy.
+
+At re:Invent 2014, Werner Vogels introduced Lambda in the Day 2 keynote, and Wagner presented session MBL202, "Getting Started with AWS Lambda," with a live demo. The preview launch supported only Node.js, with functions limited to 60 seconds of runtime, 25 concurrent executions per account, and 128 MB to 1 GB of configurable memory. Lambda was initially positioned as "a kind of simple scripting mechanism to thumbnail images coming into S3."
+
+Wagner's original pitch was for an event-driven glue service, not a general-purpose compute platform. He reportedly asserted that no one would ever use it for video transcoding -- a prediction that proved wrong. Wagner later wrote on the AWS Compute Blog that "you could use AWS Lambda to build entirely serverless applications," coining one of the earliest uses of the term "serverless" in this context. Austen Collins, creator of the Serverless Framework, cited that blog post as the first time he encountered the word.
+
+## Sources
+
+1. AWS Blog. "AWS Lambda turns ten -- looking back and looking ahead." November 2024. [https://aws.amazon.com/blogs/aws/aws-lambda-turns-ten-the-first-decade-of-serverless-innovation/](https://aws.amazon.com/blogs/aws/aws-lambda-turns-ten-the-first-decade-of-serverless-innovation/)
+2. AWS Compute Blog. "Compute content at re:Invent 2014." [https://aws.amazon.com/blogs/compute/reinvent2014/](https://aws.amazon.com/blogs/compute/reinvent2014/)
+3. Serverless Chats Podcast. "Episode #52: The Past, Present, and Future of Serverless with Tim Wagner." [https://www.serverlesschats.com/52/](https://www.serverlesschats.com/52/)
+4. Lober, F. "10 Years of AWS Lambda -- The Evolution, Impact, and Future of Serverless." Medium. [https://medium.com/@fabian_lober/10-years-of-aws-lambda-the-evolution-impact-and-future-of-serverless-1-2-0da1e86a9dae](https://medium.com/@fabian_lober/10-years-of-aws-lambda-the-evolution-impact-and-future-of-serverless-1-2-0da1e86a9dae)

@@ -6,7 +6,7 @@ categories: [Tools]
 tags: [amazon-forecast, AWS, time-series, forecasting, ML]
 related:
   - tools/amazon-sagemaker
-  - tools/amazon-s3
+  - tools/aws-s3
   - tools/amazon-quicksight
 ---
 

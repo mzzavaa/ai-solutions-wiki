@@ -7,7 +7,7 @@ tags: [amazon-personalize, AWS, recommendations, ML, personalization]
 related:
   - tools/amazon-bedrock
   - tools/amazon-sagemaker
-  - tools/amazon-s3
+  - tools/aws-s3
 ---
 
 Amazon Personalize is a managed machine learning service that generates individualized recommendations for users. It uses the same recommendation technology that Amazon.com uses for product suggestions. You provide interaction data (user clicked item X, user purchased item Y), and Personalize trains models that predict what each user is most likely to engage with next. No ML expertise is required to get started, though the service exposes tuning parameters for teams that want fine-grained control.

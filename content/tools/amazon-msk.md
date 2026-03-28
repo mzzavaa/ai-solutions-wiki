@@ -6,7 +6,7 @@ categories: [Tools]
 tags: [amazon-msk, AWS, kafka, streaming, event-driven, data-pipelines]
 related:
   - tools/amazon-lambda
-  - tools/amazon-s3
+  - tools/aws-s3
   - tools/aws-eventbridge
 ---
 

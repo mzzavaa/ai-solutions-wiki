@@ -7,7 +7,7 @@ tags: [glossary, fundamentals, hardware, gpu, performance]
 related:
   - glossary/floating-point
   - glossary/binary-system
-  - guides/aws-bedrock-101
+  - guides/getting-started-with-bedrock
 ---
 
 AI model performance is ultimately bounded by hardware. Understanding the constraints - what limits inference speed, what determines whether a model fits in memory, what drives cloud costs - is essential for designing cost-effective AI systems.

@@ -46,3 +46,18 @@ Bedrock uses on-demand pricing (per input/output token) for most use cases, with
 Cross-region inference (where Bedrock routes requests to the most available region) can improve throughput during peak demand without additional configuration.
 
 For workloads over 40-50 API calls per minute sustained, Provisioned Throughput provides cost predictability. For spiky or low-volume workloads, on-demand is almost always the right choice.
+
+## Origins and History
+
+AWS announced Amazon Bedrock in April 2023 during a special announcement event, positioning it as the primary way to access foundation models within the AWS ecosystem. The service reached general availability on September 28, 2023, with an announcement describing five generative AI innovations aimed at making it easier for organizations to "build new generative AI applications, enhance employee productivity, and transform businesses."
+
+At GA launch, Bedrock offered models from AI21 Labs, Anthropic (Claude), Cohere, Stability AI, and Amazon (Titan), with Meta's Llama models following shortly after. The serverless architecture meant customers had no infrastructure to provision -- they made API calls and paid per token.
+
+At re:Invent 2023 (November/December), AWS announced significant expansions: access to Anthropic's Claude 2.1 with a 200,000-token context window, general availability of Agents for Amazon Bedrock (enabling multi-step task execution using company systems and data), and the introduction of Guardrails for Amazon Bedrock (allowing companies to define content filtering policies). Subsequent re:Invent cycles in 2024 and 2025 added Amazon's own Nova model family, Bedrock Knowledge Bases for RAG, reranking capabilities, and model evaluation tools.
+
+## Sources
+
+1. About Amazon. "Amazon Bedrock General Availability Generative AI Innovations." September 28, 2023. [https://www.aboutamazon.com/news/aws/aws-amazon-bedrock-general-availability-generative-ai-innovations](https://www.aboutamazon.com/news/aws/aws-amazon-bedrock-general-availability-generative-ai-innovations)
+2. About Amazon. "AWS Announces More Model Choice and Powerful New Capabilities in Amazon Bedrock." November 2023. [https://press.aboutamazon.com/2023/11/aws-announces-more-model-choice-and-powerful-new-capabilities-in-amazon-bedrock-to-securely-build-and-scale-generative-ai-applications](https://press.aboutamazon.com/2023/11/aws-announces-more-model-choice-and-powerful-new-capabilities-in-amazon-bedrock-to-securely-build-and-scale-generative-ai-applications)
+3. AWS Blog. "Top announcements of AWS re:Invent 2023." [https://aws.amazon.com/blogs/aws/top-announcements-of-aws-reinvent-2023/](https://aws.amazon.com/blogs/aws/top-announcements-of-aws-reinvent-2023/)
+4. AWS Documentation. "Amazon Bedrock." [https://docs.aws.amazon.com/bedrock/](https://docs.aws.amazon.com/bedrock/)

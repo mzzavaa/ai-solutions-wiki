@@ -7,7 +7,7 @@ tags: [glossary, fundamentals, api, rest, integration]
 related:
   - guides/programming-languages-for-ai
   - glossary/hardware-constraints
-  - guides/aws-bedrock-101
+  - guides/getting-started-with-bedrock
 ---
 
 An API (Application Programming Interface) is a defined contract that lets two pieces of software communicate. One side exposes endpoints and operations; the other side calls them. The implementation details on either side are hidden - you do not need to know how Bedrock runs inference to call the Bedrock API.

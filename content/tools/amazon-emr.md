@@ -6,7 +6,7 @@ categories: [Tools]
 tags: [amazon-emr, AWS, spark, big-data, data-processing, feature-engineering]
 related:
   - tools/amazon-sagemaker
-  - tools/amazon-s3
+  - tools/aws-s3
   - tools/amazon-glue
 ---
 

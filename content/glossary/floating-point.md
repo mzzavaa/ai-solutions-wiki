@@ -7,7 +7,7 @@ tags: [glossary, fundamentals, quantization, model-optimization]
 related:
   - glossary/binary-system
   - glossary/hardware-constraints
-  - guides/aws-bedrock-101
+  - guides/getting-started-with-bedrock
 ---
 
 Floating-point arithmetic is how computers represent real numbers (numbers with fractional parts) in binary. The precision of this representation - how many bits are used - directly determines how large an AI model is, how fast it runs, and how accurately it performs.

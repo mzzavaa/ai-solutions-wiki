@@ -45,6 +45,23 @@ Amplify is a good fit when:
 
 Amplify adds an abstraction layer over CloudFormation. For teams that need precise control over infrastructure, Terraform or CDK may be more appropriate.
 
+## Origins and History
+
+AWS introduced Amplify in November 2017 at AWS re:Invent as an open-source JavaScript library designed to simplify the integration of mobile and web applications with AWS backend services. At launch, even adding a basic login page required wrestling with CloudFormation templates and IAM policies. Amplify aimed to collapse that boilerplate into simple library calls.
+
+The platform evolved rapidly through a series of milestones. In August 2018, the Amplify CLI launched as a command-line tool that generated backend resources through an interactive wizard, automatically creating least-privilege IAM roles, Cognito user pools, API Gateway endpoints, and S3 buckets. In November 2018, Amplify Console (now Amplify Hosting) introduced Git-based continuous deployment with automatic branch previews.
+
+In December 2020, Amplify Studio (initially called Admin UI) provided a visual interface for building backends without the CLI. A 2021 update added Figma-to-React code generation, enabling designers to export components directly into Amplify applications.
+
+**Amplify Gen 2**, previewed at re:Invent 2023 and reaching general availability in 2024, represents a fundamental architectural shift. Gen 2 replaces the CLI wizard and JSON configuration files with a TypeScript-first, code-first approach. Developers define their backend resources -- authentication rules, data models, storage buckets, functions -- entirely in TypeScript using the Amplify libraries. This configuration is stored alongside application code in the repository, enabling standard code review, version control, and refactoring workflows.
+
+## Sources
+
+1. AWS Blog. "AWS Amplify Evolution Timeline -- 2017 to 2025." [https://dev.to/aws-builders/aws-amplify-evolution-timeline-2017-to-2025-d83](https://dev.to/aws-builders/aws-amplify-evolution-timeline-2017-to-2025-d83)
+2. AWS Blog. "Introducing the Next Generation of AWS Amplify's Fullstack Development Experience." [https://aws.amazon.com/blogs/mobile/introducing-amplify-gen2/](https://aws.amazon.com/blogs/mobile/introducing-amplify-gen2/)
+3. AWS Documentation. "AWS Amplify." [https://docs.amplify.aws/](https://docs.amplify.aws/)
+4. Collins, F. "AWS Amplify 2024: A New Era." [https://blog.focusotter.com/aws-amplify-in-2024-is-not-the-amplify-you-grew-up-with](https://blog.focusotter.com/aws-amplify-in-2024-is-not-the-amplify-you-grew-up-with)
+
 ## Related Articles
 
 - [Amazon Cognito]({{< relref "aws-cognito.md" >}}) - authentication backend for Amplify apps

@@ -67,6 +67,21 @@ After Bedrock processes a transcript or generates an edited script, FFmpeg assem
 
 Remotion creates video from scratch using React components and data. FFmpeg processes existing video. They are complementary, not competing tools. See the [Remotion vs FFmpeg comparison]({{< relref "remotion-vs-ffmpeg.md" >}}) for full context.
 
+## Origins and History
+
+FFmpeg was created by French programmer Fabrice Bellard, initially publishing under the pseudonym "Gerard Lantau," and first released on December 20, 2000. The name combines "FF" for "Fast Forward" (a reference to VCR controls) with "mpeg" for the Moving Picture Experts Group standard. The project was originally hosted on SourceForge, where it became one of the most popular projects on the platform. After FFmpeg migrated to its own infrastructure several years later, SourceForge reportedly experienced a significant drop in traffic.
+
+Bellard's use of a pseudonym was likely a precaution against patent litigation, which was a serious risk for anyone working on multimedia codec implementations at the time. In 2003, Bellard departed the project, and Michael Niedermayer assumed the role of lead maintainer, a position he held until 2015. Bellard went on to create other foundational projects including QEMU and the Tiny C Compiler.
+
+As of 2026, the FFmpeg repository has over 57,000 GitHub stars, 1.5 million lines of code, and contributions from over 2,400 developers across eight major versions.
+
+## Sources
+
+1. Kostya's Boring Codec World (2022). "FFhistory: Fabrice Bellard." [https://codecs.multimedia.cx/2022/12/ffhistory-fabrice-bellard/](https://codecs.multimedia.cx/2022/12/ffhistory-fabrice-bellard/)
+2. FFmpeg - Wikipedia. [https://en.wikipedia.org/wiki/FFmpeg](https://en.wikipedia.org/wiki/FFmpeg)
+3. Bellard, F. Home Page. [https://bellard.org/](https://bellard.org/)
+4. FFmpeg Official Site. [https://ffmpeg.org/](https://ffmpeg.org/)
+
 ## Related Articles
 
 - [AWS Elemental MediaConvert]({{< relref "aws-mediaconvert.md" >}}) - managed alternative for large files

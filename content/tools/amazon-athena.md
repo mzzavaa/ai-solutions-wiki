@@ -5,7 +5,7 @@ date: 2026-03-28
 categories: [Tools]
 tags: [amazon-athena, AWS, SQL, analytics, serverless, data-lake]
 related:
-  - tools/amazon-s3
+  - tools/aws-s3
   - tools/amazon-glue
   - tools/amazon-quicksight
   - tools/amazon-redshift

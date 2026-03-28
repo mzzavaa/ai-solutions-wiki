@@ -7,7 +7,7 @@ tags: [amazon-managed-grafana, AWS, monitoring, visualization, dashboards, obser
 related:
   - tools/amazon-timestream
   - tools/aws-cloudwatch
-  - tools/amazon-managed-service-kafka
+  - tools/amazon-msk
 ---
 
 Amazon Managed Grafana is a fully managed service for the open-source Grafana visualization platform. It provides enterprise-ready Grafana workspaces with built-in authentication (AWS IAM Identity Center, SAML), automatic scaling, and native integration with AWS data sources. For AI projects, Managed Grafana serves as the operational dashboard layer for monitoring model performance, data pipeline health, and infrastructure metrics.
