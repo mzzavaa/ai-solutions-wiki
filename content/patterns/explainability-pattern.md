@@ -7,7 +7,7 @@ tags: [explainability, transparency, audit, compliance, trust]
 related:
   - patterns/guardrails-pattern
   - frameworks/responsible-ai-framework
-  - frameworks/eu-ai-act-framework
+  - frameworks/eu-ai-act-risk-framework
   - frameworks/ai-ethics-framework
 ---
 
