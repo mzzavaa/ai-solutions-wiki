@@ -6,7 +6,7 @@ categories: [Glossary]
 tags: [programmatic-video, remotion, motion-canvas, manim, video-generation, automation]
 related:
   - glossary/remotion
-  - glossary/ffmpeg-glossary
+  - tools/ffmpeg
 ---
 
 Programmatic video is the practice of generating video content through code and data rather than through manual editing in timeline-based software. Instead of dragging clips on a timeline, a developer writes a program that describes scenes, animations, transitions, and overlays declaratively or procedurally. The program is then executed to render the final video file. This approach enables version control, parameterization, automated testing, and mass generation of video variants from templates.

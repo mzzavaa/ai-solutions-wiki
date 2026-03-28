@@ -8,7 +8,7 @@ related:
   - patterns/ai-governance
   - patterns/observability-ai
   - patterns/model-lineage
-  - glossary/nist-ai-rmf
+  - glossary/nist-ai-rmf-glossary
 ---
 
 Regulators, auditors, and internal governance teams need to answer a specific question: why did the AI system make this decision? An audit trail provides the answer by capturing an immutable record of every input, output, model version, configuration, and intermediate step involved in each AI-driven decision.

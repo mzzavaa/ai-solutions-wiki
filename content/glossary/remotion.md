@@ -5,7 +5,7 @@ date: 2026-03-28
 categories: [Glossary]
 tags: [remotion, programmatic-video, react, ffmpeg, video-as-code]
 related:
-  - glossary/ffmpeg-glossary
+  - tools/ffmpeg
   - glossary/programmatic-video
   - glossary/virtual-dom
 ---

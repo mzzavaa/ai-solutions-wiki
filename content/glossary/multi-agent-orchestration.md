@@ -6,7 +6,7 @@ categories: [Glossary]
 tags: [multi-agent, orchestration, ai-agents, autogen, crewai, langgraph, society-of-mind]
 related:
   - glossary/multi-agent-systems
-  - glossary/crewai-glossary
+  - tools/crewai
   - glossary/ai-agents
   - glossary/agentic-ai
   - glossary/aws-agentcore

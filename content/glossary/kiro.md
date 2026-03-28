@@ -8,7 +8,7 @@ related:
   - glossary/agentic-ai
   - glossary/ai-agents
   - glossary/prompt-engineering
-  - glossary/aws-bedrock-glossary
+  - tools/amazon-bedrock
 ---
 
 Kiro is an AI-powered integrated development environment (IDE) created by AWS that emphasizes spec-driven development over unstructured AI code generation. Built on the Code OSS platform (the open-source foundation of VS Code), Kiro guides developers through a structured workflow of requirements gathering, technical design, and task decomposition before generating code.

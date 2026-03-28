@@ -5,7 +5,7 @@ date: 2026-03-28
 categories: [Patterns]
 tags: [model-lineage, provenance, reproducibility, mlops, tracking, compliance, artifacts]
 related:
-  - glossary/model-lineage
+  - glossary/model-lineage-glossary
   - patterns/ai-audit-trail
   - patterns/model-versioning
   - patterns/data-versioning
