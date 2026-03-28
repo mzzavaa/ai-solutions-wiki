@@ -9,7 +9,7 @@ related:
   - glossary/observability
   - glossary/drift-detection
   - tools/amazon-bedrock
-  - tools/amazon-lambda
+  - tools/aws-lambda
 ---
 
 Amazon CloudWatch is AWS's monitoring and observability service. It collects metrics, logs, and traces from AWS services and custom applications, providing dashboards, alarms, and anomaly detection across the AWS resource stack. For AI workloads, CloudWatch provides the infrastructure monitoring layer - Lambda execution metrics, API Gateway latency, SQS queue depth - while AI-specific observability (token usage, response quality) requires custom metric publication.

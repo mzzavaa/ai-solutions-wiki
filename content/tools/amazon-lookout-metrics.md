@@ -5,7 +5,7 @@ date: 2026-03-28
 categories: [Tools]
 tags: [amazon-lookout-metrics, AWS, anomaly-detection, monitoring, ML]
 related:
-  - tools/aws-cloudwatch
+  - tools/amazon-cloudwatch
   - tools/amazon-managed-grafana
   - tools/amazon-quicksight
 ---

@@ -6,7 +6,7 @@ categories: [Tools]
 tags: [amazon-managed-grafana, AWS, monitoring, visualization, dashboards, observability]
 related:
   - tools/amazon-timestream
-  - tools/aws-cloudwatch
+  - tools/amazon-cloudwatch
   - tools/amazon-msk
 ---
 

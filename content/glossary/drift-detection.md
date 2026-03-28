@@ -7,7 +7,7 @@ tags: [drift-detection, model-monitor, sagemaker, mlops, retraining, data-qualit
 related:
   - patterns/observability-ai
   - patterns/model-versioning
-  - tools/aws-cloudwatch
+  - tools/amazon-cloudwatch
   - guides/ci-cd-ai-detailed
 ---
 

@@ -5,9 +5,9 @@ date: 2026-03-28
 categories: [Tools]
 tags: [amazon-msk, AWS, kafka, streaming, event-driven, data-pipelines]
 related:
-  - tools/amazon-lambda
+  - tools/aws-lambda
   - tools/aws-s3
-  - tools/aws-eventbridge
+  - tools/amazon-eventbridge
 ---
 
 Amazon Managed Streaming for Apache Kafka (MSK) is a fully managed service for running Apache Kafka on AWS. Kafka is the industry standard for real-time event streaming, and MSK removes the operational burden of managing Kafka clusters: broker provisioning, patching, replication, and failure recovery are handled automatically. For AI projects, MSK serves as the real-time data backbone that feeds events into ML feature stores, inference pipelines, and analytics systems.

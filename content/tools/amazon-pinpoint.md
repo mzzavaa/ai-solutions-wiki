@@ -7,7 +7,7 @@ tags: [amazon-pinpoint, AWS, marketing, messaging, segmentation, engagement]
 related:
   - tools/amazon-personalize
   - tools/amazon-connect
-  - tools/amazon-lambda
+  - tools/aws-lambda
 ---
 
 Amazon Pinpoint is a multi-channel customer engagement service that handles email, SMS, push notifications, voice messages, and in-app messaging. It combines messaging delivery with audience segmentation, campaign management, and analytics. For AI projects, Pinpoint is the delivery mechanism for personalized communications: sending the right message to the right user at the right time, informed by ML models that predict engagement and optimize send timing.

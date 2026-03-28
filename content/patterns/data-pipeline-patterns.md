@@ -6,8 +6,8 @@ categories: [Patterns]
 tags: [data-pipeline, mlops, feature-engineering, aws, patterns, data-quality]
 related:
   - glossary/event-driven-architecture
-  - tools/aws-eventbridge
-  - tools/amazon-step-functions
+  - tools/amazon-eventbridge
+  - tools/aws-step-functions
   - tools/aws-s3
   - tools/amazon-sagemaker
 ---

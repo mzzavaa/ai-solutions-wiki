@@ -7,7 +7,7 @@ tags: [aws-iot-core, AWS, IoT, MQTT, edge, device-management]
 related:
   - tools/amazon-timestream
   - tools/amazon-sagemaker
-  - tools/amazon-lambda
+  - tools/aws-lambda
 ---
 
 AWS IoT Core is a managed service that connects IoT devices to the AWS cloud. It handles device authentication, message brokering (via MQTT, HTTPS, and WebSocket protocols), and message routing through a rules engine that directs device data to AWS services. For AI projects, IoT Core is the entry point for sensor data that feeds ML models: predictive maintenance systems, anomaly detection, quality monitoring, and environmental intelligence.

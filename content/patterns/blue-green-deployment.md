@@ -8,7 +8,7 @@ related:
   - glossary/blue-green-deployment
   - patterns/canary-deployment
   - guides/ci-cd-ai-detailed
-  - tools/amazon-lambda
+  - tools/aws-lambda
   - patterns/model-versioning
 ---
 

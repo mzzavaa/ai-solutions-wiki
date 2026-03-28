@@ -7,7 +7,7 @@ tags: [aws-step-functions, orchestration, workflow, aws, pipelines, ai-agents]
 related:
   - glossary/serverless
   - patterns/data-pipeline-patterns
-  - tools/amazon-lambda
+  - tools/aws-lambda
   - comparisons/step-functions-vs-lambda-chains
   - patterns/agentic-workflows
 ---

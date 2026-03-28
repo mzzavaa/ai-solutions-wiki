@@ -7,7 +7,7 @@ tags: [amazon-lex, AWS, chatbot, conversational-AI, NLU, voice]
 related:
   - tools/amazon-connect
   - tools/amazon-bedrock
-  - tools/amazon-lambda
+  - tools/aws-lambda
 ---
 
 Amazon Lex is the AWS service for building conversational interfaces using voice and text. It provides the same speech recognition and natural language understanding technology that powers Amazon Alexa. For enterprise AI projects, Lex serves as the front-end interaction layer for chatbots, IVR systems, and automated customer service workflows.

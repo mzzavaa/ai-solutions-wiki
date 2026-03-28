@@ -73,7 +73,7 @@ For a typical 10-minute news segment: MediaConvert ($0.015), Rekognition video (
 ## Related Articles
 
 - [Amazon S3]({{< relref "/tools/aws-s3.md" >}}) - storage layer
-- [Amazon EventBridge]({{< relref "/tools/aws-eventbridge.md" >}}) - pipeline trigger
+- [Amazon EventBridge]({{< relref "/tools/amazon-eventbridge.md" >}}) - pipeline trigger
 - [AWS Elemental MediaConvert]({{< relref "/tools/aws-mediaconvert.md" >}}) - normalization
 - [FFmpeg]({{< relref "/tools/ffmpeg.md" >}}) - editing and assembly
 - [Amazon Rekognition]({{< relref "/tools/amazon-rekognition.md" >}}) - video analysis
