@@ -3,14 +3,14 @@ title: "Event Sourcing and CQRS for AI Pipelines"
 description: "Using event-driven architecture patterns for AI data pipelines: immutable event logs, replay capability, audit trails, and CQRS for separating read and write models."
 date: 2026-03-25
 categories: [Patterns]
-tags: [architecture, intermediate, event-sourcing, cqrs, audit, event-driven]
+tags: ["architecture", "advanced", "event-sourcing", "ai-pipelines", "audit-trail", "replay", "event-driven"]
 related:
   - glossary/event-sourcing
   - glossary/event-driven-architecture
   - patterns/microservices-for-ai
   - patterns/data-pipeline-patterns
-  - tools/amazon-eventbridge
-  - tools/aws-step-functions
+  - tools/aws-eventbridge
+  - tools/amazon-step-functions
 ---
 
 Event Sourcing treats every state change as an immutable event appended to a log. Instead of storing the current state of a record, you store the full sequence of events that produced that state. The current state is derived by replaying the log. For AI systems, this pattern solves several problems that are hard to address with mutable state stores: audit trails, pipeline replay, debugging data quality issues, and reconstructing model inputs retrospectively.

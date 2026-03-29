@@ -3,7 +3,7 @@ title: "Embeddings - Vector Representations for AI Search"
 description: "What embeddings are, how they enable semantic search, which embedding models to use, and how to choose vector database infrastructure."
 date: 2026-03-24
 categories: [Glossary]
-tags: [ai-ml, beginner, embeddings, vector-search, semantic-search, rag]
+tags: ["ai-ml", "intermediate", "embeddings", "vector-representations", "nlp", "semantic-search", "transformers"]
 related:
   - glossary/rag
   - glossary/vector-database

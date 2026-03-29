@@ -3,7 +3,7 @@ title: "AI for Financial Compliance Automation"
 description: "KYC/AML screening, transaction monitoring, regulatory reporting, and audit trail generation for financial services."
 date: 2026-03-24
 categories: [Solutions]
-tags: [compliance, KYC, AML, transaction-monitoring, regulatory-reporting]
+tags: ["ai-ml", "advanced", "compliance", "finance", "document-processing", "regulatory", "automation"]
 industries: [finance]
 tools: [amazon-bedrock, amazon-comprehend]
 ---

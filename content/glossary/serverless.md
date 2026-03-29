@@ -3,7 +3,7 @@ title: "Serverless Computing"
 description: "What serverless computing means, how Lambda, Fargate, and Step Functions fit AI workloads, and when serverless is and is not the right choice."
 date: 2026-03-24
 categories: [Glossary]
-tags: [cloud-computing, beginner, serverless, lambda, fargate, step-functions]
+tags: ["cloud-computing", "beginner", "serverless", "functions", "event-driven", "aws-lambda", "cloud"]
 ---
 
 Serverless computing is a cloud execution model where the cloud provider manages server provisioning, scaling, and availability. You deploy code or containers without managing the underlying infrastructure. Billing is based on actual usage (invocations, duration) rather than reserved capacity.
@@ -57,6 +57,6 @@ For AI applications where users notice latency, mitigate cold starts with:
 
 ## Related Articles
 
-- [AWS Lambda]({{< relref "/tools/aws-lambda.md" >}}) - primary serverless compute
+- [AWS Lambda]({{< relref "/tools/amazon-lambda.md" >}}) - primary serverless compute
 - [Event-Driven Architecture]({{< relref "event-driven-architecture.md" >}}) - architectural pattern for serverless
-- [AWS Step Functions]({{< relref "/tools/aws-step-functions.md" >}}) - serverless orchestration
+- [AWS Step Functions]({{< relref "/tools/amazon-step-functions.md" >}}) - serverless orchestration

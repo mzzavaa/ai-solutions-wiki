@@ -3,7 +3,7 @@ title: "AI Fraud Detection for Financial Services"
 description: "Real-time transaction scoring, anomaly detection, behavioral biometrics, and investigation prioritization for financial fraud prevention."
 date: 2026-03-24
 categories: [Solutions]
-tags: [fraud-detection, anomaly-detection, transaction-scoring, financial-security]
+tags: ["ai-ml", "advanced", "fraud-detection", "finance", "anomaly-detection", "real-time", "ml"]
 industries: [finance]
 tools: [amazon-sagemaker, amazon-bedrock]
 ---

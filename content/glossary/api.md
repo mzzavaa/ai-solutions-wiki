@@ -3,11 +3,11 @@ title: "API - Application Programming Interface"
 description: "What an API is, REST vs GraphQL vs gRPC, authentication patterns, rate limiting, and how AI services are accessed through standardized API contracts."
 date: 2026-03-26
 categories: [Glossary]
-tags: [cs-fundamentals, beginner, api, rest, integration, http]
+tags: ["software-engineering", "beginner", "api", "rest", "integration", "http", "endpoints"]
 related:
   - guides/programming-languages-for-ai
   - glossary/hardware-constraints
-  - guides/getting-started-with-bedrock
+  - guides/aws-bedrock-101
 ---
 
 An API (Application Programming Interface) is a defined contract that lets two pieces of software communicate. One side exposes endpoints and operations; the other side calls them. The implementation details on either side are hidden - you do not need to know how Bedrock runs inference to call the Bedrock API.

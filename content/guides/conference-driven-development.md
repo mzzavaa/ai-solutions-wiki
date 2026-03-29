@@ -3,7 +3,7 @@ title: "Conference-Driven Development - Using Talks to Build Demos and Ideas"
 description: "How preparing conference talks forces you to build prototypes, validate ideas, and create reusable patterns. The compounding effect of speaking."
 date: 2026-03-24
 categories: [Guides]
-tags: [software-engineering, intermediate, conferences, speaking, prototypes, knowledge-sharing]
+tags: ["project-management", "intermediate", "conference", "developer-relations", "demos", "prototyping", "learning"]
 ---
 
 The best way to force yourself to finish a prototype is to schedule a conference talk about it. Conference-driven development is not a formal methodology - it is a pattern that consultants and technical leads discover by accident and then deliberately use. A deadline with an audience creates a quality of focus that internal deadlines rarely achieve.

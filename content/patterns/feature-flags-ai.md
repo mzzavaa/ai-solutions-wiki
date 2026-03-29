@@ -3,7 +3,7 @@ title: "Feature Flags for AI Model Deployment"
 description: "Using feature flags to safely roll out AI model changes: A/B testing models, canary deployments, gradual traffic shifting, and instant rollback without redeployment."
 date: 2026-03-25
 categories: [Patterns]
-tags: [devops, intermediate, feature-flags, model-deployment, ab-testing, canary]
+tags: ["software-engineering", "intermediate", "feature-flags", "ai-deployment", "rollout", "experimentation", "progressive-delivery"]
 related:
   - glossary/feature-flags
   - patterns/circuit-breaker-ai

@@ -3,7 +3,7 @@ title: "AI for Environmental Monitoring and Compliance"
 description: "Air and water quality monitoring, pollution detection, compliance reporting, and satellite-based environmental tracking with AI."
 date: 2026-03-24
 categories: [Solutions]
-tags: [environmental-monitoring, pollution-detection, compliance, satellite, air-quality]
+tags: ["ai-ml", "advanced", "environmental-monitoring", "satellite-data", "computer-vision", "geospatial", "government"]
 industries: [government]
 tools: [amazon-sagemaker, amazon-bedrock]
 ---

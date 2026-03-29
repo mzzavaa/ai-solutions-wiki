@@ -3,7 +3,7 @@ title: "How to Get AWS Funding for Your AI Project"
 description: "A practical guide to AWS PoC funding (up to 10,000 EUR) and migration funding (up to 400,000 EUR) - eligibility, application process, and how a consultant helps you navigate it."
 date: 2026-03-24
 categories: [Guides]
-tags: [cloud-computing, beginner, aws-funding, poc, cost-optimization, procurement]
+tags: ["project-management", "beginner", "aws-funding", "poc", "proof-of-concept", "cloud-credits", "startup"]
 tools: [amazon-bedrock, amazon-sagemaker]
 ---
 

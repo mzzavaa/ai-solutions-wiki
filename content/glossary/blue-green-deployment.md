@@ -3,12 +3,12 @@ title: "Blue-Green Deployment"
 description: "What blue-green deployment is, how it works, why it matters for zero-downtime AI model updates, and how it compares to canary and rolling deployments."
 date: 2026-03-25
 categories: [Glossary]
-tags: [devops, intermediate, blue-green, deployment, zero-downtime, rollback]
+tags: ["devops", "intermediate", "blue-green-deployment", "zero-downtime", "deployment", "release", "rollback"]
 related:
   - patterns/blue-green-deployment
   - patterns/canary-deployment
   - guides/ci-cd-ai-detailed
-  - tools/aws-lambda
+  - tools/amazon-lambda
 ---
 
 Blue-green deployment is a release technique that maintains two identical production environments - one active (serving traffic), one idle (available for deployment) - and switches traffic between them when releasing a new version. The two environments are conventionally named "blue" and "green," with the active environment alternating between the two colours on each deployment.

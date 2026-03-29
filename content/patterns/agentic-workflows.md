@@ -3,7 +3,7 @@ title: "Agentic Workflow Patterns - From Simple Chains to Complex Orchestration"
 description: "Chain, router, parallel, hierarchical, and loop patterns for AI agents. When to use each, error handling, and fallback strategies."
 date: 2026-03-24
 categories: [Patterns]
-tags: [ai-agents, intermediate, agentic-ai, orchestration, workflow-patterns, multi-agent]
+tags: ["ai-agents", "advanced", "agentic-workflows", "tool-use", "planning", "multi-step", "orchestration"]
 tools: [amazon-bedrock, amazon-step-functions, langgraph]
 related:
   - glossary/ai-agents
@@ -11,7 +11,7 @@ related:
   - tools/strands-agents
   - tools/langgraph
   - tools/crewai
-  - tools/aws-step-functions
+  - tools/amazon-step-functions
 ---
 
 Agentic AI workflows go beyond single model calls. An agent can use tools, take actions, and decide what to do next based on results. But "agentic" covers a wide range of architectural patterns with very different complexity profiles. Choosing the right pattern for the problem avoids over-engineering simple workflows and under-engineering complex ones.

@@ -3,7 +3,7 @@ title: "Amazon Bedrock - Enterprise AI Foundation"
 description: "A comprehensive reference for Amazon Bedrock: available models, key features, use cases, and pricing patterns for enterprise teams."
 date: 2026-03-24
 categories: [Tools]
-tags: [amazon-bedrock, AWS, foundation-models, agents, guardrails, knowledge-bases]
+tags: ["ai-ml", "beginner", "amazon-bedrock", "foundation-models", "aws", "llm", "managed-ai"]
 related:
   - tools/amazon-sagemaker
   - tools/amazon-opensearch

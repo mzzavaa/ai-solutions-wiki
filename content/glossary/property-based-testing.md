@@ -3,7 +3,7 @@ title: "Property-Based Testing"
 description: "What property-based testing is, why it is ideal for AI systems that cannot be tested with exact-output assertions, and the tools available in Python and JavaScript."
 date: 2026-03-25
 categories: [Glossary]
-tags: [software-engineering, advanced, property-based-testing, testing, quality, hypothesis]
+tags: ["software-engineering", "intermediate", "property-based-testing", "testing", "randomized", "invariants", "quality"]
 related:
   - guides/testing-ai-systems
   - guides/ci-cd-for-ai

@@ -3,7 +3,7 @@ title: "CI/CD - Continuous Integration and Continuous Delivery"
 description: "What CI/CD is, why it matters for AI projects, the tools involved, and the AI-specific considerations that extend standard pipelines."
 date: 2026-03-25
 categories: [Glossary]
-tags: [devops, beginner, ci-cd, github-actions, automation, deployment]
+tags: ["devops", "beginner", "ci-cd", "continuous-integration", "continuous-delivery", "automation", "pipelines"]
 related:
   - guides/ci-cd-for-ai
   - guides/testing-ai-systems

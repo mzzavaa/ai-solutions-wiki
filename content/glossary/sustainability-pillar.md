@@ -3,7 +3,7 @@ title: "Sustainability (Well-Architected Pillar)"
 description: "The Well-Architected pillar added in 2021 covering efficient resource usage, managed services, and data lifecycle management - and how it applies to AI workloads including model selection, efficient inference, and training in renewable energy regions."
 date: 2026-03-26
 categories: [Glossary]
-tags: [cloud-computing, intermediate, sustainability, well-architected, green-computing]
+tags: ["architecture", "beginner", "sustainability", "well-architected", "aws", "green-computing", "efficiency"]
 related:
   - frameworks/well-architected-framework
   - frameworks/well-architected-ai-ml-lens

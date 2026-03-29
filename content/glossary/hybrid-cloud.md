@@ -3,7 +3,7 @@ title: "Hybrid Cloud"
 description: "What hybrid cloud is, why it matters for AI workloads with data gravity and compliance constraints, and AWS hybrid options including FSx for NetApp ONTAP, Outposts, and Local Zones."
 date: 2026-03-26
 categories: [Glossary]
-tags: [cloud-computing, intermediate, hybrid-cloud, fsxn, infrastructure, on-premises]
+tags: ["cloud-computing", "intermediate", "hybrid-cloud", "on-premises", "cloud", "integration", "connectivity"]
 related:
   - solutions/media/hybrid-video-pipeline
   - glossary/serverless

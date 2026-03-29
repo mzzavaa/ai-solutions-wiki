@@ -3,7 +3,7 @@ title: "Infrastructure as Code (IaC)"
 description: "What Infrastructure as Code is, and how Terraform, AWS CDK, and CloudFormation compare for managing AI project infrastructure."
 date: 2026-03-24
 categories: [Glossary]
-tags: [devops, beginner, iac, terraform, cdk, cloudformation]
+tags: ["devops", "beginner", "infrastructure-as-code", "iac", "terraform", "automation", "provisioning"]
 ---
 
 Infrastructure as Code (IaC) is the practice of managing and provisioning cloud infrastructure through machine-readable configuration files rather than manual console operations. With IaC, your infrastructure has the same version history, code review process, and deployment automation as your application code.

@@ -3,9 +3,9 @@ title: "Observability for AI Systems - Logs, Metrics, Traces"
 description: "Applying the three pillars of observability to AI workloads: CloudWatch for metrics and alarms, Langfuse for LLM tracing, OpenTelemetry for distributed traces, and custom AI metrics."
 date: 2026-03-25
 categories: [Patterns]
-tags: [devops, advanced, observability, cloudwatch, langfuse, opentelemetry, monitoring]
+tags: ["devops", "intermediate", "observability", "llm-monitoring", "tracing", "metrics", "ai-operations"]
 related:
-  - tools/amazon-cloudwatch
+  - tools/aws-cloudwatch
   - patterns/canary-deployment
   - glossary/observability
   - glossary/drift-detection

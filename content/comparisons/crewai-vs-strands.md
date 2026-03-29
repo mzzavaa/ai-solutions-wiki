@@ -3,7 +3,7 @@ title: "CrewAI vs Strands Agents - Multi-Agent Framework Comparison"
 description: "Architecture differences, AWS integration, and decision criteria for choosing between CrewAI and Strands Agents for multi-agent AI systems."
 date: 2026-03-24
 categories: [Comparisons]
-tags: [ai-agents, intermediate, crewai, strands-agents, multi-agent, comparison]
+tags: ["ai-agents", "intermediate", "crewai", "strands", "multi-agent", "comparison", "framework"]
 related:
   - tools/crewai
   - tools/strands-agents

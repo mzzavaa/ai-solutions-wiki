@@ -3,7 +3,7 @@ title: "Data Preparation for AI Projects - A Practical Guide"
 description: "How to prepare data for AI projects: assessing what you have, cleaning and normalizing it, building evaluation datasets, and setting up ongoing data governance."
 date: 2026-03-24
 categories: [Guides]
-tags: [data-engineering, intermediate, data-preparation, data-quality, mlops, data-pipeline]
+tags: ["data-engineering", "intermediate", "data-preparation", "etl", "data-quality", "training-data", "feature-engineering"]
 ---
 
 "We have lots of data" is one of the most common statements at the start of an AI project and one of the most misleading. Having data and having data that is ready to power a production AI system are very different things. Data preparation is consistently the most time-consuming phase of AI projects - understanding what it involves upfront prevents the most common source of project delays.

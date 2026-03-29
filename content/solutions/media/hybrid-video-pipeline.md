@@ -3,7 +3,7 @@ title: "Hybrid Cloud AI Video Pipeline with Amazon FSx for NetApp ONTAP"
 description: "How to build an AI video processing pipeline that spans on-premises storage and AWS cloud using FSx for NetApp ONTAP as a hybrid bridge, with Rekognition, Transcribe, and Bedrock for AI analysis."
 date: 2026-03-26
 categories: [Solutions]
-tags: [media, video-processing, hybrid-cloud, fsxn, rekognition, bedrock, step-functions]
+tags: ["media-processing", "advanced", "hybrid-video-pipeline", "media", "architecture", "aws", "streaming"]
 industries: [media]
 tools: [amazon-rekognition, amazon-bedrock, aws-step-functions, amazon-transcribe, amazon-fsx, aws-mediaconvert, amazon-cloudfront]
 related:

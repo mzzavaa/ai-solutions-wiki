@@ -3,7 +3,7 @@ title: "How to Choose Your First AI Use Case"
 description: "A practical framework for selecting the right first AI use case - prioritizing for quick wins, avoiding common traps, and setting up for a successful first deployment."
 date: 2026-03-24
 categories: [Guides]
-tags: [project-management, beginner, getting-started, use-case-selection, strategy, quick-wins]
+tags: ["project-management", "beginner", "use-case-selection", "ai-adoption", "getting-started", "strategy", "roi"]
 ---
 
 The most common mistake in enterprise AI adoption is choosing the wrong first use case. Teams either pick something too ambitious (which stalls before delivering value), too trivial (which delivers value but builds no capability), or too politically complex (which gets mired in stakeholder disagreements before any code is written).

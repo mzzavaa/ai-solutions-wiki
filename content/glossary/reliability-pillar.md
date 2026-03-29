@@ -3,7 +3,7 @@ title: "Reliability (Well-Architected Pillar)"
 description: "The Well-Architected pillar covering fault tolerance, disaster recovery, health checks, and scaling - and how it applies to AI workloads including model endpoint failover and graceful degradation."
 date: 2026-03-26
 categories: [Glossary]
-tags: [cloud-computing, intermediate, reliability, well-architected, resilience, disaster-recovery]
+tags: ["architecture", "beginner", "reliability", "well-architected", "aws", "fault-tolerance", "resilience"]
 related:
   - frameworks/well-architected-framework
   - frameworks/well-architected-ai-ml-lens

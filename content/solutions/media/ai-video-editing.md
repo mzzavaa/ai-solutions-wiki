@@ -3,7 +3,7 @@ title: "AI Video Editing Automation for Broadcasters"
 description: "How AI automates the most time-consuming parts of broadcast video editing - rough cuts, highlight generation, and scene detection - at scale."
 date: 2026-03-24
 categories: [Solutions]
-tags: [video, media, automation, rekognition, broadcast]
+tags: ["media-processing", "advanced", "ai-video-editing", "media", "automation", "computer-vision", "post-production"]
 industries: [media]
 tools: [amazon-rekognition, amazon-bedrock, aws-step-functions]
 ---

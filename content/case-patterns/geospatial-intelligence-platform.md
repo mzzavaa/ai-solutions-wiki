@@ -3,7 +3,7 @@ title: "Case Pattern: Building a Geospatial AI Platform from Public Data"
 description: "How a team built a geospatial intelligence platform combining satellite imagery, public datasets, and AI analysis to generate location-based insights at scale."
 date: 2026-03-24
 categories: [Case Patterns]
-tags: [data-engineering, advanced, geospatial, satellite-imagery, computer-vision, aws, data-platform]
+tags: ["ai-ml", "advanced", "geospatial", "satellite-data", "intelligence-platform", "computer-vision", "aws"]
 ---
 
 A geospatial analytics team built a platform to generate infrastructure change detection reports from publicly available satellite imagery and open government datasets. The platform detects construction activity, land use change, and infrastructure development across thousands of locations - work that previously required manual analyst review of imagery.

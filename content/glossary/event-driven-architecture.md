@@ -3,7 +3,7 @@ title: "Event-Driven Architecture for AI"
 description: "What event-driven architecture is, how S3 triggers, EventBridge, and Step Functions patterns enable scalable AI pipelines."
 date: 2026-03-24
 categories: [Glossary]
-tags: [architecture, intermediate, event-driven, eventbridge, step-functions, serverless]
+tags: ["software-engineering", "intermediate", "event-driven", "messaging", "pub-sub", "kafka", "decoupling"]
 ---
 
 Event-driven architecture (EDA) is a software design pattern where components communicate by producing and consuming events - records of something that happened. Components are decoupled: the producer does not know who will consume the event, and consumers do not know who produced it. This decoupling makes systems more scalable, maintainable, and extensible.
@@ -50,6 +50,6 @@ Use EventBridge when event routing logic matters. Use SQS when you need durable 
 
 ## Related Articles
 
-- [Amazon EventBridge]({{< relref "/tools/amazon-eventbridge.md" >}}) - primary event bus
-- [AWS Step Functions]({{< relref "/tools/aws-step-functions.md" >}}) - orchestration for multi-step pipelines
+- [Amazon EventBridge]({{< relref "/tools/aws-eventbridge.md" >}}) - primary event bus
+- [AWS Step Functions]({{< relref "/tools/amazon-step-functions.md" >}}) - orchestration for multi-step pipelines
 - [Serverless Computing]({{< relref "serverless.md" >}}) - execution model for event consumers

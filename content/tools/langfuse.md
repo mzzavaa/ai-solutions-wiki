@@ -3,7 +3,7 @@ title: "Langfuse - LLM Observability and Tracing"
 description: "Using Langfuse to trace LLM calls, evaluate outputs, and monitor AI application quality in production."
 date: 2026-03-24
 categories: [Tools]
-tags: [langfuse, observability, tracing, evaluation, LLM-ops]
+tags: ["ai-agents", "intermediate", "langfuse", "observability", "llm-monitoring", "tracing", "evaluation"]
 ---
 
 Langfuse is an open-source LLM observability platform. It captures traces of AI application execution - every model call, retrieval step, tool invocation, and latency - and provides tooling to evaluate output quality, debug failures, and measure cost over time. For AI applications in production, observability is not optional: without it, quality regressions and cost spikes are invisible.

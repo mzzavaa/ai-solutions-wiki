@@ -3,7 +3,7 @@ title: "GIS and AI Architecture on AWS"
 description: "How to combine geospatial data processing (GeoPandas, Shapely, satellite imagery) with AI services (Bedrock, OpenSearch) for natural language queries and spatial intelligence."
 date: 2026-03-24
 categories: [Solutions]
-tags: [geospatial, GIS, geopandas, bedrock, opensearch, satellite]
+tags: ["ai-ml", "advanced", "gis", "geospatial", "ai-architecture", "mapping", "spatial-data"]
 industries: [geospatial]
 tools: [amazon-bedrock, amazon-opensearch, amazon-lambda, amazon-s3]
 ---

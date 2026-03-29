@@ -3,7 +3,7 @@ title: "AI Architecture Patterns - From Monolith to Multi-Agent"
 description: "How AI system architecture evolves from monolithic single-model deployments through microservices to collaborative multi-agent systems, with trade-offs and guidance for each stage."
 date: 2026-03-25
 categories: [Guides]
-tags: [architecture, advanced, multi-agent, microservices, design-patterns, ai-systems]
+tags: ["architecture", "intermediate", "ai-architecture", "patterns", "design", "scalability", "cloud"]
 related:
   - glossary/multi-agent-systems
   - glossary/agentic-ai

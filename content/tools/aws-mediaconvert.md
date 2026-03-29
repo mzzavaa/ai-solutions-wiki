@@ -3,11 +3,7 @@ title: "AWS Elemental MediaConvert - Video Processing at Scale"
 description: "Using AWS Elemental MediaConvert for transcoding, format conversion, and video processing in AI media pipelines."
 date: 2026-03-25
 categories: [Tools]
-tags: [aws-mediaconvert, video, transcoding, media, AWS]
-related:
-  - tools/azure-media-services
-  - tools/google-media-cdn
-  - tools/ffmpeg
+tags: ["media-processing", "intermediate", "aws-mediaconvert", "video-encoding", "transcoding", "aws", "media"]
 ---
 
 AWS Elemental MediaConvert is a file-based video transcoding service. It converts video files between formats, resolutions, and codecs, and applies processing like caption insertion, image overlay, and audio normalization. In AI pipelines it handles the heavy transcoding work that would be impractical on Lambda (file size limits, timeout limits) or expensive on EC2 (underutilized instances).

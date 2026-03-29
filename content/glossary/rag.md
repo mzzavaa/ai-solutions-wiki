@@ -3,7 +3,7 @@ title: "RAG - Retrieval Augmented Generation"
 description: "What RAG is, how it works, when to use it, and the common implementation pitfalls that reduce retrieval quality."
 date: 2026-03-24
 categories: [Glossary]
-tags: [ai-agents, intermediate, rag, retrieval, vector-search, embeddings, knowledge-base]
+tags: ["ai-ml", "beginner", "rag", "retrieval", "vector-search", "knowledge-base", "embeddings"]
 related:
   - guides/building-rag-systems
   - patterns/rag-implementation

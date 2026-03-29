@@ -3,11 +3,7 @@ title: "Amazon Cognito - User Authentication for AI Apps"
 description: "Using Amazon Cognito for user sign-up, sign-in, and access control in AI-powered web and mobile applications."
 date: 2026-03-24
 categories: [Tools]
-tags: [amazon-cognito, authentication, security, identity, AWS]
-related:
-  - tools/azure-ad-b2c
-  - tools/google-firebase
-  - tools/keycloak
+tags: ["security", "intermediate", "aws-cognito", "authentication", "authorization", "identity", "aws"]
 ---
 
 Amazon Cognito provides user authentication, authorization, and user management for web and mobile applications. It handles sign-up flows, password policies, MFA, social identity providers (Google, Apple, Facebook), and enterprise federation (SAML, OIDC). For AI applications, it secures the front-end layer and generates the credentials that authorize calls to AWS services.
@@ -50,21 +46,6 @@ For B2B AI applications where each customer is a separate tenant:
 - API Gateway and Lambda use the claim to scope data access per tenant
 
 Alternatively, separate User Pools per tenant provide stronger isolation but add operational complexity.
-
-## Origins and History
-
-Amazon Cognito became generally available on July 10, 2014. The original announcement described it as "a simple user identity and data synchronization service that helps you securely manage and synchronize app data for your users across their mobile devices." At launch, Cognito supported identity federation through Amazon, Facebook, and Google login providers, as well as unauthenticated guest access. The initial feature set also included device data synchronization, allowing application state (preferences, game progress) to be stored in the AWS Cloud and synced across devices.
-
-In the months following launch, Cognito expanded rapidly. In September 2014, developer authenticated identities were introduced, allowing applications with their own user databases to obtain temporary AWS credentials. In October 2014, OpenID Connect support was added, opening federation to any OIDC-compliant identity provider.
-
-A pivotal evolution came in 2016 with the introduction of Cognito User Pools, which transformed Cognito from a federation and sync service into a complete identity provider. User Pools added a managed user directory with sign-up and sign-in flows, password policies, email and phone verification, and a hosted authentication UI.
-
-## Sources
-
-1. AWS. "Introducing Amazon Cognito." July 10, 2014. [https://aws.amazon.com/about-aws/whats-new/2014/07/10/introducing-amazon-cognito/](https://aws.amazon.com/about-aws/whats-new/2014/07/10/introducing-amazon-cognito/)
-2. AWS. "Latest Amazon Cognito Features." November 6, 2014. [https://aws.amazon.com/about-aws/whats-new/2014/11/06/latest-amazon-cognito-features/](https://aws.amazon.com/about-aws/whats-new/2014/11/06/latest-amazon-cognito-features/)
-3. Konishi, H. "AWS History and Timeline regarding Amazon Cognito." [https://hidekazu-konishi.com/entry/aws_history_and_timeline_amazon_cognito.html](https://hidekazu-konishi.com/entry/aws_history_and_timeline_amazon_cognito.html)
-4. AWS Documentation. "Amazon Cognito." [https://docs.aws.amazon.com/cognito/](https://docs.aws.amazon.com/cognito/)
 
 ## Related Articles
 

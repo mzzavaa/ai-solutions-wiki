@@ -3,7 +3,7 @@ title: "Agentic AI"
 description: "What makes AI agentic vs assistive, autonomous task execution, tool use, planning capabilities, and current limitations."
 date: 2026-03-24
 categories: [Glossary]
-tags: [ai-agents, beginner, agentic-ai, autonomous-ai, tool-use, planning]
+tags: ["ai-agents", "beginner", "agentic-ai", "agents", "autonomous", "tool-use", "planning"]
 related:
   - glossary/ai-agents
   - glossary/multi-agent-systems

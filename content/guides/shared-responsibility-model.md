@@ -3,7 +3,7 @@ title: "The Shared Responsibility Model for AI on AWS"
 description: "How AWS shared responsibility applies to AI and ML workloads: data, model, and infrastructure responsibilities across Bedrock and SageMaker."
 date: 2026-03-25
 categories: [Guides]
-tags: [security, intermediate, shared-responsibility, compliance, bedrock, sagemaker, ai-security]
+tags: ["security", "intermediate", "shared-responsibility", "cloud-security", "aws", "compliance", "governance"]
 related:
   - glossary/shared-responsibility
   - tools/amazon-bedrock

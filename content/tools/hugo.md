@@ -3,7 +3,7 @@ title: "Hugo - Static Site Generator"
 description: "Using Hugo to build fast, maintainable documentation sites and AI solution landing pages, with GitHub Pages and Amplify deployment."
 date: 2026-03-24
 categories: [Tools]
-tags: [hugo, static-site, documentation, deployment, JAMstack]
+tags: ["software-engineering", "beginner", "hugo", "static-site", "cms", "golang", "web"]
 ---
 
 Hugo is a static site generator written in Go. It compiles Markdown content and HTML templates into static HTML/CSS/JS files that deploy to any web host. Build times are extremely fast - thousands of pages in seconds - making it practical for large documentation sites and wikis like this one.

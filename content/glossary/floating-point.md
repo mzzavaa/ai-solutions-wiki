@@ -3,11 +3,11 @@ title: "Floating-Point Arithmetic and Model Precision"
 description: "IEEE 754, FP32, FP16, BF16, and INT8 - how number precision determines model size, inference speed, and accuracy tradeoffs in AI deployment."
 date: 2026-03-26
 categories: [Glossary]
-tags: [cs-fundamentals, intermediate, floating-point, quantization, model-optimization, number-systems]
+tags: ["cs-fundamentals", "beginner", "floating-point", "ieee-754", "precision", "computer-science", "numbers"]
 related:
   - glossary/binary-system
   - glossary/hardware-constraints
-  - guides/getting-started-with-bedrock
+  - guides/aws-bedrock-101
 ---
 
 Floating-point arithmetic is how computers represent real numbers (numbers with fractional parts) in binary. The precision of this representation - how many bits are used - directly determines how large an AI model is, how fast it runs, and how accurately it performs.

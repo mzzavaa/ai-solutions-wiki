@@ -3,7 +3,7 @@ title: "Budgeting an AI Project - What It Really Costs"
 description: "A practical cost breakdown for enterprise AI projects - from prototype to production - covering model inference, infrastructure, data, integration, and ongoing operations."
 date: 2026-03-24
 categories: [Guides]
-tags: [project-management, intermediate, budgeting, cost-estimation, enterprise, planning]
+tags: ["project-management", "beginner", "ai-budgeting", "cost-management", "project-planning", "roi", "cloud-costs"]
 ---
 
 AI project cost estimates are frequently wrong by an order of magnitude - usually because they account for model inference costs but miss the engineering work, data preparation, integration, testing, and ongoing operations that make up the majority of total project cost.

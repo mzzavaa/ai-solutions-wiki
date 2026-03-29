@@ -3,7 +3,7 @@ title: "Open Practice Library"
 description: "What the Open Practice Library is, its key practices for AI projects, and how it structures discovery and delivery for teams building AI-powered products."
 date: 2026-03-25
 categories: [Glossary]
-tags: [project-management, intermediate, open-practice-library, agile, discovery, event-storming]
+tags: ["project-management", "beginner", "open-practice-library", "agile", "discovery", "facilitation", "methodology"]
 related:
   - guides/open-practice-library
   - frameworks/event-storming-ai

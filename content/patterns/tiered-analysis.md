@@ -3,7 +3,7 @@ title: "Tiered Analysis Pattern - Progressive Depth for AI Processing"
 description: "Apply cheap analysis first, score results, then apply expensive analysis only to candidates that pass a threshold. Reduces AI API costs by 80-90% in practice."
 date: 2026-03-26
 categories: [Patterns]
-tags: [architecture, intermediate, tiered-analysis, algorithms, cost-optimization, video-processing]
+tags: ["architecture", "intermediate", "tiered-analysis", "cost-efficiency", "routing", "llm", "pipeline"]
 related:
   - guides/sorting-algorithms-for-ai
   - glossary/time-complexity

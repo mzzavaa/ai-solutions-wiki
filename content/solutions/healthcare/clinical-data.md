@@ -3,7 +3,7 @@ title: "AI for Clinical Data Analysis"
 description: "Practical AI applications for clinical data analysis: extracting insights from unstructured clinical notes, supporting documentation, and enabling query across patient records at scale."
 date: 2026-03-24
 categories: [Solutions]
-tags: [healthcare, clinical-data, NLP, medical-NLP, EHR, documentation]
+tags: ["ai-ml", "advanced", "clinical-data", "healthcare", "nlp", "ehr", "document-processing"]
 ---
 
 Clinical data is predominantly unstructured. Physician notes, radiology reports, discharge summaries, and nursing assessments contain critical patient information, but it lives in free text rather than structured database fields. AI - specifically medical NLP - makes this information queryable, analyzable, and actionable at scale.

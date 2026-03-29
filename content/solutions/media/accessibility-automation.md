@@ -3,7 +3,7 @@ title: "AI-Powered Accessibility for Broadcasters and Media"
 description: "Automated subtitle generation, audio descriptions, sign language overlay detection, and WCAG compliance checking for broadcast and media organizations."
 date: 2026-03-24
 categories: [Solutions]
-tags: [accessibility, subtitles, audio-description, WCAG, broadcast]
+tags: ["media-processing", "intermediate", "accessibility", "captions", "transcription", "media", "automation"]
 industries: [media]
 tools: [amazon-transcribe, amazon-bedrock]
 ---

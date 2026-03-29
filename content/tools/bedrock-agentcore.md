@@ -3,7 +3,7 @@ title: "AWS Bedrock AgentCore - Serverless AI Agent Hosting"
 description: "How AWS Bedrock AgentCore provides managed infrastructure for running AI agents at scale without managing servers."
 date: 2026-03-25
 categories: [Tools]
-tags: [bedrock-agentcore, agents, serverless, AWS, bedrock]
+tags: ["ai-agents", "advanced", "bedrock-agentcore", "aws", "agent-runtime", "tool-use", "memory"]
 ---
 
 AWS Bedrock AgentCore is the managed runtime layer for deploying AI agents in production. Rather than building your own agent execution infrastructure (managing compute, scaling, state persistence, and tool invocation), AgentCore provides these capabilities as a managed service. Agents run serverlessly - you pay per invocation, not for idle capacity.

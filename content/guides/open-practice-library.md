@@ -3,7 +3,7 @@ title: "Open Practice Library for AI Projects - Discovery to Delivery"
 description: "Applying Open Practice Library practices to AI: Event Storming for AI use case discovery, Impact Mapping for AI value, User Story Mapping for AI features, and Mob Programming for AI development."
 date: 2026-03-25
 categories: [Guides]
-tags: [project-management, intermediate, open-practice-library, event-storming, impact-mapping, discovery, agile]
+tags: ["project-management", "intermediate", "open-practice-library", "agile", "discovery", "delivery", "facilitation"]
 related:
   - glossary/open-practice-library
   - frameworks/event-storming-ai

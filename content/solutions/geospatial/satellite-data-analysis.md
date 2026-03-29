@@ -3,7 +3,7 @@ title: "AI for Satellite Data and Geospatial Intelligence"
 description: "Using multi-agent AI systems to query and analyze satellite imagery and geospatial data through natural language, with public data sources and AWS services."
 date: 2026-03-24
 categories: [Solutions]
-tags: [geospatial, satellite, multi-agent, SageMaker, natural-language-queries]
+tags: ["ai-ml", "advanced", "satellite-data", "geospatial", "computer-vision", "remote-sensing", "analysis"]
 industries: [geospatial, defense, logistics]
 tools: [amazon-sagemaker, amazon-bedrock, amazon-s3]
 ---

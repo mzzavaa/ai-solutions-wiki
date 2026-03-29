@@ -3,7 +3,7 @@ title: "Amazon CloudWatch - Monitoring and Observability for AI"
 description: "Using Amazon CloudWatch for AI workloads: custom metrics for LLM cost and token usage, alarms for model quality, log insights for inference debugging, and anomaly detection."
 date: 2026-03-25
 categories: [Tools]
-tags: [cloudwatch, monitoring, observability, metrics, alarms, logs, ai-engineering, bedrock, lambda]
+tags: ["devops", "intermediate", "aws-cloudwatch", "monitoring", "logging", "metrics", "observability"]
 related:
   - patterns/observability-ai
   - glossary/observability

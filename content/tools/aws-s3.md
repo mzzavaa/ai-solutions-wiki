@@ -3,7 +3,7 @@ title: "Amazon S3 - Object Storage for AI Pipelines"
 description: "How Amazon S3 functions as the storage backbone for AI data pipelines: ingest, staging, output, and lifecycle management."
 date: 2026-03-25
 categories: [Tools]
-tags: [aws-s3, storage, AWS, data-pipeline, object-storage]
+tags: ["cloud-computing", "beginner", "aws-s3", "object-storage", "aws", "data-pipeline", "storage"]
 related:
   - tools/azure-blob-storage
   - tools/google-cloud-storage

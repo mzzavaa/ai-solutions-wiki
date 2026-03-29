@@ -3,13 +3,13 @@ title: "Event Sourcing"
 description: "What event sourcing is, why it matters for AI audit trails and pipeline replay, its relationship to CQRS, and when to apply it in AI systems."
 date: 2026-03-25
 categories: [Glossary]
-tags: [architecture, advanced, event-sourcing, cqrs, audit, data-pipeline]
+tags: ["software-engineering", "intermediate", "event-sourcing", "event-driven", "audit-log", "cqrs", "architecture"]
 related:
   - patterns/event-sourcing-ai
   - glossary/event-driven-architecture
   - patterns/data-pipeline-patterns
-  - tools/amazon-eventbridge
-  - tools/aws-step-functions
+  - tools/aws-eventbridge
+  - tools/amazon-step-functions
 ---
 
 Event Sourcing is an architectural pattern where the state of a system is stored as an immutable sequence of events rather than as a current snapshot. Instead of writing "the document is in state X," you write "Document Submitted event occurred, then Document Processed event occurred, then Document Indexed event occurred." The current state is derived by replaying the event sequence from the beginning.

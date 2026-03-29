@@ -3,7 +3,7 @@ title: "AI Audio Analysis - Multi-Track Selection and Quality Enhancement"
 description: "Automated best-mic selection from multi-track recordings, noise reduction, speaker isolation, and quality scoring for film and broadcast."
 date: 2026-03-24
 categories: [Solutions]
-tags: [audio, multi-track, noise-reduction, quality-scoring, broadcast, film]
+tags: ["media-processing", "advanced", "audio-analysis", "speech-to-text", "media", "nlp", "transcription"]
 industries: [media]
 tools: [amazon-bedrock, amazon-transcribe]
 ---

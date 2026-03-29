@@ -3,7 +3,7 @@ title: "Binary and Number Systems in Computing"
 description: "How computers represent all data in base-2 (binary), why transistors make this fundamental, and how number systems connect to AI model quantization."
 date: 2026-03-26
 categories: [Glossary]
-tags: [cs-fundamentals, beginner, binary, number-systems, computing]
+tags: ["cs-fundamentals", "beginner", "binary", "bits", "number-systems", "computer-science", "fundamentals"]
 related:
   - glossary/floating-point
   - glossary/hardware-constraints

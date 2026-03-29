@@ -3,7 +3,7 @@ title: "Amazon Comprehend - NLP at Scale"
 description: "Sentiment analysis, entity extraction, topic modeling, and language detection with Amazon Comprehend. When to use Comprehend vs Bedrock for NLP tasks."
 date: 2026-03-24
 categories: [Tools]
-tags: [NLP, sentiment-analysis, entity-extraction, topic-modeling, AWS]
+tags: ["ai-ml", "intermediate", "amazon-comprehend", "nlp", "sentiment-analysis", "entity-extraction", "aws"]
 tools: [amazon-comprehend, amazon-bedrock]
 related:
   - tools/azure-cognitive-services

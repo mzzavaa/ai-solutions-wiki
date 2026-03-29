@@ -3,7 +3,7 @@ title: "Testing AI Systems - Unit Tests to Production Monitoring"
 description: "A practical testing strategy for AI systems: property-based testing, integration testing with mocked models, evaluation frameworks, and production monitoring that catches quality regressions."
 date: 2026-03-25
 categories: [Guides]
-tags: [software-engineering, advanced, testing, evaluation, monitoring, quality, property-based-testing]
+tags: ["software-engineering", "intermediate", "testing", "ai-testing", "evaluation", "quality-assurance", "llm"]
 related:
   - glossary/property-based-testing
   - guides/ci-cd-for-ai

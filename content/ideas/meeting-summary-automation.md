@@ -3,7 +3,7 @@ title: "AI Spark: Never Write Meeting Notes Again"
 description: "Automate meeting summaries and action item extraction using transcription and LLM post-processing - a practical three-step build."
 date: 2026-03-24
 categories: [Ideas]
-tags: [ai-ml, beginner, meeting-summaries, transcription, automation, productivity]
+tags: ["ai-ml", "beginner", "meeting-summary", "transcription", "automation", "productivity", "nlp"]
 ---
 
 Meeting notes are one of the most universally disliked administrative tasks in any organization. Someone has to take them, they are often incomplete or delayed, and the person taking notes cannot fully participate in the meeting. AI-powered meeting summarization eliminates the manual work and typically produces better structured output than manual notes.

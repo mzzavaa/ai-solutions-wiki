@@ -3,12 +3,12 @@ title: "Canary Deployment for AI Models"
 description: "Gradual traffic shifting to new model versions: how to implement canary deployments with Lambda weighted aliases and SageMaker production variants, with automatic rollback triggers."
 date: 2026-03-25
 categories: [Patterns]
-tags: [devops, intermediate, canary, deployment, gradual-rollout, lambda, sagemaker, rollback]
+tags: ["devops", "intermediate", "canary-deployment", "progressive-rollout", "release", "risk-management", "deployment"]
 related:
   - glossary/canary-deployment
   - patterns/blue-green-deployment
   - guides/ci-cd-ai-detailed
-  - tools/aws-lambda
+  - tools/amazon-lambda
   - patterns/observability-ai
 ---
 

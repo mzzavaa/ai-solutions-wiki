@@ -3,7 +3,7 @@ title: "AWS Step Functions vs Lambda Chains for AI Orchestration"
 description: "When to use state machines vs direct invocation for AI workflows. Error handling, retry patterns, cost comparison, and visibility trade-offs."
 date: 2026-03-24
 categories: [Comparisons]
-tags: [cloud-computing, intermediate, step-functions, lambda, orchestration, workflow, aws]
+tags: ["cloud-computing", "intermediate", "aws-step-functions", "aws-lambda", "comparison", "orchestration", "serverless"]
 tools: [amazon-step-functions, amazon-lambda, amazon-bedrock]
 ---
 

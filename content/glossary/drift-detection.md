@@ -3,11 +3,11 @@ title: "Model Drift and Data Drift"
 description: "What drift is, the three types (data, concept, prediction), how to detect them using SageMaker Model Monitor, and when to trigger model retraining."
 date: 2026-03-25
 categories: [Glossary]
-tags: [ai-ml, intermediate, drift-detection, model-monitor, sagemaker, mlops, retraining]
+tags: ["devops", "intermediate", "drift-detection", "infrastructure", "configuration", "monitoring", "iac"]
 related:
   - patterns/observability-ai
   - patterns/model-versioning
-  - tools/amazon-cloudwatch
+  - tools/aws-cloudwatch
   - guides/ci-cd-ai-detailed
 ---
 

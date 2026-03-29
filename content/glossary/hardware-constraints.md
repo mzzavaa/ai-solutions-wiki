@@ -3,11 +3,11 @@ title: "Hardware Constraints for AI Systems"
 description: "CPU vs GPU, VRAM limits, memory bandwidth, and how hardware choices determine what AI models you can run and at what cost."
 date: 2026-03-26
 categories: [Glossary]
-tags: [cs-fundamentals, intermediate, hardware, gpu, performance, ml-training]
+tags: ["cs-fundamentals", "intermediate", "hardware-constraints", "memory", "cpu", "gpu", "performance"]
 related:
   - glossary/floating-point
   - glossary/binary-system
-  - guides/getting-started-with-bedrock
+  - guides/aws-bedrock-101
 ---
 
 AI model performance is ultimately bounded by hardware. Understanding the constraints - what limits inference speed, what determines whether a model fits in memory, what drives cloud costs - is essential for designing cost-effective AI systems.

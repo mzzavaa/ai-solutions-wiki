@@ -3,7 +3,7 @@ title: "AI Transcription with Accurate Speaker Attribution"
 description: "How to achieve production-quality multi-speaker transcription with speaker diarization, using AWS Transcribe and Bedrock post-processing."
 date: 2026-03-24
 categories: [Solutions]
-tags: [transcription, speaker-diarization, AWS-Transcribe, media, accessibility]
+tags: ["media-processing", "intermediate", "ai-transcription", "speech-to-text", "media", "captions", "aws"]
 industries: [media]
 tools: [amazon-transcribe, amazon-bedrock]
 ---

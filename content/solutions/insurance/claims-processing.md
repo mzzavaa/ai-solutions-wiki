@@ -3,7 +3,7 @@ title: "AI for Insurance Claims Processing"
 description: "Automated claims intake, fraud detection, and document extraction for insurance operations - from first notice of loss to payment authorization."
 date: 2026-03-24
 categories: [Solutions]
-tags: [insurance, claims, fraud-detection, textract, step-functions, automation]
+tags: ["ai-ml", "advanced", "claims-processing", "insurance", "automation", "document-processing", "nlp"]
 industries: [insurance, finance]
 tools: [amazon-textract, amazon-bedrock, aws-step-functions]
 ---

@@ -3,10 +3,7 @@ title: "Amazon Translate - Neural Machine Translation"
 description: "Using Amazon Translate for real-time and batch document translation in multilingual AI applications."
 date: 2026-03-25
 categories: [Tools]
-tags: [amazon-translate, translation, NLP, multilingual, AWS]
-related:
-  - tools/azure-translator
-  - tools/google-cloud-translation
+tags: ["ai-ml", "beginner", "amazon-translate", "translation", "nlp", "aws", "multilingual"]
 ---
 
 Amazon Translate is a neural machine translation service that converts text between languages. It supports 75+ languages and language pairs, handles real-time translation via API, and processes large document batches asynchronously. For AI applications serving international users or processing multilingual content, it removes the need to integrate third-party translation vendors.

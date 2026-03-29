@@ -3,7 +3,7 @@ title: "Case Pattern: AI Video Processing Pipeline for a National Broadcaster"
 description: "Architecture and lessons from building a production AI pipeline that processes, indexes, and makes searchable a large library of broadcast video content."
 date: 2026-03-24
 categories: [Case Patterns]
-tags: [media-processing, advanced, video-processing, transcription, search, aws, pipeline]
+tags: ["media-processing", "advanced", "video-processing", "pipeline", "aws", "transcoding", "architecture"]
 ---
 
 A national broadcaster needed to make decades of archived news footage searchable - not just by file metadata, but by spoken content, on-screen text, and visual subject matter. The archive contained over 400,000 hours of content across formats ranging from modern digital files to digitized VHS. Manual indexing was not viable at this scale.

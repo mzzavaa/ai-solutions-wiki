@@ -3,7 +3,7 @@ title: "Claude by Anthropic - Enterprise AI Assistant"
 description: "What makes Claude useful for enterprise applications, model tiers, key strengths, access options including through Amazon Bedrock, and common enterprise use cases."
 date: 2026-03-24
 categories: [Tools]
-tags: [claude, anthropic, llm, bedrock, enterprise, foundation-models]
+tags: ["ai-ml", "beginner", "claude", "llm", "foundation-models", "bedrock", "enterprise"]
 ---
 
 Claude is Anthropic's family of large language models, designed with a focus on safety, reliability, and extended context handling. For enterprise AI applications, Claude is one of the most widely deployed models via Amazon Bedrock, where it is available across multiple capability tiers.

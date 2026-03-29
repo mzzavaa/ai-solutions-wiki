@@ -3,7 +3,7 @@ title: "AWS Step Functions - Workflow Orchestration for AI Pipelines"
 description: "How Step Functions orchestrates multi-step AI workflows, handles retries and errors, and integrates with other AWS services - with practical patterns for AI use cases."
 date: 2026-03-24
 categories: [Tools]
-tags: [aws-step-functions, orchestration, workflow, aws, pipelines, ai-agents]
+tags: ["cloud-computing", "intermediate", "aws-step-functions", "workflow", "orchestration", "aws", "serverless"]
 related:
   - glossary/serverless
   - patterns/data-pipeline-patterns

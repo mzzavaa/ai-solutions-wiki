@@ -3,7 +3,7 @@ title: "Using Notion as an AI Backend - Databases, APIs, and Automation"
 description: "Notion API for structured data, MCP integration, and using Notion databases as knowledge stores for AI agents. When it works and when to outgrow it."
 date: 2026-03-24
 categories: [Tools]
-tags: [Notion, API, knowledge-management, MCP, AI-backend, low-code]
+tags: ["software-engineering", "beginner", "notion", "knowledge-base", "integration", "productivity"]
 tools: [amazon-bedrock]
 ---
 

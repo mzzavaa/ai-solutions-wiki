@@ -3,7 +3,7 @@ title: "Model Versioning and Artifact Management"
 description: "Why model versioning matters and how to implement it: S3 for artifacts, Git for configuration, SageMaker Model Registry, Bedrock model version pinning, and rollback procedures."
 date: 2026-03-25
 categories: [Patterns]
-tags: [ai-ml, intermediate, model-versioning, artifact-management, sagemaker, mlops, rollback]
+tags: ["ai-ml", "intermediate", "model-versioning", "mlops", "deployment", "rollback", "model-management"]
 related:
   - glossary/drift-detection
   - patterns/blue-green-deployment

@@ -3,7 +3,7 @@ title: "Automated Content Metadata and Tagging with AI"
 description: "Auto-tagging video and audio content, scene classification, topic extraction, and SEO metadata generation for media libraries."
 date: 2026-03-24
 categories: [Solutions]
-tags: [metadata, tagging, classification, SEO, content-management]
+tags: ["media-processing", "intermediate", "content-metadata", "media", "tagging", "computer-vision", "automation"]
 industries: [media]
 tools: [amazon-rekognition, amazon-bedrock, amazon-transcribe]
 ---

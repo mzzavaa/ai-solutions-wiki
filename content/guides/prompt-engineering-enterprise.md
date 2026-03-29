@@ -3,7 +3,7 @@ title: "Prompt Engineering for Enterprise AI Applications"
 description: "Practical prompt engineering patterns for production AI systems: system prompts, few-shot examples, chain-of-thought, structured output, guardrails, versioning, and A/B testing."
 date: 2026-03-26
 categories: [Guides]
-tags: [ai-ml, intermediate, prompt-engineering, bedrock, claude, enterprise]
+tags: ["ai-ml", "intermediate", "prompt-engineering", "enterprise", "llm", "best-practices", "optimization"]
 related:
   - guides/getting-started-with-bedrock
   - patterns/prompt-engineering-patterns

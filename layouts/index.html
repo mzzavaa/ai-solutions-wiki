@@ -21,7 +21,7 @@
         <span>Sections</span>
       </div>
       <div class="stat">
-        <strong>15</strong>
+        <strong>{{ with .Site.GetPage "solutions" }}{{ len .Sections }}{{ end }}</strong>
         <span>Industries</span>
       </div>
       <div class="stat">
