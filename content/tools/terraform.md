@@ -82,6 +82,21 @@ Deploy to dev with `terraform apply -var-file=dev.tfvars`. Promote to prod after
 
 The primary trade-off: Terraform is multi-cloud and uses its own DSL (HCL); CDK is AWS-only but uses familiar programming languages (Python, TypeScript). See the [Terraform vs CDK comparison]({{< relref "terraform-vs-cdk.md" >}}) for a detailed breakdown.
 
+## Origins and History
+
+Mitchell Hashimoto first recognized the need for a cloud-agnostic infrastructure provisioning tool in 2011, when AWS released CloudFormation. The day after that launch, Hashimoto published a blog post arguing that an open-source, provider-neutral alternative was needed and invited the community to build one. When no one did, HashiCorp built it themselves.
+
+On July 28, 2014, HashiCorp released Terraform 0.1 with support for AWS and DigitalOcean. The announcement described Terraform as "a tool for safely and efficiently building, combining, and launching infrastructure." The initial vision was to compose resources across multiple providers -- servers from AWS, DNS from CloudFlare, databases from Heroku -- and build them all in parallel.
+
+Terraform was far from an overnight success. Downloads were largely stagnant for the first eighteen months, and the team considered shutting the project down. By late 2016, however, the provider ecosystem had grown to over 750 contributors and dozens of providers including Azure, Google Cloud, and OpenStack. Downloads began doubling monthly in 2017. Terraform 1.0 reached general availability in June 2021, signaling production stability. In April 2024, IBM announced the acquisition of HashiCorp for $6.4 billion, closing in February 2025.
+
+## Sources
+
+1. HashiCorp. "Terraform Announcement." July 28, 2014. [https://www.hashicorp.com/en/blog/terraform-announcement](https://www.hashicorp.com/en/blog/terraform-announcement)
+2. HashiCorp. "The Story of HashiCorp Terraform with Mitchell Hashimoto." [https://www.hashicorp.com/en/resources/the-story-of-hashicorp-terraform-with-mitchell-hashimoto](https://www.hashicorp.com/en/resources/the-story-of-hashicorp-terraform-with-mitchell-hashimoto)
+3. HashiCorp. "Announcing HashiCorp Terraform 1.0 General Availability." June 2021. [https://www.hashicorp.com/en/blog/announcing-hashicorp-terraform-1-0-general-availability](https://www.hashicorp.com/en/blog/announcing-hashicorp-terraform-1-0-general-availability)
+4. "Terraform (software)." Wikipedia. [https://en.wikipedia.org/wiki/Terraform_(software)](https://en.wikipedia.org/wiki/Terraform_(software))
+
 ## Related Articles
 
 - [Infrastructure as Code]({{< relref "/glossary/infrastructure-as-code.md" >}}) - concept overview

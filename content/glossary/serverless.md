@@ -57,6 +57,6 @@ For AI applications where users notice latency, mitigate cold starts with:
 
 ## Related Articles
 
-- [AWS Lambda]({{< relref "/tools/amazon-lambda.md" >}}) - primary serverless compute
+- [AWS Lambda]({{< relref "/tools/aws-lambda.md" >}}) - primary serverless compute
 - [Event-Driven Architecture]({{< relref "event-driven-architecture.md" >}}) - architectural pattern for serverless
-- [AWS Step Functions]({{< relref "/tools/amazon-step-functions.md" >}}) - serverless orchestration
+- [AWS Step Functions]({{< relref "/tools/aws-step-functions.md" >}}) - serverless orchestration

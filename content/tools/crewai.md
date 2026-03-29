@@ -57,3 +57,16 @@ Configure the backend at the agent level - different agents in the same crew can
 ## Getting Started
 
 Install with `pip install crewai crewai-tools`. The quickstart pattern - define two agents with complementary roles, define two tasks, run the crew - is functional in under 50 lines of Python. The official documentation provides working examples for research, content generation, and analysis use cases.
+
+## Origins and History
+
+Joao Moura built the initial prototype of CrewAI while experimenting with a small agent to help him write LinkedIn posts more efficiently. That experiment revealed a broader insight: the barrier to building and deploying multi-agent systems was unnecessarily high. Moura finished building the framework in October 2023 and quietly released it as an open-source project on GitHub the following month. The project gained rapid traction, accumulating tens of thousands of GitHub stars within months.
+
+In January 2024, CrewAI incorporated as a company with Moura as CEO and Rob Bailey as COO. The company attracted 150 enterprise customers within its first six months and raised funding from investors who were themselves CrewAI users. By 2025, CrewAI reported powering over 1.4 billion agentic automations across enterprise customers including PwC, IBM, Capgemini, and NVIDIA.
+
+## Sources
+
+1. Moura, J. (2023). Twitter post on CrewAI origins. [https://x.com/joaomdmoura/status/1933162425869861101](https://x.com/joaomdmoura/status/1933162425869861101)
+2. CrewAI GitHub Repository. [https://github.com/crewAIInc/crewAI](https://github.com/crewAIInc/crewAI)
+3. Insight Partners (2025). "How CrewAI is orchestrating the next generation of AI Agents." [https://www.insightpartners.com/ideas/crewai-scaleup-ai-story/](https://www.insightpartners.com/ideas/crewai-scaleup-ai-story/)
+4. IBM. "What is CrewAI?" [https://www.ibm.com/think/topics/crew-ai](https://www.ibm.com/think/topics/crew-ai)

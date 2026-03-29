@@ -5,7 +5,7 @@ date: 2026-03-25
 categories: [Patterns]
 tags: [observability, cloudwatch, langfuse, opentelemetry, monitoring, ai-engineering, production, llm]
 related:
-  - tools/aws-cloudwatch
+  - tools/amazon-cloudwatch
   - patterns/canary-deployment
   - glossary/observability
   - glossary/drift-detection

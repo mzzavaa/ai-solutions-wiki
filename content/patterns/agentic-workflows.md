@@ -11,7 +11,7 @@ related:
   - tools/strands-agents
   - tools/langgraph
   - tools/crewai
-  - tools/amazon-step-functions
+  - tools/aws-step-functions
 ---
 
 Agentic AI workflows go beyond single model calls. An agent can use tools, take actions, and decide what to do next based on results. But "agentic" covers a wide range of architectural patterns with very different complexity profiles. Choosing the right pattern for the problem avoids over-engineering simple workflows and under-engineering complex ones.

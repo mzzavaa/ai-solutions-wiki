@@ -5,6 +5,10 @@ date: 2026-03-24
 categories: [Tools]
 tags: [amazon-textract, OCR, document-processing, forms, tables]
 tools: [amazon-textract]
+related:
+  - tools/azure-form-recognizer
+  - tools/google-document-ai
+  - tools/tesseract-ocr
 ---
 
 Amazon Textract is AWS's managed OCR and document analysis service. Unlike basic OCR tools that return raw text, Textract understands document structure: it identifies tables, forms, key-value pairs, and reading order. This structural understanding is what makes it useful for downstream processing, where you need extracted text that makes sense, not just a stream of characters.

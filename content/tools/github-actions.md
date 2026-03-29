@@ -300,10 +300,22 @@ Include model evaluation in the pipeline to catch quality regressions before dep
           path: evaluation-results.json
 ```
 
-## Sources and Further Reading
+## Origins and History
 
-- GitHub Documentation: GitHub Actions. [https://docs.github.com/en/actions](https://docs.github.com/en/actions)
-- GitHub Documentation: Workflow syntax reference. [https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
-- AWS Documentation: Configuring OpenID Connect in Amazon Web Services. [https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services](https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
-- peaceiris/actions-hugo. [https://github.com/peaceiris/actions-hugo](https://github.com/peaceiris/actions-hugo)
-- aws-actions/configure-aws-credentials. [https://github.com/aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials)
+GitHub announced Actions in limited public beta at GitHub Universe on October 16, 2018, in San Francisco. The announcement positioned Actions not as a traditional CI/CD pipeline product but as a general-purpose workflow automation system built on open-source principles. At launch, workflows were defined in a custom HCL-like syntax, and each action step ran inside a Docker container on GitHub's servers.
+
+Industry analyst James Governor of RedMonk described the Universe 2018 launch as "low key revolutionary," noting that GitHub was embracing and extending CI/CD. The announcement was immediately seen as a competitive threat to established CI services such as CircleCI and Travis CI, which had built their businesses on tight GitHub integration.
+
+Between the beta and general availability, GitHub made a significant design change: the workflow definition format was switched from HCL to YAML, aligning with the configuration language already familiar to most DevOps practitioners. GitHub Actions reached general availability at Universe 2019 in November, with full CI/CD capabilities including matrix builds, artifact storage, and caching.
+
+## Sources
+
+1. GitHub Blog. "GitHub Actions: built by you, run by us." October 17, 2018. [https://blog.github.com/2018-10-17-action-demos/](https://blog.github.com/2018-10-17-action-demos/)
+2. Governor, J. "GitHub Universe 2018: Low Key Revolutionary." RedMonk. November 7, 2018. [https://redmonk.com/jgovernor/2018/11/07/github-universe-2018-low-key-revolutionary/](https://redmonk.com/jgovernor/2018/11/07/github-universe-2018-low-key-revolutionary/)
+3. InfoQ. "GitHub Release Developer Workflow Tools: Actions, Suggested Changes & Security Alerts." October 2018. [https://www.infoq.com/news/2018/10/github-universe-2018-actions/](https://www.infoq.com/news/2018/10/github-universe-2018-actions/)
+4. GitHub Blog. "New from Universe 2019: GitHub for mobile, GitHub Archive Program, and more." November 2019. [https://github.blog/news-insights/product-news/universe-day-one/](https://github.blog/news-insights/product-news/universe-day-one/)
+5. GitHub Documentation: GitHub Actions. [https://docs.github.com/en/actions](https://docs.github.com/en/actions)
+6. GitHub Documentation: Workflow syntax reference. [https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions](https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions)
+7. AWS Documentation: Configuring OpenID Connect in Amazon Web Services. [https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services](https://docs.github.com/en/actions/security-for-github-actions/security-hardening-your-deployments/configuring-openid-connect-in-amazon-web-services)
+8. peaceiris/actions-hugo. [https://github.com/peaceiris/actions-hugo](https://github.com/peaceiris/actions-hugo)
+9. aws-actions/configure-aws-credentials. [https://github.com/aws-actions/configure-aws-credentials](https://github.com/aws-actions/configure-aws-credentials)

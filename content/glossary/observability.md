@@ -6,7 +6,7 @@ categories: [Glossary]
 tags: [observability, monitoring, logs, metrics, traces, cloudwatch, langfuse, opentelemetry, ai-engineering]
 related:
   - patterns/observability-ai
-  - tools/aws-cloudwatch
+  - tools/amazon-cloudwatch
   - glossary/drift-detection
   - guides/ci-cd-ai-detailed
 ---

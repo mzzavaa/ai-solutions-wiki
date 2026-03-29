@@ -4,6 +4,9 @@ description: "What Rekognition does, which features work well in enterprise appl
 date: 2026-03-24
 categories: [Tools]
 tags: [amazon-rekognition, computer-vision, aws, image-analysis, video-analysis]
+related:
+  - tools/azure-computer-vision
+  - tools/google-cloud-vision
 ---
 
 Amazon Rekognition is AWS's managed computer vision service. It provides pre-trained models for object detection, scene analysis, text detection, facial analysis, and content moderation - accessible through an API without requiring ML expertise to deploy or operate.

@@ -8,8 +8,8 @@ related:
   - patterns/event-sourcing-ai
   - glossary/event-driven-architecture
   - patterns/data-pipeline-patterns
-  - tools/aws-eventbridge
-  - tools/amazon-step-functions
+  - tools/amazon-eventbridge
+  - tools/aws-step-functions
 ---
 
 Event Sourcing is an architectural pattern where the state of a system is stored as an immutable sequence of events rather than as a current snapshot. Instead of writing "the document is in state X," you write "Document Submitted event occurred, then Document Processed event occurred, then Document Indexed event occurred." The current state is derived by replaying the event sequence from the beginning.

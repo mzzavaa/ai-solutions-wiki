@@ -13,15 +13,15 @@
     </div>
     <div class="hero-stats">
       <div class="stat">
-        <strong>200+</strong>
+        <strong>{{ len (where .Site.RegularPages "Type" "!=" "page") }}+</strong>
         <span>Articles</span>
       </div>
       <div class="stat">
-        <strong>9</strong>
+        <strong>{{ len .Site.Sections }}</strong>
         <span>Sections</span>
       </div>
       <div class="stat">
-        <strong>15+</strong>
+        <strong>15</strong>
         <span>Industries</span>
       </div>
       <div class="stat">
@@ -52,7 +52,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         </div>
         <h3>How-to Guides</h3>
-        <p>Step-by-step tutorials for building AI solutions from scratch.</p>
+        <p>Step-by-step tutorials for building AI solutions, agile practices, and project management.</p>
         <span class="card-link">Read guides
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </span>
@@ -62,7 +62,7 @@
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
         </div>
         <h3>Frameworks</h3>
-        <p>Scoring, assessment, and decision frameworks for AI projects.</p>
+        <p>Agile, waterfall, and decision frameworks for AI project management.</p>
         <span class="card-link">See frameworks
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </span>
@@ -114,6 +114,16 @@
         <h3>AI Ideas</h3>
         <p>Daily AI sparks - quick concepts to inspire your next project.</p>
         <span class="card-link">Get inspired
+          <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+      <a href="{{ "case-patterns/" | relURL }}" class="category-card">
+        <div class="category-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+        </div>
+        <h3>Case Patterns</h3>
+        <p>Real-world AI implementation patterns drawn from production use cases.</p>
+        <span class="card-link">View cases
           <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
         </span>
       </a>

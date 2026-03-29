@@ -1,0 +1,41 @@
+---
+title: "Red Teaming"
+description: "What red teaming is in AI, how adversarial testing discovers vulnerabilities and failure modes before deployment, and best practices for running red team exercises."
+date: 2026-03-28
+categories: [Glossary]
+tags: [red-teaming, adversarial-testing, ai-safety, security, evaluation, guardrails]
+related:
+  - glossary/ai-safety
+  - glossary/hallucination
+  - patterns/prompt-injection-defense
+  - patterns/guardrails-pattern
+  - guides/red-teaming-ai
+---
+
+Red teaming in AI is the practice of systematically probing an AI system to discover vulnerabilities, failure modes, harmful outputs, and policy violations before the system is deployed to users. A red team plays the role of an adversary, using creative and structured techniques to elicit behavior that the system's designers intended to prevent.
+
+## Origins
+
+The term comes from military and cybersecurity practice, where a red team simulates enemy attacks against an organization's defenses to identify weaknesses. In the AI context, red teaming was popularized by major model providers who used it to evaluate language models before public release. Microsoft, OpenAI, Anthropic, and Google have all published accounts of red teaming exercises used to discover and mitigate harmful model behaviors.
+
+## What Red Teams Test For
+
+**Harmful content generation** - Attempts to make the model produce dangerous, illegal, or toxic content. This includes instructions for weapons, exploitation, harassment, and other prohibited content categories.
+
+**Prompt injection** - Techniques that override the system prompt or safety instructions. Jailbreaks, role-playing attacks, and instruction smuggling that cause the model to ignore its guardrails.
+
+**Information leakage** - Attempts to extract the system prompt, training data, personal information, or proprietary information from the model's responses.
+
+**Bias and discrimination** - Probing for differential treatment across demographic groups, stereotyping, or discriminatory outputs.
+
+**Factual reliability** - Testing whether the model fabricates information, invents citations, or presents speculation as fact in domain-specific contexts.
+
+## Running a Red Team Exercise
+
+Assemble a diverse team including security specialists, domain experts, creative writers, and people with different cultural backgrounds. Define the scope: which attack categories to prioritize, which system configurations to test, and what constitutes a finding versus expected behavior.
+
+Provide structured attack templates but also allow open-ended exploration. Some of the most impactful findings come from creative, unstructured probing. Document every finding with the exact input that triggered it, the model's response, and the severity classification. Track findings in a structured database to enable trend analysis across red teaming rounds.
+
+## Integrating Red Teaming into Development
+
+Red teaming should not be a one-time event. Run red team exercises before major releases, after significant model or prompt changes, and on a regular cadence for production systems. Automate repeatable test cases from previous red team findings to create regression test suites. Use red team findings to improve guardrails, refine system prompts, and update content filtering rules.

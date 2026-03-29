@@ -4,6 +4,10 @@ description: "How Amazon S3 functions as the storage backbone for AI data pipeli
 date: 2026-03-25
 categories: [Tools]
 tags: [aws-s3, storage, AWS, data-pipeline, object-storage]
+related:
+  - tools/azure-blob-storage
+  - tools/google-cloud-storage
+  - tools/minio
 ---
 
 Amazon S3 (Simple Storage Service) is object storage built to store and retrieve any amount of data from anywhere. In AI pipelines it serves as the primary layer for raw data ingest, intermediate processing artifacts, model inputs, and final outputs. Because almost every AWS AI service integrates natively with S3, it is typically the first and last stop in any data workflow.
@@ -48,6 +52,23 @@ In a typical media AI pipeline, S3 handles each stage:
 | Event triggers | EventBridge, Lambda | Event Grid | Pub/Sub, Cloud Functions |
 | Versioning | Yes | Yes (soft delete) | Yes |
 | Lifecycle policies | Yes | Yes | Yes |
+
+## Origins and History
+
+Amazon S3 launched on March 14, 2006 (Pi Day), making it the first generally available AWS service. The press release announced "a highly scalable, reliable, and low-latency data storage infrastructure at very low costs." Jeff Barr wrote a simple blog post alongside the launch, noting that the developer community was "interested in and hungry for powerful, scalable, and useful web services."
+
+The priority of S3 in the AWS launch sequence is sometimes debated. Amazon Simple Queue Service (SQS) entered public preview on November 3, 2004, more than a year before S3. However, SQS did not reach general availability until July 2006, after S3. This makes S3 the first GA service and SQS the first service to enter preview.
+
+When AWS launched, S3 was its only production service. EC2 for compute followed a few months later. Werner Vogels later revealed that S3 was built with eight microservices at launch; by 2022, that number had grown to over 300. S3 did not have a graphical interface until the AWS Management Console appeared in 2010 -- for its first four years, all interaction was via REST, SOAP, or BitTorrent APIs.
+
+SmugMug, the photo hosting service, became one of the first significant S3 customers in April 2006. After an initial period of outages and slowdowns, they described it after one year as "considerably more reliable than our own internal storage" and claimed savings of nearly $1 million in storage costs.
+
+## Sources
+
+1. Amazon Press Release. "Amazon Web Services Launches." March 14, 2006. [https://press.aboutamazon.com/2006/3/amazon-web-services-launches](https://press.aboutamazon.com/2006/3/amazon-web-services-launches)
+2. Barr, J. "Eight Years (And Counting) of Cloud Computing." AWS Blog. [https://aws.amazon.com/blogs/aws/eight-years-and-counting-of-cloud-computing/](https://aws.amazon.com/blogs/aws/eight-years-and-counting-of-cloud-computing/)
+3. "Amazon S3." Wikipedia. [https://en.wikipedia.org/wiki/Amazon_S3](https://en.wikipedia.org/wiki/Amazon_S3)
+4. Konishi, H. "AWS History and Timeline regarding Amazon S3." [https://hidekazu-konishi.com/entry/aws_history_and_timeline_amazon_s3.html](https://hidekazu-konishi.com/entry/aws_history_and_timeline_amazon_s3.html)
 
 ## Related Articles
 
