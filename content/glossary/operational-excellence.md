@@ -3,7 +3,7 @@ title: "Operational Excellence (Well-Architected Pillar)"
 description: "The Well-Architected pillar covering runbooks, automation, observability, incident response, and continuous improvement - and how it applies to AI and ML workloads."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, well-architected, devops, automation, observability]
+tags: [cloud-computing, intermediate, operational-excellence, well-architected, devops, automation]
 related:
   - frameworks/well-architected-framework
   - frameworks/well-architected-ai-ml-lens

@@ -3,7 +3,7 @@ title: "Text-to-Speech (TTS)"
 description: "What text-to-speech technology is, how AWS Polly, Azure Speech, and GCP Text-to-Speech compare, and key features like neural voices and SSML."
 date: 2026-03-24
 categories: [Glossary]
-tags: [text-to-speech, TTS, voice, synthesis, audio]
+tags: [ai-ml, beginner, text-to-speech, voice, synthesis, audio]
 ---
 
 Text-to-speech (TTS) converts written text into spoken audio. Modern neural TTS systems produce speech that is nearly indistinguishable from human recording for short to medium-length passages. Applications include accessibility features for visually impaired users, voice assistants, IVR systems, audio content generation, and programmatic narration for video.

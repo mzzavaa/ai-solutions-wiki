@@ -3,7 +3,7 @@ title: "Observability"
 description: "What observability means, the three pillars of logs, metrics, and traces, and why AI systems need specialized observability for token costs, latency, and hallucination rates."
 date: 2026-03-25
 categories: [Glossary]
-tags: [observability, monitoring, logs, metrics, traces, cloudwatch, langfuse, opentelemetry, ai-engineering]
+tags: [devops, intermediate, observability, monitoring, logs, metrics, traces, cloudwatch, langfuse]
 related:
   - patterns/observability-ai
   - tools/amazon-cloudwatch

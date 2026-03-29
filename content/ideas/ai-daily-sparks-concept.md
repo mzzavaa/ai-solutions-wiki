@@ -3,7 +3,7 @@ title: "Daily AI Sparks - One Automation Idea Per Day"
 description: "How the Daily AI Sparks series works and how to use short automation ideas to find your first AI quick win."
 date: 2026-03-24
 categories: [Ideas]
-tags: [automation, getting-started, quick-wins, productivity]
+tags: [ai-ml, beginner, automation, quick-wins, productivity, getting-started]
 ---
 
 Most teams approach AI transformation the wrong way. They start with a strategy document, a committee, a vendor evaluation, and six months later they have a roadmap but no working software. Daily AI Sparks inverts this.

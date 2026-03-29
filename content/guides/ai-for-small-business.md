@@ -3,7 +3,7 @@ title: "AI for Small Businesses - Where to Start"
 description: "Low-cost AI tools, quick wins in email automation and document processing, and guidance on when to invest in custom solutions."
 date: 2026-03-24
 categories: [Guides]
-tags: [small-business, quick-wins, automation, email, document-processing]
+tags: [ai-ml, beginner, small-business, automation, quick-wins, document-processing]
 ---
 
 Small businesses face a different AI challenge than enterprises: limited budget, limited technical staff, and limited time to experiment. The right approach is not to start with infrastructure or custom models - it is to find the three or four points where AI saves meaningful time with off-the-shelf tools, prove the value, then decide whether deeper investment makes sense.

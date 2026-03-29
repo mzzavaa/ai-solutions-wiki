@@ -3,7 +3,7 @@ title: "AI Deployment Models - SaaS, PaaS, IaaS, and Serverless"
 description: "How the four cloud deployment models apply to AI workloads: when to use managed models, platform endpoints, GPU instances, or serverless patterns, with cost implications."
 date: 2026-03-25
 categories: [Guides]
-tags: [deployment, cloud-fundamentals, bedrock, sagemaker, serverless, IaaS, PaaS, SaaS, cost]
+tags: [cloud-computing, intermediate, deployment, bedrock, sagemaker, serverless, cost]
 related:
   - guides/shared-responsibility-model
   - guides/infrastructure-as-code-ai

@@ -3,7 +3,7 @@ title: "Agentic Workflow Patterns - From Simple Chains to Complex Orchestration"
 description: "Chain, router, parallel, hierarchical, and loop patterns for AI agents. When to use each, error handling, and fallback strategies."
 date: 2026-03-24
 categories: [Patterns]
-tags: [agentic-AI, orchestration, workflow-patterns, error-handling, multi-agent]
+tags: [ai-agents, intermediate, agentic-ai, orchestration, workflow-patterns, multi-agent]
 tools: [amazon-bedrock, amazon-step-functions, langgraph]
 related:
   - glossary/ai-agents

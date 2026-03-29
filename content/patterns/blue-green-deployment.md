@@ -3,7 +3,7 @@ title: "Blue-Green Deployment for AI Services"
 description: "Zero-downtime model updates using blue-green deployment: how it works, AWS implementation with Lambda aliases and SageMaker variants, and rollback strategies for AI systems."
 date: 2026-03-25
 categories: [Patterns]
-tags: [blue-green, deployment, zero-downtime, lambda, sagemaker, rollback, ai-engineering, production]
+tags: [devops, intermediate, blue-green, deployment, zero-downtime, lambda, sagemaker, rollback]
 related:
   - glossary/blue-green-deployment
   - patterns/canary-deployment

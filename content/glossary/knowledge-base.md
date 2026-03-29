@@ -3,7 +3,7 @@ title: "Knowledge Base (AI)"
 description: "What an AI knowledge base is, how it differs from a traditional knowledge base, vector stores, and RAG integration."
 date: 2026-03-24
 categories: [Glossary]
-tags: [knowledge-base, RAG, vector-store, information-retrieval]
+tags: [ai-agents, beginner, knowledge-base, rag, vector-store, information-retrieval]
 ---
 
 An AI knowledge base is a structured or semi-structured collection of documents, data, and information that an AI system can retrieve and use to generate grounded responses. The term overlaps with "traditional" knowledge bases but differs in how content is stored, indexed, and retrieved.

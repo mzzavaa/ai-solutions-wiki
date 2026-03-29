@@ -1,7 +1,7 @@
 ---
 title: "Time Complexity and Big-O Notation"
 description: "An introduction to Big-O notation and how it describes the asymptotic behavior of algorithms."
-tags: ["algorithms", "computer-science", "fundamentals", "big-o"]
+tags: [cs-fundamentals, intermediate, time-complexity, algorithms, big-o, performance]
 date: 2026-03-28
 categories: [Glossary]
 sources:

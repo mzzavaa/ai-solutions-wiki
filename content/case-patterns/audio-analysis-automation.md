@@ -3,7 +3,7 @@ title: "Case Pattern: Multi-Track Audio Analysis for Film Production"
 description: "Architecture for an AI system that processes multi-track audio from film production, identifying issues, categorizing content, and generating post-production notes."
 date: 2026-03-24
 categories: [Case Patterns]
-tags: [audio-analysis, media, post-production, transcription, quality-control]
+tags: [media-processing, intermediate, audio-analysis, multi-track, post-production, transcription, quality-control]
 ---
 
 A post-production facility built an AI system to analyze raw multi-track audio from film and television shoots. The system identifies technical issues (noise, clipping, hum), classifies content by track type, transcribes dialogue, and generates automated production notes - work that previously required a sound editor to manually review hours of raw footage.

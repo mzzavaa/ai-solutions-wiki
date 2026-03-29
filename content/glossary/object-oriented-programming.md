@@ -3,7 +3,7 @@ title: "Object-Oriented Programming (OOP)"
 description: "Classes, objects, inheritance, encapsulation, and polymorphism - how OOP concepts apply directly to AI frameworks like CrewAI and Pydantic."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, fundamentals, programming, oop]
+tags: [cs-fundamentals, beginner, oop, programming, classes, inheritance]
 related:
   - guides/programming-languages-for-ai
   - tools/crewai

@@ -3,7 +3,7 @@ title: "Shared Responsibility Model"
 description: "What the shared responsibility model is, how AWS, Azure, and GCP divide security duties, and special considerations for AI and ML workloads."
 date: 2026-03-25
 categories: [Glossary]
-tags: [shared-responsibility, security, compliance, cloud-fundamentals, AI-security]
+tags: [security, beginner, shared-responsibility, compliance, cloud, ai-security]
 related:
   - guides/shared-responsibility-model
   - tools/amazon-bedrock

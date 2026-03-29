@@ -3,7 +3,7 @@ title: "Claude vs GPT - Choosing an Enterprise LLM"
 description: "A practical comparison of Anthropic Claude and OpenAI GPT for enterprise applications - capability differences, access options, compliance characteristics, and decision criteria."
 date: 2026-03-24
 categories: [Comparisons]
-tags: [claude, gpt, openai, anthropic, comparison, enterprise, LLM]
+tags: [ai-ml, intermediate, claude, gpt, llm, comparison, enterprise]
 ---
 
 Claude (Anthropic) and GPT (OpenAI) are the two most widely deployed foundation models in enterprise AI applications. Both are capable general-purpose LLMs; the differences that matter for enterprise decisions are in access options, compliance characteristics, specific capability strengths, and cost structure rather than a clear overall winner.

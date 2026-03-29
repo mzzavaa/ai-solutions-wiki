@@ -3,7 +3,7 @@ title: "Floating-Point Arithmetic and Model Precision"
 description: "IEEE 754, FP32, FP16, BF16, and INT8 - how number precision determines model size, inference speed, and accuracy tradeoffs in AI deployment."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, fundamentals, quantization, model-optimization]
+tags: [cs-fundamentals, intermediate, floating-point, quantization, model-optimization, number-systems]
 related:
   - glossary/binary-system
   - glossary/hardware-constraints

@@ -3,7 +3,7 @@ title: "AI Cost Optimization Patterns"
 description: "Model selection by task, caching strategies, batch vs real-time processing, and tiered inference with Haiku, Sonnet, and Opus."
 date: 2026-03-24
 categories: [Patterns]
-tags: [cost-optimization, model-selection, caching, batch-processing, inference]
+tags: [cloud-computing, intermediate, cost-optimization, model-selection, caching, batch-processing]
 tools: [amazon-bedrock, claude-anthropic]
 ---
 

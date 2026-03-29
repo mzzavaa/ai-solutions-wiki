@@ -3,7 +3,7 @@ title: "Circuit Breaker Pattern"
 description: "What the circuit breaker pattern is, why AI services need it for handling model timeouts and rate limits, and how to implement it with AWS Step Functions."
 date: 2026-03-25
 categories: [Glossary]
-tags: [circuit-breaker, resilience, error-handling, ai-engineering, production, fallback]
+tags: [architecture, intermediate, circuit-breaker, resilience, error-handling, fallback]
 related:
   - patterns/circuit-breaker-ai
   - patterns/microservices-for-ai

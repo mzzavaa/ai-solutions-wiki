@@ -3,7 +3,7 @@ title: "Security (Well-Architected Pillar)"
 description: "The Well-Architected pillar covering IAM, encryption, network security, and detection - and how it applies to AI workloads including training data protection, prompt injection defense, and Bedrock Guardrails."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, well-architected, security, iam, encryption]
+tags: [security, intermediate, security-pillar, well-architected, iam, encryption]
 related:
   - frameworks/well-architected-framework
   - frameworks/well-architected-ai-ml-lens

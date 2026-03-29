@@ -3,7 +3,7 @@ title: "Multi-Agent AI Systems - When One Model Is Not Enough"
 description: "A practical introduction to multi-agent AI architectures: when to use them, how they work, and which frameworks are production-ready."
 date: 2026-03-24
 categories: [Guides]
-tags: [multi-agent, LangGraph, CrewAI, architecture, AWS-AgentCore]
+tags: [ai-agents, intermediate, multi-agent, langgraph, crewai, aws-agentcore]
 related:
   - glossary/ai-agents
   - glossary/multi-agent-systems

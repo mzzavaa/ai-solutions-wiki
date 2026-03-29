@@ -3,7 +3,7 @@ title: "Performance Efficiency (Well-Architected Pillar)"
 description: "The Well-Architected pillar covering compute selection, storage, database, and networking choices - and how it applies to AI workloads including GPU selection, model quantization, and inference scaling."
 date: 2026-03-26
 categories: [Glossary]
-tags: [glossary, well-architected, performance, latency, scaling]
+tags: [cloud-computing, intermediate, performance-efficiency, well-architected, latency, scaling]
 related:
   - frameworks/well-architected-framework
   - frameworks/well-architected-ai-ml-lens

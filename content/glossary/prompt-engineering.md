@@ -3,7 +3,7 @@ title: "Prompt Engineering"
 description: "What prompt engineering is, why it matters in enterprise AI applications, and the most effective techniques for getting reliable outputs from LLMs."
 date: 2026-03-24
 categories: [Glossary]
-tags: [prompt-engineering, LLM, prompts, enterprise, instructions]
+tags: [ai-ml, beginner, prompt-engineering, llm, enterprise, instructions]
 related:
   - patterns/prompt-engineering-patterns
   - glossary/llm
