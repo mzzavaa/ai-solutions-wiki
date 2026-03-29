@@ -72,6 +72,6 @@ SmugMug, the photo hosting service, became one of the first significant S3 custo
 
 ## Related Articles
 
-- [Amazon EventBridge]({{< relref "aws-eventbridge.md" >}}) - triggering pipelines from S3 events
+- [Amazon EventBridge]({{< relref "amazon-eventbridge.md" >}}) - triggering pipelines from S3 events
 - [AWS Lambda]({{< relref "amazon-lambda.md" >}}) - processing objects on arrival
 - [Building an AI Video Pipeline]({{< relref "/solutions/media/video-pipeline-architecture.md" >}}) - end-to-end example

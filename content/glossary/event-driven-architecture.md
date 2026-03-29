@@ -50,6 +50,6 @@ Use EventBridge when event routing logic matters. Use SQS when you need durable 
 
 ## Related Articles
 
-- [Amazon EventBridge]({{< relref "/tools/aws-eventbridge.md" >}}) - primary event bus
-- [AWS Step Functions]({{< relref "/tools/amazon-step-functions.md" >}}) - orchestration for multi-step pipelines
+- [Amazon EventBridge]({{< relref "/tools/amazon-eventbridge.md" >}}) - primary event bus
+- [AWS Step Functions]({{< relref "/tools/aws-step-functions.md" >}}) - orchestration for multi-step pipelines
 - [Serverless Computing]({{< relref "serverless.md" >}}) - execution model for event consumers
