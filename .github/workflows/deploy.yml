@@ -44,13 +44,11 @@ jobs:
         env:
           HUGO_CACHEDIR: ${{ runner.temp }}/hugo_cache
           HUGO_ENVIRONMENT: production
-          TZ: America/New_York
-          PAGES_BASE_URL: ${{ steps.pages.outputs.base_url }}
+          TZ: Europe/Vienna
         run: |
           hugo \
             --gc \
-            --minify \
-            --baseURL "$PAGES_BASE_URL/"
+            --minify
 
       - name: Index with Pagefind
         run: npx -y pagefind@latest --site public --output-subdir pagefind
