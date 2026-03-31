@@ -1,0 +1,594 @@
+{{ define "main" }}
+<style>
+  /* ---- Layers Page Styles ---- */
+  .layers-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 100%);
+    padding: 72px 24px 56px;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  .layers-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #a78bfa;
+    background: rgb(167 139 250 / 0.12);
+    border: 1px solid rgb(167 139 250 / 0.25);
+    border-radius: 100px;
+    padding: 4px 14px;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .layers-hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.75rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .layers-hero p {
+    font-size: 1.1rem;
+    color: #94a3b8;
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  /* ---- Stack visualizer ---- */
+  .stack-nav {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    padding: 40px 24px 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .stack-nav-item {
+    flex: 1;
+    text-align: center;
+    padding: 10px 8px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-top: 3px solid transparent;
+    color: #64748b;
+    text-decoration: none;
+    transition: color 0.15s, border-color 0.15s;
+  }
+
+  .stack-nav-item:hover { text-decoration: none; }
+  .stack-nav-item.layer-1 { border-color: #7c3aed; color: #7c3aed; }
+  .stack-nav-item.layer-2 { border-color: #2563eb; color: #2563eb; }
+  .stack-nav-item.layer-3 { border-color: #d97706; color: #d97706; }
+  .stack-nav-item.layer-4 { border-color: #059669; color: #059669; }
+
+  /* ---- Layer sections ---- */
+  .layer-section {
+    padding: 64px 24px;
+    border-bottom: 1px solid var(--border);
+    position: relative;
+  }
+
+  .layer-section:nth-child(even) {
+    background: var(--surface);
+  }
+
+  .layer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .layer-header {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 24px;
+    align-items: start;
+    margin-bottom: 40px;
+  }
+
+  .layer-number {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 64px;
+  }
+
+  .layer-num-badge {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: #fff;
+    flex-shrink: 0;
+  }
+
+  .layer-num-line {
+    width: 2px;
+    height: 32px;
+    border-radius: 2px;
+    opacity: 0.3;
+  }
+
+  .layer-1 .layer-num-badge { background: #7c3aed; }
+  .layer-1 .layer-num-line { background: #7c3aed; }
+  .layer-2 .layer-num-badge { background: #2563eb; }
+  .layer-2 .layer-num-line { background: #2563eb; }
+  .layer-3 .layer-num-badge { background: #d97706; }
+  .layer-3 .layer-num-line { background: #d97706; }
+  .layer-4 .layer-num-badge { background: #059669; }
+  .layer-4 .layer-num-line { background: #059669; }
+
+  .layer-meta {
+    padding-top: 4px;
+  }
+
+  .layer-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    padding: 3px 10px;
+    border-radius: 100px;
+    margin-bottom: 10px;
+  }
+
+  .layer-1 .layer-label { background: rgb(124 58 237 / 0.1); color: #7c3aed; }
+  .layer-2 .layer-label { background: rgb(37 99 235 / 0.1); color: #2563eb; }
+  .layer-3 .layer-label { background: rgb(217 119 6 / 0.1); color: #d97706; }
+  .layer-4 .layer-label { background: rgb(5 150 105 / 0.1); color: #059669; }
+
+  .layer-meta h2 {
+    font-size: 1.75rem;
+    font-weight: 800;
+    color: var(--text-primary);
+    letter-spacing: -0.02em;
+    margin-bottom: 10px;
+    line-height: 1.2;
+  }
+
+  .layer-meta p {
+    font-size: 0.975rem;
+    color: var(--text-secondary);
+    line-height: 1.65;
+    max-width: 620px;
+  }
+
+  /* ---- Topic cards grid ---- */
+  .topic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .topic-card {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 16px;
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+
+  .topic-card:hover {
+    box-shadow: var(--shadow);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  .layer-1 .topic-card:hover { border-color: #7c3aed; }
+  .layer-2 .topic-card:hover { border-color: #2563eb; }
+  .layer-3 .topic-card:hover { border-color: #d97706; }
+  .layer-4 .topic-card:hover { border-color: #059669; }
+
+  .topic-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .layer-1 .topic-icon { background: rgb(124 58 237 / 0.1); color: #7c3aed; }
+  .layer-2 .topic-icon { background: rgb(37 99 235 / 0.1); color: #2563eb; }
+  .layer-3 .topic-icon { background: rgb(217 119 6 / 0.1); color: #d97706; }
+  .layer-4 .topic-icon { background: rgb(5 150 105 / 0.1); color: #059669; }
+
+  /* ---- Layer connector arrow ---- */
+  .layer-connector {
+    text-align: center;
+    padding: 16px 0 0;
+    color: var(--text-muted);
+  }
+
+  /* ---- Bottom CTA ---- */
+  .layers-cta {
+    padding: 64px 24px;
+    text-align: center;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  }
+
+  .layers-cta h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 12px;
+  }
+
+  .layers-cta p {
+    color: rgb(255 255 255 / 0.65);
+    font-size: 0.975rem;
+    max-width: 480px;
+    margin: 0 auto 28px;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #f1f5f9;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1px solid rgb(255 255 255 / 0.25);
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .cta-outline:hover {
+    border-color: rgb(255 255 255 / 0.5);
+    background: rgb(255 255 255 / 0.05);
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .layer-header { grid-template-columns: 1fr; }
+    .layer-number { flex-direction: row; min-width: auto; }
+    .layer-num-line { display: none; }
+    .stack-nav { flex-wrap: wrap; gap: 4px; }
+    .stack-nav-item { flex: none; width: calc(50% - 4px); }
+  }
+</style>
+
+<!-- Hero -->
+<section class="layers-hero">
+  <div class="layers-hero-badge">
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+    Conceptual Map
+  </div>
+  <h1>{{ .Title }}</h1>
+  <p>{{ .Description }}</p>
+
+  <!-- Stack navigation -->
+  <nav class="stack-nav" aria-label="Jump to layer">
+    <a href="#layer-1" class="stack-nav-item layer-1">01 - AI Capabilities</a>
+    <a href="#layer-2" class="stack-nav-item layer-2">02 - Engineering Patterns</a>
+    <a href="#layer-3" class="stack-nav-item layer-3">03 - Software Foundations</a>
+    <a href="#layer-4" class="stack-nav-item layer-4">04 - Infrastructure</a>
+  </nav>
+</section>
+
+<!-- Layer 1: AI Capabilities -->
+<section class="layer-section layer-1" id="layer-1">
+  <div class="layer-inner">
+    <div class="layer-header">
+      <div class="layer-number">
+        <div class="layer-num-badge">1</div>
+        <div class="layer-num-line"></div>
+      </div>
+      <div class="layer-meta">
+        <span class="layer-label">AI Capabilities</span>
+        <h2>What AI can do and how to harness it</h2>
+        <p>The top of the stack is the AI itself - the models, techniques, and capabilities that make intelligent systems possible. This layer covers the core building blocks: language models, embeddings, agent architectures, evaluation, and the craft of prompt engineering.</p>
+      </div>
+    </div>
+    <div class="topic-grid">
+      <a href="{{ "tools/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 1 0 5 5"/><path d="M12 17v5"/><path d="M4 14H2"/><path d="M22 14h-2"/><path d="m4.93 4.93-1.41 1.41"/><path d="m19.07 4.93 1.41 1.41"/><circle cx="12" cy="14" r="8"/></svg>
+        </span>
+        Large Language Models
+      </a>
+      <a href="{{ "glossary/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </span>
+        Embeddings and Search
+      </a>
+      <a href="{{ "patterns/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+        </span>
+        Agent Architectures
+      </a>
+      <a href="{{ "guides/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </span>
+        Fine-tuning
+      </a>
+      <a href="{{ "guides/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 12h.01"/><path d="M15 12h.01"/><path d="M10 16c.5.3 1.2.5 2 .5s1.5-.2 2-.5"/><path d="M19 6.3a9 9 0 0 1 1.8 3.9 2 2 0 0 1 0 3.6 9 9 0 0 1-17.6 0 2 2 0 0 1 0-3.6A9 9 0 0 1 12 3c2 0 3.5 1.1 3.5 2.5s-.9 2.5-2 3"/></svg>
+        </span>
+        Prompt Engineering
+      </a>
+      <a href="{{ "comparisons/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        </span>
+        Model Evaluation
+      </a>
+      <a href="{{ "patterns/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+        </span>
+        Multimodal AI
+      </a>
+      <a href="{{ "glossary/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        </span>
+        AI Glossary
+      </a>
+    </div>
+  </div>
+  <div class="layer-connector">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- Layer 2: Engineering Patterns -->
+<section class="layer-section layer-2" id="layer-2">
+  <div class="layer-inner">
+    <div class="layer-header">
+      <div class="layer-number">
+        <div class="layer-num-badge">2</div>
+        <div class="layer-num-line"></div>
+      </div>
+      <div class="layer-meta">
+        <span class="layer-label">Engineering Patterns</span>
+        <h2>How to architect and wire AI into systems</h2>
+        <p>Raw capabilities need structure. This layer covers the architectural patterns and engineering disciplines that turn AI model calls into reliable, maintainable production systems - RAG pipelines, orchestration, tool-calling, observability, and prompt lifecycle management.</p>
+      </div>
+    </div>
+    <div class="topic-grid">
+      <a href="{{ "patterns/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+        </span>
+        RAG Architecture
+      </a>
+      <a href="{{ "patterns/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        </span>
+        Orchestration
+      </a>
+      <a href="{{ "patterns/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </span>
+        Tool Calling
+      </a>
+      <a href="{{ "guides/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </span>
+        Observability
+      </a>
+      <a href="{{ "guides/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>
+        </span>
+        Prompt Versioning
+      </a>
+      <a href="{{ "frameworks/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        </span>
+        AI Frameworks
+      </a>
+      <a href="{{ "patterns/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="3" rx="2" ry="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+        </span>
+        Context Management
+      </a>
+      <a href="{{ "case-patterns/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+        </span>
+        Case Patterns
+      </a>
+    </div>
+  </div>
+  <div class="layer-connector">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- Layer 3: Software Foundations -->
+<section class="layer-section layer-3" id="layer-3">
+  <div class="layer-inner">
+    <div class="layer-header">
+      <div class="layer-number">
+        <div class="layer-num-badge">3</div>
+        <div class="layer-num-line"></div>
+      </div>
+      <div class="layer-meta">
+        <span class="layer-label">Software Foundations</span>
+        <h2>The engineering discipline beneath the AI</h2>
+        <p>AI systems are software systems. Solid foundations in version control, testing strategy, CI/CD, API design, security, and architectural principles are what separate prototypes from production. This layer is the bedrock every AI engineer should have in place.</p>
+      </div>
+    </div>
+    <div class="topic-grid">
+      <a href="{{ "software-engineering/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9"/><path d="M12 12v3"/></svg>
+        </span>
+        Version Control
+      </a>
+      <a href="{{ "software-engineering/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </span>
+        Testing Strategy
+      </a>
+      <a href="{{ "software-engineering/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </span>
+        CI / CD Pipelines
+      </a>
+      <a href="{{ "software-engineering/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </span>
+        API Design
+      </a>
+      <a href="{{ "software-engineering/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </span>
+        Security
+      </a>
+      <a href="{{ "architecture/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+        </span>
+        Architecture Principles
+      </a>
+      <a href="{{ "software-engineering/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </span>
+        Clean Code
+      </a>
+      <a href="{{ "frameworks/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        </span>
+        Project Frameworks
+      </a>
+    </div>
+  </div>
+  <div class="layer-connector">
+    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+  </div>
+</section>
+
+<!-- Layer 4: Infrastructure -->
+<section class="layer-section layer-4" id="layer-4">
+  <div class="layer-inner">
+    <div class="layer-header">
+      <div class="layer-number">
+        <div class="layer-num-badge">4</div>
+      </div>
+      <div class="layer-meta">
+        <span class="layer-label">Infrastructure</span>
+        <h2>The compute and data layer that runs it all</h2>
+        <p>Every AI system ultimately runs on infrastructure - cloud services, containers, data pipelines, vector stores, and storage. This layer covers the operational reality of deploying and scaling AI: where data lives, how it moves, and what it costs to run.</p>
+      </div>
+    </div>
+    <div class="topic-grid">
+      <a href="{{ "tools/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+        </span>
+        Cloud Services
+      </a>
+      <a href="{{ "tools/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/></svg>
+        </span>
+        Serverless
+      </a>
+      <a href="{{ "tools/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+        </span>
+        Containers
+      </a>
+      <a href="{{ "solutions/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </span>
+        Data Pipelines
+      </a>
+      <a href="{{ "patterns/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+        </span>
+        Vector Databases
+      </a>
+      <a href="{{ "tools/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+        </span>
+        Storage and Access
+      </a>
+      <a href="{{ "tools/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></svg>
+        </span>
+        AWS AI Services
+      </a>
+      <a href="{{ "solutions/" | relURL }}" class="topic-card">
+        <span class="topic-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </span>
+        Production Deployments
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Bottom CTA -->
+<section class="layers-cta">
+  <h2>Start exploring any layer</h2>
+  <p>Each layer builds on the ones below it. Dive in where you are, or work top-to-bottom for the full picture.</p>
+  <div class="cta-group">
+    <a href="{{ "getting-started/" | relURL }}" class="cta-button large">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      Getting Started Guide
+    </a>
+    <a href="{{ "build/" | relURL }}" class="cta-outline">
+      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      Browse Build Guides
+    </a>
+  </div>
+</section>
+{{ end }}

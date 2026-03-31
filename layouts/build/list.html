@@ -1,0 +1,808 @@
+{{ define "main" }}
+<style>
+  /* ---- Build Page Styles ---- */
+  .build-hero {
+    background: linear-gradient(160deg, #0f172a 0%, #1e293b 50%, #162032 100%);
+    padding: 72px 24px 64px;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  .build-hero-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .build-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #60a5fa;
+    background: rgb(96 165 250 / 0.12);
+    border: 1px solid rgb(96 165 250 / 0.25);
+    border-radius: 100px;
+    padding: 4px 14px;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .build-hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .build-hero p {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  .build-hero-stats {
+    display: flex;
+    justify-content: center;
+    gap: 36px;
+    padding-top: 24px;
+    border-top: 1px solid rgb(255 255 255 / 0.1);
+  }
+
+  .build-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+  }
+
+  .build-stat strong {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+
+  .build-stat span {
+    font-size: 0.75rem;
+    color: #64748b;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  /* ---- Architecture overview ---- */
+  .build-arch {
+    padding: 64px 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .build-arch-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .build-section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .build-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .build-section-sub {
+    font-size: 0.925rem;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 560px;
+  }
+
+  /* ---- Project relationship map ---- */
+  .project-map {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    overflow-x: auto;
+  }
+
+  .project-map-title {
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    text-align: center;
+  }
+
+  .arch-map-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: center;
+    min-width: 600px;
+  }
+
+  .arch-map-row {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .arch-map-node {
+    padding: 8px 16px;
+    border-radius: var(--radius);
+    font-size: 0.78rem;
+    font-weight: 600;
+    border: 1.5px solid;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .arch-map-node.beginner {
+    border-color: #10b981;
+    color: #10b981;
+    background: rgb(16 185 129 / 0.07);
+  }
+
+  .arch-map-node.intermediate {
+    border-color: #2563eb;
+    color: #2563eb;
+    background: rgb(37 99 235 / 0.07);
+  }
+
+  .arch-map-node.advanced {
+    border-color: #7c3aed;
+    color: #7c3aed;
+    background: rgb(124 58 237 / 0.07);
+  }
+
+  .arch-map-arrow {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .arch-map-divider {
+    width: 100%;
+    height: 1px;
+    background: var(--border);
+    position: relative;
+  }
+
+  .arch-map-legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    flex-wrap: wrap;
+  }
+
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    color: var(--text-secondary);
+  }
+
+  .legend-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+  }
+
+  .legend-dot.beginner { background: #10b981; }
+  .legend-dot.intermediate { background: #2563eb; }
+  .legend-dot.advanced { background: #7c3aed; }
+
+  /* ---- Project cards grid ---- */
+  .build-projects {
+    padding: 64px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .build-projects-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .project-card {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    text-decoration: none;
+  }
+
+  .project-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+    text-decoration: none;
+  }
+
+  /* Project illustration area */
+  .project-illustration {
+    height: 140px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .project-illustration.rag-bg {
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  }
+
+  .project-illustration.agent-bg {
+    background: linear-gradient(135deg, #1a0a2e 0%, #4c1d95 100%);
+  }
+
+  .project-illustration.chat-bg {
+    background: linear-gradient(135deg, #0a1628 0%, #1e3a5f 100%);
+  }
+
+  .project-illustration.pipeline-bg {
+    background: linear-gradient(135deg, #0a1f0a 0%, #14532d 100%);
+  }
+
+  .project-illustration.classify-bg {
+    background: linear-gradient(135deg, #1f0a0a 0%, #7c2d12 100%);
+  }
+
+  .project-illustration.search-bg {
+    background: linear-gradient(135deg, #0f1728 0%, #0c4a6e 100%);
+  }
+
+  /* Mini CSS diagrams inside illustrations */
+  .mini-diagram {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 12px;
+  }
+
+  .mini-node {
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 0.65rem;
+    font-weight: 600;
+    border: 1px solid;
+    white-space: nowrap;
+    color: #fff;
+  }
+
+  .mini-node.blue { border-color: rgb(96 165 250 / 0.6); background: rgb(37 99 235 / 0.3); }
+  .mini-node.violet { border-color: rgb(167 139 250 / 0.6); background: rgb(124 58 237 / 0.3); }
+  .mini-node.green { border-color: rgb(52 211 153 / 0.6); background: rgb(16 185 129 / 0.3); }
+  .mini-node.amber { border-color: rgb(251 191 36 / 0.6); background: rgb(217 119 6 / 0.3); }
+
+  .mini-arrow {
+    color: rgba(255 255 255 / 0.4);
+    font-size: 0.8rem;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .mini-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    align-items: center;
+  }
+
+  /* Project card body */
+  .project-card-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1;
+  }
+
+  .project-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .difficulty-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 3px 8px;
+    border-radius: 100px;
+  }
+
+  .difficulty-badge.beginner {
+    background: rgb(16 185 129 / 0.1);
+    color: #10b981;
+    border: 1px solid rgb(16 185 129 / 0.2);
+  }
+
+  .difficulty-badge.intermediate {
+    background: rgb(37 99 235 / 0.1);
+    color: #2563eb;
+    border: 1px solid rgb(37 99 235 / 0.2);
+  }
+
+  .difficulty-badge.advanced {
+    background: rgb(124 58 237 / 0.1);
+    color: #7c3aed;
+    border: 1px solid rgb(124 58 237 / 0.2);
+  }
+
+  .est-time {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+  }
+
+  .project-card-body h3 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+  }
+
+  .project-build-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: var(--text-muted);
+    margin-bottom: 2px;
+  }
+
+  .project-build-desc {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .project-card-footer {
+    margin-top: auto;
+    padding-top: 12px;
+    border-top: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .project-tags {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  /* ---- CTA ---- */
+  .build-cta {
+    padding: 64px 24px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    text-align: center;
+  }
+
+  .build-cta-inner {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+
+  .build-cta h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 12px;
+  }
+
+  .build-cta p {
+    color: rgb(255 255 255 / 0.65);
+    font-size: 0.975rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #f1f5f9;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1px solid rgb(255 255 255 / 0.25);
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .cta-outline:hover {
+    border-color: rgb(255 255 255 / 0.5);
+    background: rgb(255 255 255 / 0.05);
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .arch-map-grid { min-width: 320px; }
+    .build-hero-stats { gap: 20px; }
+  }
+</style>
+
+<!-- Hero -->
+<section class="build-hero">
+  <div class="build-hero-inner">
+    <div class="build-hero-badge">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+      Project Guides
+    </div>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+    <div class="build-hero-stats">
+      <div class="build-stat"><strong>6</strong><span>Projects</span></div>
+      <div class="build-stat"><strong>3</strong><span>Difficulty levels</span></div>
+      <div class="build-stat"><strong>Full</strong><span>Source code</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- Architecture overview of how projects relate -->
+<section class="build-arch">
+  <div class="build-arch-inner">
+    <p class="build-section-label">How projects connect</p>
+    <h2 class="build-section-title">Build in any order, or follow the path</h2>
+    <p class="build-section-sub">Each project is self-contained, but building in order takes you from beginner foundations to advanced production patterns.</p>
+    <div class="project-map">
+      <p class="project-map-title">Project progression map</p>
+      <div class="arch-map-grid">
+        <div class="arch-map-row">
+          <div class="arch-map-node beginner">Chatbot with Memory</div>
+          <div class="arch-map-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+          <div class="arch-map-node beginner">Document Classifier</div>
+          <div class="arch-map-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+          <div class="arch-map-node intermediate">RAG Search Engine</div>
+        </div>
+        <div class="arch-map-row">
+          <div class="arch-map-arrow" style="transform: rotate(90deg);">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+        </div>
+        <div class="arch-map-row">
+          <div class="arch-map-node intermediate">AI Data Pipeline</div>
+          <div class="arch-map-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+          <div class="arch-map-node advanced">Autonomous Agent</div>
+          <div class="arch-map-arrow">
+            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </div>
+          <div class="arch-map-node advanced">Multi-Agent System</div>
+        </div>
+      </div>
+      <div class="arch-map-legend">
+        <div class="legend-item"><span class="legend-dot beginner"></span>Beginner</div>
+        <div class="legend-item"><span class="legend-dot intermediate"></span>Intermediate</div>
+        <div class="legend-item"><span class="legend-dot advanced"></span>Advanced</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Project Cards -->
+<section class="build-projects">
+  <div class="build-projects-inner">
+    <p class="build-section-label">All projects</p>
+    <h2 class="build-section-title">Pick a project and start building</h2>
+    <div class="projects-grid">
+
+      <!-- Project 1: Chatbot with Memory -->
+      <a href="{{ "guides/" | relURL }}" class="project-card">
+        <div class="project-illustration chat-bg">
+          <div class="mini-diagram">
+            <div class="mini-node blue">User</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node blue">LLM</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node green">Memory</div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <span class="difficulty-badge beginner">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              Beginner
+            </span>
+            <span class="est-time">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              2-3 hours
+            </span>
+          </div>
+          <h3>Chatbot with Persistent Memory</h3>
+          <p class="project-build-label">What you'll build</p>
+          <p class="project-build-desc">A conversational assistant that remembers context across sessions using a simple key-value store and summarization.</p>
+          <div class="project-card-footer">
+            <div class="project-tags">
+              <span class="tag-pill small">LLM</span>
+              <span class="tag-pill small">memory</span>
+              <span class="tag-pill small">chat</span>
+            </div>
+            <span class="card-link">Start building
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 2: Document Classifier -->
+      <a href="{{ "guides/" | relURL }}" class="project-card">
+        <div class="project-illustration classify-bg">
+          <div class="mini-diagram">
+            <div class="mini-node amber">Doc</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node amber">Classifier</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-stack">
+              <div class="mini-node green" style="font-size:0.58rem;padding:3px 7px;">Category A</div>
+              <div class="mini-node green" style="font-size:0.58rem;padding:3px 7px;">Category B</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <span class="difficulty-badge beginner">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+              Beginner
+            </span>
+            <span class="est-time">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              1-2 hours
+            </span>
+          </div>
+          <h3>Document Classifier with Zero-shot Prompting</h3>
+          <p class="project-build-label">What you'll build</p>
+          <p class="project-build-desc">A reliable classification pipeline that sorts incoming documents by type, topic, or urgency using structured LLM outputs.</p>
+          <div class="project-card-footer">
+            <div class="project-tags">
+              <span class="tag-pill small">classification</span>
+              <span class="tag-pill small">prompting</span>
+            </div>
+            <span class="card-link">Start building
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 3: RAG Search Engine -->
+      <a href="{{ "patterns/" | relURL }}" class="project-card">
+        <div class="project-illustration rag-bg">
+          <div class="mini-diagram">
+            <div class="mini-node blue">Query</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node blue">Embedder</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node blue">Vector DB</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node green">LLM</div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <span class="difficulty-badge intermediate">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Intermediate
+            </span>
+            <span class="est-time">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              4-6 hours
+            </span>
+          </div>
+          <h3>RAG-Powered Knowledge Search Engine</h3>
+          <p class="project-build-label">What you'll build</p>
+          <p class="project-build-desc">A semantic search engine over your own documents using embeddings, a vector database, and retrieval-augmented generation.</p>
+          <div class="project-card-footer">
+            <div class="project-tags">
+              <span class="tag-pill small">RAG</span>
+              <span class="tag-pill small">embeddings</span>
+              <span class="tag-pill small">vectors</span>
+            </div>
+            <span class="card-link">Start building
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 4: Data Pipeline -->
+      <a href="{{ "guides/" | relURL }}" class="project-card">
+        <div class="project-illustration pipeline-bg">
+          <div class="mini-diagram">
+            <div class="mini-node green">Ingest</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node green">Enrich</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node green">Store</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node green">Serve</div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <span class="difficulty-badge intermediate">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+              Intermediate
+            </span>
+            <span class="est-time">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              5-8 hours
+            </span>
+          </div>
+          <h3>AI-Enriched Data Pipeline</h3>
+          <p class="project-build-label">What you'll build</p>
+          <p class="project-build-desc">An automated pipeline that ingests raw data, enriches it with AI-extracted metadata, and loads it into a structured store.</p>
+          <div class="project-card-footer">
+            <div class="project-tags">
+              <span class="tag-pill small">pipeline</span>
+              <span class="tag-pill small">ETL</span>
+              <span class="tag-pill small">extraction</span>
+            </div>
+            <span class="card-link">Start building
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 5: Autonomous Agent -->
+      <a href="{{ "patterns/" | relURL }}" class="project-card">
+        <div class="project-illustration agent-bg">
+          <div class="mini-diagram">
+            <div class="mini-node violet">Planner</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-node violet">Executor</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-stack">
+              <div class="mini-node green" style="font-size:0.58rem;padding:3px 7px;">Tool A</div>
+              <div class="mini-node green" style="font-size:0.58rem;padding:3px 7px;">Tool B</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <span class="difficulty-badge advanced">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/></svg>
+              Advanced
+            </span>
+            <span class="est-time">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              8-12 hours
+            </span>
+          </div>
+          <h3>Autonomous Agent with Tool Use</h3>
+          <p class="project-build-label">What you'll build</p>
+          <p class="project-build-desc">A goal-driven agent that plans multi-step tasks, selects and calls tools, observes results, and iterates until complete.</p>
+          <div class="project-card-footer">
+            <div class="project-tags">
+              <span class="tag-pill small">agents</span>
+              <span class="tag-pill small">tool-use</span>
+              <span class="tag-pill small">planning</span>
+            </div>
+            <span class="card-link">Start building
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Project 6: Multi-Agent System -->
+      <a href="{{ "patterns/" | relURL }}" class="project-card">
+        <div class="project-illustration agent-bg" style="background: linear-gradient(135deg, #0a1628 0%, #312e81 100%);">
+          <div class="mini-diagram">
+            <div class="mini-node violet">Orchestrator</div>
+            <div class="mini-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="mini-stack">
+              <div class="mini-node blue" style="font-size:0.58rem;padding:3px 7px;">Agent A</div>
+              <div class="mini-node blue" style="font-size:0.58rem;padding:3px 7px;">Agent B</div>
+              <div class="mini-node blue" style="font-size:0.58rem;padding:3px 7px;">Agent C</div>
+            </div>
+          </div>
+        </div>
+        <div class="project-card-body">
+          <div class="project-card-top">
+            <span class="difficulty-badge advanced">
+              <svg xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/></svg>
+              Advanced
+            </span>
+            <span class="est-time">
+              <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              Full day+
+            </span>
+          </div>
+          <h3>Multi-Agent Orchestration System</h3>
+          <p class="project-build-label">What you'll build</p>
+          <p class="project-build-desc">A coordinator that breaks complex tasks across specialized agents running in parallel, collects results, and synthesizes a final output.</p>
+          <div class="project-card-footer">
+            <div class="project-tags">
+              <span class="tag-pill small">multi-agent</span>
+              <span class="tag-pill small">orchestration</span>
+            </div>
+            <span class="card-link">Start building
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="build-cta">
+  <div class="build-cta-inner">
+    <h2>Ready to go deeper?</h2>
+    <p>Explore the patterns and principles behind every build guide. Or jump into industry solutions to see these patterns applied in production contexts.</p>
+    <div class="cta-group">
+      <a href="{{ "patterns/" | relURL }}" class="cta-button large">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        Browse Patterns
+      </a>
+      <a href="{{ "solutions/" | relURL }}" class="cta-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+        Industry Solutions
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}
