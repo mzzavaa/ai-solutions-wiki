@@ -1,6 +1,6 @@
 ---
-title: "AWS Bedrock AgentCore - Serverless AI Agent Hosting"
-description: "How AWS Bedrock AgentCore provides managed infrastructure for running AI agents at scale without managing servers."
+title: "Amazon Bedrock AgentCore - Serverless AI Agent Hosting"
+description: "How Amazon Bedrock AgentCore provides managed infrastructure for running AI agents at scale without managing servers."
 date: 2026-03-25
 categories: [Tools]
 tags: ["ai-agents", "advanced", "bedrock-agentcore", "aws", "agent-runtime", "tool-use", "memory"]

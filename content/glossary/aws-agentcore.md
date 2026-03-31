@@ -1,5 +1,5 @@
 ---
-title: "AWS Bedrock AgentCore"
+title: "Amazon Bedrock AgentCore"
 description: "Amazon Bedrock AgentCore is a managed runtime and governance layer for deploying, operating, and securing AI agents at enterprise scale on AWS."
 date: 2026-03-28
 categories: [Glossary]
