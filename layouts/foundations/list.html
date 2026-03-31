@@ -239,6 +239,7 @@
         (dict "title" "Continuous Integration and Delivery" "desc" "Pipeline automation, deployment strategies, and the practice of keeping software in a releasable state at all times." "tag" "CI/CD" "url" "ci-cd")
         (dict "title" "API Design" "desc" "REST, GraphQL, and gRPC. Principles of versioning, error handling, and building interfaces that survive over time." "tag" "APIs" "url" "api-design")
         (dict "title" "Security Fundamentals" "desc" "Authentication, authorization, encryption, and the OWASP framework for reasoning about software vulnerabilities." "tag" "Security" "url" "security")
+        (dict "title" "Well-Architected Framework" "desc" "The cloud architecture review methodology used by AWS, Azure, and Google Cloud to evaluate workloads against proven best practices across reliability, security, cost, and operational excellence." "tag" "Cloud" "url" "well-architected")
       }}
       {{ range $i, $p := $principles }}
       <a href="{{ $.Site.BaseURL }}foundations/{{ $p.url }}/" class="principle-card">
