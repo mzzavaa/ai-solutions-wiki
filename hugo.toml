@@ -69,6 +69,10 @@ enableGitInfo = false
     url = "/architecture/"
     weight = 14
   [[menu.main]]
+    name = "Foundations"
+    url = "/foundations/"
+    weight = 16
+  [[menu.main]]
     name = "Solutions"
     url = "/solutions/"
     weight = 15

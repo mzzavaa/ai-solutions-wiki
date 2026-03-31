@@ -1,0 +1,262 @@
+{{ define "main" }}
+<style>
+  /* ---- Foundations Section Landing Page ---- */
+  .foundations-hero {
+    background: linear-gradient(160deg, #0f172a 0%, #1c1407 50%, #0f172a 100%);
+    padding: 72px 24px 64px;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  .foundations-hero-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .foundations-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fbbf24;
+    background: rgb(251 191 36 / 0.12);
+    border: 1px solid rgb(251 191 36 / 0.25);
+    border-radius: 100px;
+    padding: 4px 14px;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .foundations-hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .foundations-hero p {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.65;
+  }
+
+  /* ---- Intro section ---- */
+  .foundations-intro {
+    padding: 56px 24px;
+    border-bottom: 1px solid var(--border);
+    background: var(--surface);
+  }
+
+  .foundations-intro-inner {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .foundations-intro-inner p {
+    font-size: 1.0rem;
+    color: var(--text-secondary);
+    line-height: 1.75;
+    margin-bottom: 16px;
+  }
+
+  .foundations-intro-inner p:last-child {
+    margin-bottom: 0;
+  }
+
+  /* ---- Principles grid section ---- */
+  .foundations-principles {
+    padding: 64px 24px 80px;
+  }
+
+  .foundations-principles-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .foundations-section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #d97706;
+    margin-bottom: 8px;
+  }
+
+  .foundations-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .foundations-section-sub {
+    font-size: 0.925rem;
+    color: var(--text-secondary);
+    margin-bottom: 40px;
+    max-width: 540px;
+    line-height: 1.65;
+  }
+
+  /* ---- Principle cards grid ---- */
+  .principle-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+
+  .principle-card {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .principle-card:hover {
+    border-color: #d97706;
+    box-shadow: 0 4px 24px rgb(217 119 6 / 0.12);
+    transform: translateY(-2px);
+  }
+
+  .principle-card-accent {
+    height: 4px;
+    background: linear-gradient(90deg, #d97706, #f59e0b);
+  }
+
+  .principle-card-body {
+    padding: 24px 24px 16px;
+    flex: 1;
+  }
+
+  .principle-card-number {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: #d97706;
+    margin-bottom: 8px;
+  }
+
+  .principle-card-body h3 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 10px;
+    line-height: 1.3;
+  }
+
+  .principle-card-body p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .principle-card-footer {
+    padding: 12px 24px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-top: 1px solid var(--border);
+  }
+
+  .principle-card-tags {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+  }
+
+  .principle-card-tag {
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: #92400e;
+    background: rgb(217 119 6 / 0.1);
+    border: 1px solid rgb(217 119 6 / 0.2);
+    border-radius: 4px;
+    padding: 2px 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .principle-card-arrow {
+    font-size: 0.825rem;
+    color: #d97706;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 600px) {
+    .principle-cards-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+
+<!-- Hero -->
+<div class="foundations-hero">
+  <div class="foundations-hero-inner">
+    <span class="foundations-badge">Layer 3 &mdash; Software Foundations</span>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}
+    <p>{{ . }}</p>
+    {{ end }}
+  </div>
+</div>
+
+<!-- Intro from _index.md content -->
+{{ with .Content }}
+<div class="foundations-intro">
+  <div class="foundations-intro-inner">
+    {{ . }}
+  </div>
+</div>
+{{ end }}
+
+<!-- Principles grid -->
+<div class="foundations-principles">
+  <div class="foundations-principles-inner">
+    <div class="foundations-section-label">Core Principles</div>
+    <h2 class="foundations-section-title">Engineering Foundations</h2>
+    <p class="foundations-section-sub">Each principle below is a self-contained reference page with examples, historical context, and direct application to AI systems.</p>
+
+    <div class="principle-cards-grid">
+      {{ $principles := slice
+        (dict "title" "SOLID Principles" "desc" "Five object-oriented design principles that govern how components should be structured and relate to each other." "tag" "OOP" "url" "solid-principles")
+        (dict "title" "Clean Architecture" "desc" "The dependency rule and layered architecture pattern that keeps business logic isolated from frameworks, databases, and delivery mechanisms." "tag" "Architecture" "url" "clean-architecture")
+        (dict "title" "Design Patterns" "desc" "The Gang of Four catalog of reusable solutions to recurring object-oriented design problems." "tag" "Patterns" "url" "design-patterns")
+        (dict "title" "Domain-Driven Design" "desc" "Evans's approach to aligning software structure with business domains through ubiquitous language and bounded contexts." "tag" "DDD" "url" "domain-driven-design")
+        (dict "title" "Testing Strategy" "desc" "The testing pyramid, test-driven development, and the discipline of building confidence in software through automated verification." "tag" "Testing" "url" "testing-strategy")
+        (dict "title" "Continuous Integration and Delivery" "desc" "Pipeline automation, deployment strategies, and the practice of keeping software in a releasable state at all times." "tag" "CI/CD" "url" "ci-cd")
+        (dict "title" "API Design" "desc" "REST, GraphQL, and gRPC. Principles of versioning, error handling, and building interfaces that survive over time." "tag" "APIs" "url" "api-design")
+        (dict "title" "Security Fundamentals" "desc" "Authentication, authorization, encryption, and the OWASP framework for reasoning about software vulnerabilities." "tag" "Security" "url" "security")
+      }}
+      {{ range $i, $p := $principles }}
+      <a href="{{ $.Site.BaseURL }}foundations/{{ $p.url }}/" class="principle-card">
+        <div class="principle-card-accent"></div>
+        <div class="principle-card-body">
+          <div class="principle-card-number">Principle {{ add $i 1 }}</div>
+          <h3>{{ $p.title }}</h3>
+          <p>{{ $p.desc }}</p>
+        </div>
+        <div class="principle-card-footer">
+          <div class="principle-card-tags">
+            <span class="principle-card-tag">{{ $p.tag }}</span>
+          </div>
+          <span class="principle-card-arrow">Read more &rarr;</span>
+        </div>
+      </a>
+      {{ end }}
+    </div>
+  </div>
+</div>
+{{ end }}
