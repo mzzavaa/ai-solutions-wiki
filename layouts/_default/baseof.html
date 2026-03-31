@@ -45,12 +45,31 @@
 
     // Active nav link
     const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-links a').forEach(link => {
+    document.querySelectorAll('.nav-links a, .mobile-nav-links a').forEach(link => {
       const href = link.getAttribute('href');
       if (href !== '/' && currentPath.startsWith(href)) {
         link.classList.add('active');
       }
     });
+
+    // Mobile hamburger menu
+    const hamburger = document.getElementById('hamburger');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (hamburger && mobileMenu) {
+      hamburger.addEventListener('click', () => {
+        const isOpen = hamburger.getAttribute('aria-expanded') === 'true';
+        hamburger.setAttribute('aria-expanded', String(!isOpen));
+        mobileMenu.setAttribute('aria-hidden', String(isOpen));
+        hamburger.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+      });
+      mobileMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+          hamburger.setAttribute('aria-expanded', 'false');
+          mobileMenu.setAttribute('aria-hidden', 'true');
+          hamburger.setAttribute('aria-label', 'Open menu');
+        });
+      });
+    }
   </script>
 </body>
 </html>
