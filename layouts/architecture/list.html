@@ -1,0 +1,800 @@
+{{ define "main" }}
+<style>
+  /* ---- Architecture Page Styles ---- */
+  .arch-hero {
+    background: linear-gradient(160deg, #0f172a 0%, #1c1535 50%, #0f172a 100%);
+    padding: 72px 24px 64px;
+    text-align: center;
+    border-bottom: 1px solid #1e293b;
+  }
+
+  .arch-hero-inner {
+    max-width: 640px;
+    margin: 0 auto;
+  }
+
+  .arch-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #a78bfa;
+    background: rgb(167 139 250 / 0.12);
+    border: 1px solid rgb(167 139 250 / 0.25);
+    border-radius: 100px;
+    padding: 4px 14px;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .arch-hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .arch-hero p {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.65;
+  }
+
+  /* ---- Shared section styles ---- */
+  .arch-section {
+    padding: 64px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .arch-section:nth-child(even) {
+    background: var(--surface);
+  }
+
+  .arch-section-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .arch-section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .arch-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 8px;
+  }
+
+  .arch-section-sub {
+    font-size: 0.925rem;
+    color: var(--text-secondary);
+    margin-bottom: 36px;
+    max-width: 580px;
+    line-height: 1.65;
+  }
+
+  /* ---- Architecture pattern cards ---- */
+  .pattern-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 20px;
+  }
+
+  .pattern-card {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: border-color 0.15s, box-shadow 0.15s;
+  }
+
+  .pattern-card:hover {
+    box-shadow: var(--shadow);
+  }
+
+  .pattern-card.rag-pattern:hover { border-color: #2563eb; }
+  .pattern-card.agent-pattern:hover { border-color: #7c3aed; }
+  .pattern-card.pipeline-pattern:hover { border-color: #10b981; }
+  .pattern-card.event-pattern:hover { border-color: #d97706; }
+  .pattern-card.micro-pattern:hover { border-color: #ec4899; }
+
+  /* ---- CSS architecture diagrams ---- */
+  .arch-diagram-area {
+    padding: 24px;
+    min-height: 130px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .rag-pattern .arch-diagram-area { background: linear-gradient(135deg, rgb(37 99 235 / 0.05) 0%, rgb(37 99 235 / 0.02) 100%); }
+  .agent-pattern .arch-diagram-area { background: linear-gradient(135deg, rgb(124 58 237 / 0.05) 0%, rgb(124 58 237 / 0.02) 100%); }
+  .pipeline-pattern .arch-diagram-area { background: linear-gradient(135deg, rgb(16 185 129 / 0.05) 0%, rgb(16 185 129 / 0.02) 100%); }
+  .event-pattern .arch-diagram-area { background: linear-gradient(135deg, rgb(217 119 6 / 0.05) 0%, rgb(217 119 6 / 0.02) 100%); }
+  .micro-pattern .arch-diagram-area { background: linear-gradient(135deg, rgb(236 72 153 / 0.05) 0%, rgb(236 72 153 / 0.02) 100%); }
+
+  /* Diagram primitives */
+  .diag-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .diag-col {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .diag-node {
+    padding: 6px 12px;
+    border-radius: var(--radius);
+    font-size: 0.72rem;
+    font-weight: 600;
+    border: 1.5px solid;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  .diag-node.blue { border-color: #2563eb; color: #2563eb; background: rgb(37 99 235 / 0.08); }
+  .diag-node.violet { border-color: #7c3aed; color: #7c3aed; background: rgb(124 58 237 / 0.08); }
+  .diag-node.green { border-color: #10b981; color: #059669; background: rgb(16 185 129 / 0.08); }
+  .diag-node.amber { border-color: #d97706; color: #d97706; background: rgb(217 119 6 / 0.08); }
+  .diag-node.pink { border-color: #ec4899; color: #ec4899; background: rgb(236 72 153 / 0.08); }
+  .diag-node.gray { border-color: var(--border-strong); color: var(--text-secondary); background: var(--surface); }
+
+  .diag-arrow {
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .diag-arrow.down {
+    transform: rotate(90deg);
+    margin: 2px 0;
+  }
+
+  .diag-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    font-weight: 500;
+    text-align: center;
+  }
+
+  /* Loop indicator for agent pattern */
+  .diag-loop {
+    border: 1.5px dashed #7c3aed;
+    border-radius: var(--radius-lg);
+    padding: 10px 14px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    position: relative;
+  }
+
+  .diag-loop-label {
+    position: absolute;
+    top: -8px;
+    left: 10px;
+    background: var(--light-bg);
+    padding: 0 4px;
+    font-size: 0.6rem;
+    color: #7c3aed;
+    font-weight: 600;
+  }
+
+  /* Event bus diagram */
+  .diag-bus {
+    padding: 5px 20px;
+    border-radius: 100px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    border: 2px solid #d97706;
+    color: #d97706;
+    background: rgb(217 119 6 / 0.08);
+    letter-spacing: 0.03em;
+  }
+
+  .diag-bus-row {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+  }
+
+  /* Pattern card body */
+  .pattern-card-body {
+    padding: 18px 20px;
+  }
+
+  .pattern-card-body h3 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  .pattern-card-body p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.55;
+    margin-bottom: 12px;
+  }
+
+  .pattern-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .pattern-use-cases {
+    display: flex;
+    gap: 4px;
+    flex-wrap: wrap;
+  }
+
+  /* ---- Foundation topics grid ---- */
+  .foundation-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 12px;
+  }
+
+  .foundation-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 16px;
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+
+  .foundation-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  .foundation-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius);
+    background: rgb(37 99 235 / 0.08);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+  }
+
+  .foundation-card h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 3px;
+    line-height: 1.3;
+  }
+
+  .foundation-card p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* ---- Core principles grid ---- */
+  .principles-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+  }
+
+  .principle-card {
+    padding: 18px;
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .principle-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+  }
+
+  .principle-card:nth-child(1)::before,
+  .principle-card:nth-child(5)::before { background: #2563eb; }
+  .principle-card:nth-child(2)::before,
+  .principle-card:nth-child(6)::before { background: #7c3aed; }
+  .principle-card:nth-child(3)::before,
+  .principle-card:nth-child(7)::before { background: #10b981; }
+  .principle-card:nth-child(4)::before,
+  .principle-card:nth-child(8)::before { background: #d97706; }
+
+  .principle-abbr {
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--primary);
+    letter-spacing: 0.02em;
+    margin-bottom: 4px;
+    font-family: var(--font-mono);
+  }
+
+  .principle-card h4 {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  .principle-card p {
+    font-size: 0.78rem;
+    color: var(--text-secondary);
+    line-height: 1.45;
+  }
+
+  /* ---- CTA ---- */
+  .arch-cta {
+    padding: 64px 24px;
+    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+    text-align: center;
+  }
+
+  .arch-cta-inner {
+    max-width: 520px;
+    margin: 0 auto;
+  }
+
+  .arch-cta h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #f1f5f9;
+    margin-bottom: 12px;
+  }
+
+  .arch-cta p {
+    color: rgb(255 255 255 / 0.65);
+    font-size: 0.975rem;
+    line-height: 1.6;
+    margin-bottom: 28px;
+  }
+
+  .cta-group {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #f1f5f9;
+    font-family: var(--font);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: var(--radius);
+    text-decoration: none;
+    border: 1px solid rgb(255 255 255 / 0.25);
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .cta-outline:hover {
+    border-color: rgb(255 255 255 / 0.5);
+    background: rgb(255 255 255 / 0.05);
+    text-decoration: none;
+  }
+
+  @media (max-width: 640px) {
+    .pattern-cards-grid { grid-template-columns: 1fr; }
+    .foundation-grid { grid-template-columns: 1fr 1fr; }
+    .principles-grid { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+
+<!-- Hero -->
+<section class="arch-hero">
+  <div class="arch-hero-inner">
+    <div class="arch-hero-badge">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+      Visual Reference
+    </div>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- Pattern Diagrams -->
+<section class="arch-section">
+  <div class="arch-section-inner">
+    <p class="arch-section-label">Common patterns</p>
+    <h2 class="arch-section-title">Architecture patterns for AI systems</h2>
+    <p class="arch-section-sub">These five patterns cover the majority of production AI architectures. Each card shows a simplified diagram and the contexts where that pattern fits best.</p>
+
+    <div class="pattern-cards-grid">
+
+      <!-- RAG Pattern -->
+      <div class="pattern-card rag-pattern">
+        <div class="arch-diagram-area">
+          <div class="diag-col">
+            <div class="diag-row">
+              <div class="diag-node blue">User Query</div>
+              <div class="diag-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+              <div class="diag-node blue">Embedder</div>
+            </div>
+            <div class="diag-arrow down"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="diag-row">
+              <div class="diag-node blue">Vector DB</div>
+              <div class="diag-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+              <div class="diag-node blue">Context</div>
+              <div class="diag-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+              <div class="diag-node green">LLM</div>
+            </div>
+          </div>
+        </div>
+        <div class="pattern-card-body">
+          <h3>Retrieval-Augmented Generation (RAG)</h3>
+          <p>Ground LLM responses in your own data. Queries are embedded, matched against a vector store, and retrieved context is injected into the prompt before generation.</p>
+          <div class="pattern-card-footer">
+            <div class="pattern-use-cases">
+              <span class="tag-pill small">knowledge bases</span>
+              <span class="tag-pill small">Q&A</span>
+              <span class="tag-pill small">document search</span>
+            </div>
+            <a href="{{ "patterns/" | relURL }}" class="card-link">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Agent Pattern -->
+      <div class="pattern-card agent-pattern">
+        <div class="arch-diagram-area">
+          <div class="diag-col">
+            <div class="diag-row">
+              <div class="diag-node gray">Goal</div>
+              <div class="diag-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+              <div class="diag-loop">
+                <span class="diag-loop-label">loop</span>
+                <div class="diag-node violet">Reason</div>
+                <div class="diag-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+                <div class="diag-node violet">Act</div>
+              </div>
+            </div>
+            <div class="diag-arrow down"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="diag-node gray">Result</div>
+          </div>
+        </div>
+        <div class="pattern-card-body">
+          <h3>Agent Loop Pattern</h3>
+          <p>An LLM iteratively reasons about a goal, calls tools to take actions, observes the results, and continues until the goal is satisfied or a stop condition is reached.</p>
+          <div class="pattern-card-footer">
+            <div class="pattern-use-cases">
+              <span class="tag-pill small">automation</span>
+              <span class="tag-pill small">research</span>
+              <span class="tag-pill small">tool use</span>
+            </div>
+            <a href="{{ "patterns/" | relURL }}" class="card-link">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pipeline Pattern -->
+      <div class="pattern-card pipeline-pattern">
+        <div class="arch-diagram-area">
+          <div class="diag-row">
+            <div class="diag-col">
+              <div class="diag-node green">Ingest</div>
+              <div class="diag-label">source</div>
+            </div>
+            <div class="diag-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="diag-col">
+              <div class="diag-node green">Transform</div>
+              <div class="diag-label">AI step</div>
+            </div>
+            <div class="diag-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="diag-col">
+              <div class="diag-node green">Validate</div>
+              <div class="diag-label">gate</div>
+            </div>
+            <div class="diag-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="diag-col">
+              <div class="diag-node green">Load</div>
+              <div class="diag-label">sink</div>
+            </div>
+          </div>
+        </div>
+        <div class="pattern-card-body">
+          <h3>AI Pipeline Pattern</h3>
+          <p>Data flows linearly through a sequence of processing steps - ingestion, AI enrichment, validation gates, and loading into a destination store. Each step has a single responsibility.</p>
+          <div class="pattern-card-footer">
+            <div class="pattern-use-cases">
+              <span class="tag-pill small">ETL</span>
+              <span class="tag-pill small">batch</span>
+              <span class="tag-pill small">enrichment</span>
+            </div>
+            <a href="{{ "patterns/" | relURL }}" class="card-link">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event-driven Pattern -->
+      <div class="pattern-card event-pattern">
+        <div class="arch-diagram-area">
+          <div class="diag-col" style="gap:10px;">
+            <div class="diag-row" style="gap:8px;">
+              <div class="diag-node amber">Producer A</div>
+              <div class="diag-node amber">Producer B</div>
+            </div>
+            <div class="diag-row">
+              <div class="diag-arrow down"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+              <div class="diag-arrow down"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            </div>
+            <div class="diag-bus">Event Bus</div>
+            <div class="diag-arrow down"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="diag-bus-row">
+              <div class="diag-node amber">AI Consumer</div>
+              <div class="diag-node amber">Log Consumer</div>
+            </div>
+          </div>
+        </div>
+        <div class="pattern-card-body">
+          <h3>Event-Driven AI Pattern</h3>
+          <p>Events published to a central bus trigger AI processing consumers. Producers and consumers are decoupled - either side can scale or change independently.</p>
+          <div class="pattern-card-footer">
+            <div class="pattern-use-cases">
+              <span class="tag-pill small">real-time</span>
+              <span class="tag-pill small">streaming</span>
+              <span class="tag-pill small">webhooks</span>
+            </div>
+            <a href="{{ "patterns/" | relURL }}" class="card-link">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Microservices Pattern -->
+      <div class="pattern-card micro-pattern">
+        <div class="arch-diagram-area">
+          <div class="diag-col" style="gap:10px;">
+            <div class="diag-node gray">API Gateway</div>
+            <div class="diag-arrow down"><svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></div>
+            <div class="diag-row" style="gap:6px;">
+              <div class="diag-node pink">LLM Svc</div>
+              <div class="diag-node pink">Embed Svc</div>
+              <div class="diag-node pink">Search Svc</div>
+            </div>
+          </div>
+        </div>
+        <div class="pattern-card-body">
+          <h3>Microservices AI Pattern</h3>
+          <p>AI capabilities are exposed as independent services behind an API gateway. Each service owns one responsibility and scales independently - typical for larger AI platforms.</p>
+          <div class="pattern-card-footer">
+            <div class="pattern-use-cases">
+              <span class="tag-pill small">platforms</span>
+              <span class="tag-pill small">scale</span>
+              <span class="tag-pill small">teams</span>
+            </div>
+            <a href="{{ "patterns/" | relURL }}" class="card-link">
+              Learn more
+              <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Foundation Topics -->
+<section class="arch-section">
+  <div class="arch-section-inner">
+    <p class="arch-section-label">Building blocks</p>
+    <h2 class="arch-section-title">Software foundations</h2>
+    <p class="arch-section-sub">Architecture decisions only work when the underlying engineering is solid. These are the foundational topics every AI system builder needs.</p>
+    <div class="foundation-grid">
+
+      <a href="{{ "software-engineering/" | relURL }}" class="foundation-card">
+        <div class="foundation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><circle cx="18" cy="6" r="3"/><path d="M18 9v1a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2V9"/><path d="M12 12v3"/></svg>
+        </div>
+        <div>
+          <h4>Version Control</h4>
+          <p>Git workflows for AI projects including prompt versioning, dataset tracking, and experiment branches.</p>
+        </div>
+      </a>
+
+      <a href="{{ "software-engineering/" | relURL }}" class="foundation-card">
+        <div class="foundation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+        </div>
+        <div>
+          <h4>Testing Strategy</h4>
+          <p>How to test AI components - unit, integration, and evaluation-based testing for LLM outputs.</p>
+        </div>
+      </a>
+
+      <a href="{{ "software-engineering/" | relURL }}" class="foundation-card">
+        <div class="foundation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </div>
+        <div>
+          <h4>CI / CD Pipelines</h4>
+          <p>Automated build, test, and deploy pipelines for AI services including model evaluation gates.</p>
+        </div>
+      </a>
+
+      <a href="{{ "software-engineering/" | relURL }}" class="foundation-card">
+        <div class="foundation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+        </div>
+        <div>
+          <h4>Security Principles</h4>
+          <p>Prompt injection, data leakage, and access control patterns specific to AI systems.</p>
+        </div>
+      </a>
+
+      <a href="{{ "software-engineering/" | relURL }}" class="foundation-card">
+        <div class="foundation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        </div>
+        <div>
+          <h4>API Design</h4>
+          <p>RESTful and async API patterns for exposing AI services reliably - retries, streaming, rate limiting.</p>
+        </div>
+      </a>
+
+      <a href="{{ "patterns/" | relURL }}" class="foundation-card">
+        <div class="foundation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+        </div>
+        <div>
+          <h4>Observability</h4>
+          <p>Structured logging, tracing, and metrics for AI systems - what to monitor and how to debug failures.</p>
+        </div>
+      </a>
+
+      <a href="{{ "tools/" | relURL }}" class="foundation-card">
+        <div class="foundation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="8" x="2" y="2" rx="2" ry="2"/><rect width="20" height="8" x="2" y="14" rx="2" ry="2"/><line x1="6" x2="6.01" y1="6" y2="6"/><line x1="6" x2="6.01" y1="18" y2="18"/></svg>
+        </div>
+        <div>
+          <h4>Cloud and Infra</h4>
+          <p>Serverless, containers, and cloud services for running AI workloads - from dev to production.</p>
+        </div>
+      </a>
+
+      <a href="{{ "comparisons/" | relURL }}" class="foundation-card">
+        <div class="foundation-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        </div>
+        <div>
+          <h4>Tool Comparisons</h4>
+          <p>Side-by-side analysis of vector DBs, LLM platforms, orchestration frameworks, and cloud services.</p>
+        </div>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Core Principles -->
+<section class="arch-section">
+  <div class="arch-section-inner">
+    <p class="arch-section-label">Timeless principles</p>
+    <h2 class="arch-section-title">Core design principles</h2>
+    <p class="arch-section-sub">These principles predate AI but apply directly to AI system design. They are the vocabulary architects use when reviewing each other's work.</p>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <div class="principle-abbr">SOLID</div>
+        <h4>SOLID Principles</h4>
+        <p>Single responsibility, Open/closed, Liskov substitution, Interface segregation, Dependency inversion.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-abbr">DDD</div>
+        <h4>Domain-Driven Design</h4>
+        <p>Model software around the business domain. Ubiquitous language, bounded contexts, aggregates.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-abbr">CAP</div>
+        <h4>CAP Theorem</h4>
+        <p>Distributed systems can guarantee only two of: consistency, availability, partition tolerance.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-abbr">DRY</div>
+        <h4>Don't Repeat Yourself</h4>
+        <p>Every piece of knowledge must have a single, authoritative representation in a system.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-abbr">12F</div>
+        <h4>Twelve-Factor App</h4>
+        <p>A methodology for building portable, scalable software-as-a-service applications.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-abbr">YAGNI</div>
+        <h4>You Aren't Gonna Need It</h4>
+        <p>Don't add functionality until it is needed. Keeps codebases lean and easier to change.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-abbr">PoLP</div>
+        <h4>Principle of Least Privilege</h4>
+        <p>Every component should have the minimum access rights needed to perform its function.</p>
+      </div>
+
+      <div class="principle-card">
+        <div class="principle-abbr">CQS</div>
+        <h4>Command Query Separation</h4>
+        <p>Methods that change state should not return data. Methods that return data should not change state.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="arch-cta">
+  <div class="arch-cta-inner">
+    <h2>See patterns in action</h2>
+    <p>Architecture only makes sense in context. Explore how these patterns are applied in production solutions across different industries.</p>
+    <div class="cta-group">
+      <a href="{{ "solutions/" | relURL }}" class="cta-button large">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+        Industry Solutions
+      </a>
+      <a href="{{ "build/" | relURL }}" class="cta-outline">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        Build with AI
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}

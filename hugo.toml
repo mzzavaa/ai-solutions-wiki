@@ -53,9 +53,25 @@ enableGitInfo = false
 
 [menu]
   [[menu.main]]
+    name = "Layers"
+    url = "/layers/"
+    weight = 5
+  [[menu.main]]
+    name = "Getting Started"
+    url = "/getting-started/"
+    weight = 8
+  [[menu.main]]
+    name = "Build"
+    url = "/build/"
+    weight = 12
+  [[menu.main]]
+    name = "Architecture"
+    url = "/architecture/"
+    weight = 14
+  [[menu.main]]
     name = "Solutions"
     url = "/solutions/"
-    weight = 10
+    weight = 15
   [[menu.main]]
     name = "Guides"
     url = "/guides/"

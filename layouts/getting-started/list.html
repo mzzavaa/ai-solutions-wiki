@@ -1,0 +1,569 @@
+{{ define "main" }}
+<style>
+  /* ---- Getting Started Page Styles ---- */
+  .gs-hero {
+    background: linear-gradient(180deg, #0f172a 0%, #1e293b 60%, var(--light-bg) 100%);
+    padding: 72px 24px 0;
+    text-align: center;
+  }
+
+  .gs-hero-inner {
+    max-width: 640px;
+    margin: 0 auto;
+    padding-bottom: 56px;
+  }
+
+  .gs-hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #10b981;
+    background: rgb(16 185 129 / 0.12);
+    border: 1px solid rgb(16 185 129 / 0.25);
+    border-radius: 100px;
+    padding: 4px 14px;
+    margin-bottom: 20px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+
+  .gs-hero h1 {
+    font-size: clamp(1.75rem, 4vw, 2.6rem);
+    font-weight: 800;
+    color: #f1f5f9;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+    line-height: 1.2;
+  }
+
+  .gs-hero p {
+    font-size: 1.05rem;
+    color: #94a3b8;
+    line-height: 1.65;
+  }
+
+  /* ---- Paths section ---- */
+  .gs-paths {
+    padding: 64px 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .gs-paths-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .gs-section-label {
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+  }
+
+  .gs-section-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    letter-spacing: -0.01em;
+    margin-bottom: 36px;
+  }
+
+  .paths-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .path-card {
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    position: relative;
+    overflow: hidden;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+
+  .path-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+  }
+
+  .path-card.path-understand:hover { border-color: #7c3aed; }
+  .path-card.path-build:hover { border-color: #2563eb; }
+  .path-card.path-search:hover { border-color: #10b981; }
+
+  .path-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+  }
+  .path-understand::before { background: #7c3aed; }
+  .path-build::before { background: #2563eb; }
+  .path-search::before { background: #10b981; }
+
+  .path-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .path-understand .path-icon { background: rgb(124 58 237 / 0.1); color: #7c3aed; }
+  .path-build .path-icon { background: rgb(37 99 235 / 0.1); color: #2563eb; }
+  .path-search .path-icon { background: rgb(16 185 129 / 0.1); color: #10b981; }
+
+  .path-label {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.07em;
+    margin-bottom: 4px;
+  }
+
+  .path-understand .path-label { color: #7c3aed; }
+  .path-build .path-label { color: #2563eb; }
+  .path-search .path-label { color: #10b981; }
+
+  .path-card h3 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+    margin-bottom: 6px;
+  }
+
+  .path-card p {
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    flex: 1;
+  }
+
+  .path-steps {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 4px;
+  }
+
+  .path-step {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.8rem;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 6px 10px;
+    border-radius: var(--radius);
+    background: var(--surface);
+    border: 1px solid var(--border);
+    transition: background 0.1s, border-color 0.1s;
+  }
+
+  .path-step:hover {
+    text-decoration: none;
+    background: var(--surface-hover);
+    border-color: var(--border-strong);
+  }
+
+  .path-step-num {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    font-size: 0.65rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: #fff;
+  }
+
+  .path-understand .path-step-num { background: #7c3aed; }
+  .path-build .path-step-num { background: #2563eb; }
+  .path-search .path-step-num { background: #10b981; }
+
+  .path-step-text { flex: 1; font-weight: 500; color: var(--text-primary); }
+
+  .path-step svg { color: var(--text-muted); flex-shrink: 0; }
+
+  /* ---- Start Here section ---- */
+  .gs-start-here {
+    padding: 64px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .gs-start-here-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .start-here-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 16px;
+  }
+
+  .start-here-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-decoration: none;
+    transition: border-color 0.15s, box-shadow 0.15s, transform 0.15s;
+  }
+
+  .start-here-card:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow);
+    transform: translateY(-1px);
+    text-decoration: none;
+  }
+
+  .start-here-card-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .read-time {
+    font-size: 0.72rem;
+    color: var(--text-muted);
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  .start-here-card h3 {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    line-height: 1.4;
+  }
+
+  .start-here-card p {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    flex: 1;
+  }
+
+  .start-here-card .card-link {
+    margin-top: 4px;
+  }
+
+  /* ---- Quick reference strip ---- */
+  .gs-quick-ref {
+    padding: 48px 24px;
+    background: var(--surface);
+  }
+
+  .gs-quick-ref-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+
+  .quick-ref-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+  }
+
+  .quick-ref-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 14px 16px;
+    background: var(--light-bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: border-color 0.15s, background 0.15s;
+  }
+
+  .quick-ref-item:hover {
+    border-color: var(--primary);
+    background: var(--surface-hover);
+    text-decoration: none;
+  }
+
+  .quick-ref-item svg { color: var(--primary); flex-shrink: 0; }
+
+  @media (max-width: 900px) {
+    .paths-grid { grid-template-columns: 1fr; }
+  }
+
+  @media (max-width: 640px) {
+    .start-here-grid { grid-template-columns: 1fr; }
+    .quick-ref-strip { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+
+<!-- Hero -->
+<section class="gs-hero">
+  <div class="gs-hero-inner">
+    <div class="gs-hero-badge">
+      <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+      Start Here
+    </div>
+    <h1>{{ .Title }}</h1>
+    <p>{{ .Description }}</p>
+  </div>
+</section>
+
+<!-- Three Paths -->
+<section class="gs-paths">
+  <div class="gs-paths-inner">
+    <p class="gs-section-label">Choose your path</p>
+    <h2 class="gs-section-title">What brings you here?</h2>
+    <div class="paths-grid">
+
+      <!-- Path A: Understand -->
+      <div class="path-card path-understand">
+        <div class="path-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2a5 5 0 1 0 5 5"/><path d="M12 17v5"/><path d="M4 14H2"/><path d="M22 14h-2"/><path d="m4.93 4.93-1.41 1.41"/><path d="m19.07 4.93 1.41 1.41"/><circle cx="12" cy="14" r="8"/></svg>
+        </div>
+        <div>
+          <p class="path-label">Path A</p>
+          <h3>I want to understand AI systems</h3>
+          <p>Build a solid mental model of how AI works, from capabilities down through the engineering stack.</p>
+        </div>
+        <div class="path-steps">
+          <a href="{{ "layers/" | relURL }}" class="path-step">
+            <span class="path-step-num">1</span>
+            <span class="path-step-text">Read the Four Layers overview</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="{{ "tools/" | relURL }}" class="path-step">
+            <span class="path-step-num">2</span>
+            <span class="path-step-text">Explore AI capabilities</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="{{ "glossary/" | relURL }}" class="path-step">
+            <span class="path-step-num">3</span>
+            <span class="path-step-text">Look up terms in the glossary</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Path B: Build -->
+      <div class="path-card path-build">
+        <div class="path-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        </div>
+        <div>
+          <p class="path-label">Path B</p>
+          <h3>I want to build something</h3>
+          <p>Jump straight into project guides with step-by-step instructions, code patterns, and tool recommendations.</p>
+        </div>
+        <div class="path-steps">
+          <a href="{{ "build/" | relURL }}" class="path-step">
+            <span class="path-step-num">1</span>
+            <span class="path-step-text">Browse build guides</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="{{ "patterns/" | relURL }}" class="path-step">
+            <span class="path-step-num">2</span>
+            <span class="path-step-text">Study engineering patterns</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="{{ "tools/" | relURL }}" class="path-step">
+            <span class="path-step-num">3</span>
+            <span class="path-step-text">Pick the right tools</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Path C: Find an answer -->
+      <div class="path-card path-search">
+        <div class="path-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        </div>
+        <div>
+          <p class="path-label">Path C</p>
+          <h3>I need a specific answer</h3>
+          <p>Search the wiki, check the glossary for definitions, or compare tools side-by-side to make a quick decision.</p>
+        </div>
+        <div class="path-steps">
+          <a href="#search" class="path-step">
+            <span class="path-step-num">1</span>
+            <span class="path-step-text">Use site search</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="{{ "glossary/" | relURL }}" class="path-step">
+            <span class="path-step-num">2</span>
+            <span class="path-step-text">Browse the glossary</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+          <a href="{{ "comparisons/" | relURL }}" class="path-step">
+            <span class="path-step-num">3</span>
+            <span class="path-step-text">Compare tools</span>
+            <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Start Here - Top Articles -->
+<section class="gs-start-here">
+  <div class="gs-start-here-inner">
+    <p class="gs-section-label">Recommended first reads</p>
+    <h2 class="gs-section-title">Start here</h2>
+    <div class="start-here-grid">
+
+      <a href="{{ "layers/" | relURL }}" class="start-here-card">
+        <div class="start-here-card-top">
+          <span class="section-badge">Overview</span>
+          <span class="read-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            5 min
+          </span>
+        </div>
+        <h3>The Four Layers of AI Systems</h3>
+        <p>A conceptual map of the entire wiki - how AI capabilities, engineering patterns, software foundations, and infrastructure stack together.</p>
+        <span class="card-link">Read overview
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+
+      <a href="{{ "patterns/" | relURL }}" class="start-here-card">
+        <div class="start-here-card-top">
+          <span class="section-badge">Patterns</span>
+          <span class="read-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            8 min
+          </span>
+        </div>
+        <h3>RAG Architecture Patterns</h3>
+        <p>Retrieval-augmented generation is the most deployed AI pattern in production. Learn the variants, tradeoffs, and when to use each.</p>
+        <span class="card-link">Learn RAG
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+
+      <a href="{{ "architecture/" | relURL }}" class="start-here-card">
+        <div class="start-here-card-top">
+          <span class="section-badge">Architecture</span>
+          <span class="read-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            10 min
+          </span>
+        </div>
+        <h3>Software Architecture for AI</h3>
+        <p>A visual reference to the architectural patterns that recur across AI systems - from agent loops to event-driven pipelines.</p>
+        <span class="card-link">See patterns
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+
+      <a href="{{ "tools/" | relURL }}" class="start-here-card">
+        <div class="start-here-card-top">
+          <span class="section-badge">Tools</span>
+          <span class="read-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            6 min
+          </span>
+        </div>
+        <h3>LLM Platform Comparison</h3>
+        <p>OpenAI, Anthropic, Google, AWS Bedrock - how the major model providers compare on capability, cost, and production readiness.</p>
+        <span class="card-link">Compare platforms
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+
+      <a href="{{ "software-engineering/" | relURL }}" class="start-here-card">
+        <div class="start-here-card-top">
+          <span class="section-badge">Engineering</span>
+          <span class="read-time">
+            <svg xmlns="http://www.w3.org/2000/svg" width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            7 min
+          </span>
+        </div>
+        <h3>Git and Version Control for AI Teams</h3>
+        <p>How to apply version control discipline to AI projects - including prompt files, model configs, evaluation datasets, and experiment tracking.</p>
+        <span class="card-link">Read guide
+          <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>
+        </span>
+      </a>
+
+    </div>
+  </div>
+</section>
+
+<!-- Quick Reference Strip -->
+<section class="gs-quick-ref">
+  <div class="gs-quick-ref-inner">
+    <p class="gs-section-label">Jump to any section</p>
+    <h2 class="gs-section-title">Browse the full wiki</h2>
+    <div class="quick-ref-strip">
+      <a href="{{ "solutions/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+        Industry Solutions
+      </a>
+      <a href="{{ "guides/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        How-to Guides
+      </a>
+      <a href="{{ "patterns/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="3"/><path d="M12 1v4M12 19v4M4.22 4.22l2.83 2.83M16.95 16.95l2.83 2.83M1 12h4M19 12h4M4.22 19.78l2.83-2.83M16.95 7.05l2.83-2.83"/></svg>
+        Patterns
+      </a>
+      <a href="{{ "tools/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+        Tool Reviews
+      </a>
+      <a href="{{ "frameworks/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        Frameworks
+      </a>
+      <a href="{{ "comparisons/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 20V10"/><path d="M12 20V4"/><path d="M6 20v-6"/></svg>
+        Comparisons
+      </a>
+      <a href="{{ "glossary/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg>
+        Glossary
+      </a>
+      <a href="{{ "ideas/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg>
+        AI Ideas
+      </a>
+      <a href="{{ "case-patterns/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+        Case Patterns
+      </a>
+      <a href="{{ "software-engineering/" | relURL }}" class="quick-ref-item">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        Software Engineering
+      </a>
+    </div>
+  </div>
+</section>
+{{ end }}
