@@ -1518,5 +1518,38 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 [data-theme="dark"] .pagefind-ui__filter-name {
+  color: #f1f5f9 !important;
+  font-weight: 600;
+}
+
+/* Filter panel background and text */
+[data-theme="dark"] .pagefind-ui__filter-panel {
+  color: #e2e8f0 !important;
+}
+
+/* Filter checkbox labels (the "Advanced (1)", "Beginner (8)" text) */
+[data-theme="dark"] .pagefind-ui__filter-value,
+[data-theme="dark"] .pagefind-ui__filter-value label,
+[data-theme="dark"] .pagefind-ui__filter-checkbox + label {
+  color: #cbd5e1 !important;
+}
+
+/* Clear button */
+[data-theme="dark"] .pagefind-ui__search-clear {
   color: #94a3b8 !important;
+}
+
+/* Filter checkbox spacing for mobile */
+.pagefind-ui__filter-value {
+  padding: 0.2rem 0 !important;
+}
+
+@media (max-width: 600px) {
+  .pagefind-ui__filter-value {
+    padding: 0.3rem 0 !important;
+  }
+
+  .pagefind-ui__filter-panel {
+    padding-bottom: 0.75rem !important;
+  }
 }
