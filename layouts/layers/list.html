@@ -273,6 +273,10 @@
     text-decoration: none;
   }
 
+  @media (max-width: 768px) {
+    .topic-grid { grid-template-columns: 1fr; }
+  }
+
   @media (max-width: 640px) {
     .layer-header { grid-template-columns: 1fr; }
     .layer-number { flex-direction: row; min-width: auto; }
