@@ -102,6 +102,20 @@
     line-height: 1.65;
   }
 
+  /* ---- Principle card icon ---- */
+  .principle-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius);
+    background: rgb(217 119 6 / 0.1);
+    color: #d97706;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 12px;
+    flex-shrink: 0;
+  }
+
   /* ---- Principle cards grid ---- */
   .principle-cards-grid {
     display: grid;
@@ -230,32 +244,135 @@
     <p class="foundations-section-sub">Each principle below is a self-contained reference page with examples, historical context, and direct application to AI systems.</p>
 
     <div class="principle-cards-grid">
-      {{ $principles := slice
-        (dict "title" "SOLID Principles" "desc" "Five object-oriented design principles that govern how components should be structured and relate to each other." "tag" "OOP" "url" "solid-principles")
-        (dict "title" "Clean Architecture" "desc" "The dependency rule and layered architecture pattern that keeps business logic isolated from frameworks, databases, and delivery mechanisms." "tag" "Architecture" "url" "clean-architecture")
-        (dict "title" "Design Patterns" "desc" "The Gang of Four catalog of reusable solutions to recurring object-oriented design problems." "tag" "Patterns" "url" "design-patterns")
-        (dict "title" "Domain-Driven Design" "desc" "Evans's approach to aligning software structure with business domains through ubiquitous language and bounded contexts." "tag" "DDD" "url" "domain-driven-design")
-        (dict "title" "Testing Strategy" "desc" "The testing pyramid, test-driven development, and the discipline of building confidence in software through automated verification." "tag" "Testing" "url" "testing-strategy")
-        (dict "title" "Continuous Integration and Delivery" "desc" "Pipeline automation, deployment strategies, and the practice of keeping software in a releasable state at all times." "tag" "CI/CD" "url" "ci-cd")
-        (dict "title" "API Design" "desc" "REST, GraphQL, and gRPC. Principles of versioning, error handling, and building interfaces that survive over time." "tag" "APIs" "url" "api-design")
-        (dict "title" "Security Fundamentals" "desc" "Authentication, authorization, encryption, and the OWASP framework for reasoning about software vulnerabilities." "tag" "Security" "url" "security")
-      }}
-      {{ range $i, $p := $principles }}
-      <a href="{{ $.Site.BaseURL }}foundations/{{ $p.url }}/" class="principle-card">
+
+      <a href="{{ $.Site.BaseURL }}foundations/solid-principles/" class="principle-card">
         <div class="principle-card-accent"></div>
         <div class="principle-card-body">
-          <div class="principle-card-number">Principle {{ add $i 1 }}</div>
-          <h3>{{ $p.title }}</h3>
-          <p>{{ $p.desc }}</p>
+          <span class="principle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+          </span>
+          <div class="principle-card-number">Principle 1</div>
+          <h3>SOLID Principles</h3>
+          <p>Five object-oriented design principles that govern how components should be structured and relate to each other.</p>
         </div>
         <div class="principle-card-footer">
-          <div class="principle-card-tags">
-            <span class="principle-card-tag">{{ $p.tag }}</span>
-          </div>
+          <div class="principle-card-tags"><span class="principle-card-tag">OOP</span></div>
           <span class="principle-card-arrow">Read more &rarr;</span>
         </div>
       </a>
-      {{ end }}
+
+      <a href="{{ $.Site.BaseURL }}foundations/clean-architecture/" class="principle-card">
+        <div class="principle-card-accent"></div>
+        <div class="principle-card-body">
+          <span class="principle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+          </span>
+          <div class="principle-card-number">Principle 2</div>
+          <h3>Clean Architecture</h3>
+          <p>The dependency rule and layered architecture pattern that keeps business logic isolated from frameworks, databases, and delivery mechanisms.</p>
+        </div>
+        <div class="principle-card-footer">
+          <div class="principle-card-tags"><span class="principle-card-tag">Architecture</span></div>
+          <span class="principle-card-arrow">Read more &rarr;</span>
+        </div>
+      </a>
+
+      <a href="{{ $.Site.BaseURL }}foundations/design-patterns/" class="principle-card">
+        <div class="principle-card-accent"></div>
+        <div class="principle-card-body">
+          <span class="principle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+          </span>
+          <div class="principle-card-number">Principle 3</div>
+          <h3>Design Patterns</h3>
+          <p>The Gang of Four catalog of reusable solutions to recurring object-oriented design problems.</p>
+        </div>
+        <div class="principle-card-footer">
+          <div class="principle-card-tags"><span class="principle-card-tag">Patterns</span></div>
+          <span class="principle-card-arrow">Read more &rarr;</span>
+        </div>
+      </a>
+
+      <a href="{{ $.Site.BaseURL }}foundations/domain-driven-design/" class="principle-card">
+        <div class="principle-card-accent"></div>
+        <div class="principle-card-body">
+          <span class="principle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21"/><line x1="9" x2="9" y1="3" y2="18"/><line x1="15" x2="15" y1="6" y2="21"/></svg>
+          </span>
+          <div class="principle-card-number">Principle 4</div>
+          <h3>Domain-Driven Design</h3>
+          <p>Evans's approach to aligning software structure with business domains through ubiquitous language and bounded contexts.</p>
+        </div>
+        <div class="principle-card-footer">
+          <div class="principle-card-tags"><span class="principle-card-tag">DDD</span></div>
+          <span class="principle-card-arrow">Read more &rarr;</span>
+        </div>
+      </a>
+
+      <a href="{{ $.Site.BaseURL }}foundations/testing-strategy/" class="principle-card">
+        <div class="principle-card-accent"></div>
+        <div class="principle-card-body">
+          <span class="principle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+          </span>
+          <div class="principle-card-number">Principle 5</div>
+          <h3>Testing Strategy</h3>
+          <p>The testing pyramid, test-driven development, and the discipline of building confidence in software through automated verification.</p>
+        </div>
+        <div class="principle-card-footer">
+          <div class="principle-card-tags"><span class="principle-card-tag">Testing</span></div>
+          <span class="principle-card-arrow">Read more &rarr;</span>
+        </div>
+      </a>
+
+      <a href="{{ $.Site.BaseURL }}foundations/ci-cd/" class="principle-card">
+        <div class="principle-card-accent"></div>
+        <div class="principle-card-body">
+          <span class="principle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+          </span>
+          <div class="principle-card-number">Principle 6</div>
+          <h3>Continuous Integration and Delivery</h3>
+          <p>Pipeline automation, deployment strategies, and the practice of keeping software in a releasable state at all times.</p>
+        </div>
+        <div class="principle-card-footer">
+          <div class="principle-card-tags"><span class="principle-card-tag">CI/CD</span></div>
+          <span class="principle-card-arrow">Read more &rarr;</span>
+        </div>
+      </a>
+
+      <a href="{{ $.Site.BaseURL }}foundations/api-design/" class="principle-card">
+        <div class="principle-card-accent"></div>
+        <div class="principle-card-body">
+          <span class="principle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+          </span>
+          <div class="principle-card-number">Principle 7</div>
+          <h3>API Design</h3>
+          <p>REST, GraphQL, and gRPC. Principles of versioning, error handling, and building interfaces that survive over time.</p>
+        </div>
+        <div class="principle-card-footer">
+          <div class="principle-card-tags"><span class="principle-card-tag">APIs</span></div>
+          <span class="principle-card-arrow">Read more &rarr;</span>
+        </div>
+      </a>
+
+      <a href="{{ $.Site.BaseURL }}foundations/security/" class="principle-card">
+        <div class="principle-card-accent"></div>
+        <div class="principle-card-body">
+          <span class="principle-card-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg>
+          </span>
+          <div class="principle-card-number">Principle 8</div>
+          <h3>Security Fundamentals</h3>
+          <p>Authentication, authorization, encryption, and the OWASP framework for reasoning about software vulnerabilities.</p>
+        </div>
+        <div class="principle-card-footer">
+          <div class="principle-card-tags"><span class="principle-card-tag">Security</span></div>
+          <span class="principle-card-arrow">Read more &rarr;</span>
+        </div>
+      </a>
+
     </div>
   </div>
 </div>
