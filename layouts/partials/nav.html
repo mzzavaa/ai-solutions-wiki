@@ -6,9 +6,50 @@
         <span>AI Solutions Wiki</span>
       </a>
       <ul class="nav-links">
-        {{ range .Site.Menus.main }}
-        <li><a href="{{ .URL | relURL }}" class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a></li>
-        {{ end }}
+
+        <li class="nav-group">
+          <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false">
+            Learn
+            <svg class="nav-caret" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown" role="menu" aria-label="Learn">
+            <p class="nav-dropdown-label">Learn</p>
+            <a href="{{ "/layers/" | relURL }}" role="menuitem">Layers</a>
+            <a href="{{ "/getting-started/" | relURL }}" role="menuitem">Getting Started</a>
+            <a href="{{ "/foundations/" | relURL }}" role="menuitem">Foundations</a>
+          </div>
+        </li>
+
+        <li class="nav-group">
+          <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false">
+            Build
+            <svg class="nav-caret" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown" role="menu" aria-label="Build">
+            <p class="nav-dropdown-label">Build</p>
+            <a href="{{ "/build/" | relURL }}" role="menuitem">Build</a>
+            <a href="{{ "/architecture/" | relURL }}" role="menuitem">Architecture</a>
+          </div>
+        </li>
+
+        <li class="nav-group">
+          <button class="nav-group-btn" aria-haspopup="true" aria-expanded="false">
+            Explore
+            <svg class="nav-caret" xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
+          </button>
+          <div class="nav-dropdown nav-dropdown--wide" role="menu" aria-label="Explore">
+            <p class="nav-dropdown-label">Explore</p>
+            <a href="{{ "/solutions/" | relURL }}" role="menuitem">Solutions</a>
+            <a href="{{ "/guides/" | relURL }}" role="menuitem">Guides</a>
+            <a href="{{ "/tools/" | relURL }}" role="menuitem">Tools</a>
+            <a href="{{ "/frameworks/" | relURL }}" role="menuitem">Frameworks</a>
+            <a href="{{ "/comparisons/" | relURL }}" role="menuitem">Comparisons</a>
+            <a href="{{ "/glossary/" | relURL }}" role="menuitem">Glossary</a>
+          </div>
+        </li>
+
+        <li><a href="{{ "/about/" | relURL }}" class="nav-direct-link">About</a></li>
+
       </ul>
     </div>
     <div class="nav-right">
@@ -26,10 +67,44 @@
 
   <!-- Mobile menu panel -->
   <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
-    <ul class="mobile-nav-links">
-      {{ range .Site.Menus.main }}
-      <li><a href="{{ .URL | relURL }}" class="{{ if $.IsMenuCurrent "main" . }}active{{ end }}">{{ .Name }}</a></li>
-      {{ end }}
-    </ul>
+    <nav class="mobile-nav">
+
+      <div class="mobile-nav-group">
+        <p class="mobile-nav-group-label">Learn</p>
+        <ul class="mobile-nav-links">
+          <li><a href="{{ "/layers/" | relURL }}">Layers</a></li>
+          <li><a href="{{ "/getting-started/" | relURL }}">Getting Started</a></li>
+          <li><a href="{{ "/foundations/" | relURL }}">Foundations</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-group">
+        <p class="mobile-nav-group-label">Build</p>
+        <ul class="mobile-nav-links">
+          <li><a href="{{ "/build/" | relURL }}">Build</a></li>
+          <li><a href="{{ "/architecture/" | relURL }}">Architecture</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-group">
+        <p class="mobile-nav-group-label">Explore</p>
+        <ul class="mobile-nav-links">
+          <li><a href="{{ "/solutions/" | relURL }}">Solutions</a></li>
+          <li><a href="{{ "/guides/" | relURL }}">Guides</a></li>
+          <li><a href="{{ "/tools/" | relURL }}">Tools</a></li>
+          <li><a href="{{ "/frameworks/" | relURL }}">Frameworks</a></li>
+          <li><a href="{{ "/comparisons/" | relURL }}">Comparisons</a></li>
+          <li><a href="{{ "/glossary/" | relURL }}">Glossary</a></li>
+        </ul>
+      </div>
+
+      <div class="mobile-nav-group">
+        <p class="mobile-nav-group-label">About</p>
+        <ul class="mobile-nav-links">
+          <li><a href="{{ "/about/" | relURL }}">About</a></li>
+        </ul>
+      </div>
+
+    </nav>
   </div>
 </header>

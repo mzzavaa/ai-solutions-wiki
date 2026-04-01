@@ -45,10 +45,48 @@
 
     // Active nav link
     const currentPath = window.location.pathname;
-    document.querySelectorAll('.nav-links a, .mobile-nav-links a').forEach(link => {
+    document.querySelectorAll('.nav-dropdown a, .mobile-nav-links a, .nav-direct-link').forEach(link => {
       const href = link.getAttribute('href');
-      if (href !== '/' && currentPath.startsWith(href)) {
+      if (href && href !== '/' && currentPath.startsWith(href)) {
         link.classList.add('active');
+        const group = link.closest('.nav-group');
+        if (group) {
+          const btn = group.querySelector('.nav-group-btn');
+          if (btn) btn.classList.add('active');
+        }
+      }
+    });
+
+    // Desktop dropdown toggle (click for keyboard/touch)
+    document.querySelectorAll('.nav-group-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        const group = btn.closest('.nav-group');
+        const isOpen = group.classList.contains('open');
+        document.querySelectorAll('.nav-group.open').forEach(g => {
+          g.classList.remove('open');
+          g.querySelector('.nav-group-btn').setAttribute('aria-expanded', 'false');
+        });
+        if (!isOpen) {
+          group.classList.add('open');
+          btn.setAttribute('aria-expanded', 'true');
+        }
+      });
+    });
+
+    document.addEventListener('click', () => {
+      document.querySelectorAll('.nav-group.open').forEach(g => {
+        g.classList.remove('open');
+        g.querySelector('.nav-group-btn').setAttribute('aria-expanded', 'false');
+      });
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        document.querySelectorAll('.nav-group.open').forEach(g => {
+          g.classList.remove('open');
+          g.querySelector('.nav-group-btn').setAttribute('aria-expanded', 'false');
+        });
       }
     });
 
