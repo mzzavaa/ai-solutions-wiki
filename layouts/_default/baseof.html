@@ -34,8 +34,8 @@
         });
       }
 
-      // Restore query from URL
-      if (initialQuery) {
+      // Restore query from URL — skip on the dedicated search page (it handles its own restoration)
+      if (initialQuery && !document.getElementById('search-page')) {
         const input = document.querySelector('#search input[type=text]');
         if (input) {
           input.value = initialQuery;

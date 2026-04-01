@@ -297,6 +297,26 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .hamburger .icon-close { display: none; }
+
+/* ---- Mobile search icon link (hidden on desktop, shown on mobile) ---- */
+.nav-search-link {
+  display: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 7px;
+  color: var(--text-secondary);
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  transition: background 0.15s, border-color 0.15s;
+  flex-shrink: 0;
+}
+
+.nav-search-link:hover {
+  background: var(--surface-hover);
+  color: var(--text-primary);
+}
 .hamburger[aria-expanded="true"] .icon-menu { display: none; }
 .hamburger[aria-expanded="true"] .icon-close { display: block; }
 
@@ -1313,6 +1333,8 @@ img { max-width: 100%; height: auto; display: block; }
   }
   .nav-links { display: none; }
   .hamburger { display: flex; }
+  #search { display: none; }
+  .nav-search-link { display: flex; }
 }
 
 @media (max-width: 640px) {
@@ -1429,6 +1451,10 @@ img { max-width: 100%; height: auto; display: block; }
 #hero-search .pagefind-ui {
   max-width: 600px;
   margin: 0 auto;
+}
+
+#search-page .pagefind-ui {
+  max-width: 100%;
 }
 
 /* Result title — larger, stronger weight */
