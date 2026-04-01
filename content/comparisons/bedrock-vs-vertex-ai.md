@@ -1,6 +1,6 @@
 ---
-title: "AWS Bedrock vs Google Vertex AI - Cloud AI Platforms Compared"
-description: "Comparing AWS Bedrock and Google Vertex AI for foundation model access, fine-tuning, RAG, and enterprise AI deployment."
+title: "Amazon Bedrock vs Google Vertex AI - Cloud AI Platforms Compared"
+description: "Comparing Amazon Bedrock and Google Vertex AI for foundation model access, fine-tuning, RAG, and enterprise AI deployment."
 date: 2026-03-28
 categories: [Comparisons]
 tags: [AWS, Google, Bedrock, Vertex-AI, LLM, cloud, comparison]
