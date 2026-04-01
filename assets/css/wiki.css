@@ -1430,3 +1430,67 @@ img { max-width: 100%; height: auto; display: block; }
   max-width: 600px;
   margin: 0 auto;
 }
+
+/* Result title — larger, stronger weight */
+.pagefind-ui__result-title {
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  line-height: 1.4 !important;
+}
+
+.pagefind-ui__result-link {
+  text-decoration: none !important;
+}
+
+.pagefind-ui__result-link:hover {
+  text-decoration: underline !important;
+}
+
+/* Excerpt — slightly muted, comfortable line height */
+.pagefind-ui__result-excerpt {
+  font-size: 0.875rem !important;
+  line-height: 1.65 !important;
+  color: #475569 !important;
+  margin-top: 0.35rem !important;
+}
+
+/* Highlighted match — subtle blue tint instead of harsh yellow */
+.pagefind-ui mark {
+  background-color: #dbeafe !important;
+  color: #1e3a5f !important;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* Result card spacing */
+.pagefind-ui__result {
+  padding: 1rem 1.25rem !important;
+  border-radius: 8px !important;
+}
+
+/* Filter section */
+.pagefind-ui__filter-panel {
+  margin-bottom: 1rem !important;
+}
+
+.pagefind-ui__filter-name {
+  font-size: 0.8rem !important;
+  font-weight: 600 !important;
+  text-transform: uppercase !important;
+  letter-spacing: 0.05em !important;
+  color: #64748b !important;
+}
+
+/* Dark mode overrides for new rules */
+[data-theme="dark"] .pagefind-ui__result-excerpt {
+  color: #94a3b8 !important;
+}
+
+[data-theme="dark"] .pagefind-ui mark {
+  background-color: #1e3a5f !important;
+  color: #bfdbfe !important;
+}
+
+[data-theme="dark"] .pagefind-ui__filter-name {
+  color: #94a3b8 !important;
+}
