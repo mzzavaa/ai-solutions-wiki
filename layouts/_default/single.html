@@ -15,7 +15,8 @@
         </div>
 
         <h1 data-pagefind-meta="title">{{ .Title }}</h1>
-        {{ with .Section }}<span data-pagefind-meta="section" style="display:none">{{ . | humanize | title }}</span>{{ end }}
+        {{ with .Section }}<span data-pagefind-meta="section" data-pagefind-filter="section" style="display:none">{{ . | humanize | title }}</span>{{ end }}
+        {{ with .Params.tags }}{{ $levels := slice "beginner" "intermediate" "advanced" "expert" }}{{ range . }}{{ if in $levels (. | lower) }}<span data-pagefind-filter="level" style="display:none">{{ . | title }}</span>{{ end }}{{ end }}{{ end }}
 
         {{ with .Description }}
         <p class="article-description">{{ . }}</p>
@@ -41,7 +42,7 @@
         </div>
 
         {{ with .Params.tags }}
-        <div class="article-tags" data-pagefind-ignore>
+        <div class="article-tags">
           {{ range . }}
           <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag-pill">#{{ . }}</a>
           {{ end }}

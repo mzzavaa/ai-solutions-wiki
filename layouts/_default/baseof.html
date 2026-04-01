@@ -13,20 +13,49 @@
   <script src="{{ "pagefind/pagefind-ui.js" | relURL }}"></script>
   <script>
     window.addEventListener('DOMContentLoaded', function() {
-      new PagefindUI({
+      const params = new URLSearchParams(window.location.search);
+      const initialQuery = params.get('q') || '';
+
+      const mainSearch = new PagefindUI({
         element: "#search",
         showSubResults: true,
         showImages: false,
+        showFilters: true,
         baseUrl: "{{ "" | relURL }}"
       });
+
       if (document.getElementById('hero-search')) {
         new PagefindUI({
           element: "#hero-search",
           showSubResults: false,
           showImages: false,
+          showFilters: false,
           baseUrl: "{{ "" | relURL }}"
         });
       }
+
+      // Restore query from URL
+      if (initialQuery) {
+        const input = document.querySelector('#search input[type=text]');
+        if (input) {
+          input.value = initialQuery;
+          input.dispatchEvent(new Event('input', { bubbles: true }));
+        }
+      }
+
+      // Sync search query to URL params for bookmarkable filtered searches
+      document.addEventListener('input', function(e) {
+        if (e.target.closest('#search') && e.target.type === 'text') {
+          const url = new URL(window.location);
+          const val = e.target.value.trim();
+          if (val) {
+            url.searchParams.set('q', val);
+          } else {
+            url.searchParams.delete('q');
+          }
+          window.history.replaceState({}, '', url);
+        }
+      });
     });
   </script>
   <script>
