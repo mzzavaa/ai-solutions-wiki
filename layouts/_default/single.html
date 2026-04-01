@@ -5,7 +5,7 @@
 
     <article class="article-content">
       <header class="article-header">
-        <div class="article-meta-top">
+        <div class="article-meta-top" data-pagefind-ignore>
           {{ with .Section }}
           <a href="{{ printf "%s/" . | relURL }}" class="section-badge">{{ . | humanize | title }}</a>
           {{ end }}
@@ -14,13 +14,14 @@
           {{ end }}{{ end }}
         </div>
 
-        <h1>{{ .Title }}</h1>
+        <h1 data-pagefind-meta="title">{{ .Title }}</h1>
+        {{ with .Section }}<span data-pagefind-meta="section" style="display:none">{{ . | humanize | title }}</span>{{ end }}
 
         {{ with .Description }}
         <p class="article-description">{{ . }}</p>
         {{ end }}
 
-        <div class="article-meta">
+        <div class="article-meta" data-pagefind-ignore>
           <span class="meta-item">
             <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
             {{ .Date.Format "2 January 2006" }}
@@ -40,7 +41,7 @@
         </div>
 
         {{ with .Params.tags }}
-        <div class="article-tags">
+        <div class="article-tags" data-pagefind-ignore>
           {{ range . }}
           <a href="{{ "/tags/" | relURL }}{{ . | urlize }}/" class="tag-pill">#{{ . }}</a>
           {{ end }}
@@ -48,13 +49,13 @@
         {{ end }}
       </header>
 
-      <div class="article-body">
+      <div class="article-body" data-pagefind-body>
         {{ .Content }}
       </div>
 
-      {{ partial "cta.html" . }}
+      <div data-pagefind-ignore>{{ partial "cta.html" . }}</div>
 
-      <footer class="article-footer">
+      <footer class="article-footer" data-pagefind-ignore>
         <div class="article-taxonomy">
           {{ with .Params.industries }}
           <div class="taxonomy-group">
@@ -83,7 +84,7 @@
     </article>
   </div>
 
-  <div class="article-sidebar">
+  <div class="article-sidebar" data-pagefind-ignore>
     {{ partial "toc.html" . }}
     {{ partial "related.html" . }}
   </div>
