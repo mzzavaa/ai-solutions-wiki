@@ -15,6 +15,8 @@ related:
 Amazon Personalize is a managed machine learning service that generates individualized recommendations for users. It uses the same recommendation technology that Amazon.com uses for product suggestions. You provide interaction data (user clicked item X, user purchased item Y), and Personalize trains models that predict what each user is most likely to engage with next. No ML expertise is required to get started, though the service exposes tuning parameters for teams that want fine-grained control.
 
 Official documentation: https://docs.aws.amazon.com/personalize/
+Pricing: https://aws.amazon.com/personalize/pricing/
+Service quotas: https://docs.aws.amazon.com/personalize/latest/dg/limits.html
 
 ## Core Concepts
 

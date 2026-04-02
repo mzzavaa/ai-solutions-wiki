@@ -13,6 +13,8 @@ related:
 Amazon Neptune is a fully managed graph database service that supports both property graph (using Apache TinkerPop Gremlin) and RDF graph (using SPARQL) models. For AI projects, Neptune excels at representing and querying complex relationships: knowledge graphs for RAG systems, fraud detection networks, recommendation engines based on social connections, and identity resolution across disparate data sources.
 
 Official documentation: https://docs.aws.amazon.com/neptune/
+Pricing: https://aws.amazon.com/neptune/pricing/
+Service quotas: https://docs.aws.amazon.com/neptune/latest/userguide/limits.html
 
 ## Core Concepts
 

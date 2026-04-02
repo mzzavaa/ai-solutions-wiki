@@ -13,6 +13,10 @@ related:
 
 Amazon Comprehend is a managed NLP service that provides trained models for common text analysis tasks without requiring ML expertise or model training. It handles the high-volume, structured NLP tasks that would otherwise require either custom model development or expensive LLM calls.
 
+Official documentation: https://docs.aws.amazon.com/comprehend/latest/dg/  
+Pricing: https://aws.amazon.com/comprehend/pricing/  
+Service quotas: https://docs.aws.amazon.com/comprehend/latest/dg/guidelines-and-limits.html
+
 ## What Comprehend Does
 
 **Sentiment analysis** - Classifies text as positive, negative, neutral, or mixed, with a confidence score for each. Works at the document level and at the entity level (targeted sentiment). Useful for customer feedback analysis, social media monitoring, and product review processing.

@@ -1,6 +1,6 @@
 ---
 title: "Real-Time Data Pipelines for AI Workloads"
-description: "How to build real-time streaming data pipelines for AI: feature computation with Flink, event-driven inference, stream-to-feature-store patterns, and managing late-arriving data."
+description: "Implementation guide for real-time streaming data pipelines: four-layer architecture, Flink feature computation, late-arriving data handling with watermarks, event-driven inference, schema evolution, and operational monitoring."
 date: 2026-03-28
 categories: [Guides]
 tags: [stream-processing, flink, kafka, real-time, feature-store, data-engineering]
@@ -9,9 +9,15 @@ related:
   - patterns/stream-processing-ai
   - glossary/change-data-capture
   - guides/data-quality-ai
+  - glossary/kafka
+  - glossary/apache-flink
+  - guides/mlops-getting-started
+  - patterns/event-driven-ai
 ---
 
-Batch data pipelines compute features from historical data, typically on hourly or daily schedules. For AI use cases that require fresh signals - fraud detection, recommendation ranking, dynamic pricing - batch latency is too slow. Real-time streaming pipelines compute features and trigger inference as events arrive, reducing feature freshness from hours to seconds.
+**This page is a build guide.** For the architectural pattern describing dual-write consistency guarantees and training-serving skew prevention, see [Real-Time Feature Computation Pattern](/patterns/stream-processing-ai/).
+
+Batch data pipelines compute features from historical data on scheduled intervals, typically hourly or daily. For AI use cases requiring fresh signals — fraud detection scores, real-time recommendation ranking, dynamic pricing — this latency is too high. A fraud model running on hour-old transaction features will miss velocity attacks entirely. Real-time streaming pipelines compute features and trigger inference as events arrive, reducing feature freshness from hours to seconds.
 
 ## Architecture Overview
 
@@ -117,3 +123,10 @@ Pattern: the stream processor calls the inference service directly for each even
 **Monitoring** - Track end-to-end latency (event time to feature store write), throughput, checkpoint duration, and consumer lag. Alert when lag exceeds the freshness SLO.
 
 Real-time pipelines are more complex to operate than batch. Start with the use cases where freshness directly impacts business outcomes and expand from there.
+
+## Sources
+
+- Kleppmann, M. *Designing Data-Intensive Applications.* O'Reilly Media, 2017. — Chapters 10–11 cover stream processing, exactly-once semantics, and the trade-offs between batch and streaming architectures. The standard reference for distributed data systems.
+- Apache Flink Documentation. "Event Time and Watermarks." https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/time/ — Authoritative reference for the watermark and late-data handling patterns described above.
+- Confluent Documentation. "Schema Registry." https://docs.confluent.io/platform/current/schema-registry/index.html — Schema evolution strategy referenced in the Operational Considerations section.
+- Kreps, J. "The Log: What Every Software Engineer Should Know About Real-Time Data's Unifying Abstraction." *LinkedIn Engineering Blog* (2013). https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying — Foundational essay on log-based event streaming that underpins Kafka and streaming pipelines.

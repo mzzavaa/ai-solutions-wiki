@@ -13,6 +13,8 @@ related:
 Amazon Kendra is a managed enterprise search service from AWS that uses machine learning to return relevant answers from unstructured data. Unlike keyword-based search engines, Kendra understands natural language queries and returns precise answers extracted from documents rather than just a list of matching files. For AI projects, Kendra serves as a high-quality retrieval layer that can feed into generative AI workflows or stand alone as an intelligent search solution.
 
 Official documentation: https://docs.aws.amazon.com/kendra/
+Pricing: https://aws.amazon.com/kendra/pricing/
+Service quotas: https://docs.aws.amazon.com/kendra/latest/dg/quotas.html
 
 ## Core Concepts
 

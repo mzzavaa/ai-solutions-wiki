@@ -13,6 +13,8 @@ related:
 Amazon Lookout for Metrics is a managed service that detects anomalies in business and operational metrics using machine learning. You connect it to your metric data sources, define the measures and dimensions you want to monitor, and the service automatically learns normal patterns and alerts you when something deviates unexpectedly. Unlike threshold-based alerting, Lookout for Metrics adapts to seasonal patterns, trends, and day-of-week variations without manual threshold tuning.
 
 Official documentation: https://docs.aws.amazon.com/lookoutmetrics/
+Pricing: https://aws.amazon.com/lookout-for-metrics/pricing/
+Service quotas: https://docs.aws.amazon.com/lookoutmetrics/latest/dev/quotas.html
 
 ## Core Concepts
 

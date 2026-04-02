@@ -4,6 +4,14 @@ description: "Security considerations for AI systems, covering prompt injection,
 date: 2026-03-28
 categories: [Guides]
 tags: [security, AI-development, governance, prompt-injection, enterprise]
+related:
+  - guides/owasp-top-10-llm
+  - guides/github-actions-security
+  - patterns/prompt-injection-defense
+  - patterns/guardrails-pattern
+  - foundations/security
+  - glossary/prompt-injection
+  - glossary/ai-red-team
 ---
 
 AI systems introduce security risks that traditional application security does not address. Prompt injection, data poisoning, model extraction, and training data leakage are attack vectors specific to AI. Organizations deploying AI need security practices that cover both traditional application security and AI-specific threats.

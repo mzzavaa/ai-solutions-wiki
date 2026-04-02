@@ -13,9 +13,11 @@ related:
   - tools/rasa
 ---
 
-Amazon Lex is the AWS service for building conversational interfaces using voice and text. It provides the same speech recognition and natural language understanding technology that powers Amazon Alexa. For enterprise AI projects, Lex serves as the front-end interaction layer for chatbots, IVR systems, and automated customer service workflows.
+Amazon Lex is the AWS service for building conversational interfaces using voice and text. It uses deep learning for automatic speech recognition (ASR) and natural language understanding (NLU) to recognize intent and extract slot values from user input. For enterprise AI projects, Lex serves as the front-end interaction layer for chatbots, IVR systems, and automated customer service workflows.
 
-Official documentation: https://docs.aws.amazon.com/lex/
+Official documentation: https://docs.aws.amazon.com/lex/  
+Pricing: https://aws.amazon.com/lex/pricing/  
+Service quotas: https://docs.aws.amazon.com/lex/latest/dg/gl-limits.html
 
 ## Core Concepts
 

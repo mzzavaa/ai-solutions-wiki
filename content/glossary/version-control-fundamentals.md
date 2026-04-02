@@ -4,6 +4,11 @@ description: "Core concepts of version control systems including branching, merg
 date: 2026-03-28
 categories: [Glossary]
 tags: [version-control, Git, branching, merging, source-control, VCS]
+related:
+  - software-engineering/version-control-fundamentals
+  - software-engineering/gitignore-patterns
+  - glossary/ci-cd
+  - foundations/ci-cd
 ---
 
 Version control (also called source control or revision control) is the practice of tracking and managing changes to files, particularly source code, over time. A version control system (VCS) records every modification, who made it, and when, enabling teams to collaborate on code, review changes, and recover previous states.

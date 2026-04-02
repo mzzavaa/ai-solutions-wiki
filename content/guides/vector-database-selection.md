@@ -4,6 +4,13 @@ description: "How to choose the right vector database for your AI application, c
 date: 2026-03-28
 categories: [Guides]
 tags: [vector-database, RAG, embeddings, infrastructure, database]
+related:
+  - glossary/vector-database
+  - guides/building-rag-systems
+  - tools/amazon-opensearch
+  - glossary/embeddings
+  - glossary/approximate-nearest-neighbor
+  - comparisons/vector-databases
 ---
 
 Vector databases store and search high-dimensional embeddings, enabling similarity search for RAG systems, recommendation engines, and semantic search. The vector database market has exploded with options, making selection confusing. This guide provides a structured approach to choosing the right one for your use case.
