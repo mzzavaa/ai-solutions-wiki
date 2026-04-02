@@ -107,3 +107,9 @@ Circuit breakers are only as good as the fallback they activate. Test the fallba
 - The circuit never closes because the half-open probe request is also misconfigured
 
 Inject failures in load tests to verify the circuit trips correctly and the fallback produces an acceptable response.
+
+## Sources and Further Reading
+
+1. Nygard, M. (2007). *Release It! Design and Deploy Production-Ready Software.* Pragmatic Bookshelf. — First systematic description of the Circuit Breaker pattern as an architectural stability pattern (Chapter 4). The three-state model (closed/open/half-open) used in this article originates here.
+2. Fowler, M. "CircuitBreaker." *martinfowler.com*, 2014. [https://martinfowler.com/bliki/CircuitBreaker.html](https://martinfowler.com/bliki/CircuitBreaker.html) — Canonical reference description of the pattern.
+3. Newman, S. (2015). *Building Microservices: Designing Fine-Grained Systems.* O'Reilly Media. — Chapter 11 covers resilience patterns including circuit breakers in the context of service-to-service calls, applicable to AI service integration.

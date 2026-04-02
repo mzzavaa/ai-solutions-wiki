@@ -44,5 +44,3 @@ Match the technique to the threat model. If data will be published, differential
 3. Machanavajjhala, A., et al. "L-Diversity: Privacy Beyond K-Anonymity." *ACM Transactions on Knowledge Discovery from Data* 1, no. 1 (2007).
 4. Dwork, C. "Differential Privacy." *Proceedings of the 33rd International Colloquium on Automata, Languages and Programming* (ICALP 2006): 1-12.
 5. Abowd, J. "The U.S. Census Bureau Adopts Differential Privacy." *Proceedings of the 24th ACM SIGKDD International Conference on Knowledge Discovery and Data Mining* (2018).
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

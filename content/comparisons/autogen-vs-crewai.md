@@ -4,6 +4,11 @@ description: "Comparing Microsoft AutoGen and CrewAI for building multi-agent AI
 date: 2026-03-28
 categories: [Comparisons]
 tags: [AutoGen, CrewAI, multi-agent, LLM, orchestration, comparison]
+related:
+  - comparisons/single-agent-vs-multi-agent
+  - comparisons/crewai-vs-langgraph
+  - tools/autogen
+  - tools/crewai
 ---
 
 Multi-agent systems use multiple LLM-powered agents that collaborate to solve complex tasks. AutoGen (from Microsoft Research) and CrewAI are the two most popular frameworks for building these systems. They differ in abstraction level, conversation patterns, and how much control they give you over agent interactions.

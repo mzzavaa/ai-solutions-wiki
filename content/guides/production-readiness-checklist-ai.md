@@ -77,5 +77,3 @@ Production readiness reviews originated at Google, where Site Reliability Engine
 
 1. Beyer, B., et al. *Site Reliability Engineering: How Google Runs Production Systems.* O'Reilly Media, 2016.
 2. Breck, E., et al. "The ML Test Score: A Rubric for ML Production Readiness and Technical Debt Reduction." *Proceedings of IEEE Big Data* (2017).
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

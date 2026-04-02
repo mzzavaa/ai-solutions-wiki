@@ -4,6 +4,12 @@ description: "How to design and run A/B tests for AI models and features, coveri
 date: 2026-03-28
 categories: [Guides]
 tags: [a-b-testing, experimentation, evaluation, production, AI-development]
+related:
+  - guides/testing-ai-systems
+  - guides/testing-llm-applications
+  - guides/llm-evaluation-methods
+  - patterns/feature-flags-ai
+  - patterns/observability-ai
 ---
 
 A/B testing AI systems is more complex than A/B testing traditional software changes. Model improvements that look significant in offline evaluation may show no impact in production. Conversely, changes that seem marginal offline can produce meaningful business improvements. A/B testing is the only reliable way to validate AI changes in production.

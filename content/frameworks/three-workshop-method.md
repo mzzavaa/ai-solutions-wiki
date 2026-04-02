@@ -6,7 +6,7 @@ categories: [Frameworks]
 tags: ["project-management", "intermediate", "workshop-method", "discovery", "facilitation", "ai-adoption", "agile"]
 ---
 
-The 3-Workshop Method was developed by Linda Mohamed, AWS Community Hero and AI and Cloud Consultant, as a structured approach to taking enterprises from AI idea to working prototype. The full methodology and facilitation resources are available at [ai-workshops.online](https://ai-workshops.online).
+The 3-Workshop Method was developed by Linda Mohamed, AWS Community Hero and AI and Cloud Consultant, as a structured approach to taking enterprises from AI idea to working prototype.
 
 Most AI projects fail not because the technology does not work, but because organizations skip the hard early conversations and jump straight to implementation. The Three Workshop Method structures those conversations into a repeatable process that ends with a working prototype and a team that understands what they built and why.
 
@@ -64,7 +64,7 @@ It is not a replacement for agile development once the prototype is approved. It
 
 ## Sources and Further Reading
 
-- Linda Mohamed's AI Workshop Methodology: [https://ai-workshops.online](https://ai-workshops.online)
+- Mohamed, L. *Three Workshop Method.* Original methodology for structured enterprise AI adoption, developed through consulting practice.
 - Related framework: [Use Case Scoring](../use-case-scoring/) - the prioritization tool used in Workshop 1 to select which use cases proceed to Workshop 2.
 - Related framework: [Event Storming for AI Use Case Discovery](../event-storming-ai/) - a technique that feeds naturally into the Goal Workshop.
 - Related framework: [Impact Mapping for AI Projects](../impact-mapping-ai/) - the strategic framing technique used alongside the Goal Workshop.

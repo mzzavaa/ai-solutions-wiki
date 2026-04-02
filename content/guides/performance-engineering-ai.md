@@ -45,5 +45,3 @@ Start with profiling. Identify whether your bottleneck is compute-bound (GPU uti
 2. Microsoft. "ONNX Runtime: Cross-platform, high performance ML inferencing and training accelerator." GitHub, 2019. https://github.com/microsoft/onnxruntime
 3. NVIDIA. "TensorRT: Programmable Inference Accelerator." NVIDIA Developer, 2017. https://developer.nvidia.com/tensorrt
 4. Kwon, W., et al. "Efficient Memory Management for Large Language Model Serving with PagedAttention." *Proceedings of the 29th Symposium on Operating Systems Principles* (SOSP 2023).
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

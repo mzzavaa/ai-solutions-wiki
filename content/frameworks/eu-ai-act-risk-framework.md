@@ -75,3 +75,9 @@ Non-compliance penalties are tiered. Prohibited practices carry fines up to 35 m
 ## Enforcement Timeline
 
 February 2025: Prohibitions on unacceptable risk systems in effect. August 2025: Transparency obligations and GPAI rules in effect. February 2026: Commission publishes guidelines on high-risk classification with practical examples. August 2026: Full requirements for Annex III high-risk systems enforceable. August 2027: Requirements for high-risk AI in regulated products enforceable.
+
+## Sources
+
+1. European Parliament and Council. "Regulation (EU) 2024/1689 of the European Parliament and of the Council of 13 June 2024 laying down harmonised rules on artificial intelligence (Artificial Intelligence Act)." *Official Journal of the European Union* L Series, 12 July 2024. [https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689](https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=OJ:L_202401689) — The primary legal text.
+2. European Commission. "AI Act Explorer." [https://artificialintelligenceact.eu/](https://artificialintelligenceact.eu/) — Article-by-article annotated reference maintained by the Future of Life Institute.
+3. European Commission. "High-Level Expert Group on Artificial Intelligence: Ethics Guidelines for Trustworthy AI." April 2019. — The precursor guidelines that shaped the Act's risk classification principles.

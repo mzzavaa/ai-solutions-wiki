@@ -4,6 +4,13 @@ description: "How to design AI assistants that are genuinely useful rather than 
 date: 2026-03-24
 categories: [Guides]
 tags: [guides, assistants, chatbots, design]
+related:
+  - guides/building-ai-chatbots
+  - guides/building-rag-systems
+  - guides/prompt-engineering-enterprise
+  - guides/testing-llm-applications
+  - tools/amazon-bedrock
+  - patterns/observability-ai
 ---
 
 Most AI assistants fail not because the underlying model is bad but because the design around the model is bad. Intake is unclear, context is lost between turns, escalation paths do not exist, and there is no mechanism for the system to improve based on what users actually ask. This guide addresses those design problems.

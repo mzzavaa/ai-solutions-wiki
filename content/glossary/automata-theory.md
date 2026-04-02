@@ -39,5 +39,3 @@ The foundations of automata theory were laid in the 1930s and 1950s by several i
 1. Turing, A. M. "On Computable Numbers, with an Application to the Entscheidungsproblem." *Proceedings of the London Mathematical Society*, 2(42), 1936, pp. 230-265.
 2. Kleene, S. C. "Representation of Events in Nerve Nets and Finite Automata." In *Automata Studies*, Princeton University Press, 1956, pp. 3-42.
 3. Chomsky, N. "Three Models for the Description of Language." *IRE Transactions on Information Theory*, 2(3), 1956, pp. 113-124.
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

@@ -35,5 +35,3 @@ Today, SCM principles are so deeply embedded in development workflows that teams
 1. United States Department of Defense. "MIL-STD-483: Configuration Management Practices for Systems, Equipment, Munitions, and Computer Programs," 1970.
 2. IEEE Computer Society. "IEEE 828: Standard for Software Configuration Management Plans," 1983 (revised 1990, 1998, 2012).
 3. Torvalds, L. Git version control system, first released April 2005. Distributed SCM tool that became the dominant platform for software configuration management.
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

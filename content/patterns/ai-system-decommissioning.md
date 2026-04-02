@@ -45,5 +45,3 @@ Decommission an AI system when model performance has degraded below acceptable t
 1. Brodie, M. L. and Stonebraker, M. *Migrating Legacy Systems: Gateways, Interfaces, and the Incremental Approach*. Morgan Kaufmann, 1995.
 2. U.S. Congress. Sarbanes-Oxley Act of 2002 (SOX), Section 802. Record retention requirements for audit documentation.
 3. European Parliament and Council. "Regulation Laying Down Harmonised Rules on Artificial Intelligence" (EU AI Act), 2024. Lifecycle management requirements for high-risk AI systems.
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

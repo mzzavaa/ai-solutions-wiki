@@ -77,3 +77,9 @@ The debate itself is the most valuable part. Disagreements about component matur
 ## When to Use Wardley Mapping
 
 Use Wardley Mapping when making build-vs-buy decisions for AI infrastructure, when setting AI platform strategy, and when evaluating vendor solutions against custom development. The map provides a visual argument for strategic investment decisions that is more compelling than a bullet-point list.
+
+## Sources
+
+1. Wardley, S. (2016). *Wardley Maps.* Available at [https://medium.com/wardleymaps](https://medium.com/wardleymaps) and as a free book. — Primary source for the Wardley Mapping technique, describing the value chain, evolution axis, and strategic patterns. Wardley published his methodology as open content after developing it at Fotango and Canonical.
+2. Wardley, S. (2014). "Bits or pieces? The strategic journey of Simon Wardley." — Canonical early blog series documenting the development of the mapping method.
+3. Cherbakov, L. et al. (2005). "Impact of service orientation at the business level." *IBM Systems Journal* 44(4). — Early work on value chain analysis in technology strategy that influenced Wardley's thinking.

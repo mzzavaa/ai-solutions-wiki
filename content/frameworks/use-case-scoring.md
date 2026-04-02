@@ -6,7 +6,7 @@ categories: [Frameworks]
 tags: ["project-management", "intermediate", "use-case-scoring", "prioritization", "ai-adoption", "evaluation", "roi"]
 ---
 
-This framework was developed by Linda Mohamed based on WSJF (Weighted Shortest Job First) principles adapted for AI use case prioritization across dozens of enterprise workshops. The full workshop methodology is available at [ai-workshops.online](https://ai-workshops.online).
+This framework was developed by Linda Mohamed based on WSJF (Weighted Shortest Job First) principles adapted for AI use case prioritization across dozens of enterprise workshops.
 
 When organizations run their first AI ideation workshop, they rarely leave with too few ideas. They leave with too many - Post-it notes covering three whiteboards, a shared document with 57 bullet points, and no clear path forward. The Use Case Scoring Framework exists to solve exactly that problem.
 
@@ -50,5 +50,5 @@ For organizations running their first AI program, the scoring session itself is 
 
 - Reinertsen, D. G. (2009). *The Principles of Product Development Flow: Second Generation Lean Product Development.* Celeritas Publishing. - The source of WSJF (Weighted Shortest Job First) principles on which this framework's scoring approach is based.
 - Scaled Agile Framework (SAFe) documentation on WSJF: [https://scaledagileframework.com/wsjf/](https://scaledagileframework.com/wsjf/)
-- Linda Mohamed's AI Workshop Methodology: [https://ai-workshops.online](https://ai-workshops.online)
+- Mohamed, L. *Use Case Scoring Framework.* Original prioritization methodology adapted from WSJF for AI project selection, developed through enterprise consulting practice.
 - Related framework: [Three Workshop Method](../three-workshop-method/) - the structured workshop process in which this scoring tool is used.

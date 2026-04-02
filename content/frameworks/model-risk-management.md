@@ -43,5 +43,3 @@ LLMs challenge traditional model risk frameworks in several ways. They are gener
 1. Board of Governors of the Federal Reserve System and Office of the Comptroller of the Currency. "Supervisory Guidance on Model Risk Management" (SR 11-7 / OCC 2011-12), April 4, 2011.
 2. Office of the Comptroller of the Currency. "Comptroller's Handbook: Model Risk Management," August 2021. Updated guidance addressing AI/ML models.
 3. European Central Bank. "Guide on artificial intelligence and machine learning for credit institutions," 2023.
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.
