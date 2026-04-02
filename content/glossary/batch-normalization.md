@@ -36,3 +36,8 @@ Batch normalization provides several practical benefits for training deep networ
 Batch normalization is standard in convolutional neural networks for computer vision. However, it is less common in transformer architectures, where layer normalization (normalizing across features within a single sample rather than across the batch) is preferred. The choice between batch normalization and layer normalization depends on your architecture and whether batch statistics are meaningful (they are not for variable-length sequences or very small batch sizes).
 
 For technical leaders evaluating model architectures, batch normalization is a training optimization detail that affects training speed and stability. It does not change what the model can learn, only how efficiently it learns.
+
+## Sources
+
+1. Ioffe, S. and Szegedy, C. (2015). "Batch Normalization: Accelerating Deep Network Training by Reducing Internal Covariate Shift." *Proceedings of the 32nd International Conference on Machine Learning (ICML 2015).* — Original paper introducing batch normalization; demonstrated 14× faster training on ImageNet classification. [https://arxiv.org/abs/1502.03167](https://arxiv.org/abs/1502.03167)
+2. Ba, J.L., Kiros, J.R., and Hinton, G.E. (2016). "Layer Normalization." *arXiv:1607.06450.* — Introduced layer normalization as the alternative that became standard in transformer models, normalizing across features rather than batch dimension. [https://arxiv.org/abs/1607.06450](https://arxiv.org/abs/1607.06450)

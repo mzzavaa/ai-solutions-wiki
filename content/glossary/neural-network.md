@@ -36,3 +36,10 @@ For technical leaders, neural networks are the building block of nearly every AI
 ## When to Use Neural Networks
 
 Neural networks excel when you have large amounts of data, the relationships between inputs and outputs are complex and non-linear, and you can tolerate probabilistic rather than deterministic outputs. For small datasets or problems requiring interpretable decisions, simpler models (logistic regression, decision trees) may be more appropriate.
+
+## Sources
+
+1. Rosenblatt, F. (1958). "The Perceptron: A Probabilistic Model for Information Storage and Organization in the Brain." *Psychological Review* 65(6), pp. 386–408. — Introduced the perceptron, the single-neuron predecessor to multi-layer neural networks.
+2. Rumelhart, D.E., Hinton, G.E., and Williams, R.J. (1986). "Learning Representations by Back-propagating Errors." *Nature* 323, pp. 533–536. — Established backpropagation for multi-layer networks; the paper that made neural network training practical.
+3. LeCun, Y., Bottou, L., Bengio, Y., and Haffner, P. (1998). "Gradient-Based Learning Applied to Document Recognition." *Proceedings of the IEEE* 86(11), pp. 2278–2324. — Introduced LeNet and demonstrated convolutional neural networks on digit recognition; foundational CNN paper. [http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf](http://yann.lecun.com/exdb/publis/pdf/lecun-01a.pdf)
+4. Goodfellow, I., Bengio, Y., and Courville, A. (2016). *Deep Learning.* MIT Press. — Comprehensive graduate-level textbook covering neural network theory, architectures, and training; freely available online at [https://www.deeplearningbook.org/](https://www.deeplearningbook.org/)
