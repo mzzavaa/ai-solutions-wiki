@@ -36,3 +36,10 @@ Plain SGD is rarely used alone. Modern optimizers add momentum and adaptive lear
 ## Why It Matters
 
 For technical leaders, gradient descent determines training cost and model quality. The learning rate is the single most important hyperparameter: too high and training diverges, too low and training takes excessively long or gets stuck. Learning rate schedules (warmup, cosine decay) are standard practice for achieving good results. Understanding these fundamentals helps you interpret training curves, diagnose training failures, and make informed decisions about training infrastructure requirements.
+
+## Sources
+
+1. Robbins, H. and Monro, S. (1951). "A Stochastic Approximation Method." *The Annals of Mathematical Statistics* 22(3), pp. 400–407. — Original stochastic approximation paper; the theoretical foundation for stochastic gradient descent.
+2. Rumelhart, D.E., Hinton, G.E., and Williams, R.J. (1986). "Learning Representations by Back-propagating Errors." *Nature* 323, pp. 533–536. — The paper that established backpropagation as a practical algorithm for training multi-layer neural networks; made gradient descent viable for deep architectures.
+3. Kingma, D.P. and Ba, J. (2014). "Adam: A Method for Stochastic Optimization." *arXiv:1412.6980.* — Introduced Adam; by far the most cited optimization paper in deep learning. [https://arxiv.org/abs/1412.6980](https://arxiv.org/abs/1412.6980)
+4. Loshchilov, I. and Hutter, F. (2019). "Decoupled Weight Decay Regularization." *International Conference on Learning Representations (ICLR 2019).* — Introduced AdamW by showing that weight decay in Adam is not equivalent to L2 regularization; AdamW became the standard optimizer for transformer pre-training. [https://arxiv.org/abs/1711.05101](https://arxiv.org/abs/1711.05101)

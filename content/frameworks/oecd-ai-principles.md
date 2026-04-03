@@ -56,3 +56,9 @@ To support implementation, the OECD created the AI Policy Observatory (OECD.AI),
 The OECD AI Principles have shaped AI regulation globally. The EU AI Act references OECD definitions and risk categories. The US National AI Initiative and Executive Order on AI Safety align with OECD principle areas. Japan, Canada, the UK, and Australia have all built national AI strategies that explicitly reference the OECD framework. The G7 Hiroshima Process on AI and the Global Partnership on AI (GPAI) both operate within the conceptual framework established by these principles.
 
 The principles' broad adoption is partly due to their high-level, technology-neutral formulation. They provide a shared vocabulary and value system without prescribing specific technical implementations, allowing countries and organizations to adapt them to their own legal, cultural, and economic contexts.
+
+## Sources
+
+1. OECD. "Recommendation of the Council on Artificial Intelligence." OECD Legal Instruments, OECD/LEGAL/0449, May 22, 2019. [https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449](https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449) — The primary legal instrument adopting the five AI principles.
+2. OECD.AI Policy Observatory. "OECD Principles on AI." [https://oecd.ai/en/ai-principles](https://oecd.ai/en/ai-principles) — Official landing page with updated guidance and country implementation tracking.
+3. OECD. "G20 AI Principles." June 2019. [https://oecd.ai/en/g20](https://oecd.ai/en/g20) — G20 adoption of the OECD principles, extending their reach to non-OECD member economies including China, Brazil, and India.

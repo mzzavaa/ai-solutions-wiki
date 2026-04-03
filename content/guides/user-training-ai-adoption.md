@@ -45,5 +45,3 @@ Trust is not binary. Users need to develop calibrated trust, knowing when to rel
 1. Lewin, K. "Frontiers in Group Dynamics." *Human Relations*, 1(1), 1947. Introduced the unfreeze-change-refreeze model of organizational change.
 2. Kotter, J. *Leading Change*. Harvard Business School Press, 1996. Eight-step framework for organizational transformation.
 3. Hiatt, J. *ADKAR: A Model for Change in Business, Government and our Community*. Prosci Learning Center Publications, 2006. Individual change management framework.
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

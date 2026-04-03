@@ -13,6 +13,7 @@ related:
 Amazon Fraud Detector is a managed service that uses machine learning to identify potentially fraudulent activity in real time. It combines your historical fraud data with Amazon's fraud detection expertise (patterns learned from AWS and Amazon.com) to train models that score transactions, account registrations, or any event for fraud risk. The service is designed so that fraud analysts and application developers can build and deploy detection models without deep ML knowledge.
 
 Official documentation: https://docs.aws.amazon.com/frauddetector/
+Pricing: https://aws.amazon.com/fraud-detector/pricing/
 
 ## Core Concepts
 

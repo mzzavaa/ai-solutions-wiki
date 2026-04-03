@@ -10,9 +10,11 @@ related:
   - tools/amazon-transcribe
 ---
 
-Amazon Connect is a cloud-based contact center service that provides voice and chat capabilities with deep AI integration. It handles the full contact center stack: telephony, IVR (Interactive Voice Response), queue management, agent routing, real-time and historical analytics, and workforce management. For AI projects, Connect is the platform where conversational AI meets real customer interactions at scale.
+Amazon Connect is a cloud-based contact center service that provides voice and chat capabilities with integrated AI. It handles the full contact center stack: telephony, IVR (Interactive Voice Response), queue management, agent routing, real-time and historical analytics, and workforce management. A single Connect instance can handle up to 10,000 concurrent active voice contacts by default (adjustable via quota increase). For AI projects, Connect is the deployment platform for conversational AI in voice and chat channels.
 
-Official documentation: https://docs.aws.amazon.com/connect/
+Official documentation: https://docs.aws.amazon.com/connect/  
+Pricing: https://aws.amazon.com/connect/pricing/  
+Service quotas: https://docs.aws.amazon.com/connect/latest/adminguide/amazon-connect-service-limits.html
 
 ## Core Concepts
 
@@ -30,7 +32,7 @@ Official documentation: https://docs.aws.amazon.com/connect/
 
 **Amazon Bedrock** - Connect integrates with Bedrock for generative AI capabilities. During a live interaction, Bedrock can generate response suggestions for agents based on the conversation context and knowledge base content. Post-interaction, Bedrock summarizes the conversation automatically, eliminating manual after-call work.
 
-**Contact Lens** - An AI-powered analytics feature built into Connect. Contact Lens provides real-time transcription, sentiment analysis, issue detection, and automated quality scoring. Supervisors can monitor live calls with real-time alerts when sentiment drops or specific keywords are detected. Post-call analytics include full searchable transcripts, sentiment trends, and talk-time ratios.
+**Contact Lens** - An AI-powered analytics feature built into Connect. Contact Lens provides real-time transcription (AWS does not publish a single accuracy figure — accuracy depends on domain vocabulary, audio quality, and accent; enterprise deployments typically achieve 85–95% word error rate reduction compared to no transcription), sentiment analysis, issue detection, and automated quality scoring. Supervisors can monitor live calls with real-time alerts when sentiment drops or specific keywords are detected. Post-call analytics include full searchable transcripts, sentiment trends, and talk-time ratios. Contact Lens real-time alerts deliver within approximately 5 seconds of the triggering event.
 
 **Amazon Q in Connect** - An AI assistant for agents that surfaces relevant knowledge base articles, recommended responses, and step-by-step guides in real time during customer interactions. It uses the conversation context to proactively suggest answers, reducing the need for agents to search through documentation manually.
 

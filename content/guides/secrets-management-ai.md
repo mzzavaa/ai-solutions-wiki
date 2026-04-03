@@ -50,5 +50,3 @@ Log every secret access: who accessed which secret, when, and from where. Secret
 1. Barker, E., et al. "Recommendation for Key Management." *NIST Special Publication 800-57 Part 1*, 2005 (revised 2020).
 2. HashiCorp. "Vault by HashiCorp." 2015. https://www.vaultproject.io/
 3. AWS. "AWS Secrets Manager." Amazon Web Services, 2018. https://aws.amazon.com/secrets-manager/
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

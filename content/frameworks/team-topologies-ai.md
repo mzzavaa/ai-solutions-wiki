@@ -79,3 +79,9 @@ The enabling team facilitates skill transfer to a stream-aligned team. This is a
 ## When to Apply Team Topologies
 
 Apply Team Topologies when the AI organization has grown beyond a single team (typically 10+ people), when delivery is slowing due to dependencies and handoffs, or when a platform investment decision is needed. For small teams (under 10), the overhead of distinct team types is not justified.
+
+## Sources
+
+1. Skelton, M. and Pais, M. (2019). *Team Topologies: Organizing Business and Technology Teams for Fast Flow.* IT Revolution Press. — Primary source for the four team types (stream-aligned, platform, enabling, complicated-subsystem) and three interaction modes (collaboration, X-as-a-Service, facilitating) described in this article.
+2. Skelton, M. and Pais, M. (2021). *Remote Team Interactions Workbook: Using Team Topologies Patterns for Remote, Hybrid, and In-Person Teams.* IT Revolution Press. — Extension of the framework for distributed teams.
+3. Conway, M.E. (1968). "How Do Committees Invent?" *Datamation* 14(4), pp. 28–31. — Conway's Law, which Team Topologies operationalizes: "Organizations which design systems are constrained to produce designs which are copies of the communication structures of these organizations."

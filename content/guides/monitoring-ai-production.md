@@ -4,6 +4,15 @@ description: "A comprehensive guide to monitoring production AI systems, coverin
 date: 2026-03-28
 categories: [Guides]
 tags: [monitoring, MLOps, production, observability, AI-infrastructure]
+related:
+  - guides/drift-detection-guide
+  - guides/mlops-getting-started
+  - glossary/mlops
+  - glossary/data-drift
+  - glossary/model-degradation
+  - tools/amazon-cloudwatch
+  - tools/grafana
+  - tools/prometheus
 ---
 
 Monitoring AI systems in production is fundamentally different from monitoring traditional software. Traditional monitoring focuses on "is the system up and responding?" AI monitoring must also answer "is the system still producing good results?" A model can return HTTP 200 with low latency while producing increasingly wrong predictions due to data drift. Without AI-specific monitoring, these failures are invisible until stakeholders complain.

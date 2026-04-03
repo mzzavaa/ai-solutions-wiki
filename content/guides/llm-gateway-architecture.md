@@ -46,5 +46,3 @@ Place the gateway close to your application infrastructure to minimize added lat
 1. LiteLLM documentation and GitHub repository (2023). Open-source LLM proxy supporting 100+ providers.
 2. Portkey documentation (2023). Managed AI gateway with observability and reliability features.
 3. Richardson, C. *Microservices Patterns* (2018). Foundational API gateway patterns that informed LLM gateway design.
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

@@ -88,4 +88,4 @@ This output feeds directly into Impact Mapping (to confirm business value) and t
 - Alberto Brandolini's Event Storming website: [https://www.eventstorming.com/](https://www.eventstorming.com/)
 - Open Practice Library - Event Storming practice: [https://openpracticelibrary.com/practice/event-storming/](https://openpracticelibrary.com/practice/event-storming/)
 - Related framework: [Impact Mapping for AI Projects](../impact-mapping-ai/) - follows Event Storming to confirm business value of identified opportunities.
-- Linda Mohamed's AI Workshop Methodology (which incorporates Event Storming): [https://ai-workshops.online](https://ai-workshops.online)
+- Mohamed, L. *Three Workshop Method.* Incorporates Event Storming as a discovery phase technique in structured enterprise AI adoption.

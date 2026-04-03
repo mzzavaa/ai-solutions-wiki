@@ -47,4 +47,3 @@ Apply the FinOps cycle of Inform, Optimize, Operate to AI workloads specifically
 2. FinOps Foundation. "AI Cost Management." FinOps Framework, 2024. https://www.finops.org/wg/ai-cost-management/
 3. OpenCost Project. "OpenCost: Open Source Cost Monitoring for Cloud Native Environments." CNCF, 2022. https://www.opencost.io/
 
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

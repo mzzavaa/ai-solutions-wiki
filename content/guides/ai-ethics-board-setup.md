@@ -58,5 +58,3 @@ Document escalation outcomes and feed them back into the review criteria to prev
 2. OECD. "Recommendation of the Council on Artificial Intelligence." OECD Legal Instruments, OECD/LEGAL/0449, May 2019. https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0449
 3. IEEE. "IEEE Standard 7000-2021: Model Process for Addressing Ethical Concerns during System Design." IEEE Standards Association, 2021.
 4. European Parliament. "Regulation (EU) 2024/1689: Artificial Intelligence Act." *Official Journal of the European Union*, 2024.
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

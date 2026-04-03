@@ -64,5 +64,3 @@ ML systems that lack monitoring degrade silently. A model trained on last year's
 2. Sculley, D., et al. "Hidden Technical Debt in Machine Learning Systems." *Advances in Neural Information Processing Systems* 28 (NeurIPS 2015).
 3. Polyzotis, N., et al. "Data Management Challenges in Production Machine Learning." *Proceedings of the 2017 ACM International Conference on Management of Data* (SIGMOD 2017).
 4. Amershi, S., et al. "Software Engineering for Machine Learning: A Case Study." *Proceedings of the 41st International Conference on Software Engineering: Software Engineering in Practice* (ICSE-SEIP 2019).
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

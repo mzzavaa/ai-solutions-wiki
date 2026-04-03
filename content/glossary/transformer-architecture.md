@@ -30,3 +30,9 @@ For technical decision-makers, the transformer architecture determines the cost 
 ## Practical Considerations
 
 Transformer inference cost scales with sequence length. Longer context windows require more memory and compute. Techniques like KV-cache optimization, quantization, and sparse attention are engineering responses to these constraints. When evaluating AI platforms, understanding that longer contexts cost more - both in latency and dollars - helps set realistic expectations for production workloads.
+
+## Sources
+
+1. Vaswani, A., Shazeer, N., Parmar, N., Uszkoreit, J., Jones, L., Gomez, A.N., Kaiser, L., and Polosukhin, I. (2017). "Attention Is All You Need." *Advances in Neural Information Processing Systems 30 (NIPS 2017).* — Original transformer paper introducing self-attention, multi-head attention, and positional encoding; the architecture underlying GPT, BERT, Claude, and all modern LLMs. [https://arxiv.org/abs/1706.03762](https://arxiv.org/abs/1706.03762)
+2. Devlin, J., Chang, M.-W., Lee, K., and Toutanova, K. (2018). "BERT: Pre-training of Deep Bidirectional Transformers for Language Understanding." *arXiv:1810.04805.* — Introduced masked language modeling for encoder-only transformers; established pre-training + fine-tuning as the dominant NLP paradigm. [https://arxiv.org/abs/1810.04805](https://arxiv.org/abs/1810.04805)
+3. Brown, T. et al. (2020). "Language Models are Few-Shot Learners." *Advances in Neural Information Processing Systems 33 (NeurIPS 2020).* — GPT-3 paper demonstrating in-context learning at scale; first demonstration that large decoder-only transformers exhibit emergent few-shot capabilities. [https://arxiv.org/abs/2005.14165](https://arxiv.org/abs/2005.14165)

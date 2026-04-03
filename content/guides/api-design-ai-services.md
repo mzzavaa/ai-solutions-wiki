@@ -51,5 +51,3 @@ Use API keys for server-to-server calls and OAuth 2.0 for user-facing applicatio
 1. Fielding, R. "Architectural Styles and the Design of Network-based Software Architectures." Doctoral dissertation, University of California, Irvine, 2000.
 2. OpenAPI Initiative. *OpenAPI Specification*, originally created as Swagger by Tony Tam, 2011. Linux Foundation collaborative project.
 3. W3C / WHATWG. "Server-Sent Events." HTML Living Standard. Standardized mechanism for server-to-client streaming over HTTP.
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

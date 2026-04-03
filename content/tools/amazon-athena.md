@@ -14,6 +14,8 @@ related:
 Amazon Athena is a serverless query engine that runs SQL queries directly against data stored in Amazon S3. There is no infrastructure to manage: no clusters, no servers, no capacity planning. You point Athena at your S3 data (using table definitions from the Glue Data Catalog), write SQL, and get results. For AI projects, Athena is the go-to tool for ad-hoc data exploration, training data validation, and lightweight analytics that do not justify a dedicated data warehouse.
 
 Official documentation: https://docs.aws.amazon.com/athena/
+Pricing: https://aws.amazon.com/athena/pricing/
+Service quotas: https://docs.aws.amazon.com/athena/latest/ug/service-limits.html
 
 ## Core Concepts
 

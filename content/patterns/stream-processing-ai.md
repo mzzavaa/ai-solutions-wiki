@@ -1,6 +1,6 @@
 ---
 title: "Real-Time Feature Computation Pattern"
-description: "Using stream processing for real-time feature computation in AI systems: windowed aggregations, stream-table joins, dual-write to online and offline stores, and consistency guarantees."
+description: "The architectural pattern for computing ML features from event streams: windowed aggregations, stream-table joins, dual-write to online and offline stores, training-serving consistency, and operational trade-offs."
 date: 2026-03-28
 categories: [Patterns]
 tags: [stream-processing, feature-store, real-time, flink, inference, ai-engineering]
@@ -8,9 +8,15 @@ related:
   - glossary/stream-processing
   - guides/stream-processing-ai
   - glossary/change-data-capture
+  - glossary/feature-store
+  - glossary/kafka
+  - patterns/event-driven-ai
+  - guides/mlops-getting-started
 ---
 
-Batch feature computation runs on a schedule - hourly, daily, or on-demand. Between runs, features are stale. For AI use cases where recent behaviour matters (fraud detection, recommendation ranking, dynamic pricing), stale features degrade prediction quality. The real-time feature computation pattern uses stream processing to compute features continuously as events arrive, making them available for inference with seconds of latency rather than hours.
+**This page describes the pattern.** For a full implementation guide covering pipeline architecture, late data handling, schema evolution, and event-driven inference, see [Real-Time Data Pipelines for AI Workloads](/guides/stream-processing-ai/).
+
+The core problem this pattern solves: ML models need features that reflect current state, but computing features in batch introduces hours of staleness. For fraud detection, recommendation ranking, and dynamic pricing, a feature that is two hours old can be as misleading as no feature at all. The real-time feature computation pattern maintains continuously updated feature values by computing them in-stream as events arrive, making freshness a property of the architecture rather than a constraint of the compute schedule.
 
 ## The Pattern
 
@@ -130,3 +136,10 @@ The most common bug in real-time feature systems is training-serving skew: the m
 **Feature Freshness SLO** - Define and monitor the maximum acceptable delay between an event occurring and the corresponding feature being available in the online store. Alert when the SLO is breached.
 
 Real-time feature computation adds significant operational complexity over batch. Use it selectively for features where freshness directly impacts prediction quality, and keep batch computation for features where hourly or daily freshness is sufficient.
+
+## Sources
+
+- Kreps, J., Narkhede, N., and Rao, J. "Kafka: A Distributed Messaging System for Log Processing." *NetDB Workshop at VLDB* (2011). https://www.microsoft.com/en-us/research/wp-content/uploads/2017/09/Kafka.pdf — Original Kafka paper describing the log-based event streaming model this pattern depends on.
+- Zaharia, M. et al. "Apache Spark: A Unified Engine for Big Data Processing." *Communications of the ACM* 59, no. 11 (2016): 56–65. https://dl.acm.org/doi/10.1145/2934664 — Covers structured streaming and stateful computation in Spark, an alternative to Flink for this pattern.
+- Marz, N., and Warren, J. *Big Data: Principles and Best Practices of Scalable Real-Time Data Systems.* Manning Publications, 2015. — Introduces the Lambda Architecture (batch layer + speed layer), the historical predecessor to the unified streaming approach described here.
+- Apache Flink Documentation. "Stateful Stream Processing." https://nightlies.apache.org/flink/flink-docs-stable/docs/concepts/stateful-stream-processing/ — Reference for windowed aggregations, state backends, and exactly-once semantics used in the Flink examples above.

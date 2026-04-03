@@ -58,3 +58,10 @@ Generate artificial datasets that preserve the statistical properties of real da
 ## Combining Techniques
 
 The strongest privacy posture combines multiple techniques. Train with differential privacy for provable guarantees. Use federated learning to keep raw data decentralized. Apply synthetic data for development and testing environments. Use secure computation for sensitive inference scenarios. The right combination depends on the threat model, regulatory requirements, and acceptable performance tradeoffs.
+
+## Sources and Further Reading
+
+1. McMahan, H.B., Moore, E., Ramage, D., Hampson, S., and Arcas, B.A. y (2017). "Communication-Efficient Learning of Deep Networks from Decentralized Data." *AISTATS 2017.* — Foundational federated learning paper introducing FedAvg. [https://arxiv.org/abs/1602.05629](https://arxiv.org/abs/1602.05629)
+2. Dwork, C., McSherry, F., Nissim, K., and Smith, A. (2006). "Calibrating Noise to Sensitivity in Private Data Analysis." *TCC 2006.* — Formal definition of (ε, δ)-differential privacy.
+3. Abadi, M. et al. (2016). "Deep Learning with Differential Privacy." *CCS 2016.* — Introduced DP-SGD enabling practical differentially private ML training. [https://arxiv.org/abs/1607.00133](https://arxiv.org/abs/1607.00133)
+4. Boneh, D. et al. (2021). "Secure Multi-Party Computation (MPC) for Privacy-Preserving Machine Learning." Survey chapter in *Tutorials on the Foundations of Cryptography.* — Overview of SMPC techniques applicable to privacy-preserving ML.

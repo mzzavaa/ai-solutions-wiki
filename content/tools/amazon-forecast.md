@@ -13,6 +13,8 @@ related:
 Amazon Forecast is a managed service that uses machine learning to generate time series forecasts. You provide historical time series data (sales figures, server utilization, inventory levels), and Forecast automatically selects the best algorithm, trains a model, and produces predictions with confidence intervals. It combines traditional statistical methods (ARIMA, ETS) with deep learning approaches (DeepAR+, CNN-QR) and selects the best performer for your specific dataset.
 
 Official documentation: https://docs.aws.amazon.com/forecast/
+Pricing: https://aws.amazon.com/forecast/pricing/
+Service quotas: https://docs.aws.amazon.com/forecast/latest/dg/limits.html
 
 ## Core Concepts
 

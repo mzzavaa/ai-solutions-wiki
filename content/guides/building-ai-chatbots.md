@@ -4,6 +4,15 @@ description: "A practical guide to building production AI chatbots, covering arc
 date: 2026-03-28
 categories: [Guides]
 tags: [chatbot, conversational-AI, LLM, architecture, AI-development]
+related:
+  - guides/building-ai-assistants
+  - guides/building-rag-systems
+  - guides/prompt-engineering-enterprise
+  - guides/testing-llm-applications
+  - tools/amazon-lex
+  - tools/amazon-connect
+  - patterns/circuit-breaker-ai
+  - patterns/observability-ai
 ---
 
 AI chatbots are the most common first AI project for many organizations. The gap between a demo chatbot and a production chatbot is enormous. A demo can be built in an afternoon with a system prompt and an API key. A production chatbot requires conversation design, context management, guardrails, error handling, monitoring, and integration with backend systems. This guide covers the journey from prototype to production.

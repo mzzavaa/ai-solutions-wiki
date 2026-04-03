@@ -13,6 +13,8 @@ related:
 Amazon DynamoDB is a fully managed NoSQL database service provided by AWS that supports key-value and document data models. It delivers consistent single-digit millisecond response times at any scale, making it a foundational service for applications that require low-latency data access. DynamoDB handles table creation, scaling, backups, and replication without requiring database administration. For AI workloads, DynamoDB serves as a fast metadata store, session state backend, feature store for real-time inference, and event-driven data source via DynamoDB Streams.
 
 Official documentation: https://docs.aws.amazon.com/dynamodb/
+Pricing: https://aws.amazon.com/dynamodb/pricing/
+Service quotas: https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/Limits.html
 
 ## Key Capabilities
 

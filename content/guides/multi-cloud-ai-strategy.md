@@ -50,5 +50,3 @@ Start with a primary cloud provider for most workloads. Add a secondary provider
 1. Gartner. "Cloud Strategy: Embrace Multi-Cloud with Confidence." Gartner Research, 2018.
 2. Google. "Kubeflow: The Machine Learning Toolkit for Kubernetes." GitHub, 2017. https://github.com/kubeflow/kubeflow
 3. Zaharia, M., et al. "Accelerating the Machine Learning Lifecycle with MLflow." *IEEE Data Engineering Bulletin* 41, no. 4 (2018).
-
-Ready to implement these practices? Visit [ai-workshops.online](https://ai-workshops.online) for hands-on guidance.

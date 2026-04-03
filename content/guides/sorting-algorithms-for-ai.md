@@ -1,6 +1,6 @@
 ---
-title: "Sorting and Search Algorithms - Why They Matter for AI Pipelines"
-description: "How sorting and search algorithms underpin AI pipeline design, with a real-world example from Linda Mohamed's multi-signal video scoring system."
+title: "Sorting and Search Algorithms for AI Pipelines"
+description: "How sorting and search algorithms underpin AI pipeline design: complexity trade-offs, partial sorting for top-k selection, tiered analysis patterns, and vector database search."
 date: 2026-03-26
 categories: [Guides]
 tags: ["cs-fundamentals", "intermediate", "algorithms", "sorting", "search", "time-complexity", "data-structures"]
@@ -9,6 +9,9 @@ related:
   - glossary/data-structures
   - patterns/tiered-analysis
   - glossary/hardware-constraints
+  - glossary/big-o-notation
+  - guides/building-rag-systems
+  - glossary/vector-database
 ---
 
 Every AI pipeline that produces more than one result needs to rank them. Ranking is sorting. Understanding the algorithms behind sorting and search - their complexity, tradeoffs, and practical behavior - is foundational to building AI systems that perform well at scale.
@@ -31,20 +34,20 @@ For AI applications, the choice between these matters less than understanding th
 
 **Tree search** traverses a tree structure. Binary search trees give O(log n) average-case lookup and insertion. In AI applications, vector databases use approximate nearest-neighbor tree structures (HNSW, KD-trees) to find the closest embeddings to a query vector without scanning all vectors - this is why vector search is fast despite operating over millions of high-dimensional points.
 
-## Real-World Application: Linda Mohamed's Video Pipeline
+## Real-World Application: Multi-Signal Video Scoring
 
-Linda Mohamed's AI video pipeline analyzes hours of footage to find the best 3-5 second clips for compilations. The core challenge is algorithmic: given thousands of candidate clips, identify the most engaging ones efficiently.
+A representative example is an AI video pipeline that analyzes hours of footage to identify the best 3–5 second clips for highlight compilations. The core challenge is algorithmic: given thousands of candidate clips, identify the most engaging ones efficiently.
 
 The pipeline uses a multi-signal scoring system:
 
-- **Emotion scores** from AWS Rekognition (facial expression analysis)
-- **Face recognition confidence** (how certain Rekognition is that a face is present and identifiable)
-- **Scene labels** (Rekognition's classification of what is happening in the frame)
+- **Emotion scores** from a facial expression analysis service
+- **Face detection confidence** (certainty that a face is present and identifiable)
+- **Scene labels** (classification of what is happening in the frame)
 - **Activity detection** (motion and action signals)
 
 Each signal contributes to a composite score. After all candidates are scored, the pipeline **sorts all clips by composite score** to select the top results. This is straightforward sorting applied to an AI output.
 
-The scoring framework is inspired by WSJF (Weighted Shortest Job First), the prioritization method from SAFe. Each signal is weighted by its reliability and relevance, and the composite is a weighted sum. Sorting by this composite is equivalent to sorting by a business-value-adjusted priority score.
+The scoring framework follows the structure of WSJF (Weighted Shortest Job First), the prioritization method from SAFe (Scaled Agile Framework). Each signal is weighted by its reliability and relevance; the composite is a weighted sum. Sorting by this composite is equivalent to sorting by a business-value-adjusted priority score — a pattern applicable to any multi-criteria AI ranking problem.
 
 ## Search Optimization Through Tiered Analysis
 
@@ -86,5 +89,7 @@ top_indices = np.argpartition(scores, -5)[-5:]  # O(n) partial sort for top-k
 
 ## Sources
 
-- Cormen, T. H., Leiserson, C. E., Rivest, R. L., and Stein, C. *Introduction to Algorithms* (4th ed., 2022). MIT Press. https://mitpress.mit.edu/9780262046305/
-- Video pipeline scoring methodology: Linda Mohamed's multi-signal video analysis pipeline.
+- Cormen, T. H., Leiserson, C. E., Rivest, R. L., and Stein, C. *Introduction to Algorithms* (4th ed., 2022). MIT Press. https://mitpress.mit.edu/9780262046305/ — The definitive reference for algorithm complexity analysis, sorting, and search data structures.
+- Peters, T. "Timsort." CPython source and original description (2002). https://bugs.python.org/issue4585 — Original description of the algorithm behind Python's `sorted()`.
+- Malkov, Y. A., and Yashunin, D. A. "Efficient and Robust Approximate Nearest Neighbor Search Using Hierarchical Navigable Small World Graphs." *IEEE Transactions on Pattern Analysis and Machine Intelligence* 42, no. 4 (2020): 824–836. https://arxiv.org/abs/1603.09320 — The HNSW algorithm used in production vector databases for approximate nearest-neighbor search.
+- Scaled Agile Framework. "Weighted Shortest Job First (WSJF)." https://scaledagileframework.com/wsjf/ — The prioritization model referenced for multi-signal composite scoring.

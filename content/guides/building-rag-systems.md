@@ -79,3 +79,10 @@ Assembling the retrieved chunks and the query into a prompt that produces a good
 - Set temperature low (0.1-0.3) for factual Q&A - you want determinism, not creativity
 
 Production RAG systems benefit from evaluation infrastructure: regularly testing retrieval recall and answer quality against a ground truth set, and alerting when performance degrades after knowledge base updates.
+
+## Sources
+
+- Lewis, P., Perez, E., Piktus, A., Petroni, F., Karpukhin, V., Goyal, N., ... and Kiela, D. "Retrieval-Augmented Generation for Knowledge-Intensive NLP Tasks." *NeurIPS* (2020). https://arxiv.org/abs/2005.11401 — The original RAG paper introducing the retrieve-then-generate architecture.
+- Gao, Y. et al. "Retrieval-Augmented Generation for Large Language Models: A Survey." (2023). https://arxiv.org/abs/2312.10997 — Comprehensive survey of RAG variants including Naive RAG, Advanced RAG, and Modular RAG architectures, with a taxonomy of chunking, retrieval, and generation strategies.
+- Robertson, S. and Zaragoza, H. "The Probabilistic Relevance Framework: BM25 and Beyond." *Foundations and Trends in Information Retrieval* 3, no. 4 (2009): 333–389. — The BM25 algorithm referenced in the hybrid search section; the standard keyword retrieval baseline.
+- Nogueira, R. and Cho, K. "Passage Re-ranking with BERT." (2019). https://arxiv.org/abs/1901.04085 — Foundational work on cross-encoder re-ranking, which underpins the two-stage retrieve-then-rerank pattern described above.

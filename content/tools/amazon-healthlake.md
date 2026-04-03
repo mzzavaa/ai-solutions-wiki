@@ -15,6 +15,8 @@ related:
 Amazon HealthLake is a HIPAA-eligible, FHIR-compliant data store designed for healthcare and life sciences data. It ingests, stores, and normalizes health data in the FHIR R4 standard format, then automatically enriches it using NLP to extract medical entities, relationships, and traits from unstructured clinical text. For AI projects in healthcare, HealthLake solves the foundational data problem: getting diverse health data into a queryable, standards-compliant format that ML models can consume.
 
 Official documentation: https://docs.aws.amazon.com/healthlake/
+Pricing: https://aws.amazon.com/healthlake/pricing/
+Service quotas: https://docs.aws.amazon.com/healthlake/latest/devguide/healthlake-quotas.html
 
 ## Core Concepts
 

@@ -1,9 +1,17 @@
 ---
 title: "Fine-Tuning LLMs - A Practical Guide"
-description: "When and how to fine-tune large language models, covering data preparation, training approaches, evaluation, and cost considerations."
+description: "When and how to fine-tune large language models, covering data preparation, training approaches (full fine-tuning, LoRA, QLoRA), evaluation, and cost considerations."
 date: 2026-03-28
 categories: [Guides]
 tags: [fine-tuning, LLM, training, machine-learning, models]
+related:
+  - glossary/fine-tuning
+  - glossary/lora
+  - guides/llm-evaluation-methods
+  - guides/building-rag-systems
+  - guides/model-registry-guide
+  - glossary/transfer-learning
+  - glossary/catastrophic-forgetting
 ---
 
 Fine-tuning adapts a pre-trained language model to a specific task or domain by training it on additional data. It is one of the most misunderstood techniques in applied AI. Teams often fine-tune when prompting would suffice, or skip fine-tuning when it would provide significant improvements. This guide covers when fine-tuning is appropriate, how to do it effectively, and how to avoid common pitfalls.
@@ -63,15 +71,17 @@ Update all model parameters on your dataset. Produces the best results but requi
 
 Train small adapter matrices that modify the model's behavior without changing the original weights. Much cheaper than full fine-tuning, with results that are often comparable.
 
-**When to use:** Most fine-tuning use cases. LoRA has become the default approach for practical fine-tuning.
+The key insight (Hu et al., 2022): the weight updates ΔW needed to adapt a model to a new task are intrinsically low-rank. Rather than updating the full weight matrix W ∈ ℝ^(d×k), LoRA decomposes the update as ΔW = BA where B ∈ ℝ^(d×r) and A ∈ ℝ^(r×k), with rank r ≪ min(d, k). A 4096×4096 weight matrix has 16.8M parameters; at rank 8, the LoRA adapter has only 65K — a 245× reduction in trainable parameters.
 
-**Key parameters:** Rank (r) controls adapter capacity. Start with r=8 or r=16. Higher rank captures more complex adaptations but costs more and risks overfitting.
+**When to use:** Most fine-tuning use cases. LoRA has become the default approach for practical fine-tuning. Hugging Face's `peft` library provides a standard implementation.
+
+**Key parameters:** Rank (r) controls adapter capacity. Start with r=8 or r=16. Higher rank captures more complex adaptations but costs more and risks overfitting. The `alpha` scaling parameter is typically set to r or 2r.
 
 ### QLoRA
 
-Combines LoRA with model quantization. The base model is loaded in 4-bit precision, reducing memory requirements dramatically. Enables fine-tuning large models on consumer GPUs.
+Combines LoRA with model quantization (Dettmers et al., 2023). The base model is loaded in 4-bit NormalFloat (NF4) precision using bitsandbytes, reducing memory requirements dramatically. A 65B parameter model that requires ~130GB in full precision fits in ~48GB with QLoRA. Enables fine-tuning large models on consumer GPUs.
 
-**When to use:** When GPU memory is limited. Quality is slightly lower than full LoRA but the cost reduction is substantial.
+**When to use:** When GPU memory is limited. Quality is slightly lower than full LoRA but the cost reduction is substantial. The NF4 data type is specifically designed to minimize quantization error for normally-distributed weights.
 
 ## Training Process
 
@@ -112,10 +122,18 @@ Evaluate fine-tuned models rigorously:
 
 ## Cost Considerations
 
-**Training cost.** Fine-tuning via API (OpenAI, Bedrock) costs $8-$25 per million training tokens. Self-hosted fine-tuning costs GPU hours ($1-$5/hour for single-GPU, more for multi-GPU).
+**Training cost.** Fine-tuning via API (OpenAI, Bedrock) costs approximately $8–$25 per million training tokens as of early 2026 — verify current pricing at provider documentation before budgeting, as these figures change. Self-hosted fine-tuning costs GPU hours ($1–$5/hour for single-GPU on cloud providers, more for multi-GPU).
 
 **Inference cost.** Fine-tuned models are often the same cost to run as base models. The savings come from using a smaller fine-tuned model instead of a larger prompted model.
 
 **Maintenance cost.** Fine-tuned models need periodic retraining as data and requirements change. Budget for quarterly or monthly retraining cycles.
 
 Fine-tuning is a powerful technique when applied to the right problems. The decision to fine-tune should be driven by data: you have enough quality examples, prompting is demonstrably insufficient, and the improvement justifies the ongoing maintenance cost.
+
+## Sources
+
+- Hu, E. J., Shen, Y., Wallis, P., Allen-Zhu, Z., Li, Y., Wang, S., Wang, L., and Chen, W. "LoRA: Low-Rank Adaptation of Large Language Models." *ICLR* (2022). https://arxiv.org/abs/2106.09685 — The original LoRA paper. Demonstrates that intrinsic rank of weight updates is low, enabling efficient fine-tuning with adapter matrices.
+- Dettmers, T., Pagnoni, A., Holtzman, A., and Zettlemoyer, L. "QLoRA: Efficient Finetuning of Quantized LLMs." *NeurIPS* (2023). https://arxiv.org/abs/2305.14314 — Introduces NF4 quantization and the double quantization technique that enables fine-tuning 65B models on a single 48GB GPU.
+- Hu, E. J. et al. "Towards a Unified View of Parameter-Efficient Transfer Learning." *ICLR* (2022). https://arxiv.org/abs/2110.04366 — Unified framework comparing LoRA, adapters, prefix tuning, and prompt tuning. Useful for understanding when each PEFT method is appropriate.
+- Kirkpatrick, J. et al. "Overcoming Catastrophic Forgetting in Neural Networks." *PNAS* 114, no. 13 (2017): 3521–3526. https://arxiv.org/abs/1612.00796 — Elastic Weight Consolidation (EWC), a regularization approach to catastrophic forgetting mentioned in the training problems section.
+- Hugging Face. "PEFT: State-of-the-Art Parameter-Efficient Fine-Tuning." https://github.com/huggingface/peft — The standard Python library for LoRA, QLoRA, prompt tuning, and other PEFT methods referenced in this guide.
