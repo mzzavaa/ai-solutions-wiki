@@ -80,3 +80,9 @@ The circuit breaker's value depends on having a meaningful fallback:
 - Return a clear "service temporarily unavailable" message
 
 The fallback should be defined before enabling the circuit breaker, not discovered during an incident.
+
+## Sources
+
+- Fowler, M. (2014). Circuit breaker. *martinfowler.com*. (Canonical definition of the circuit breaker pattern; the three-state model referenced across all implementations.)
+- Nygard, M. T. (2018). *Release It!: Design and Deploy Production-Ready Software* (2nd ed.). Pragmatic Bookshelf. (Introduced the circuit breaker pattern for software; Chapter 5 covers stability patterns including circuit breakers and bulkheads.)
+- Akka Project. (2019). Akka circuit breaker documentation. *Akka*. (Production circuit breaker implementation reference with state machine, configurable thresholds, and fallback patterns.)

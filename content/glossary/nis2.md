@@ -29,3 +29,9 @@ AI systems deployed in critical infrastructure sectors fall under NIS2's cyberse
 ## Enforcement
 
 Maximum fines reach 10 million euros or 2% of global turnover for essential entities, and 7 million euros or 1.4% of turnover for important entities. Critically, NIS2 introduces personal accountability for senior management, who can be held liable for non-compliance.
+
+## Sources
+
+- European Parliament and Council. (2022). *Directive (EU) 2022/2555 on measures for a high common level of cybersecurity across the Union (NIS2 Directive)*. Official Journal of the European Union, L 333/80. (The directive itself; all obligations derive from this primary source.)
+- European Union Agency for Cybersecurity (ENISA). (2023). *ENISA threat landscape 2023*. ENISA. (Annual threat intelligence informing NIS2 risk management requirements.)
+- European Commission. (2022). *Proposal for NIS2: Impact Assessment*. SWD(2020) 345 final. (Legislative history and rationale for scope expansion and strengthened enforcement.)

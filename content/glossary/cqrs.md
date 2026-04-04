@@ -35,3 +35,9 @@ CQRS adds complexity and is justified when read and write workloads have very di
 ## When Not to Use CQRS
 
 Simple CRUD applications with uniform access patterns do not benefit from CQRS. The added complexity of maintaining two models, synchronizing them, and handling eventual consistency is not justified when a single model serves both reads and writes adequately.
+
+## Sources
+
+- Young, G. (2010). CQRS Documents. *CQRS Documents*. (Foundational CQRS documentation by Greg Young, who coined and defined the pattern.)
+- Fowler, M. (2011). CQRS. *martinfowler.com*. (Canonical software architecture reference for CQRS; describes when and when not to apply it.)
+- Vernon, V. (2013). *Implementing Domain-Driven Design*. Addison-Wesley. Chapter 4: Architecture. (CQRS in the context of DDD; covers event-sourced write models and materialized read models.)

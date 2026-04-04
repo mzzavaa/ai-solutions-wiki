@@ -33,3 +33,9 @@ In traditional workflows, a security review happens late - after code is written
 AI systems amplify security concerns. Models trained on sensitive data can memorise and leak that data. Model files serialised with pickle can execute arbitrary code when loaded. Inference endpoints often have elevated permissions to access data stores. Prompt injection can manipulate model behaviour.
 
 DevSecOps ensures that these AI-specific risks are addressed continuously, not as an afterthought.
+
+## Sources
+
+- Kim, G., Humble, J., Debois, P., & Willis, J. (2016). *The DevOps Handbook*. IT Revolution Press. (Foundational DevOps reference; Chapter 20 covers integrating security into the deployment pipeline.)
+- OWASP Foundation. (2021). *OWASP Top 10: 2021*. OWASP. (Standard application security risk reference; SAST/DAST tools in DevSecOps pipelines are evaluated against these categories.)
+- National Institute of Standards and Technology. (2022). *NIST SP 800-218: Secure Software Development Framework (SSDF)*. (Federal guidance on integrating security throughout the software development lifecycle; basis for DevSecOps compliance programs.)

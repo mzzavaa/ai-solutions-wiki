@@ -47,3 +47,9 @@ With CI/CD, every prompt change triggers an automated evaluation run. The pipeli
 **Secret management** - Model API keys are secrets. Store them in GitHub Actions secrets, AWS Secrets Manager, or equivalent. Never hardcode API keys in workflow files or application code.
 
 **Flakiness handling** - Model outputs are non-deterministic. A test case that passes 80% of the time will occasionally fail CI even when nothing is wrong. Use deterministic evaluation metrics where possible, run evaluation multiple times and average scores, and set thresholds that account for expected variance.
+
+## Sources
+
+- Fowler, M., & Foemmel, M. (2006). Continuous integration. *ThoughtWorks*. (Original continuous integration article by Martin Fowler; defined the practice and rationale.)
+- Humble, J., & Farley, D. (2010). *Continuous Delivery: Reliable Software Releases through Build, Test, and Deployment Automation*. Addison-Wesley. (Definitive reference for CI/CD pipelines; defined the deployment pipeline concept.)
+- Forsgren, N., Humble, J., & Kim, G. (2018). *Accelerate: The Science of Lean Software and DevOps*. IT Revolution Press. (DORA research; empirically demonstrated that CI/CD practices are the strongest predictor of software delivery performance.)
