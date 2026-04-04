@@ -34,3 +34,9 @@ The EU AI Act explicitly requires AI literacy. Article 4 mandates that providers
 Effective AI literacy programs are role-specific. Engineers need technical depth on model behavior, evaluation methods, and failure modes. Business stakeholders need understanding of capabilities, costs, and organizational impact. All employees interacting with AI tools need practical training on effective use, output verification, and escalation procedures.
 
 Literacy programs should be ongoing, not one-time events. AI capabilities evolve rapidly, and organizational understanding must keep pace.
+
+## Sources
+
+- European Parliament and Council. (2024). *Regulation (EU) 2024/1689 (EU AI Act)*, Article 4: AI Literacy. Official Journal of the European Union. (Primary legal source; establishes AI literacy as a mandatory requirement for providers and deployers of AI systems.)
+- Long, D., & Magerko, B. (2020). What is AI literacy? Competencies and design considerations. *CHI 2020*. (First systematic framework for defining AI literacy competencies; basis for most subsequent educational programs.)
+- Ng, D. T. K., et al. (2021). Conceptualizing AI literacy: An exploratory review. *Computers and Education: Artificial Intelligence, 2*, 100041. (Comprehensive review synthesizing AI literacy frameworks across 30+ papers.)

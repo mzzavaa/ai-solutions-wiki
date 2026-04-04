@@ -31,3 +31,9 @@ Token budgets are enforced at multiple levels. The model API's max_tokens parame
 Organizations reduce token consumption through prompt compression (removing redundant instructions), semantic caching (reusing responses for similar queries), model routing (sending simple queries to cheaper models), context window management (prioritizing the most relevant context), and response length guidelines in system prompts.
 
 Setting appropriate token budgets requires understanding the tradeoff between response quality (which generally improves with more context and longer outputs) and cost efficiency.
+
+## Sources
+
+- Vaswani, A., et al. (2017). Attention is all you need. *NeurIPS 2017*. (Transformer architecture; the quadratic attention cost with sequence length is the fundamental reason context window management and token budgets matter.)
+- Liu, N., et al. (2024). Lost in the middle: How language models use long contexts. *Transactions of the Association for Computational Linguistics, 12*, 157–173. (Demonstrated that LLM performance degrades for information in the middle of long contexts; informs token budget design for RAG.)
+- Ge, T., et al. (2023). In-context autoencoder for context compression in a large language model. *ICLR 2024*. (Prompt compression research; context for input token reduction strategies.)

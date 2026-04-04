@@ -56,3 +56,10 @@ Keep a test set of examples with expected outputs. Treat prompt changes as code 
 ## Prompt Injection Risks
 
 For applications that include user-provided text in prompts, prompt injection is a security concern. A malicious user could include text in their input that overrides the system instructions. Mitigate by: using delimiters to separate instructions from user content, validating inputs before including them in prompts, and using platform-level guardrails to filter outputs.
+
+## Sources
+
+- Brown, T., et al. (2020). Language models are few-shot learners. *NeurIPS 2020*. (GPT-3; demonstrated few-shot prompting as a primary method for adapting LLMs without fine-tuning.)
+- Wei, J., et al. (2022). Chain-of-thought prompting elicits reasoning in large language models. *NeurIPS 2022*. (CoT prompting; showed that step-by-step reasoning in prompts substantially improves accuracy on multi-step tasks.)
+- Kojima, T., et al. (2022). Large language models are zero-shot reasoners. *NeurIPS 2022*. (Zero-shot CoT; demonstrated "Let's think step by step" as a universal reasoning trigger.)
+- White, J., et al. (2023). A prompt pattern catalog to enhance prompt engineering with ChatGPT. *arXiv:2302.11382*. (Systematic catalog of prompt engineering patterns for recurring interaction challenges.)

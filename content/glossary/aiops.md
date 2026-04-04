@@ -31,3 +31,9 @@ The core problem AIOps addresses: modern distributed systems generate too much o
 AI systems present unique operational challenges. Model performance degrades due to data drift, not just infrastructure failures. GPU memory leaks accumulate over days. Token generation latency varies with prompt length. AIOps tools monitoring AI workloads need to understand these domain-specific patterns.
 
 The irony of using AI to monitor AI is not lost on practitioners - but it works. The operational patterns are different enough from model behaviour that the monitoring layer adds genuine value.
+
+## Sources
+
+- Dang, Y., et al. (2019). AIOps challenges and experiences. *ICSE 2019*. (Microsoft survey of real-world AIOps deployments; documents alert fatigue, correlation, and RCA challenges.)
+- Chen, J., et al. (2020). Towards intelligent incident management: Why we need it and how we make it work. *ESEC/FSE 2020*. (Microsoft; ML-driven incident management in production; empirical results on MTTR reduction.)
+- Nedelkoski, S., Cardoso, J., & Kao, O. (2019). Anomaly detection and classification using distributed tracing and deep learning. *IEEE/ACM CCGRID 2019*. (Deep learning for distributed system anomaly detection; technical foundation for modern AIOps tools.)

@@ -55,3 +55,10 @@ Domain-specific terms - rare proper nouns, technical acronyms, product names, me
 - [Amazon Transcribe]({{< relref "/tools/amazon-transcribe.md" >}}) - detailed service guide
 - [Text-to-Speech (TTS)]({{< relref "text-to-speech.md" >}}) - the reverse operation
 - [Computer Vision]({{< relref "computer-vision.md" >}}) - complementary multimodal input
+
+## Sources
+
+- Radford, A., et al. (2023). Robust speech recognition via large-scale weak supervision. *ICML 2023*. (Whisper; demonstrated that training on 680,000 hours of weakly supervised audio achieves near-human multilingual ASR.)
+- Baevski, A., et al. (2020). wav2vec 2.0: A framework for self-supervised learning of speech representations. *NeurIPS 2020*. (wav2vec 2.0; self-supervised pre-training that reduced labeled data requirements by orders of magnitude.)
+- Chan, W., Jaitly, N., Le, Q., & Vinyals, O. (2016). Listen, attend and spell: A neural network for large vocabulary conversational speech recognition. *ICASSP 2016*. (LAS; foundational attention-based end-to-end ASR model eliminating alignment assumptions.)
+- Graves, A. (2006). Connectionist temporal classification: Labelling unsegmented sequence data with recurrent neural networks. *ICML 2006*. (CTC loss; enabled end-to-end training of RNN ASR models without pre-segmented phoneme labels.)
