@@ -52,3 +52,11 @@ Fine-tuning continues the training process on a dataset of examples specific to 
 4. Fine-tuning plus RAG is appropriate for the most demanding applications: fine-tuning for behavior, RAG for knowledge.
 
 The most common mistake is going straight to fine-tuning when better prompting or RAG would have solved the problem at a fraction of the cost and complexity.
+
+## Sources
+
+- Howard, J., & Ruder, S. (2018). Universal language model fine-tuning for text classification. *ACL 2018*. (ULMFiT; established fine-tuning pretrained LMs as the standard NLP paradigm.)
+- Devlin, J., et al. (2019). BERT: Pre-training of deep bidirectional transformers for language understanding. *NAACL 2019*. (BERT fine-tuning paradigm for downstream tasks.)
+- Brown, T., et al. (2020). Language models are few-shot learners. *NeurIPS 2020*. (GPT-3; demonstrated few-shot prompting as an alternative to fine-tuning.)
+- Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *NeurIPS 2020*. (RAG; alternative to fine-tuning for knowledge-grounded tasks.)
+- Hu, E.J., et al. (2022). LoRA: Low-rank adaptation of large language models. *ICLR 2022*. (Parameter-efficient fine-tuning using low-rank weight updates.)

@@ -28,3 +28,10 @@ Many real-world datasets are naturally graph-structured. Social networks, supply
 ## Practical Considerations
 
 Graph data requires specialized infrastructure. Libraries like PyTorch Geometric and DGL handle sparse adjacency matrices and mini-batch sampling. Scalability is the primary challenge: real-world graphs with billions of edges require distributed training and neighbor sampling strategies. For teams evaluating GNNs, start with a well-defined graph structure and a clear task. If the relational structure does not demonstrably improve over tabular baselines, simpler approaches may be more maintainable.
+
+## Sources
+
+- Kipf, T.N., & Welling, M. (2017). Semi-supervised classification with graph convolutional networks. *ICLR 2017*. (GCN original paper.)
+- Veličković, P., et al. (2018). Graph attention networks. *ICLR 2018*. (GAT; attention-based GNN.)
+- Hamilton, W., Ying, R., & Leskovec, J. (2017). Inductive representation learning on large graphs. *NeurIPS 2017*. (GraphSAGE; inductive learning with neighbor sampling.)
+- Xu, K., et al. (2019). How powerful are graph neural networks? *ICLR 2019*. (GIN; theoretical analysis of GNN expressivity.)
