@@ -48,3 +48,9 @@ Focus unit tests on deterministic logic: prompt template rendering, output parsi
 ## Running Unit Tests
 
 Unit tests should run in under 30 seconds for the entire suite, execute on every commit and pull request, and never require network access or API keys. Use pytest markers (`@pytest.mark.unit`) to separate unit tests from integration and evaluation tests so CI can run the appropriate subset at each stage.
+
+## Sources
+
+- Beck, K. (2003). *Test-Driven Development: By Example*. Addison-Wesley. (TDD and unit testing as a discipline; defines test isolation and the test-first approach.)
+- Meszaros, G. (2007). *xUnit Test Patterns: Refactoring Test Code*. Addison-Wesley. (Canonical reference for test doubles (mocks, stubs, fakes, spies); the terminology used throughout this article comes from this book.)
+- Fowler, M. (2014). Mocks aren't stubs. *martinfowler.com*. (Precise definitions distinguishing mocks from stubs; classic reference for understanding test double semantics.)
