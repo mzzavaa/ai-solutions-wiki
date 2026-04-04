@@ -33,3 +33,9 @@ For AI teams, the lakehouse is particularly valuable because ML workloads and BI
 ## Practical Guidance
 
 Start with Apache Iceberg if building a new data platform on AWS. Use Parquet as the underlying file format. Implement table maintenance (compaction, snapshot expiration) to maintain query performance over time. The lakehouse does not eliminate the need for data modeling - invest in schema design and data quality just as you would for a traditional warehouse.
+
+## Sources
+
+- Armbrust, M., et al. (2021). Lakehouse: A new generation of open platforms that unify data warehousing and advanced analytics. *CIDR 2021*. (Introduced the lakehouse concept and defined its design goals; foundational paper for the architecture.)
+- Armbrust, M., et al. (2020). Delta Lake: High-performance ACID table storage over cloud object stores. *VLDB 2020*. (Delta Lake; the first widely-adopted open table format enabling ACID transactions on object storage.)
+- Apache Software Foundation. (2021). Apache Iceberg table format specification. (Iceberg; AWS-preferred open table format for lakehouse on S3; technical basis for Athena/Glue/EMR lakehouse integration.)

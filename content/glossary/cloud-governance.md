@@ -29,3 +29,9 @@ Cloud providers offer native governance tools: AWS Organizations with Service Co
 ## Organizational Model
 
 Effective cloud governance requires clear ownership. A Cloud Center of Excellence (CCoE) or platform engineering team typically defines governance policies, while development teams implement them. Guardrails should be automated wherever possible to reduce friction and prevent policy violations before they reach production.
+
+## Sources
+
+- Cloud Security Alliance. (2017). *Cloud Controls Matrix (CCM)*. CSA. (Industry-standard control framework for cloud security governance; widely used to map regulatory requirements to technical controls.)
+- National Institute of Standards and Technology. (2018). *NIST SP 800-53 Rev. 5: Security and Privacy Controls for Information Systems and Organizations*. (Foundational control catalog for cloud governance; required reference for US federal and many regulated environments.)
+- ISACA. (2019). *COBIT 2019 Framework*. (IT governance framework that informs Cloud Center of Excellence and governance structure design.)

@@ -28,3 +28,9 @@ Providers must maintain technical documentation covering the system's intended p
 ## Ongoing Obligations
 
 Conformity assessment is not a one-time event. Providers must have a quality management system and post-market monitoring system in place. Substantial modifications to a high-risk AI system trigger a new conformity assessment. Providers must also register their high-risk AI systems in the EU database before placing them on the market.
+
+## Sources
+
+- European Parliament and Council. (2024). *Regulation (EU) 2024/1689 (EU AI Act)*, Articles 9–17, 43. Official Journal of the European Union. (Primary legal source; Articles 9–17 define requirements for high-risk AI, Article 43 defines conformity assessment procedures.)
+- European Commission. (2022). *Guide to the AI Act conformity assessment procedures*. (Practical guidance on internal vs. third-party assessment routes and notified body requirements.)
+- ISO/IEC 42001:2023. *Artificial Intelligence — Management System*. (International standard for AI management systems; accepted as evidence of conformity in the EU AI Act framework.)

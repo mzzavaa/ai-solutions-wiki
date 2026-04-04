@@ -30,3 +30,9 @@ DORA is structured around five core areas:
 ## AI-Specific Implications
 
 AI systems in financial services are ICT systems under DORA. This means AI models used for credit decisions, algorithmic trading, or fraud detection must be included in the ICT risk management framework, tested for operational resilience, and their third-party dependencies (such as cloud AI APIs) must be contractually governed. Model failures that affect service availability or data integrity are reportable incidents.
+
+## Sources
+
+- European Parliament and Council. (2022). *Regulation (EU) 2022/2554 (DORA)*. Official Journal of the European Union, L 333/1. (The regulation itself; all compliance obligations derive from this primary source.)
+- European Banking Authority. (2023). *Joint ESA technical standards under DORA*. (Regulatory technical standards specifying incident classification, testing requirements, and third-party contract clauses.)
+- European Systemic Risk Board. (2022). *Systemic cyber risk*. Occasional Paper No. 19. (Analysis of ICT systemic risk in financial services; motivates DORA's requirements for concentrated third-party provider risk.)
