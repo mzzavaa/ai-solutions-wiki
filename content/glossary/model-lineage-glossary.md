@@ -29,3 +29,9 @@ Model lineage is typically implemented through experiment tracking tools (MLflow
 ## Challenges
 
 Lineage for fine-tuned foundation models is inherently incomplete because the base model's training data is usually unknown. Organizations must document what they can control (their fine-tuning data and process) while acknowledging the opacity of the base model. For compound AI systems, lineage must track multiple models and their interactions, adding complexity.
+
+## Sources
+
+- Buneman, P., Khanna, S., & Tan, W. C. (2001). Why and where: A characterization of data provenance. *ICDT 2001*. (Foundational data provenance paper; the "why-provenance" and "where-provenance" concepts directly apply to model lineage.)
+- Bose, R., & Frew, J. (2005). Lineage retrieval for scientific data processing: A survey. *ACM Computing Surveys, 37*(1), 1–28. (Survey of lineage tracking in scientific workflows; directly applicable to ML experiment tracking.)
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *NeurIPS 2015*. (Identified undocumented model dependencies as a primary ML technical debt; motivates systematic lineage tracking.)

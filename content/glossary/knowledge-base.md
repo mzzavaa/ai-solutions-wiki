@@ -46,3 +46,9 @@ Use an AI knowledge base when:
 - You need citations - retrieval-based systems can return the source document for each answer
 
 The knowledge base approach is more flexible and more maintainable than fine-tuning for knowledge-intensive use cases. Fine-tuning is better for adapting model behavior and style; knowledge bases are better for keeping the model up to date with facts, policies, and documents.
+
+## Sources
+
+- Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *NeurIPS 2020*. (RAG; the foundational paper demonstrating that retrieval-augmented generation outperforms fine-tuning for knowledge-intensive tasks.)
+- Karpukhin, V., et al. (2020). Dense passage retrieval for open-domain question answering. *EMNLP 2020*. (DPR; established dense vector retrieval as the standard for AI knowledge base search, replacing BM25 for semantic queries.)
+- Izacard, G., & Grave, E. (2021). Leveraging passage retrieval with generative models for open domain question answering. *EACL 2021*. (FiD; showed that reading multiple retrieved passages together significantly improves knowledge base QA accuracy.)
