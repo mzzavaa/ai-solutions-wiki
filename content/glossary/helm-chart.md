@@ -37,3 +37,9 @@ For AI platforms on Kubernetes, Helm charts package inference services, monitori
 **Combine with GitOps** - tools like ArgoCD and Flux watch your chart repository and automatically apply changes when a new chart version is pushed. This provides audit trails, rollback capability, and declarative deployment management.
 
 Avoid over-templating. If values files become as complex as the manifests they configure, the chart is too generic. Charts should be opinionated about application architecture and flexible about environment-specific settings.
+
+## Sources
+
+- Burns, B., Beda, J., Hightower, K., & Evenson, L. (2022). *Kubernetes: Up and Running* (3rd ed.). O'Reilly Media. (Kubernetes deployment management; Helm's role in templating and packaging Kubernetes workloads.)
+- Helm Maintainers. (2019). *Helm: The package manager for Kubernetes*. CNCF. (Helm chart structure, template rendering, values files, and lifecycle hooks — the primary reference for Helm usage.)
+- Weaver, A. (2021). *GitOps and Kubernetes*. Manning. (GitOps-based Helm deployment with ArgoCD and Flux; declarative Helm release management.)

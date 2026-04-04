@@ -43,3 +43,9 @@ AI APIs benefit from explicit contracts because their inputs and outputs are oft
 Versioning is particularly important for AI APIs that evolve as models improve. OpenAPI specs make breaking changes visible: a diff between spec versions shows exactly what changed, enabling consumers to assess migration effort.
 
 For internal ML services where performance is critical, gRPC with Protocol Buffers may be preferred. For public-facing AI APIs where developer experience and broad compatibility matter, OpenAPI with REST is the standard.
+
+## Sources
+
+- Fielding, R. T., & Taylor, R. N. (2002). Principled design of the modern Web architecture. *ACM Transactions on Internet Technology*, 2(2), 115–150. (REST architectural constraints; the basis for HTTP API design that OpenAPI describes.)
+- OpenAPI Initiative. (2017). *OpenAPI Specification 3.0.0*. Linux Foundation. (The specification standard itself; schema types, path items, components, and the design-first API contract model.)
+- Richardson, L., & Ruby, S. (2007). *RESTful Web Services*. O'Reilly Media. (REST API design patterns; resource-oriented architecture and the principles that OpenAPI specifications encode.)

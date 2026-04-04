@@ -43,3 +43,9 @@ Use **spies** rarely, typically when debugging test failures where you need to s
 ## Risks of Over-Mocking
 
 Mocking creates a gap between tests and reality. If you mock everything, your tests verify that your code works with your mocks, not with real services. Mitigate this by running a small set of tests against real services on a schedule, re-recording VCR cassettes periodically, and defining contracts between services that are tested independently. The goal is confidence that mocked tests reflect real behavior, not blind trust in mocks.
+
+## Sources
+
+- Meszaros, G. (2007). *xUnit Test Patterns: Refactoring Test Code*. Addison-Wesley. (Canonical taxonomy of test doubles: mocks, stubs, fakes, spies, and dummies; the source of the terminology used throughout this article.)
+- Fowler, M. (2014). Mocks aren't stubs. *martinfowler.com*. (Precise distinction between mocks (interaction-based) and stubs (state-based); when each is appropriate; classical vs. mockist testing styles.)
+- Freeman, S., & Pryce, N. (2009). *Growing Object-Oriented Software, Guided by Tests*. Addison-Wesley. (Mock-based TDD; using mocks to discover interfaces and drive design; avoiding over-mocking with the GOOS style.)

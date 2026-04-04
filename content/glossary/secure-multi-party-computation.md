@@ -28,3 +28,9 @@ SMPC unlocks datasets that could never be combined under traditional data sharin
 ## Practical Considerations
 
 SMPC introduces significant computational overhead (10-1000x compared to plaintext) and communication costs between parties. Frameworks like MP-SPDZ, CrypTen (Meta), and TF Encrypted provide implementations. For practical deployment, identify the minimal computation that must be done securely and keep everything else in plaintext. Two-party computation is more efficient than multi-party. Start with secure aggregation for federated learning, which is the most mature and performant application, before attempting full SMPC training pipelines.
+
+## Sources
+
+- Yao, A. C. (1982). Protocols for secure computations. *FOCS 1982*. (Introduced secure two-party computation; the foundational theoretical paper for the field.)
+- Goldreich, O., Micali, S., & Wigderson, A. (1987). How to play any mental game. *STOC 1987*. (Extended Yao's result to multi-party computation; proved that any function can be computed securely.)
+- Bonawitz, K., et al. (2017). Practical secure aggregation for privacy-preserving machine learning. *ACM CCS 2017*. (Secure aggregation for federated learning; the most practical SMPC application for ML; powers Google's federated learning deployments.)

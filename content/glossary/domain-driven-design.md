@@ -32,3 +32,9 @@ DDD is most valuable for complex business domains where the logic is intricate, 
 ## Practical Guidance
 
 Start with strategic DDD: identify bounded contexts and their relationships (context mapping) before diving into tactical patterns (aggregates, repositories). Invest in the ubiquitous language - it is the most impactful and lowest-cost DDD practice. Do not apply every DDD pattern everywhere; use tactical patterns in the core domain where business logic is complex, and simpler approaches (CRUD, transaction scripts) in supporting subdomains.
+
+## Sources
+
+- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley. (The original DDD book; defined ubiquitous language, bounded contexts, aggregates, and strategic/tactical patterns.)
+- Vernon, V. (2013). *Implementing Domain-Driven Design*. Addison-Wesley. (Definitive implementation guide; detailed treatment of aggregates, domain events, and bounded context integration patterns.)
+- Fowler, M. (2014). Bounded context. *martinfowler.com*. (Concise canonical explanation of bounded contexts; widely cited reference for how DDD maps to microservices decomposition.)

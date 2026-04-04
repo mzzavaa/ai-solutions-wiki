@@ -43,3 +43,9 @@ The main limitation is the linear decision boundary. Logistic regression cannot 
 ## When to Use It
 
 Use logistic regression as your first classifier for any binary or multi-class problem. It excels in fraud detection, spam filtering, medical diagnosis screening, and churn prediction - any domain where interpretable probability scores matter. If logistic regression achieves acceptable performance, its simplicity and interpretability make it preferable to more complex alternatives.
+
+## Sources
+
+- Cox, D. R. (1958). The regression analysis of binary sequences. *Journal of the Royal Statistical Society, Series B, 20*(2), 215–242. (Introduced logistic regression for binary outcome modeling; foundational paper for the algorithm.)
+- McCullagh, P., & Nelder, J. A. (1989). *Generalized Linear Models* (2nd ed.). Chapman & Hall. (Definitive statistical treatment of generalized linear models; logistic regression is a special case of the Bernoulli GLM.)
+- Hosmer, D. W., Lemeshow, S., & Sturdivant, R. X. (2013). *Applied Logistic Regression* (3rd ed.). Wiley. (Standard applied reference; model assessment, multicollinearity, and interpretation of coefficients.)

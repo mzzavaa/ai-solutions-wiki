@@ -39,3 +39,9 @@ Gitflow, GitHub Flow, and GitLab Flow are popular branching models built on feat
 If using feature branches, keep them short-lived (1-3 days maximum). Merge frequently from main into the feature branch to reduce divergence. Run CI on feature branches to catch issues before the merge. Consider whether trunk-based development with feature flags would better serve your team's delivery speed, particularly for teams that are experiencing painful merges, slow release cycles, or integration failures.
 
 Many successful teams use a hybrid: short-lived feature branches (hours to a couple of days) that function essentially as trunk-based development with code review gates.
+
+## Sources
+
+- Driessen, V. (2010). A successful Git branching model. *nvie.com*. (Original Gitflow model; feature branches, release branches, and hotfix branches — the most widely cited feature-branching strategy.)
+- Fowler, M. (2020). Patterns for managing source code branches. *martinfowler.com*. (Comprehensive taxonomy of branching strategies; trade-offs between feature branching, trunk-based development, and hybrid models.)
+- Forsgren, N., Humble, J., & Kim, G. (2018). *Accelerate: The Science of Lean Software and DevOps*. IT Revolution Press. (DORA research showing trunk-based development outperforms long-lived feature branches on delivery performance metrics.)

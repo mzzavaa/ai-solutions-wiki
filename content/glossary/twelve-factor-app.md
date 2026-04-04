@@ -40,3 +40,8 @@ The twelve factors encode the lessons learned from deploying thousands of applic
 **Disposability** - containers and Lambda functions start and stop frequently. Fast startup (avoid loading large models on cold start unless using provisioned capacity) and graceful shutdown (complete in-progress requests before terminating) are essential.
 
 **Backing services** - treat the AI model endpoint, vector database, and feature store as attached resources configurable by environment, not hardcoded in application code.
+
+## Sources
+
+- Wiggins, A. (2011). *The Twelve-Factor App*. Heroku. (The original twelve-factor methodology; defines all twelve factors and their rationale.)
+- Pivotal. (2015). *Beyond the Twelve-Factor App*. O'Reilly Media. (Extended the twelve-factor app with API-first, telemetry, and security as additional factors for modern cloud-native applications.)

@@ -41,3 +41,9 @@ Like t-SNE, UMAP is stochastic and different runs produce different layouts. Clu
 ## When to Use It
 
 Use UMAP as the default choice for high-dimensional data visualization, replacing t-SNE in most scenarios. It is the standard for exploring embeddings, single-cell RNA sequencing, and any large-scale visualization task. Use it for general-purpose dimensionality reduction when PCA's linear assumption is too restrictive. Combine UMAP with clustering algorithms (HDBSCAN is a natural pairing) for exploratory data analysis.
+
+## Sources
+
+- McInnes, L., Healy, J., & Melville, J. (2018). UMAP: Uniform manifold approximation and projection for dimension reduction. *arXiv:1802.03426*. (Original UMAP paper; theoretical foundations in Riemannian geometry and algebraic topology.)
+- McInnes, L., Healy, J., & Astels, S. (2017). HDBSCAN: Hierarchical density based clustering. *Journal of Open Source Software, 2*(11). (Companion clustering algorithm; UMAP + HDBSCAN is the standard pipeline for exploratory analysis.)
+- Becht, E., et al. (2019). Dimensionality reduction for visualizing single-cell data using UMAP. *Nature Biotechnology, 37*, 38–44. (Demonstrated UMAP superiority over t-SNE for single-cell RNA sequencing; drove widespread adoption.)

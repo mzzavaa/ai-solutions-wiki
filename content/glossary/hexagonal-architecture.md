@@ -32,3 +32,9 @@ For AI applications, the business logic (how to orchestrate prompts, validate ou
 ## Practical Guidance
 
 Start with two adapter types per port: the real implementation and a test fake. This immediately validates that the port interface is well-designed. Keep ports focused on the application's needs, not the capabilities of specific technologies. Apply hexagonal architecture to services with meaningful business logic; thin wrappers or simple data transformations do not warrant the overhead.
+
+## Sources
+
+- Cockburn, A. (2005). Hexagonal architecture (Ports and adapters). *Alistair Cockburn's blog*. (Original paper defining hexagonal architecture; introduced ports, adapters, and the symmetry principle.)
+- Martin, R. C. (2017). *Clean Architecture*. Prentice Hall. (Generalizes hexagonal architecture into clean architecture; dependency rule as the core principle.)
+- Newman, S. (2019). *Monolith to Microservices*. O'Reilly Media. (Hexagonal architecture as a foundation for microservice extraction; anti-corruption layer patterns.)

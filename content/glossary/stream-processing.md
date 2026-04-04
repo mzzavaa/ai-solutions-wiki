@@ -37,3 +37,9 @@ The distinction from batch processing is fundamental: batch operates on bounded 
 ## Stream Processing for AI
 
 AI systems benefit from stream processing in two key areas: real-time feature computation (computing features at inference time from live data) and continuous data pipeline processing (transforming and enriching data as it arrives for model training and feature stores).
+
+## Sources
+
+- Zaharia, M., et al. (2013). Discretized streams: Fault-tolerant streaming computation at scale. *SOSP 2013*. (Spark Streaming; introduced the micro-batch model that Spark Structured Streaming builds on.)
+- Carbone, P., et al. (2015). Apache Flink: Stream and batch processing in a single engine. *IEEE Data Engineering Bulletin, 38*(4), 28–38. (Apache Flink; defined true streaming with event-time processing and exactly-once state semantics.)
+- Akidau, T., et al. (2015). The dataflow model: A practical approach to balancing correctness, latency, and cost in massive-scale, unbounded, out-of-order data processing. *VLDB 2015*. (Google Dataflow model; defined windowing, watermarks, and triggers — the conceptual foundation for Flink and Beam.)

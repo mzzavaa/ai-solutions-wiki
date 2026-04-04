@@ -33,3 +33,9 @@ For AI applications with multiple services (API gateway, inference service, post
 Use Pact for consumer-driven contract testing between HTTP services. Start with the most critical service boundaries - the ones that break most often or cause the most pain when they break. Contract tests complement, not replace, unit tests (verify internal logic) and a small number of end-to-end tests (verify critical user journeys). Keep contracts focused on the data structure and status codes that consumers actually use, not every field the provider returns.
 
 For AI model APIs, contract tests verify response format and required fields, not prediction accuracy (which requires different evaluation approaches).
+
+## Sources
+
+- Fowler, M. (2011). Consumer-driven contracts: A service evolution pattern. *martinfowler.com*. (Defined consumer-driven contract testing; the pattern underlying Pact and all modern contract testing tools.)
+- Richardson, C. (2018). *Microservices Patterns*. Manning. Chapter 3: Interprocess communication in a microservice architecture. (Contract testing in the microservices context; API versioning and backward compatibility strategies.)
+- IainAtkinson & Bethany Skurrie. (2018). Pact specification. *pact.io*. (Pact; the most widely used consumer-driven contract testing tool; specification and protocol.)

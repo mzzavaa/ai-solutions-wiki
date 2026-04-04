@@ -35,3 +35,9 @@ Dashboards make system behavior visible. For AI platforms, Grafana dashboards ty
 **Dashboard as code** - store dashboard JSON definitions in source control using Grafana's provisioning or tools like Grafonnet. This ensures dashboards are versioned, reviewed, and recoverable.
 
 Avoid dashboard sprawl. A few well-maintained dashboards provide more value than dozens of abandoned ones. Assign ownership for each dashboard and review regularly.
+
+## Sources
+
+- Beyer, B., Jones, C., Petoff, J., & Murphy, N. R. (Eds.). (2016). *Site Reliability Engineering: How Google Runs Production Systems*. O'Reilly Media. Chapter 10: Practical Alerting. (RED method and the philosophy of alerting on symptoms vs. causes; directly applicable to Grafana dashboard design.)
+- Wilkes, J. (2015). My favorite Syslog. *ACM Queue*. (Monitoring philosophy: what to measure, why dashboards matter for operational visibility, and the limitations of threshold-based alerting.)
+- Grafana Labs. (2021). *Grafana documentation*. grafana.com. (Grafana panel types, data sources, alerting rules, and dashboard-as-code with Grafonnet.)

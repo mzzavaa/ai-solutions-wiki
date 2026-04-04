@@ -33,3 +33,8 @@ AI services often have natural error rates (model confidence below thresholds, t
 ## Practical Guidance
 
 Start with a 30-day rolling window for error budget calculation. Set SLOs based on user expectations, not aspirational targets. Define the error budget policy before the first budget depletion, not during a crisis. Automate budget tracking and alerting (alert at 50% and 75% consumption). Review and adjust SLOs quarterly based on operational experience and changing user needs.
+
+## Sources
+
+- Beyer, B., Jones, C., Petoff, J., & Murphy, N. R. (Eds.). (2016). *Site Reliability Engineering: How Google Runs Production Systems*. O'Reilly Media. Chapter 3: Embracing Risk. (Introduced error budgets as a mechanism to balance reliability and velocity; the primary reference.)
+- Beyer, B., Murphy, N. R., Rensin, D. K., Kawahara, K., & Thorne, S. (Eds.). (2018). *The Site Reliability Workbook*. O'Reilly Media. Chapter 2: Implementing SLOs. (Practical guidance on error budget policies, tracking, and enforcement.)

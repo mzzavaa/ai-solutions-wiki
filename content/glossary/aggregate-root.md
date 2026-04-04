@@ -31,3 +31,9 @@ Aggregates define the transactional boundary in your domain model. Getting aggre
 Design aggregates around true invariants - business rules that must be enforced atomically. If two entities must always be consistent with each other in the same transaction, they belong in the same aggregate. If eventual consistency is acceptable between them, they belong in separate aggregates.
 
 Keep aggregates small. Reference other aggregates by ID, not by direct object reference. Use domain events to coordinate between aggregates. This design enables horizontal scaling because different aggregates can be stored on different nodes without cross-node transactions.
+
+## Sources
+
+- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley. (Original definition of aggregate, aggregate root, and the invariant enforcement principle; Part III, Chapter 6.)
+- Vernon, V. (2013). *Implementing Domain-Driven Design*. Addison-Wesley. (Practical guidance on aggregate design; rule of one transaction per aggregate; designing small aggregates.)
+- Fowler, M. (2014). Aggregate. *martinfowler.com*. (Concise reference for aggregate pattern; clarifies the distinction between aggregate roots and internal entities.)

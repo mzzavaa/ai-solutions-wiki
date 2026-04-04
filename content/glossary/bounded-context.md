@@ -27,3 +27,9 @@ For microservice architecture, bounded contexts provide the natural decompositio
 ## Practical Guidance
 
 Identify bounded contexts through domain expert conversations, not technical analysis. Look for places where language changes: when different teams use the same word differently, or different words for the same concept, you have found a boundary. Draw a context map showing the relationships between contexts (upstream/downstream, shared kernel, customer/supplier). Use this map to guide team organization, API design, and data ownership. Do not split contexts too finely - each context needs enough scope to be a coherent, useful unit of work.
+
+## Sources
+
+- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley. Chapters 14-17: Distillation and Strategic Design. (Original bounded context definition; context maps and integration patterns between contexts.)
+- Vernon, V. (2013). *Implementing Domain-Driven Design*. Addison-Wesley. Chapter 2: Domains, Subdomains, and Bounded Contexts. (Practical bounded context identification and context mapping; upstream/downstream relationships.)
+- Fowler, M. (2014). Bounded context. *martinfowler.com*. (Concise canonical reference widely cited in microservices decomposition discussions.)

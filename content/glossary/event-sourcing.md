@@ -72,3 +72,9 @@ The event store can be implemented with:
 - **S3** with a time-partitioned key scheme for low-cost archival and batch replay
 
 EventBridge routes events from producers to multiple consumers without tight coupling. Each consumer subscribes to the event types it cares about.
+
+## Sources
+
+- Fowler, M. (2005). Event sourcing. *martinfowler.com*. (Coined the "event sourcing" pattern name; canonical definition used across the industry.)
+- Young, G. (2010). CQRS and Event Sourcing. *CQRS Documents*. (Foundational treatment of event sourcing combined with CQRS; defined the event store and projection concepts.)
+- Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O'Reilly Media. Chapter 11: Stream Processing. (Log-as-event-store; explains why an immutable log is equivalent to and preferable to mutable state for event-sourced systems.)

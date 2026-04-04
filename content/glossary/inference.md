@@ -46,3 +46,9 @@ Prompt caching (available on some platforms) reduces cost for applications that 
 For non-interactive workloads (processing a backlog of documents, nightly batch jobs), batching requests reduces per-request cost and can increase total throughput. Bedrock Batch Inference processes large datasets from S3 at lower per-token rates than synchronous API calls, in exchange for higher latency (hours rather than seconds).
 
 Use synchronous inference for interactive applications where users wait for responses. Use batch inference for background processing jobs where same-day completion is acceptable.
+
+## Sources
+
+- Crankshaw, D., et al. (2017). Clipper: A low-latency online prediction serving system. *NSDI 2017*. (Early systematic treatment of ML serving; defined the latency-throughput tradeoffs and batching strategies.)
+- Kwon, W., et al. (2023). Efficient memory management for large language model serving with PagedAttention. *SOSP 2023*. (vLLM PagedAttention; current standard for high-throughput LLM inference by treating KV-cache as virtual memory.)
+- Pope, R., et al. (2023). Efficiently scaling transformer inference. *MLSys 2023*. (Google analysis of LLM inference bottlenecks; introduced partitioning strategies for multi-accelerator serving.)

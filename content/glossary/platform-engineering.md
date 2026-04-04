@@ -40,3 +40,9 @@ Platform engineering addresses this by providing:
 DevOps is a culture and set of practices. Platform engineering is a product discipline that builds tools embodying DevOps principles. A DevOps team might write a wiki page explaining how to set up monitoring. A platform team builds a system where monitoring is configured automatically when a service is deployed.
 
 The distinction matters because documentation-driven approaches do not scale. Self-service platforms do.
+
+## Sources
+
+- Gregor, H., & Skelton, M. (2022). *Platform Engineering on Kubernetes*. Manning. (Platform engineering principles applied to Kubernetes-based platforms; Internal Developer Platforms, golden paths, and self-service infrastructure.)
+- Skelton, M., & Pais, M. (2019). *Team Topologies: Organizing Business and Technology Teams for Fast Flow*. IT Revolution Press. (Platform teams as enablers; stream-aligned teams as consumers; the organizational model underlying platform engineering.)
+- Humanitec. (2022). *State of Platform Engineering Report 2022*. Humanitec. (Survey of platform engineering adoption; Internal Developer Platform components and maturity model.)

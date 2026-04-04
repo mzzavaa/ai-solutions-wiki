@@ -34,3 +34,9 @@ Kafka is a log, not a queue. Messages are not deleted after consumption. Multipl
 ## Practical Guidance
 
 Use MSK Serverless to avoid capacity management. Design topics around event types, not consumers. Keep messages small (< 1 MB); store large payloads in S3 and reference them in Kafka messages. Monitor consumer lag to detect processing bottlenecks. Use Kafka Connect for standardized integrations with databases, S3, and other systems rather than writing custom producers and consumers.
+
+## Sources
+
+- Kreps, J., Narkhede, N., & Rao, J. (2011). Kafka: A distributed messaging system for log aggregation. *NetDB Workshop at VLDB 2011*. (Original Kafka paper; introduced the commit log abstraction and multi-consumer replay model.)
+- Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O'Reilly Media. Chapter 11: Stream Processing. (Definitive treatment of Kafka as a distributed commit log; compares it to databases and message queues.)
+- Kreps, J. (2013). The log: What every software engineer should know about real-time data's unifying abstraction. *LinkedIn Engineering Blog*. (Explains why the append-only log is the fundamental primitive underlying Kafka; foundational conceptual reference.)

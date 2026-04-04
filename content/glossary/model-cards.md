@@ -41,3 +41,9 @@ The standard model card structure covers:
 For custom models, create the model card during development, not after deployment. The information is most available when the team is actively building. Template: Google's original model card template is freely available and widely used. Hugging Face's model card format is standard in the open source community.
 
 For third-party models, the provider's model card (Anthropic publishes model cards for Claude; Amazon publishes them for Titan and other Bedrock models) covers the base model. Your organization should supplement it with documentation of how you are using it: what system prompts, what guardrails, what use case, and what evaluation you have done on your specific deployment.
+
+## Sources
+
+- Mitchell, M., et al. (2019). Model cards for model reporting. *FAccT 2019*. (Original model card paper by Google researchers; defined the format and rationale.)
+- Gebru, T., et al. (2021). Datasheets for datasets. *Communications of the ACM, 64*(12), 86–92. (Companion standard for training data documentation; used alongside model cards for full provenance.)
+- European Parliament and Council. (2024). *Regulation (EU) 2024/1689 (EU AI Act)*, Article 13 and Annex IV: Transparency and Technical Documentation. (Regulatory requirement driving model card adoption for high-risk AI systems in the EU.)

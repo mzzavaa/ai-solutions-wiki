@@ -28,3 +28,9 @@ In modern AI architectures, the processor role is common. Cloud providers hostin
 A critical consideration is sub-processing. If an AI processor uses another cloud service or API, that sub-processor must be authorized by the controller and bound by equivalent data protection obligations. The chain of processing relationships in complex AI systems can be several layers deep, and the controller remains responsible for ensuring compliance throughout.
 
 When a processor starts making its own decisions about data use, such as training its own models on customer data, it may be reclassified as a controller for that processing, with all attendant obligations.
+
+## Sources
+
+- European Parliament and Council. (2016). *Regulation (EU) 2016/679 (GDPR)*, Articles 4(8), 28–29. Official Journal of the European Union. (Primary legal source; defines data processor and processor obligations, including data processing agreement requirements.)
+- European Data Protection Board. (2021). *Guidelines 07/2020 on the concepts of controller and processor in the GDPR*. EDPB. (Authoritative guidance interpreting Article 28; addresses sub-processing chains and reclassification scenarios.)
+- Information Commissioner's Office. (2021). *Controllers and processors*. ICO guidance. (Practical regulator interpretation of processor obligations in cloud and AI service contexts.)

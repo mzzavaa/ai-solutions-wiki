@@ -43,3 +43,9 @@ WebSocket is one option for this streaming delivery:
 **Fallback** - Not all networks support WebSocket (some corporate proxies block the upgrade). Implement SSE or long-polling fallback for resilience.
 
 For most LLM streaming scenarios, SSE is simpler and sufficient. Choose WebSocket when you need bidirectional communication - for example, interactive AI applications where the user can send follow-up messages or cancel mid-stream.
+
+## Sources
+
+- Fette, I., & Melnikov, A. (2011). *The WebSocket Protocol*. RFC 6455. IETF. (The formal WebSocket specification; upgrade handshake, frame format, and close handshake.)
+- Grigorik, I. (2013). *High Performance Browser Networking*. O'Reilly Media. Chapter 17: WebSocket. (WebSocket architecture; multiplexing, framing, and the performance characteristics compared to HTTP polling and SSE.)
+- HTML Living Standard. (2023). *Server-Sent Events*. WHATWG. (SSE as an alternative to WebSocket for server-to-client streaming; the comparison relevant to LLM token streaming decisions.)

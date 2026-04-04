@@ -31,3 +31,9 @@ Most ORMs implement the unit of work pattern internally. SQLAlchemy's Session, E
 ## Practical Guidance
 
 In serverless and microservices architectures with DynamoDB, the unit of work concept translates to DynamoDB's TransactWriteItems, which atomically writes up to 100 items across multiple tables. For operations spanning multiple services, the saga pattern replaces the unit of work since no single transaction can span multiple databases. Use the unit of work within a single service's database boundary and sagas for cross-service coordination.
+
+## Sources
+
+- Fowler, M. (2002). *Patterns of Enterprise Application Architecture*. Addison-Wesley. Chapter 11: Object-Relational Behavioral Patterns. (Original Unit of Work pattern definition; change tracking, batch updates, and the relationship to the identity map.)
+- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley. Part III: Refining the Model. (Repository and Unit of Work in the DDD context; managing persistence as part of aggregate lifecycle.)
+- Richardson, C. (2018). *Microservices Patterns*. Manning. Chapter 4: Managing transactions with sagas. (Saga pattern as the replacement for Unit of Work across service boundaries; where Unit of Work stops and sagas begin.)

@@ -38,3 +38,9 @@ Prioritize recall when false negatives are dangerous or costly: fraud detection 
 Never evaluate a classifier on precision or recall alone - always report both. Use the precision-recall curve to visualize the tradeoff across all thresholds. Choose the operating point (threshold) based on the business cost of each error type.
 
 For imbalanced datasets (rare positive class), precision-recall is more informative than accuracy or ROC curves. A model with 95% accuracy can have terrible recall on the minority class, but precision-recall analysis makes this visible immediately.
+
+## Sources
+
+- Davis, J., & Goadrich, M. (2006). The relationship between precision-recall and ROC curves. *ICML 2006*. (Proved that PR curves dominate ROC curves for class imbalance evaluation; fundamental reference for choosing between the two.)
+- Manning, C. D., Raghavan, P., & Schütze, H. (2008). *Introduction to Information Retrieval*. Cambridge University Press. Chapter 8. (Standard IR reference defining precision, recall, and the precision-recall tradeoff in the context of ranked retrieval.)
+- Saito, T., & Rehmsmeier, M. (2015). The precision-recall plot is more informative than the ROC plot when evaluating binary classifiers on imbalanced datasets. *PLOS ONE, 10*(3). (Empirical analysis confirming PR curves are superior for imbalanced classification; widely cited in applied ML.)

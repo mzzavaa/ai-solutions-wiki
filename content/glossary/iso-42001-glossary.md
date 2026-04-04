@@ -31,3 +31,9 @@ Organizations can be certified against ISO 42001 by accredited certification bod
 ISO 42001 is not a regulation, but compliance with it supports regulatory compliance. The EU AI Act's requirements for quality management systems and risk management align closely with ISO 42001's structure. Organizations certified to ISO 42001 will find it easier to demonstrate compliance with the EU AI Act's organizational requirements, though certification alone does not guarantee regulatory compliance.
 
 ISO 42001 complements ISO 27001 (information security) and ISO 27701 (privacy), and organizations can integrate all three into a unified management system.
+
+## Sources
+
+- ISO/IEC 42001:2023. *Information technology — Artificial intelligence — Management system*. International Organization for Standardization. (The standard itself; all requirements, Annex A controls, and Annex B guidance are defined here.)
+- ISO/IEC JTC 1/SC 42. (2023). *ISO/IEC 42001 Implementation Guide*. ISO. (Official implementation guidance accompanying the standard.)
+- National Institute of Standards and Technology. (2023). *AI RMF 1.0 and ISO 42001 Crosswalk*. NIST. (Official mapping between NIST AI RMF subcategories and ISO 42001 requirements; enables organizations to satisfy both frameworks simultaneously.)

@@ -38,3 +38,9 @@ For simpler workloads, AWS offers lower-overhead alternatives. ECS Fargate runs 
 ## Practical Guidance
 
 Use EKS with managed node groups or Fargate to reduce operational burden. Adopt Helm for deployment management and ArgoCD or Flux for GitOps-based deployments. Start with a single namespace and simple deployments before adopting advanced features. Budget for the platform team expertise needed to operate Kubernetes well.
+
+## Sources
+
+- Burns, B., Grant, B., Oppenheimer, D., Brewer, E., & Wilkes, J. (2016). Borg, Omega, and Kubernetes. *ACM Queue, 14*(1). (Design history of Kubernetes; explains the Borg/Omega precedents and the design decisions that shaped K8s.)
+- Burns, B., et al. (2022). *Kubernetes: Up and Running* (3rd ed.). O'Reilly Media. (Standard practical reference for Kubernetes operations and deployment patterns.)
+- Verma, A., et al. (2015). Large-scale cluster management at Google with Borg. *EuroSys 2015*. (Borg system paper; the internal Google predecessor that informed Kubernetes design.)

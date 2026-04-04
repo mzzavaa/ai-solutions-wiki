@@ -36,3 +36,9 @@ Common strategies: mock the AI backend for most E2E tests (testing UI behavior),
 ## Cost and Placement
 
 E2E tests are the most expensive tests in the pyramid: slowest to run (minutes), most brittle (sensitive to UI changes), and hardest to debug (failures can originate anywhere in the stack). Use them sparingly for critical user journeys. Most AI applications need 10-30 E2E tests covering core workflows, not hundreds. Run mocked-backend E2E tests on every PR and real-backend E2E tests on a schedule.
+
+## Sources
+
+- Cohn, M. (2009). *Succeeding with Agile: Software Development Using Scrum*. Addison-Wesley. (Test pyramid; E2E tests at the top of the pyramid — highest cost, lowest count, highest confidence for critical paths.)
+- Fowler, M. (2012). Test pyramid. *martinfowler.com*. (Canonical exposition of the testing pyramid; E2E test costs vs. unit test costs; guidance on the right balance.)
+- Playwright. (2021). *Playwright for Python/Node.js*. Microsoft. (Playwright architecture: browser automation, network interception, streaming handling — the primary tool referenced in the article.)

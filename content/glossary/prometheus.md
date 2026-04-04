@@ -31,3 +31,9 @@ For AI workloads, Prometheus tracks inference latency, request throughput, error
 ## Practical Guidance
 
 Instrument your AI services with Prometheus client libraries (available for Python, Go, Java, Node.js). Define key metrics early: request latency percentiles (p50, p95, p99), error rate, throughput, and model-specific metrics (prediction confidence, token count, processing time). Use recording rules to pre-compute expensive queries. Set retention appropriate to your needs (15 days default; use Thanos or AMP for long-term storage). Avoid high-cardinality labels (like user IDs) that explode metric storage.
+
+## Sources
+
+- Beyer, B., Jones, C., Petoff, J., & Murphy, N. R. (Eds.). (2016). *Site Reliability Engineering*. O'Reilly Media. Chapter 6: Monitoring Distributed Systems. (The four golden signals: latency, traffic, errors, and saturation — the foundation for Prometheus metric design.)
+- Prometheus Authors. (2016). *Prometheus: From open-source to commercial offering*. CNCF Blog. (Prometheus architecture; pull-based scraping, time-series storage, and PromQL query language.)
+- Turnbull, J. (2018). *Monitoring with Prometheus*. Turnbull Press. (Prometheus instrumentation, alerting, federation, and integration with Grafana for production monitoring systems.)

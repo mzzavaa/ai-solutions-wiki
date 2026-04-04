@@ -29,3 +29,9 @@ In AI systems, determining who is the controller can be complex. The organizatio
 However, if the AI provider uses customer data to improve its own models, it may become a controller for that secondary processing. This dual role creates compliance complexity. Organizations deploying AI must clearly define controller and processor relationships in their data processing agreements and ensure that model training, fine-tuning, and inference activities all have clear legal bases attributed to the appropriate party.
 
 When multiple organizations collaborate on an AI system, joint controllership may arise, requiring a formal arrangement under Article 26 of GDPR.
+
+## Sources
+
+- European Parliament and Council. (2016). *Regulation (EU) 2016/679 (GDPR)*, Articles 4(7), 24–27. Official Journal of the European Union. (Primary legal source; defines data controller, controller obligations, and joint controllership.)
+- European Data Protection Board. (2021). *Guidelines 07/2020 on the concepts of controller and processor in the GDPR*. EDPB. (Authoritative guidance on distinguishing controllers from processors in complex AI deployment scenarios.)
+- Wachter, S., & Mittelstadt, B. (2019). A right to reasonable inferences: Re-thinking data protection law in the age of big data and AI. *Columbia Business Law Review, 2019*(2). (Analyzes controller accountability for AI-generated inferences under GDPR.)

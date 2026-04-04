@@ -32,3 +32,9 @@ ELT became practical as cloud data warehouses (Redshift, BigQuery, Snowflake) ga
 ## Practical Guidance
 
 Use ELT when your destination system has sufficient compute for transformations (Redshift, BigQuery) and when you want to preserve raw data for flexibility. Use traditional ETL when transformations require complex processing beyond SQL (ML feature engineering, image processing) or when the destination system lacks transform compute. Many organizations use a hybrid: ELT for structured data transformations and ETL for complex or unstructured data processing.
+
+## Sources
+
+- Stonebraker, M., & Cetintemel, U. (2005). "One size fits all": An idea whose time has come and gone. *ICDE 2005*. (Argued for specialized analytics engines over general-purpose databases; foundational for the cloud warehouse approach ELT relies on.)
+- Armbrust, M., et al. (2021). Lakehouse: A new generation of open platforms that unify data warehousing and advanced analytics. *CIDR 2021*. (Lakehouse architecture; unified ELT and ML pipeline patterns.)
+- Gorman, C., & Wagner, T. (2021). *The Analytics Engineering Guide*. dbt Labs. (Modern ELT and analytics engineering practices; defines the role of SQL-based transformations as code in ELT workflows.)

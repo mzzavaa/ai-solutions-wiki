@@ -29,3 +29,9 @@ Effective AI supply chain security includes maintaining a software bill of mater
 ## Model Supply Chain Risks
 
 Unique to AI is the model supply chain. Models downloaded from public repositories (Hugging Face, GitHub) may be tampered with. Fine-tuning on untrusted data can introduce vulnerabilities. Model serialization formats like pickle allow arbitrary code execution. Organizations should verify model provenance, scan model files for malicious payloads, and maintain internal model registries with integrity verification.
+
+## Sources
+
+- Squire, M., et al. (2021). Backstabber's knife collection: A review of open source supply chain attacks. *DIMVA 2020*. (Systematic taxonomy of supply chain attacks against open-source software; directly applicable to ML library and model supply chains.)
+- Stonebraker, M. (2021). *Software bill of materials (SBOM)*. NTIA. (US government definition and minimum elements for SBOMs; the baseline for AI supply chain inventory.)
+- Carlini, N., et al. (2024). Poisoning web-scale training datasets is practical. *IEEE S&P 2024*. (Demonstrated that training data poisoning is feasible at scale; motivates data supply chain integrity controls.)

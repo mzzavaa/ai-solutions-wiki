@@ -38,3 +38,9 @@ Immutable infrastructure eliminates drift by definition. Every instance running 
 ## Practical Guidance
 
 Use containers (Docker + ECS/EKS) as the primary mechanism for immutable deployments. Store all configuration in environment variables, parameter store, or config maps - never baked into images. Automate image building in CI/CD pipelines. Disable SSH access to production instances. For AI inference endpoints, immutable deployment means updating the model by deploying a new container image with the new model, not by replacing model files on a running server.
+
+## Sources
+
+- Morris, K. (2016). *Infrastructure as Code*. O'Reilly Media. Chapter 8: Immutable infrastructure. (Immutable server pattern vs. mutable server anti-pattern; golden image pipeline and blue-green deployments.)
+- Humble, J., & Farley, D. (2010). *Continuous Delivery*. Addison-Wesley. Chapter 5: Anatomy of the Deployment Pipeline. (Immutable deployments through pipeline stages; the relationship between immutable infrastructure and continuous delivery.)
+- Rebentisch, E. (2017). Immutable infrastructure: The key to scaling containers. *Docker Blog*. (Container-based immutable infrastructure patterns; Docker image as the immutable artifact replacing traditional server management.)

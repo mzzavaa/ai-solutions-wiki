@@ -45,3 +45,10 @@ SHAP has stronger theoretical foundations (unique solution satisfying the Shaple
 ## When to Use Them
 
 Use SHAP for systematic model analysis, feature importance ranking, bias detection, and regulatory compliance. Use LIME for quick ad-hoc explanations and when working with non-standard model types. Both are essential tools for building trust in ML systems, debugging model behavior, and meeting explainability requirements in regulated industries.
+
+## Sources
+
+- Ribeiro, M.T., Singh, S., & Guestrin, C. (2016). "Why should I trust you?": Explaining the predictions of any classifier. *KDD 2016*. (LIME original paper.)
+- Lundberg, S.M., & Lee, S.I. (2017). A unified approach to interpreting model predictions. *NeurIPS 2017*. (SHAP original paper; unified framework based on Shapley values.)
+- Lundberg, S.M., et al. (2020). From local explanations to global understanding with explainable AI for trees. *Nature Machine Intelligence, 2*(1), 56–67. (TreeSHAP; polynomial-time exact Shapley values for tree models.)
+- Shapley, L.S. (1953). A value for n-person games. *Contributions to the Theory of Games, 2*, 307–317. (Shapley values; the game theory foundation for SHAP.)

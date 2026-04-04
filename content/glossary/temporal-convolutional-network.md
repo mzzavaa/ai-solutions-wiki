@@ -28,3 +28,9 @@ TCNs demonstrated that recurrence is not necessary for sequence modeling, achiev
 ## Practical Considerations
 
 TCNs are well-suited for time-series forecasting, audio processing, and any sequential task with a known maximum dependency length. They are straightforward to implement in PyTorch or TensorFlow. For tasks requiring very long-range dependencies, transformers or state-space models may be more appropriate since TCN receptive fields are bounded. TCNs are a strong choice for edge deployment due to their predictable memory footprint and efficient inference. Consider TCNs when you need RNN-like modeling but want faster training and simpler deployment.
+
+## Sources
+
+- van den Oord, A., et al. (2016). WaveNet: A generative model for raw audio. *arXiv:1609.03499*. (WaveNet; introduced causal dilated convolutions for audio synthesis; demonstrated TCN superiority over RNNs for sequential audio modeling.)
+- Bai, S., Kolter, J. Z., & Koltun, V. (2018). An empirical evaluation of generic convolutional and recurrent networks for sequence modeling. *arXiv:1803.01271*. (Systematic comparison of TCNs vs LSTMs/GRUs; showed TCNs match or outperform RNNs across standard sequence modeling benchmarks.)
+- Lea, C., et al. (2017). Temporal convolutional networks for action segmentation and detection. *CVPR 2017*. (TCNs for video temporal modeling; coined "temporal convolutional network" as the standard term.)

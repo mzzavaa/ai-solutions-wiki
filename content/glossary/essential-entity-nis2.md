@@ -48,3 +48,8 @@ Member states exercise proactive supervision over essential entities, including 
 ## Relevance to AI Systems
 
 AI systems deployed in essential entity sectors inherit NIS2 cybersecurity obligations. An AI system used in healthcare diagnostics, energy grid management, or financial infrastructure must meet the same cybersecurity, incident reporting, and supply chain security requirements as any other critical system in that sector.
+
+## Sources
+
+- European Parliament and Council. (2022). *Directive (EU) 2022/2555 (NIS2)*. Official Journal of the European Union, L 333/80. (Primary legal source; Annex I defines essential entity sectors and Article 32 defines supervisory obligations.)
+- European Union Agency for Cybersecurity (ENISA). (2023). *NIS2 Directive: Implementation guide*. ENISA. (ENISA guidance on essential entity obligations and national transposition requirements.)

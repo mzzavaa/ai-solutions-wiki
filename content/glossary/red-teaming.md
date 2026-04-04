@@ -39,3 +39,9 @@ Provide structured attack templates but also allow open-ended exploration. Some 
 ## Integrating Red Teaming into Development
 
 Red teaming should not be a one-time event. Run red team exercises before major releases, after significant model or prompt changes, and on a regular cadence for production systems. Automate repeatable test cases from previous red team findings to create regression test suites. Use red team findings to improve guardrails, refine system prompts, and update content filtering rules.
+
+## Sources
+
+- Perez, E., et al. (2022). Red teaming language models with language models. *arXiv:2202.03286*. (Automated red teaming using LLMs to generate adversarial prompts at scale; foundational methodology paper.)
+- Ganguli, D., et al. (2022). Red teaming language models to reduce harms: Methods, scaling behaviors, and lessons learned. *arXiv:2209.07858*. (Anthropic's red teaming methodology; documents adversarial attack categories and mitigation findings.)
+- Perez, F., & Ribeiro, I. (2022). Ignore previous prompt: Attack techniques for language models. *NeurIPS 2022 ML Safety Workshop*. (Prompt injection attacks; the primary red teaming threat vector for LLM-based AI systems.)

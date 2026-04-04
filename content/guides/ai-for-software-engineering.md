@@ -6,6 +6,10 @@ categories: [Guides]
 tags: [AI-coding, code-generation, bug-detection, test-generation, developer-tools]
 related:
   - guides/code-review-ai-projects
+  - guides/testing-llm-applications
+  - guides/ai-security-best-practices
+  - guides/ci-cd-for-ai
+  - guides/devsecops-ai
   - frameworks/shift-left-testing
   - guides/ai-product-management
 ---

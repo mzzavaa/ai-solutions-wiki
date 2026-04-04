@@ -47,3 +47,9 @@ The main limitation is computational cost. Agglomerative clustering is O(n^3) in
 ## When to Use It
 
 Use hierarchical clustering when you want to explore cluster structure at multiple levels of granularity, when the number of clusters is unknown, or when you need the dendrogram for interpretability. It is well-suited for gene expression analysis, taxonomy construction, and document clustering on small-to-medium datasets. For larger datasets, consider K-Means or DBSCAN.
+
+## Sources
+
+- Ward, J. H. (1963). Hierarchical grouping to optimize an objective function. *Journal of the American Statistical Association, 58*(301), 236–244. (Ward's method; the standard linkage criterion for most hierarchical clustering applications.)
+- Murtagh, F., & Legendre, P. (2014). Ward's hierarchical agglomerative clustering method: Which algorithms implement Ward's criterion? *Journal of Classification, 31*(3), 274–295. (Analysis of Ward linkage implementations; clarifies which algorithms correctly implement the criterion.)
+- Müllner, D. (2011). Modern hierarchical, agglomerative clustering algorithms. *arXiv:1109.2378*. (Efficient O(n²) implementations of hierarchical clustering that make large-scale use practical.)

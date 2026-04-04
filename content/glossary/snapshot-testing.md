@@ -38,3 +38,9 @@ Snapshot testing is valuable for AI systems in several ways:
 ## Best Practices
 
 Review snapshot diffs carefully in pull requests. A snapshot update should be as intentional as a code change. Keep snapshots small and focused: one snapshot per behavior, not a single massive snapshot of the entire system output. Store snapshots in version control alongside the tests so they are versioned with the code they test.
+
+## Sources
+
+- Facebook. (2016). *Jest snapshot testing*. jest.io. (Original snapshot testing feature in Jest; the pattern of serializing output and comparing to stored snapshots for deterministic regression testing.)
+- Fowler, M. (2006). Approval testing. *martinfowler.com*. (Approval tests as a form of snapshot testing; the concept of capturing known-good output and comparing future runs against it.)
+- Marick, B. (2003). How to misuse code coverage. *testingcraft.com*. (The risk of treating snapshots as documentation rather than regression tests; intentional review of snapshot updates.)

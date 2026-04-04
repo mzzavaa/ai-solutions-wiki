@@ -53,3 +53,9 @@ Use EventBridge when event routing logic matters. Use SQS when you need durable 
 - [Amazon EventBridge]({{< relref "/tools/amazon-eventbridge.md" >}}) - primary event bus
 - [AWS Step Functions]({{< relref "/tools/aws-step-functions.md" >}}) - orchestration for multi-step pipelines
 - [Serverless Computing]({{< relref "serverless.md" >}}) - execution model for event consumers
+
+## Sources
+
+- Hohpe, G., & Woolf, B. (2003). *Enterprise Integration Patterns: Designing, Building, and Deploying Messaging Solutions*. Addison-Wesley. (Canonical reference for event-driven patterns including publish-subscribe, message channels, and routing; the foundation modern EDA implementations are built on.)
+- Fowler, M. (2017). What do you mean by "event-driven"? *martinfowler.com*. (Defines event notification, event-carried state transfer, event sourcing, and CQRS as distinct EDA patterns.)
+- Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O'Reilly Media. Chapter 11: Stream Processing. (Log-based messaging and event-driven data pipelines; foundational for AI pipeline EDA design.)

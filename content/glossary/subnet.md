@@ -31,3 +31,9 @@ Resources in the same subnet can communicate freely. Communication between subne
 ## Why It Matters
 
 Subnet design directly affects security posture, availability, and operational flexibility. Poor subnet architecture (everything in public subnets, single AZ, undersized CIDR blocks) creates security vulnerabilities, single points of failure, and scaling constraints that are expensive to remediate later. Getting subnet design right from the start is one of the highest-leverage infrastructure decisions.
+
+## Sources
+
+- Fuller, V., & Li, T. (2006). *Classless Inter-Domain Routing (CIDR): The Internet Address Assignment and Aggregation Plan*. RFC 4632. IETF. (CIDR notation and subnet mask calculation; the standard defining how IP address ranges are divided into subnets.)
+- Droms, R. (1997). *Dynamic Host Configuration Protocol*. RFC 2131. IETF. (DHCP address allocation within subnets; the mechanism by which AWS assigns private IP addresses to resources in subnets.)
+- AWS. (2024). *Amazon VPC User Guide: Subnets*. Amazon Web Services. (AWS subnet types — public, private, and isolated; route table configuration; availability zone placement and multi-AZ design.)

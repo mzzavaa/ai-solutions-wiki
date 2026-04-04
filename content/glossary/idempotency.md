@@ -45,3 +45,9 @@ Idempotency prevents all of these scenarios.
 **Request Fingerprinting** - For systems where clients do not send idempotency keys, compute a fingerprint from the request body (hash of the input). This provides automatic deduplication but can produce false matches if different intentional requests happen to be identical.
 
 Idempotency is not optional for production AI APIs. It is a reliability requirement that prevents expensive and confusing duplicate processing.
+
+## Sources
+
+- Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O'Reilly Media. Chapter 11: Stream Processing. (Idempotent consumers in distributed systems; exactly-once semantics and idempotency keys as practical alternatives.)
+- Fielding, R. T. (2000). *Architectural Styles and the Design of Network-based Software Architectures*. Doctoral dissertation, UC Irvine. (REST constraints including HTTP method semantics; GET, PUT, DELETE as idempotent methods.)
+- Birman, K. P. (2012). *Guide to Reliable Distributed Systems*. Springer. Chapter 4: At-most-once and at-least-once delivery. (Idempotency as the mechanism for safe retry behavior in distributed systems with at-least-once delivery guarantees.)

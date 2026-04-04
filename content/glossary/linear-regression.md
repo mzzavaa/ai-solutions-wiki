@@ -39,3 +39,9 @@ The algorithm cannot capture non-linear patterns without manual feature engineer
 ## When to Use It
 
 Linear regression is the right starting point when you need a fast, interpretable baseline for continuous prediction. It works well for price prediction, demand forecasting, and any problem where the relationship between inputs and output is approximately linear. Always start with linear regression before moving to more complex models - if it performs well enough, the interpretability and simplicity are significant advantages in production.
+
+## Sources
+
+- Gauss, C. F. (1809). *Theoria Motus Corporum Coelestium*. (Introduced least squares; the mathematical foundation of ordinary least squares linear regression.)
+- Tibshirani, R. (1996). Regression shrinkage and selection via the lasso. *Journal of the Royal Statistical Society, Series B, 58*(1), 267–288. (Lasso regression; introduced L1 regularization for sparse feature selection.)
+- Hoerl, A. E., & Kennard, R. W. (1970). Ridge regression: Biased estimation for nonorthogonal problems. *Technometrics, 12*(1), 55–67. (Ridge regression; introduced L2 regularization for multicollinear regression problems.)

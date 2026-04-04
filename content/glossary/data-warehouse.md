@@ -32,3 +32,9 @@ The pattern for most organizations: raw data lands in the data lake, ETL pipelin
 ## Practical Guidance
 
 Use Redshift Serverless to avoid over-provisioning. Partition tables by date for time-series data. Use materialized views for frequently executed queries. Monitor query performance and costs using Redshift query monitoring rules. For organizations starting fresh, consider a lakehouse architecture that combines warehouse query performance with lake flexibility.
+
+## Sources
+
+- Inmon, W. H. (1992). *Building the Data Warehouse*. QED Publishing. (Coined "data warehouse"; defined the subject-oriented, integrated, non-volatile, time-variant storage concept.)
+- Kimball, R., & Ross, M. (2013). *The Data Warehouse Toolkit: The Definitive Guide to Dimensional Modeling* (3rd ed.). Wiley. (Dimensional modeling standard; star schema and snowflake schema designs used in all major data warehouses.)
+- Armbrust, M., et al. (2021). Lakehouse: A new generation of open platforms that unify data warehousing and advanced analytics. *CIDR 2021*. (Introduced the lakehouse concept; directly relevant to understanding how warehouses are evolving for AI workloads.)

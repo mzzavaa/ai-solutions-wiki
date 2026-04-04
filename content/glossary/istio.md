@@ -37,3 +37,9 @@ For smaller deployments, simpler alternatives exist. AWS App Mesh provides servi
 ## Practical Guidance
 
 Start with Istio's ambient mode (no sidecars, ztunnel-based) for simpler operations. Enable features incrementally - start with mTLS and observability before adding complex traffic management. Monitor the resource overhead of Envoy sidecars (typically 50-100 MB memory per pod). Plan for the platform engineering investment required to operate Istio reliably.
+
+## Sources
+
+- Calcote, L., & Butcher, Z. (2019). *Istio: Up and Running*. O'Reilly Media. (Comprehensive reference for Istio architecture; control plane, data plane, Envoy sidecar, VirtualService, DestinationRule.)
+- Nygard, M. T. (2018). *Release It!* (2nd ed.). Pragmatic Bookshelf. Chapter 14: Chaos Engineering. (Service mesh circuit breaking, retry, and timeout as reliability patterns managed by Istio.)
+- Envoy Proxy Authors. (2016). *Envoy: C++ L7 proxy and communication bus*. CNCF. (Envoy architecture; the sidecar proxy underlying Istio; observability features via xDS API.)

@@ -70,3 +70,9 @@ The IAM layer is where IaC provides the most value for AI projects - precisely d
 - [Terraform]({{< relref "/tools/terraform.md" >}}) - detailed guide
 - [Terraform vs CDK]({{< relref "/comparisons/terraform-vs-cdk.md" >}}) - choosing between tools
 - [Serverless Computing]({{< relref "serverless.md" >}}) - primary infrastructure pattern for AI workloads
+
+## Sources
+
+- Morris, K. (2016). *Infrastructure as Code: Managing Servers in the Cloud*. O'Reilly Media. (First book to comprehensively define IaC practices; established the principles of dynamic infrastructure management.)
+- Hashimoto, M. (2014). Terraform: A tool for building, changing, and versioning infrastructure safely and efficiently. *HashiCorp*. (Terraform introduction; the most widely adopted IaC tool for multi-cloud infrastructure.)
+- Humble, J., & Farley, D. (2010). *Continuous Delivery*. Addison-Wesley. Chapter 11: Managing Infrastructure and Environments. (Established treating infrastructure as code as a prerequisite for continuous delivery.)

@@ -35,3 +35,9 @@ Containers solve the "works on my machine" problem. The same container image run
 Use multi-stage builds to keep production images small. Pin dependency versions explicitly (no `latest` tags). Use ECR for private image storage with vulnerability scanning. Minimize the number of layers and cache frequently. Run containers as non-root users for security. For GPU workloads, use NVIDIA's CUDA base images and ensure the host has the matching GPU drivers.
 
 Treat containers as immutable. Configuration should come from environment variables or mounted config maps, not baked into the image. This enables the same image to run across environments with different settings.
+
+## Sources
+
+- Merkel, D. (2014). Docker: Lightweight Linux containers for consistent development and deployment. *Linux Journal*, 239. (Original Docker paper; container image layering, copy-on-write filesystem, and the Dockerfile build process.)
+- Felter, W., Ferreira, A., Rajamony, R., & Rubio, J. (2015). An updated performance comparison of virtual machines and Linux containers. *2015 IEEE International Symposium on Performance Analysis of Systems and Software (ISPASS)*, 171–172. (Performance comparison showing containers add minimal overhead versus VMs; justification for containers in AI inference workloads.)
+- Boettiger, C. (2015). An introduction to Docker for reproducible research. *ACM SIGOPS Operating Systems Review*, 49(1), 71–79. (Containers for scientific reproducibility; directly applicable to reproducible ML training environments.)

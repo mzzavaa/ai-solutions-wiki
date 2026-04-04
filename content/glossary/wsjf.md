@@ -59,3 +59,9 @@ The scoring is always relative. Its purpose is to facilitate structured conversa
 WSJF assumes effort estimates are independent. In practice, doing one item may reduce the effort of a related item. It also does not handle dependencies - sometimes you must do a lower-scoring item before a higher-scoring one is possible.
 
 Use WSJF as a starting point for prioritization, then apply dependency and sequencing analysis as a second pass. The WSJF score identifies where value is concentrated; the dependency analysis identifies what order is actually feasible.
+
+## Sources
+
+- Leffingwell, D. (2011). *Agile Software Requirements: Lean Requirements Practices for Teams, Programs, and the Enterprise*. Addison-Wesley. (Weighted Shortest Job First as the SAFe prioritization method; cost of delay as the primary economic signal.)
+- Black, S. W. (1990). Box-office dynamite: Why Hollywood films bomb. (Cost of delay concept in production economics; the opportunity cost of delay vs. investment in shorter lead times.)
+- Reinertsen, D. G. (2009). *The Principles of Product Development Flow*. Celeritas Publishing. Chapter 2: The Economics of Product Development. (Cost of delay as the foundational concept; why WSJF is derived from lean economics rather than simple effort estimation.)

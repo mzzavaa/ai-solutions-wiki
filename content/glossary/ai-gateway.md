@@ -34,3 +34,9 @@ AI gateways include open-source options like LiteLLM and Portkey, cloud-native o
 ## When to Adopt
 
 An AI gateway becomes valuable when an organization uses multiple LLM providers, needs centralized cost control, requires consistent security and compliance policies across AI applications, or wants to avoid vendor lock-in by abstracting the provider layer.
+
+## Sources
+
+- Richardson, L., & Ruby, S. (2007). *RESTful Web Services*. O'Reilly Media. (API gateway patterns that AI gateways extend; foundational for understanding proxy and routing abstractions.)
+- Nadareishvili, I., Mitra, R., McLarty, M., & Amundsen, M. (2016). *Microservice Architecture: Aligning Principles, Practices, and Culture*. O'Reilly. (API gateway as central policy enforcement point; directly applicable to AI gateway design.)
+- Burns, B., et al. (2016). Borg, Omega, and Kubernetes. *ACM Queue, 14*(1). (Workload routing and resource management patterns; foundational for understanding why centralized gateways emerge in large deployments.)

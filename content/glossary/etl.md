@@ -33,3 +33,9 @@ Traditional ETL transforms data before loading. Modern ELT loads raw data first 
 ## Practical Guidance
 
 Use incremental extraction whenever possible to reduce processing time and cost. Implement data quality checks within the pipeline (row counts, null rates, value ranges) and fail loudly when quality degrades. Version your transformation logic in source control. Schedule pipeline monitoring to detect failures before downstream consumers (dashboards, models) are affected.
+
+## Sources
+
+- Kimball, R., & Caserta, J. (2004). *The Data Warehouse ETL Toolkit*. Wiley. (Definitive ETL reference; covers extraction strategies, transformation patterns, and error handling.)
+- Kleppmann, M. (2017). *Designing Data-Intensive Applications*. O'Reilly Media. Chapter 10: Batch Processing. (Theoretical treatment of data transformation pipelines; MapReduce and Spark as the foundations of modern ETL.)
+- Zaharia, M., et al. (2012). Resilient distributed datasets: A fault-tolerant abstraction for in-memory cluster computing. *NSDI 2012*. (Spark RDDs; the compute engine underlying AWS Glue and most large-scale ETL.)

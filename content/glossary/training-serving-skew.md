@@ -37,3 +37,9 @@ Training-serving skew is the mismatch between the data, features, or environment
 ## Impact
 
 Training-serving skew is particularly dangerous because standard offline model evaluation does not detect it. The model evaluates well on test data processed through the training pipeline. Performance only degrades when the model is served through the production pipeline where the skew exists. This is why production monitoring with real-world ground truth is essential for catching skew that offline evaluation misses.
+
+## Sources
+
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *NeurIPS 2015*. (Described training-serving skew as "pipeline jungles"; seminal paper on ML production reliability.)
+- Breck, E., et al. (2017). The ML test score: A rubric for ML production readiness and technical debt reduction. *IEEE Big Data 2017*. (Google's ML readiness rubric; explicitly tests training-serving consistency as a production requirement.)
+- Polyzotis, N., et al. (2018). Data validation for machine learning. *SysML 2018*. (TFX data validation; automated detection of distribution skew between training and serving data.)

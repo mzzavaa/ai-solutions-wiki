@@ -31,3 +31,9 @@ Feature branches isolate work but delay integration. The longer a branch lives, 
 ## Practical Guidance
 
 Start with the discipline of small, incremental commits. Each commit should be a complete, working change. Use feature flags (LaunchDarkly, AWS AppConfig) to hide incomplete features. Invest in fast, reliable CI - if CI takes 30 minutes, developers will not integrate frequently. Code review through short-lived pull requests (merged within hours) is compatible with trunk-based development; week-long review cycles are not.
+
+## Sources
+
+- Forsgren, N., Humble, J., & Kim, G. (2018). *Accelerate: The Science of Lean Software and DevOps*. IT Revolution Press. (DORA research; empirically demonstrated trunk-based development as a key predictor of software delivery performance.)
+- Hammant, P. (2014). *Trunk Based Development*. trunkbaseddevelopment.com. (Comprehensive reference for trunk-based development practices, branching models, and feature flags integration.)
+- Fowler, M., & Foemmel, M. (2006). Continuous integration. *ThoughtWorks*. (Continuous integration requires frequent mainline integration; the foundational argument for trunk-based development.)

@@ -29,3 +29,9 @@ For AI workloads, ALB fronts inference endpoints running on ECS Fargate or EKS, 
 ## Practical Guidance
 
 Use ALB for HTTP/HTTPS workloads (the vast majority of cases). Use NLB only when you need Layer 4 features, static IPs, or extreme performance. Configure health checks that actually test your application's readiness (not just TCP connectivity) with appropriate intervals and thresholds. Enable access logging for debugging and cross-zone load balancing for even distribution across availability zones.
+
+## Sources
+
+- Alizadeh, M., Greenberg, A., Maltz, D. A., Padhye, J., Patel, P., Poutievski, L., ... & Wetherall, D. (2010). Data center TCP (DCTCP). *Proceedings of ACM SIGCOMM*, 63–74. (Load balancing at data center scale; incast, buffer pressure, and the network-level challenges that application load balancers must handle.)
+- Patel, P., Bansal, D., Yuan, L., Murthy, A., Greenberg, A., Maltz, D. A., ... & Karri, N. (2013). Ananta: Cloud scale load balancing. *Proceedings of ACM SIGCOMM*, 207–218. (Architecture of a production cloud load balancer; direct server return, consistent hashing, and Layer 4/7 processing at scale.)
+- AWS. (2024). *AWS Elastic Load Balancing User Guide*. Amazon Web Services. (ALB, NLB, and GWLB feature comparison; target groups, health checks, and routing rules.)

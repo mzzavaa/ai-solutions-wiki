@@ -40,3 +40,9 @@ AI workloads introduce cost challenges that are distinct from traditional cloud 
 **Batch vs real-time inference** is a cost-quality trade-off. Real-time inference processes each request immediately with low latency. Batch inference groups requests and processes them together, significantly improving GPU utilization and reducing per-request cost, but introducing latency. For use cases where users are not waiting for an immediate response - document processing, report generation, scheduled analysis - batch inference can reduce inference costs by 50 percent or more compared to real-time.
 
 **Spot instances for training** apply to SageMaker training jobs, which can be configured to use managed spot training. SageMaker handles checkpointing automatically so that training jobs resume from their last checkpoint if interrupted, making spot training practical even for long-running jobs.
+
+## Sources
+
+- AWS. (2023). *AWS Well-Architected Framework: Cost Optimization Pillar*. Amazon Web Services. (Definitive reference for the five cost optimization design principles: cloud financial management, expenditure awareness, cost-effective resources, demand management, and optimizing over time.)
+- Greenberg, A., Hamilton, J., Maltz, D. A., & Patel, P. (2009). The cost of a cloud: Research problems in data center networks. *ACM SIGCOMM Computer Communication Review*, 39(1), 68–73. (Economics of data center infrastructure; compute, storage, and networking cost structures underlying cloud pricing.)
+- Patel, P., Bansal, D., Yuan, L., Murthy, A., Greenberg, A., Maltz, D. A., Kern, R., Kumar, H., Zikos, M., Wu, H., Kim, C., & Karri, N. (2013). Ananta: Cloud scale load balancing. *Proceedings of ACM SIGCOMM*, 207–218. (Cloud-scale infrastructure economics informing cost optimization strategies for high-throughput workloads.)

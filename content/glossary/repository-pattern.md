@@ -38,3 +38,9 @@ For AI applications, repositories commonly abstract access to model registries (
 ## Practical Guidance
 
 Keep repository interfaces focused on what the domain needs, not what the database can do. Avoid exposing query builders or raw database operations through the repository. Use the repository to encapsulate complex queries that would otherwise be scattered across the codebase. In serverless architectures, repositories abstract the specifics of DynamoDB, S3, or API calls behind clean domain interfaces.
+
+## Sources
+
+- Fowler, M. (2002). *Patterns of Enterprise Application Architecture*. Addison-Wesley. Chapter 10: Data Source Architectural Patterns. (Original repository pattern definition; the data mapping layer between domain objects and database persistence.)
+- Evans, E. (2003). *Domain-Driven Design: Tackling Complexity in the Heart of Software*. Addison-Wesley. Part III, Chapter 6. (Repository as part of the DDD building blocks; abstracting persistence behind a collection-like interface.)
+- Vernon, V. (2013). *Implementing Domain-Driven Design*. Addison-Wesley. Chapter 12: Repositories. (Practical repository implementations; port-and-adapter repositories; in-memory repositories for testing.)

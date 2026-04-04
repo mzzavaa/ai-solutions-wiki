@@ -48,3 +48,9 @@ gRPC supports four communication patterns:
 ML inference services are internal. They do not need browser compatibility (which favours REST/JSON). They pass large numeric arrays where binary serialisation saves bandwidth and CPU. They benefit from HTTP/2 connection multiplexing under high concurrency. And streaming RPCs map naturally to token-by-token LLM generation.
 
 The trade-off: gRPC is harder to debug (binary payloads are not human-readable), requires code generation tooling, and has limited browser support without a proxy like gRPC-Web or Envoy. For public-facing APIs, REST remains the standard. For internal service meshes, gRPC is often the better choice.
+
+## Sources
+
+- Grigorik, I. (2013). *High Performance Browser Networking*. O'Reilly Media. Chapter 12: HTTP/2. (HTTP/2 multiplexing, header compression, and binary framing that gRPC builds on.)
+- Protocol Buffers Team. (2008). *Protocol Buffers: Google's data interchange format*. Google. (Original protobuf documentation; binary encoding, schema evolution, and code generation.)
+- Hauer, T. (2020). Learnings from our journey with gRPC. *Cloudflare Blog*. (Production experience with gRPC at scale; performance characteristics, debugging challenges, and operational considerations.)

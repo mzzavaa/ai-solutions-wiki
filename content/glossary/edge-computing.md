@@ -33,3 +33,9 @@ Instead of sending raw data to the cloud for processing, edge computing deploys 
 Edge deployment constrains model size and compute. Models must be optimized (quantized, pruned, distilled) to run on edge hardware with limited memory and no GPU. Model updates require over-the-air deployment mechanisms with rollback capability.
 
 The common pattern is a hybrid architecture: lightweight models run at the edge for real-time decisions, while the cloud handles training, model updates, complex analysis, and long-term storage. AWS IoT Greengrass supports deploying and managing ML models on edge devices with this hybrid pattern.
+
+## Sources
+
+- Satyanarayanan, M. (2017). The emergence of edge computing. *Computer, 50*(1), 30–39. (Foundational paper defining edge computing and its relationship to cloud; coined "cloudlet" architecture.)
+- Shi, W., et al. (2016). Edge computing: Vision and challenges. *IEEE Internet of Things Journal, 3*(5), 637–646. (Widely cited survey establishing edge computing terminology and architecture principles.)
+- Li, H., Ota, K., & Dong, M. (2018). Learning IoT in edge: Deep learning for the Internet of Things with edge computing. *IEEE Network, 32*(1), 96–101. (Edge AI inference patterns; how deep learning is adapted for resource-constrained edge deployment.)

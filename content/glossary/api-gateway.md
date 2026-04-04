@@ -32,3 +32,9 @@ For AI applications, API gateways are the standard front door for model inferenc
 Use Amazon API Gateway with Lambda for serverless AI APIs - the integration is tight, scaling is automatic, and operational burden is minimal. For high-throughput, low-latency APIs, use HTTP APIs (lower overhead than REST APIs). Implement request validation at the gateway to reject malformed requests before they reach your backend. Set up usage plans and API keys for external consumers to control access and monitor usage patterns.
 
 Watch for the API Gateway payload size limit (10 MB for REST, 10 MB for HTTP APIs) and timeout limits (29 seconds for REST, 30 seconds for HTTP). For long-running AI inference, use asynchronous patterns with Step Functions or SQS rather than synchronous API calls.
+
+## Sources
+
+- Richardson, C., & Smith, F. (2016). *Microservices: From Design to Deployment*. NGINX. (API gateway pattern in microservices; routing, authentication, and aggregation as gateway responsibilities.)
+- Newman, S. (2015). *Building Microservices*. O'Reilly Media. Chapter 6: Deployment. (API gateway as the single entry point for microservice architectures; service composition patterns.)
+- AWS. (2024). *Amazon API Gateway Developer Guide*. Amazon Web Services. (Authoritative reference for REST, HTTP, and WebSocket APIs; quota, integration, and throttling behavior.)

@@ -31,3 +31,9 @@ The AI RMF aligns with ISO/IEC 42001 (AI Management System), the OECD AI Princip
 ## Adoption
 
 While voluntary, the AI RMF has been widely adopted. Federal agencies reference it in procurement requirements. The framework was cited in Executive Order 14110 on AI safety. Industry consortia use it as a baseline for sector-specific AI risk guidance.
+
+## Sources
+
+- National Institute of Standards and Technology. (2023). *Artificial Intelligence Risk Management Framework (AI RMF 1.0)*. NIST AI 100-1. (The framework itself; all GOVERN/MAP/MEASURE/MANAGE functions and trustworthy AI characteristics are defined here.)
+- National Institute of Standards and Technology. (2023). *AI RMF Playbook*. NIST. (Companion document providing suggested actions for each AI RMF subcategory.)
+- Executive Office of the President. (2023). *Executive Order 14110 on the Safe, Secure, and Trustworthy Development and Use of Artificial Intelligence*. The White House. (US federal policy mandating NIST AI RMF adoption for federal agencies; cites AI RMF 1.0 as the foundation.)

@@ -26,3 +26,10 @@ ViT unified the architecture paradigm across vision and language, enabling multi
 ## Practical Considerations
 
 ViTs require large datasets or strong pre-training to outperform CNNs. For smaller datasets, CNNs or hybrid CNN-transformer architectures often perform better. Swin Transformer provides a good balance between ViT's global attention and CNN-like hierarchical processing. Pre-trained ViT models from timm and Hugging Face transfer well to domain-specific tasks. Consider inference cost: ViT attention scales quadratically with the number of patches, so higher-resolution inputs are significantly more expensive than with CNNs.
+
+## Sources
+
+- Dosovitskiy, A., et al. (2021). An image is worth 16x16 words: Transformers for image recognition at scale. *ICLR 2021*. (Original ViT paper; demonstrated pure transformer architectures match CNN performance at scale.)
+- Liu, Z., et al. (2021). Swin Transformer: Hierarchical vision transformer using shifted windows. *ICCV 2021*. (Swin; extended ViT to dense prediction tasks with hierarchical shifted-window attention.)
+- Touvron, H., et al. (2021). Training data-efficient image transformers & distillation through attention. *ICML 2021*. (DeiT; showed ViTs can train competitively on ImageNet-1k alone using distillation.)
+- Bao, H., Dong, L., & Wei, F. (2022). BEiT: BERT pre-training of image transformers. *ICLR 2022*. (BEiT; self-supervised ViT pre-training via masked image modeling, paralleling BERT for vision.)

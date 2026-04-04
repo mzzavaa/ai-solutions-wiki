@@ -39,3 +39,9 @@ Regulatory frameworks are making model documentation mandatory. The EU AI Act re
 ## Maintaining Model Cards
 
 A model card is not a one-time document. It must be updated when the model is retrained, when new limitations are discovered, when evaluation results change, or when the intended use evolves. Integrate model card updates into the model deployment pipeline so that a model cannot be promoted to production without a current, reviewed model card.
+
+## Sources
+
+- Mitchell, M., et al. (2019). Model cards for model reporting. *FAccT 2019*. (Introduced the model card concept; the foundational paper defining the format and rationale for standardized model documentation.)
+- Gebru, T., et al. (2021). Datasheets for datasets. *Communications of the ACM, 64*(12), 86–92. (Companion to model cards; datasheet standard for training data documentation — the two standards are used together.)
+- Hutchinson, B., et al. (2022). Evaluation gaps in machine learning practice. *FAccT 2022*. (Analysis of evaluation documentation gaps; motivates why model cards need performance breakdowns by subgroup.)

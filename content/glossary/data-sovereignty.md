@@ -31,3 +31,9 @@ AI systems are particularly affected by data sovereignty because training data o
 Common strategies include deploying region-specific infrastructure, using data processing agreements with adequate safeguards, implementing encryption and pseudonymization for cross-border transfers, training separate models per jurisdiction, and adopting federated learning to keep raw data in its origin jurisdiction while still benefiting from distributed model training.
 
 Cloud providers offer region-locked services and sovereign cloud offerings to help organizations meet these requirements without sacrificing the benefits of cloud-scale AI infrastructure.
+
+## Sources
+
+- European Parliament and Council. (2016). *Regulation (EU) 2016/679 (GDPR)*, Chapter V: Transfers of personal data to third countries. Official Journal of the European Union. (Primary legal basis for cross-border data transfer restrictions affecting AI training data.)
+- Court of Justice of the European Union. (2020). *Data Protection Commissioner v. Facebook Ireland Limited and Maximillian Schrems* (Case C-311/18, Schrems II). (Landmark ruling invalidating EU-US Privacy Shield; directly shapes cross-border AI data architecture.)
+- McMahon, A., et al. (2022). Assessing the barriers to digital sovereignty in health AI: A scoping review. *npj Digital Medicine, 5*(1). (Data sovereignty challenges specific to AI healthcare systems; applicable model for cross-sector analysis.)
