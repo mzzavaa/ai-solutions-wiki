@@ -26,3 +26,9 @@ VAEs provide a principled framework for learning latent representations with a w
 ## Practical Considerations
 
 For production use, VAEs excel when the goal is representation learning or anomaly detection rather than photorealistic generation. They are easier to train than GANs and provide a natural anomaly score via reconstruction error. Modern variants like VQ-VAE (used in image and audio tokenization) and hierarchical VAEs have significantly improved generation quality. Many contemporary systems use VAE-style encoders as components within larger architectures, such as the latent space in Stable Diffusion.
+
+## Sources
+
+- Kingma, D. P., & Welling, M. (2014). Auto-encoding variational Bayes. *ICLR 2014*. (Original VAE paper; introduced the reparameterization trick and the ELBO training objective.)
+- Rezende, D. J., Mohamed, S., & Wierstra, D. (2014). Stochastic backpropagation and approximate inference in deep generative models. *ICML 2014*. (Concurrent VAE derivation; independently introduced the same reparameterization approach.)
+- van den Oord, A., & Vinyals, O. (2017). Neural discrete representation learning (VQ-VAE). *NeurIPS 2017*. (VQ-VAE; introduced vector-quantized latent spaces used in DALL-E, Stable Diffusion, and audio tokenization.)

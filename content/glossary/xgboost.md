@@ -36,3 +36,9 @@ XGBoost and its relatives (LightGBM, CatBoost) consistently win machine learning
 ## Alternatives
 
 **LightGBM** trains faster on large datasets due to histogram-based splitting. Often comparable accuracy with better training speed. **CatBoost** handles categorical features natively without encoding and may outperform on datasets with many categorical columns.
+
+## Sources
+
+- Chen, T., & Guestrin, C. (2016). XGBoost: A scalable tree boosting system. *KDD 2016*. (Original XGBoost paper; describes the regularized objective, weighted quantile sketch, sparsity-aware splitting, and cache-aware computation.)
+- Friedman, J. H. (2001). Greedy function approximation: A gradient boosting machine. *Annals of Statistics, 29*(5), 1189–1232. (Gradient boosting framework; the theoretical foundation XGBoost implements and extends.)
+- Ke, G., et al. (2017). LightGBM: A highly efficient gradient boosting decision tree. *NeurIPS 2017*. (LightGBM; introduced GOSS and EFB for faster boosting on large datasets; the main XGBoost alternative.)

@@ -32,3 +32,9 @@ Zero-shot performance varies significantly by task. Models perform well on tasks
 ## Practical Guidance
 
 Always benchmark zero-shot performance before investing in more complex approaches. Use clear, specific instructions. Specify the output format explicitly. If the model produces inconsistent results, adding structure to the prompt (step-by-step instructions, output schema) often improves zero-shot performance more than adding examples would.
+
+## Sources
+
+- Brown, T., et al. (2020). Language models are few-shot learners. *NeurIPS 2020*. (GPT-3; demonstrated zero-shot and few-shot generalization in large language models; defined and named the zero-shot task paradigm for LLMs.)
+- Wei, J., et al. (2022). Finetuned language models are zero-shot learners. *ICLR 2022*. (FLAN; showed that instruction fine-tuning substantially improves zero-shot performance across diverse tasks.)
+- Kojima, T., et al. (2022). Large language models are zero-shot reasoners. *NeurIPS 2022*. (Zero-shot CoT; "Let's think step by step" as a universal zero-shot reasoning enhancement.)

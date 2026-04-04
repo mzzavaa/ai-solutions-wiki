@@ -44,3 +44,9 @@ For model quality, use evaluation-driven development instead: define quality met
 ## Benefits for AI Projects
 
 TDD forces you to design testable interfaces. AI code written without tests tends to tightly couple model calls with business logic, making it impossible to test without calling real models. TDD naturally produces code with clean separation between deterministic logic and model inference, dependency injection for model clients, and well-defined interfaces at service boundaries. These qualities make the codebase easier to test, debug, and maintain.
+
+## Sources
+
+- Beck, K. (2003). *Test-Driven Development: By Example*. Addison-Wesley. (The foundational TDD book; introduced and defined the red-green-refactor cycle.)
+- Fowler, M. (2005). Test-driven development. *martinfowler.com*. (Canonical online reference for TDD terminology and practices.)
+- Freeman, S., & Pryce, N. (2009). *Growing Object-Oriented Software, Guided by Tests*. Addison-Wesley. (Outside-in TDD; acceptance tests driving unit test design — particularly relevant for AI application integration testing.)
