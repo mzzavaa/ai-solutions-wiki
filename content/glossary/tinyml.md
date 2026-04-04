@@ -28,3 +28,9 @@ TinyML extends machine learning to the billions of microcontrollers already depl
 ## Practical Considerations
 
 TinyML models are constrained to simple architectures: small CNNs, decision trees, or single-layer classifiers. Accuracy is necessarily lower than server-side models, so the task must be scoped appropriately. Development requires cross-compilation toolchains and on-device debugging, which adds complexity. Start with Edge Impulse or TensorFlow Lite Micro tutorials to evaluate feasibility for your use case. Power consumption, memory footprint, and inference latency are the key metrics. For tasks requiring more capability than a microcontroller provides, consider stepping up to a Linux-capable edge device running standard ML frameworks.
+
+## Sources
+
+- Warden, P., & Situnayake, D. (2019). *TinyML: Machine Learning with TensorFlow Lite on Arduino and Ultra-Low-Power Microcontrollers*. O'Reilly Media. (Foundational reference for TinyML deployment; defines the field and workflow.)
+- Banbury, C., et al. (2021). MLPerf Tiny: Benchmarking machine learning on microcontrollers. *NeurIPS 2021 Datasets and Benchmarks Track*. (Standard benchmark suite for TinyML performance evaluation across devices.)
+- David, R., et al. (2021). TensorFlow Lite Micro: Embedded machine learning for TinyML systems. *Proceedings of Machine Learning and Systems (MLSys), 3*. (Architecture and design of TF Lite Micro; the primary TinyML inference framework.)

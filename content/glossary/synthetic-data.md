@@ -37,3 +37,9 @@ Synthetic data is artificially generated data that mimics the statistical proper
 ## Limitations
 
 Synthetic data is only as good as the model that generates it. If the generation model does not capture important patterns or distributions in the real data, models trained on synthetic data will underperform on real-world inputs. Validation against real data is essential: train on synthetic data, but always evaluate on real data. Synthetic data can also amplify biases present in the seed data used to train the generator. Regular audits comparing synthetic data distributions against real-world benchmarks are necessary to maintain quality.
+
+## Sources
+
+- Xu, L., et al. (2019). Modeling tabular data using conditional GAN. *NeurIPS 2019*. (CTGAN; GAN-based tabular synthetic data generation.)
+- Jordon, J., Yoon, J., & van der Schaar, M. (2019). PATE-GAN: Generating synthetic data with differential privacy guarantees. *ICLR 2019*. (Privacy-preserving synthetic data using differential privacy + GANs.)
+- Tremblay, J., et al. (2018). Training deep networks with synthetic data: Bridging the reality gap by domain randomization. *CVPR 2018 Workshops*. (Domain randomization for sim-to-real transfer; foundational synthetic data method for vision.)
