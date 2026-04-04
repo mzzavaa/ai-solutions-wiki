@@ -31,3 +31,9 @@ Effective defenses use multiple layers: input validation and sanitization, outpu
 ## Real-World Impact
 
 Prompt injection attacks have been demonstrated against customer service chatbots (causing them to offer unauthorized discounts), AI email assistants (exfiltrating sensitive data), and code generation tools (injecting malicious code). As LLM applications gain access to tools and APIs, the potential impact of prompt injection grows significantly.
+
+## Sources
+
+- Perez, F., & Ribeiro, I. (2022). Ignore previous prompt: Attack techniques for language models. *NeurIPS ML Safety Workshop 2022*. (First systematic characterization of prompt injection attacks.)
+- Greshake, K., et al. (2023). Not what you've signed up for: Compromising real-world LLM-integrated applications with indirect prompt injection. *ACM CCS Workshop on AISec 2023*. (Indirect prompt injection via external content.)
+- OWASP Foundation. (2023). *OWASP Top 10 for Large Language Model Applications, Version 1.1*. LLM01: Prompt Injection. (Industry-standard vulnerability classification and mitigation guidance.)

@@ -35,3 +35,8 @@ Unlike supervised learning, there is no single "correct" answer to evaluate agai
 Use unsupervised learning when you have large amounts of data but few or no labels, when you want to discover structure you did not know existed, or as a preprocessing step before supervised learning. It is particularly valuable for exploratory analysis on new datasets where the relevant categories or patterns are not yet defined.
 
 The main limitation is evaluation. Without labels, quantifying model quality requires domain expertise and often subjective judgment. Combine unsupervised results with domain knowledge and validate findings with subject-matter experts before acting on them.
+
+## Sources
+
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning*, 2nd ed. Springer. Chapter 14: Unsupervised Learning. (Standard reference covering clustering, PCA, and ICA.)
+- Hinton, G.E., & Salakhutdinov, R.R. (2006). Reducing the dimensionality of data with neural networks. *Science, 313*(5786), 504–507. (Autoencoder pre-training for unsupervised feature learning; reignited interest in deep learning.)

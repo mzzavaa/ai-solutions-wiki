@@ -26,3 +26,10 @@ Multimodal models collapse the complexity of building separate vision, language,
 ## Practical Considerations
 
 Multimodal inference costs more than text-only processing because image and audio tokens are added to the context. A single image may consume 500-2000 tokens depending on resolution. Evaluate whether multimodal capability is necessary for your use case or whether a text extraction preprocessing step is sufficient. For document processing, compare multimodal LLM accuracy against specialized OCR pipelines. Latency and cost scale with the total number of tokens across all modalities.
+
+## Sources
+
+- Radford, A., et al. (2021). Learning transferable visual models from natural language supervision. *ICML 2021*. (CLIP; contrastive text-image pretraining foundational for multimodal models.)
+- Li, J., et al. (2023). BLIP-2: Bootstrapping language-image pre-training with frozen image encoders and large language models. *ICML 2023*. (Efficient multimodal architecture connecting vision encoder to LLM.)
+- Liu, H., et al. (2024). Visual instruction tuning. *NeurIPS 2023*. (LLaVA; open-source vision-language instruction tuning.)
+- Team, G., et al. (2023). Gemini: A family of highly capable multimodal models. *arXiv:2312.11805*. (Gemini; natively multimodal model trained across text, images, audio, video.)

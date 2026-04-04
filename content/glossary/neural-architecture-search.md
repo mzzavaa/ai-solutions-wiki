@@ -28,3 +28,9 @@ NAS has produced several architectures that outperform human-designed ones, incl
 ## Practical Considerations
 
 Modern NAS is accessible through frameworks like AutoKeras, NNI, and Google Cloud AutoML. However, the search space definition heavily influences results, and NAS can overfit to the proxy task used for evaluation. For most teams, starting with a proven architecture and tuning hyperparameters is more cost-effective than running NAS from scratch. Reserve NAS for high-value tasks where small accuracy gains justify the additional compute and engineering investment.
+
+## Sources
+
+- Zoph, B., & Le, Q.V. (2017). Neural architecture search with reinforcement learning. *ICLR 2017*. (Original NAS paper using RL controller; demonstrated state-of-the-art results at high compute cost.)
+- Liu, H., Simonyan, K., & Yang, Y. (2019). DARTS: Differentiable architecture search. *ICLR 2019*. (Differentiable NAS; reduced search to single GPU-days.)
+- Tan, M., & Le, Q.V. (2019). EfficientNet: Rethinking model scaling for convolutional neural networks. *ICML 2019*. (NAS-discovered scaling rules; widely deployed architecture.)
