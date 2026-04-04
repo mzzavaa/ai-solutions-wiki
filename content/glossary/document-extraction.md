@@ -61,3 +61,9 @@ No extraction technique is 100% accurate. Designing for imperfect accuracy means
 - Monitoring extraction accuracy over time as document types evolve
 
 The appropriate confidence threshold for routing to human review depends on the cost of an extraction error in your domain. For a financial figure on an insurance claim, a 95% confidence threshold with human review for anything below is appropriate. For a document classification that is easily correctable later, a lower threshold may be acceptable.
+
+## Sources
+
+- Smith, R. (2007). An overview of the Tesseract OCR engine. *ICDAR 2007*. (Tesseract; open-source OCR engine behind many document processing pipelines.)
+- Xu, Y., et al. (2020). LayoutLM: Pre-training of text and layout for document image understanding. *KDD 2020*. (Layout-aware document understanding model; foundational for modern IDP systems.)
+- Wei, H., et al. (2021). Robust layout-aware IE for visually rich documents with pre-trained language models. *ACL-IJCNLP 2021*. (Visual document understanding with pre-trained transformers.)

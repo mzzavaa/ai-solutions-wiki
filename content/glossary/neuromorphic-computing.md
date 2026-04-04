@@ -28,3 +28,9 @@ Neuromorphic computing offers orders-of-magnitude improvements in power efficien
 ## Practical Considerations
 
 Neuromorphic computing is still primarily a research and early-commercial technology. Programming models differ fundamentally from conventional deep learning frameworks, requiring expertise in spike-timing and neuromorphic algorithms. Software ecosystems (Intel's Lava framework, Norse for PyTorch) are maturing but limited compared to CUDA/PyTorch. Evaluate neuromorphic hardware for extreme power-constrained edge applications where latency and efficiency outweigh ecosystem maturity. For most workloads, conventional hardware with quantized models remains more practical.
+
+## Sources
+
+- Mead, C. (1990). Neuromorphic electronic systems. *Proceedings of the IEEE, 78*(10), 1629–1636. (Coined "neuromorphic computing"; foundational paper by Carver Mead.)
+- Mahowald, M., & Douglas, R. (1991). A silicon neuron. *Nature, 354*, 515–518. (First VLSI spiking neuron circuit.)
+- Davies, M., et al. (2018). Loihi: A neuromorphic manycore processor with on-chip learning. *IEEE Micro, 38*(1), 82–99. (Intel Loihi chip; practical neuromorphic hardware for research.)

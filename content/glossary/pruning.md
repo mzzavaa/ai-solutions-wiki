@@ -28,3 +28,9 @@ Pruning enables deploying capable models on resource-constrained devices and red
 ## Practical Considerations
 
 For immediate impact, structured pruning is more practical because the resulting models accelerate on standard hardware. Unstructured pruning requires sparse computation support (available in NVIDIA Ampere GPUs and newer via 2:4 structured sparsity). Libraries like PyTorch, TensorFlow Model Optimization Toolkit, and Neural Magic's SparseML provide pruning utilities. Start by pruning 20-30% of parameters and evaluating accuracy, then increase gradually. For LLMs, attention head pruning and layer removal are active research areas with promising early results.
+
+## Sources
+
+- LeCun, Y., Denker, J.S., & Solla, S.A. (1990). Optimal brain damage. *NeurIPS 1990*. (Early magnitude-based pruning using second-order weight saliency.)
+- Han, S., Pool, J., Tran, J., & Dally, W.J. (2015). Learning both weights and connections for efficient neural networks. *NeurIPS 2015*. (Modern unstructured magnitude pruning achieving 90%+ sparsity.)
+- Frankle, J., & Carlin, M. (2019). The lottery ticket hypothesis: Finding sparse, trainable neural networks. *ICLR 2019*. (Lottery ticket hypothesis; winning subnetwork concept.)

@@ -26,3 +26,9 @@ NeRF enables creating photorealistic 3D content from ordinary photographs, democ
 ## Practical Considerations
 
 Training a NeRF requires images with accurate camera poses, typically obtained via structure-from-motion tools like COLMAP. Quality depends heavily on image coverage and consistency (uniform lighting, no moving objects). Instant-NGP and Gaussian Splatting have reduced training from hours to minutes. For production, evaluate whether your use case needs the photorealism of NeRF/Gaussian Splatting or whether traditional 3D reconstruction methods (photogrammetry, LiDAR) are sufficient. Storage and rendering costs vary significantly across methods.
+
+## Sources
+
+- Mildenhall, B., et al. (2020). NeRF: Representing scenes as neural radiance fields for view synthesis. *ECCV 2020*. (Original NeRF paper.)
+- Müller, T., et al. (2022). Instant neural graphics primitives with a multiresolution hash encoding. *SIGGRAPH 2022*. (Instant-NGP; reduced NeRF training from hours to seconds.)
+- Kerbl, B., et al. (2023). 3D Gaussian Splatting for real-time radiance field rendering. *SIGGRAPH 2023*. (3DGS; real-time NeRF rendering via Gaussian primitives.)

@@ -32,3 +32,9 @@ Required safeguards include the right to obtain human intervention from the cont
 Many AI deployments technically fall under Article 22's restrictions. Credit scoring systems, automated recruitment tools, insurance pricing algorithms, and welfare eligibility assessments all make decisions that significantly affect individuals. Organizations must either ensure meaningful human review of AI-generated recommendations (making the decision not solely automated) or rely on one of the exceptions with appropriate safeguards.
 
 The definition of "meaningful human intervention" is critical. A human who rubber-stamps every AI recommendation without genuine review does not constitute meaningful intervention. The human reviewer must have the authority and competence to override the automated decision and must actually exercise independent judgment.
+
+## Sources
+
+- European Parliament and Council. (2016). *Regulation (EU) 2016/679 (GDPR)*, Article 22: Automated individual decision-making, including profiling. Official Journal of the European Union.
+- Article 29 Working Party. (2018). *Guidelines on Automated Individual Decision-Making and Profiling*. WP251rev.01. (Authoritative guidance on GDPR Article 22 scope and interpretation.)
+- Wachter, S., Mittelstadt, B., & Russell, C. (2017). Counterfactual explanations without opening the black box: Automated decisions and the GDPR. *Harvard Journal of Law and Technology, 31*(2). (Analysis of right-to-explanation under GDPR.)

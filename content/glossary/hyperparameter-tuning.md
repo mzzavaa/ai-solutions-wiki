@@ -32,3 +32,9 @@ Hyperparameters significantly affect model performance. The same architecture wi
 Start with established defaults for your architecture (published in papers or framework documentation). Tune the most impactful hyperparameters first: learning rate, batch size, and model size typically matter most. Use a small subset of your data for initial tuning, then validate the best configuration on the full dataset.
 
 Set a compute budget for tuning and stick to it. Diminishing returns set in quickly - the difference between a well-tuned and perfectly-tuned model is usually smaller than the difference between good data and bad data. For most enterprise applications, spending more effort on data quality yields better returns than exhaustive hyperparameter optimization.
+
+## Sources
+
+- Bergstra, J., & Bengio, Y. (2012). Random search for hyper-parameter optimization. *JMLR, 13*, 281–305. (Demonstrated random search outperforms grid search; standard justification for abandoning exhaustive grid search.)
+- Snoek, J., Larochelle, H., & Adams, R.P. (2012). Practical Bayesian optimization of machine learning algorithms. *NeurIPS 2012*. (Bayesian optimization for hyperparameter tuning; standard reference.)
+- Jaderberg, M., et al. (2017). Population based training of neural networks. *arXiv:1711.09846*. (Population-Based Training; DeepMind's approach to joint hyperparameter and weight optimization.)

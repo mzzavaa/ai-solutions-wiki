@@ -30,3 +30,9 @@ While large-scale quantum advantage for ML has not yet been demonstrated on prac
 ## Practical Considerations
 
 Current quantum hardware (50-1000+ qubits) is noisy and limited in circuit depth, restricting practical QML to small problem sizes. Frameworks like Qiskit (IBM), Cirq (Google), PennyLane (Xanadu), and Amazon Braket enable experimentation. For most organizations, quantum-inspired classical algorithms offer more immediate value than running on actual quantum hardware. Monitor QML progress for domain-specific breakthroughs, particularly in chemistry and optimization, but do not plan production systems around quantum advantage in the near term.
+
+## Sources
+
+- Biamonte, J., et al. (2017). Quantum machine learning. *Nature, 549*, 195–202. (Survey of QML algorithms and potential quantum advantages.)
+- Cerezo, M., et al. (2021). Variational quantum algorithms. *Nature Reviews Physics, 3*, 625–644. (Comprehensive review of variational quantum circuits and their limitations.)
+- Harrow, A.W., Hassidim, A., & Lloyd, S. (2009). Quantum algorithm for linear systems of equations. *Physical Review Letters, 103*(15). (HHL algorithm; theoretical quantum speedup for linear algebra underlying quantum ML claims.)
