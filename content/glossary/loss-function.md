@@ -32,3 +32,9 @@ The loss function is what the model optimizes, so it must align with your actual
 For most standard tasks, use the established loss function: cross-entropy for classification, MSE or MAE for regression. When standard losses produce models that are technically accurate but misaligned with business needs, consider custom losses that weight different types of errors according to their business impact. For example, in fraud detection, the cost of missing a fraudulent transaction far exceeds the cost of a false positive, which justifies asymmetric loss weighting.
 
 Monitor both the loss value and business metrics during training. A decreasing loss that does not improve business metrics indicates a misalignment between the loss function and the actual objective.
+
+## Sources
+
+- Goodfellow, I., Bengio, Y., & Courville, A. (2016). *Deep Learning.* MIT Press. Chapter 6: Deep Feedforward Networks — cross-entropy and MSE loss derivations. Free online at deeplearningbook.org.
+- Vapnik, V. (1998). *Statistical Learning Theory.* Wiley. (Theoretical foundation relating loss functions to generalization risk.)
+- Schroff, F., Kalenichenko, D., & Philbin, J. (2015). FaceNet: A unified embedding for face recognition and clustering. *CVPR 2015*. (Triplet loss for metric learning.)

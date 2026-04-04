@@ -35,3 +35,9 @@ PCA captures only linear relationships. If the meaningful structure in your data
 ## Practical Guidance
 
 Examine the cumulative explained variance to choose the number of components - retaining 90-95% of variance is a common threshold. Always standardize features first. Use PCA as a quick first step for dimensionality reduction; if results are insufficient, move to non-linear methods. For very large datasets, randomized PCA implementations (available in scikit-learn) provide significant speedup with minimal accuracy loss.
+
+## Sources
+
+- Pearson, K. (1901). On lines and planes of closest fit to systems of points in space. *Philosophical Magazine, 2*(11), 559–572. (Original PCA formulation.)
+- Hotelling, H. (1933). Analysis of a complex of statistical variables into principal components. *Journal of Educational Psychology, 24*(6), 417–441. (Independent modern formulation of PCA.)
+- Jolliffe, I.T. (2002). *Principal Component Analysis*, 2nd ed. Springer. (Standard reference textbook.)
