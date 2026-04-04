@@ -41,3 +41,9 @@ The main limitations are prediction speed and memory. Computing distances to all
 ## When to Use It
 
 KNN works well for small-to-medium datasets with low-to-moderate dimensionality, recommendation systems, and as a baseline classifier. It is particularly useful for problems where the decision boundary is highly irregular. For large datasets or high-dimensional data, consider tree-based methods or neural networks instead.
+
+## Sources
+
+- Cover, T., & Hart, P. (1967). Nearest neighbor pattern classification. *IEEE Transactions on Information Theory, 13*(1), 21–27. (Foundational KNN paper; proved that the nearest neighbor error rate is asymptotically bounded by twice the Bayes error rate.)
+- Bellman, R. (1957). *Dynamic Programming*. Princeton University Press. (Coined the "curse of dimensionality"; directly explains why KNN degrades in high-dimensional spaces.)
+- Muja, M., & Lowe, D. G. (2014). Scalable nearest neighbor algorithms for high dimensional data. *IEEE Transactions on Pattern Analysis and Machine Intelligence, 36*(11), 2227–2240. (FLANN; approximate nearest neighbor algorithms that make KNN practical in higher dimensions.)

@@ -38,3 +38,9 @@ Experiment tracking captures every training run. The best runs are registered in
 ## Tools
 
 Common model registry implementations include MLflow Model Registry, Amazon SageMaker Model Registry, Vertex AI Model Registry, and Azure ML Model Registry. MLflow's open-source registry is widely adopted and integrates with most ML frameworks and deployment platforms.
+
+## Sources
+
+- Chen, A., et al. (2020). Developments in MLflow: A system to accelerate the machine learning lifecycle. *DEEM Workshop at SIGMOD 2020*. (MLflow system design; model registry as a core component of the ML lifecycle management platform.)
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *NeurIPS 2015*. (Identified lack of model versioning and governance as major ML technical debt; motivates the model registry pattern.)
+- Zaharia, M., et al. (2018). Accelerating the machine learning lifecycle with MLflow. *IEEE Data Engineering Bulletin, 41*(4), 39–45. (MLflow design and the argument for unified model tracking and registry infrastructure.)

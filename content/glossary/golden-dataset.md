@@ -47,3 +47,9 @@ Golden datasets evolve as the system changes. When the model intentionally chang
 ## Common Mistakes
 
 Building a golden dataset from only easy cases, then being surprised when the system fails on hard production queries. Letting the dataset go stale as the product evolves, so it no longer represents real usage. Making the dataset too small (under 50 cases), which produces unreliable metrics with wide confidence intervals. Using model-generated golden answers without human review, which embeds the model's biases into the benchmark.
+
+## Sources
+
+- Rajpurkar, P., et al. (2016). SQuAD: 100,000+ questions for machine comprehension of text. *EMNLP 2016*. (SQuAD benchmark; canonical example of a human-curated golden dataset for NLP evaluation.)
+- Gehrmann, S., et al. (2021). The GEM benchmark: Natural language generation, its evaluation and metrics. *ACL 2021*. (GEM; multi-task NLG benchmark demonstrating best practices for golden dataset construction and multi-metric evaluation.)
+- Bowman, S. R., et al. (2015). A large annotated corpus for learning natural language inference. *EMNLP 2015*. (SNLI; widely used golden dataset methodology for NLI; documented annotation process for building reliable evaluation benchmarks.)

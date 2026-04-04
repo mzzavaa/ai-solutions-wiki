@@ -37,3 +37,9 @@ Model drift is typically caused by data drift (the input distribution changes), 
 **Alerting and investigation** - Not all drift requires automated retraining. Some drift signals indicate data quality issues, pipeline bugs, or business changes that should be investigated and addressed at the source rather than masked by retraining.
 
 Organizations should establish clear ownership and response procedures for model drift alerts. A drift detection system without a clear human or automated response process generates alerts that are ignored until a business impact forces action.
+
+## Sources
+
+- Gama, J., et al. (2014). A survey on concept drift adaptation. *ACM Computing Surveys, 46*(4), 1–37. (Comprehensive survey of drift types and detection methods; standard reference for model drift literature.)
+- Baena-García, M., et al. (2006). Early drift detection method. *ECML/PKDD International Workshop on Knowledge Discovery from Data Streams*. (EDDM; statistical method for detecting drift from error rates; one of the foundational drift detection algorithms.)
+- Breck, E., et al. (2017). The ML test score: A rubric for ML production readiness. *IEEE Big Data 2017*. (Production ML quality criteria including model monitoring and drift response procedures.)
