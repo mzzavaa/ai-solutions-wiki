@@ -31,3 +31,8 @@ For AI initiatives, data mesh improves data quality (domain experts own their da
 ## Practical Considerations
 
 Data mesh is an organizational change, not a technology purchase. It requires domain teams that are willing and able to take ownership of data products, a mature platform team that can provide self-serve tooling, and executive support for the cultural shift. It is most appropriate for large organizations with multiple distinct domains. Small organizations with a single data team should not adopt data mesh.
+
+## Sources
+
+- Dehghani, Z. (2019). How to move beyond a monolithic data lake to a distributed data mesh. *martinfowler.com*. (Original blog post introducing the data mesh concept.)
+- Dehghani, Z. (2022). *Data Mesh: Delivering Data-Driven Value at Scale.* O'Reilly Media. (Full book treatment by the originator.)

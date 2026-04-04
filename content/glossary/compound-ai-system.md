@@ -32,3 +32,9 @@ Key patterns include retrieval-augmented generation (RAG), where a retriever sup
 Compound systems introduce engineering challenges absent in single-model deployments. Each component has its own failure modes, latency characteristics, and cost profile. End-to-end evaluation requires testing component interactions, not just individual parts. Observability must trace requests through multiple components. And optimization requires understanding bottlenecks across the full pipeline rather than just improving one model.
 
 The shift toward compound AI systems reflects a maturation of the field from model-centric to systems-centric thinking, where engineering and architecture matter as much as model quality.
+
+## Sources
+
+- Zaharia, M., et al. (2024). The shift from models to compound AI systems. *BAIR Blog, UC Berkeley*. (Coined "compound AI system"; foundational framing of systems-first AI architecture.)
+- Chase, H. (2022). LangChain. *GitHub: langchain-ai/langchain*. (Popularized composable LLM pipelines; practical instantiation of compound AI.)
+- Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *NeurIPS 2020*. (RAG; core compound AI component for grounding models in retrieved knowledge.)

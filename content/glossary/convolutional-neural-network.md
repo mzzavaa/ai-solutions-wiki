@@ -26,3 +26,13 @@ CNNs transformed computer vision from hand-engineered feature pipelines to end-t
 ## Practical Considerations
 
 For production deployments, architecture choice depends on the compute budget. MobileNet and EfficientNet-Lite target mobile and edge inference. ResNet remains a reliable baseline for server-side workloads. Pre-trained CNN backbones from ImageNet are widely available and transfer well to domain-specific tasks, reducing both training time and data requirements. Many production vision systems still use CNN feature extractors even within larger multimodal pipelines.
+
+## Sources
+
+- LeCun, Y., Bottou, L., Bengio, Y., & Haffner, P. (1998). Gradient-based learning applied to document recognition. *Proceedings of the IEEE, 86*(11), 2278–2324. (LeNet; foundational CNN architecture.)
+- Krizhevsky, A., Sutskever, I., & Hinton, G.E. (2012). ImageNet classification with deep convolutional neural networks. *NeurIPS 25*. (AlexNet; large-scale CNN breakthrough on ImageNet.)
+- He, K., Zhang, X., Ren, S., & Sun, J. (2016). Deep residual learning for image recognition. *CVPR 2016*. (ResNet; skip connections for very deep networks.)
+- Simonyan, K., & Zisserman, A. (2015). Very deep convolutional networks for large-scale image recognition. *ICLR 2015*. (VGGNet.)
+- Szegedy, C., et al. (2015). Going deeper with convolutions. *CVPR 2015*. (GoogLeNet / Inception architecture.)
+- Howard, A.G., et al. (2017). MobileNets: Efficient convolutional neural networks for mobile vision applications. *arXiv:1704.04861*. (Depthwise separable convolutions for edge inference.)
+- Tan, M., & Le, Q.V. (2019). EfficientNet: Rethinking model scaling for convolutional neural networks. *ICML 2019*.

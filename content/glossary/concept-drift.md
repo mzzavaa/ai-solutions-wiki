@@ -37,3 +37,10 @@ When ground truth labels are not available in real time, proxy metrics such as p
 ## Response Strategies
 
 When concept drift is detected, the model must be updated to reflect the new relationship. Retraining on recent data that reflects the current concept is the most common response. Windowed retraining, where only the most recent N months of data are used, naturally adapts to gradual drift. For sudden drift, the model may need to be retrained immediately on post-drift data, accepting a temporary period of reduced performance while sufficient new labeled data accumulates.
+
+## Sources
+
+- Widmer, G., & Kubat, M. (1996). Learning in the presence of concept drift and hidden contexts. *Machine Learning, 23*(1), 69–101. (Early formal treatment of concept drift types.)
+- Gama, J., et al. (2014). A survey on concept drift adaptation. *ACM Computing Surveys, 46*(4). (Comprehensive survey of detection methods and adaptation strategies.)
+- Bifet, A., & Gavalda, R. (2007). Learning from time-changing data with adaptive windowing. *SIAM International Conference on Data Mining*. (ADWIN algorithm for adaptive windowing.)
+- Gama, J., et al. (2004). Learning with drift detection. *Brazilian Symposium on Artificial Intelligence*. (DDM — Drift Detection Method.)

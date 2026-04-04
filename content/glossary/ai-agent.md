@@ -37,3 +37,10 @@ Agents are not appropriate for simple question-answering, single-step transforma
 ## Risks and Limitations
 
 Agents can enter infinite loops, take incorrect actions with real-world consequences, or accumulate errors across steps. Production agent systems require guardrails: maximum step limits, human-in-the-loop approval for high-impact actions, sandboxed execution environments, and comprehensive logging of every action taken.
+
+## Sources
+
+- Yao, S., et al. (2023). ReAct: Synergizing reasoning and acting in language models. *ICLR 2023*. (ReAct pattern; foundational agentic architecture combining reasoning and action.)
+- Significant-Gravitas. (2023). AutoGPT: An autonomous GPT-4 experiment. *GitHub*. (Early widely-used autonomous agent demonstration.)
+- Schick, T., et al. (2024). Toolformer: Language models can teach themselves to use tools. *NeurIPS 2024*. (Self-taught tool use in language models.)
+- Wang, L., et al. (2024). A survey on large language model based autonomous agents. *Frontiers of Computer Science, 18*(6). (Comprehensive survey of agent architectures, memory, planning, and tool use.)

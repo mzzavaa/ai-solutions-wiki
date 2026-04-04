@@ -32,3 +32,9 @@ The variance across folds is also informative. High variance in cross-validation
 ## Practical Guidance
 
 Use K-fold cross-validation during model development and hyperparameter tuning. Reserve a completely separate holdout test set for final evaluation - this test set should never be used during development. For time-series data, always use temporal splits to avoid the subtle but devastating data leakage that random splits introduce. For large datasets where K-fold is computationally prohibitive, a single stratified split with a sufficiently large test set may be adequate.
+
+## Sources
+
+- Stone, M. (1974). Cross-validatory choice and assessment of statistical predictions. *Journal of the Royal Statistical Society B, 36*(2), 111–147. (Original cross-validation paper.)
+- Kohavi, R. (1995). A study of cross-validation and bootstrap for accuracy estimation and model selection. *IJCAI 1995*. (Systematic comparison of K-fold, LOO, and bootstrap; standard reference for K=10 choice.)
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning*, 2nd ed. Springer. Chapter 7: Model Assessment and Selection.

@@ -36,3 +36,9 @@ For technical leaders, this framework guides resource allocation decisions. If a
 **Regularization** (dropout, weight decay, early stopping) reduces variance at the cost of slightly increased bias, often improving overall performance.
 
 **Cross-validation** provides a reliable estimate of the bias-variance balance by evaluating the model across multiple data splits, revealing whether performance is consistent (low variance) or erratic (high variance).
+
+## Sources
+
+- Geman, S., Bienenstock, E., & Doursat, R. (1992). Neural networks and the bias/variance dilemma. *Neural Computation, 4*(1), 1–58. (Formal decomposition of bias and variance in supervised learning.)
+- Friedman, J.H. (1997). On bias, variance, 0/1-loss, and the curse-of-dimensionality. *Data Mining and Knowledge Discovery, 1*(1), 55–77. (Extension to classification loss functions.)
+- Hastie, T., Tibshirani, R., & Friedman, J. (2009). *The Elements of Statistical Learning*, 2nd ed. Springer. Chapter 7: Model Assessment and Selection. (Standard graduate-level textbook treatment.)

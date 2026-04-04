@@ -53,6 +53,15 @@ For AWS-native pipelines, Rekognition integrates directly with S3, Lambda, Step 
 
 All three services offer similar accuracy on common tasks. Choose based on your cloud platform rather than capability differences for standard use cases.
 
+## Sources
+
+- LeCun, Y., Bottou, L., Bengio, Y., & Haffner, P. (1998). Gradient-based learning applied to document recognition. *Proceedings of the IEEE, 86*(11), 2278–2324. (LeNet; foundational CNN paper for image recognition.)
+- Krizhevsky, A., Sutskever, I., & Hinton, G.E. (2012). ImageNet classification with deep convolutional neural networks. *Advances in Neural Information Processing Systems 25*. (AlexNet; demonstrated deep CNN superiority on large-scale image classification.)
+- Simonyan, K., & Zisserman, A. (2015). Very deep convolutional networks for large-scale image recognition. *ICLR 2015*. (VGGNet; depth vs. performance analysis.)
+- He, K., et al. (2016). Deep residual learning for image recognition. *CVPR 2016*. (ResNet; introduced skip connections enabling much deeper networks.)
+- Dosovitskiy, A., et al. (2021). An image is worth 16×16 words: Transformers for image recognition at scale. *ICLR 2021*. (ViT; vision transformer architecture.)
+- Ren, S., et al. (2015). Faster R-CNN: Towards real-time object detection with region proposal networks. *NeurIPS 2015*. (Faster R-CNN; standard object detection architecture.)
+
 ## Related Articles
 
 - [Amazon Rekognition]({{< relref "/tools/amazon-rekognition.md" >}}) - detailed service guide

@@ -44,3 +44,10 @@ ARIMA struggles with long-range dependencies, complex non-linear patterns, and m
 ## When to Use It
 
 ARIMA is the right starting point for univariate time series forecasting. It works well for demand forecasting, financial time series, inventory planning, and any domain with trend and seasonal patterns. Always benchmark complex models against ARIMA - it frequently wins on small-to-medium datasets where sophisticated models overfit.
+
+## Sources
+
+- Box, G.E.P., & Jenkins, G.M. (1970). *Time Series Analysis: Forecasting and Control.* Holden-Day. (Original ARIMA formulation; the model is sometimes called Box-Jenkins.)
+- Box, G.E.P., Jenkins, G.M., Reinsel, G.C., & Ljung, G.M. (2015). *Time Series Analysis: Forecasting and Control*, 5th ed. Wiley.
+- Hyndman, R.J., & Athanasopoulos, G. (2021). *Forecasting: Principles and Practice*, 3rd ed. OTexts. Available at otexts.com/fpp3. (Free online textbook; definitive modern treatment of ARIMA, SARIMA, and state space models.)
+- Makridakis, S., Spiliotis, E., & Assimakopoulos, V. (2018). Statistical and machine learning forecasting methods: Concerns and ways forward. *PLOS ONE, 13*(3). (M4 competition results; ARIMA as competitive baseline.)

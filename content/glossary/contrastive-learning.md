@@ -28,3 +28,10 @@ Contrastive learning unlocked practical self-supervised learning at scale. CLIP 
 ## Practical Considerations
 
 CLIP models and SimCLR-pretrained backbones are available from OpenAI and Hugging Face. For custom contrastive learning, data augmentation strategy and the number of negatives are critical design choices. Contrastive loss can collapse if augmentations are too weak or too strong. For most teams, using pre-trained contrastive models as feature extractors and fine-tuning on task-specific data is more practical than training from scratch.
+
+## Sources
+
+- Chen, T., Kornblith, S., Norouzi, M., & Hinton, G. (2020). A simple framework for contrastive learning of visual representations. *ICML 2020*. (SimCLR.)
+- He, K., Fan, H., Wu, Y., Xie, S., & Girshick, R. (2020). Momentum contrast for unsupervised visual representation learning. *CVPR 2020*. (MoCo.)
+- Radford, A., et al. (2021). Learning transferable visual models from natural language supervision. *ICML 2021*. (CLIP; text-image contrastive pretraining.)
+- Oord, A., Li, Y., & Vinyals, O. (2018). Representation learning with contrastive predictive coding. *arXiv:1807.03748*. (CPC; contrastive predictive coding framework.)
