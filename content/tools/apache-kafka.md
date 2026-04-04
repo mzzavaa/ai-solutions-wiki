@@ -9,6 +9,13 @@ related:
   - tools/amazon-eventbridge
   - tools/apache-flink
   - tools/apache-spark
+alternatives:
+  aws: tools/amazon-msk
+  azure: tools/azure-event-hubs
+  gcp: tools/google-cloud-pub-sub
+solutions:
+  - solutions/finance/fraud-detection
+  - solutions/finance/anti-money-laundering
 ---
 
 Apache Kafka is a distributed event streaming platform capable of handling trillions of events per day. Originally conceived as a messaging queue, Kafka has evolved into a full event streaming platform used for building real-time data pipelines and streaming applications. It combines messaging, storage, and stream processing to allow organizations to publish, subscribe to, store, and process streams of records in real time and at scale.

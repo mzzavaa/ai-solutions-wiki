@@ -8,6 +8,10 @@ related:
   - tools/amazon-cloudwatch
   - tools/prometheus
   - tools/grafana
+alternatives:
+  aws: tools/amazon-cloudwatch
+  azure: tools/azure-monitor
+  gcp: tools/google-cloud-monitoring
 ---
 
 OpenTelemetry (OTel) is a vendor-neutral, open-source observability framework that provides a single set of APIs, SDKs, and tools for generating, collecting, processing, and exporting telemetry data -- traces, metrics, and logs -- from applications and infrastructure. It is the industry standard for instrumenting cloud-native software, supported by virtually every observability vendor, cloud provider, and monitoring platform. OpenTelemetry's goal is to make high-quality telemetry a built-in feature of all software, eliminating vendor lock-in for observability data.

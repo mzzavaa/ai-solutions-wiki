@@ -4,6 +4,13 @@ description: "Using Terraform to provision and manage AWS infrastructure for AI 
 date: 2026-03-24
 categories: [Tools]
 tags: ["devops", "intermediate", "terraform", "infrastructure-as-code", "iac", "cloud", "provisioning"]
+related:
+  - tools/github-actions
+  - tools/aws-lambda
+  - tools/amazon-bedrock
+alternatives:
+  aws: tools/aws-amplify
+  azure: tools/azure-data-factory
 ---
 
 Terraform is an infrastructure-as-code tool that provisions cloud resources from declarative configuration files. You describe the desired state of infrastructure in HCL (HashiCorp Configuration Language), Terraform computes the difference from the current state, and applies the changes. For AI projects on AWS, Terraform manages everything from S3 buckets and Lambda functions to Bedrock configurations and IAM roles.

@@ -4,6 +4,23 @@ description: "What SageMaker is, when to use it instead of Bedrock, key capabili
 date: 2026-03-24
 categories: [Tools]
 tags: ["ai-ml", "advanced", "amazon-sagemaker", "ml-training", "model-deployment", "aws", "mlops"]
+related:
+  - tools/amazon-bedrock
+  - tools/kubeflow
+  - tools/mlflow
+  - comparisons/sagemaker-vs-bedrock
+  - comparisons/sagemaker-vs-vertex-ai
+alternatives:
+  open_source:
+    - tools/kubeflow
+    - tools/mlflow
+    - tools/ray
+  azure: tools/azure-machine-learning
+  gcp: tools/google-vertex-ai
+solutions:
+  - solutions/finance/credit-scoring
+  - solutions/healthcare/medical-imaging
+  - solutions/manufacturing
 ---
 
 Amazon SageMaker is AWS's managed platform for training, deploying, and monitoring custom machine learning models. It sits at the other end of the spectrum from Bedrock: Bedrock gives you access to pre-built foundation models through an API; SageMaker gives you the infrastructure to train your own models or fine-tune existing ones.

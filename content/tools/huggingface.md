@@ -8,6 +8,13 @@ related:
   - tools/amazon-sagemaker
   - tools/amazon-bedrock
   - tools/mlflow
+alternatives:
+  aws: tools/amazon-bedrock
+  azure: tools/azure-machine-learning
+  gcp: tools/google-vertex-ai
+solutions:
+  - solutions/healthcare/medical-imaging
+  - solutions/finance/credit-scoring
 ---
 
 Hugging Face is the central platform for open-source AI. It hosts over 500,000 models, 100,000 datasets, and provides libraries (Transformers, Diffusers, Tokenizers, Datasets) that have become the standard for working with ML models in Python. For enterprise AI projects, Hugging Face serves multiple roles: a source of pre-trained models, a library ecosystem for model integration, and an infrastructure option for model deployment.
