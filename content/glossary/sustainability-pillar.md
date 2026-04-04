@@ -46,3 +46,9 @@ AI workloads - particularly large language model training and inference - have s
 **Experiment discipline** reduces waste in the model development phase. Running large-scale training experiments that are unlikely to yield improvements consumes energy with little expected return. Investing in smaller-scale experiments to validate hypotheses before committing to full training runs reduces both cost and energy consumption.
 
 The sustainability pillar frames environmental responsibility not as a constraint on performance or capability but as a design quality: a workload that accomplishes its purpose with less energy is, in that respect, better designed than one that accomplishes the same purpose with more.
+
+## Sources
+
+- AWS. (2023). *AWS Well-Architected Framework: Sustainability Pillar*. Amazon Web Services. (Definitive reference for the six sustainability design principles: understand your impact, establish sustainability goals, maximize utilization, use managed services, reduce downstream impact, and use efficient programming languages.)
+- Patterson, D., Gonzalez, J., Le, Q., Liang, C., Munguia, L.-M., Rothchild, D., So, D., Texier, M., & Dean, J. (2021). Carbon considerations for large language model and code synthesis training. *IEEE Micro*, 42(5), 9–16. (Carbon cost of ML model training; efficient hardware selection, renewable energy regions, and model reuse to reduce AI carbon footprint.)
+- Lannelongue, L., Grealey, J., & Inouye, M. (2021). Green algorithms: Quantifying the carbon footprint of computation. *Advanced Science*, 8(12), 2100707. (Carbon footprint quantification for computational workloads; the methodology underlying AWS Customer Carbon Footprint Tool calculations.)

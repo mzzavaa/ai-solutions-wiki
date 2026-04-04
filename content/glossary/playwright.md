@@ -36,3 +36,9 @@ Playwright is generally preferred over Cypress for AI application testing due to
 ## Getting Started
 
 Install with `pip install playwright && playwright install` (Python) or `npm init playwright@latest` (Node.js). Playwright downloads browser binaries automatically and provides a code generator (`playwright codegen`) that records user interactions and generates test scripts.
+
+## Sources
+
+- Microsoft. (2020). *Playwright: Reliable end-to-end testing for modern web apps*. Microsoft. (Playwright architecture; auto-waiting, network interception, browser contexts, and tracing — the primary reference for the tool.)
+- Fowler, M. (2012). Test pyramid. *martinfowler.com*. (E2E tests at the top of the pyramid; Playwright as the tool for the smallest but most critical subset of E2E tests.)
+- Playwright documentation. (2024). *Best practices*. playwright.dev. (Page object model, network mocking, and parallel test execution patterns for production Playwright suites.)

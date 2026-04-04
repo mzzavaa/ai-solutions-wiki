@@ -36,3 +36,9 @@ Redis is limited by available memory. Data that exceeds memory capacity must be 
 ## Practical Guidance
 
 Use ElastiCache Serverless for variable workloads to avoid capacity planning. Set appropriate TTLs on cached data to prevent stale responses. Use Redis Cluster mode for datasets that exceed single-node memory. Monitor memory usage, eviction rates, and cache hit ratios. For AI inference caching, implement semantic caching (cache based on embedding similarity rather than exact key match) to improve hit rates for paraphrased queries.
+
+## Sources
+
+- Carlson, J. L. (2013). *Redis in Action*. Manning. (Redis data structures: strings, hashes, lists, sets, sorted sets; caching, rate limiting, and session storage patterns.)
+- Sanfilippo, S. (2009). Redis: Remote Dictionary Server. *Redis.io*. (Original Redis implementation; in-memory data structure store with persistence options — the primary reference for Redis architecture.)
+- Mäkinen, M. (2020). Semantic caching for AI applications. *Redis Blog*. (Semantic caching using Redis vector similarity search; applies to AI prompt caching and RAG query deduplication.)

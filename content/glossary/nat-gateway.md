@@ -34,3 +34,9 @@ For AI workloads that transfer large amounts of data (model downloads, training 
 ## Practical Guidance
 
 Deploy one NAT gateway per availability zone for high availability. Use VPC endpoints for all frequently accessed AWS services to minimize NAT gateway data charges. Monitor NAT gateway costs in Cost Explorer, especially for data-intensive workloads. If outbound internet access is not required, omit the NAT gateway entirely to reduce cost and attack surface.
+
+## Sources
+
+- Srisuresh, P., & Holdrege, M. (1999). *IP Network Address Translator (NAT) Terminology and Considerations*. RFC 2663. IETF. (Original RFC defining NAT terminology; address translation mechanics and the distinction between inbound and outbound connection handling.)
+- Rosenberg, J., & Rosen, E. (2002). Cisco Guide to Harden Cisco IOS Devices. (NAT gateway security model; why private subnets with NAT are preferred over public IP assignment for backend resources.)
+- AWS. (2024). *Amazon VPC User Guide: NAT Gateway*. Amazon Web Services. (NAT gateway placement, routing table configuration, Elastic IP assignment, and cost structure on AWS.)

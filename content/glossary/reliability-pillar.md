@@ -36,3 +36,9 @@ AI workloads introduce reliability concerns that go beyond standard infrastructu
 **Graceful degradation** when AI is unavailable means that the application continues to function - with reduced capability - rather than failing entirely. If an AI-powered recommendation engine is unavailable, the application should display popular items or user history rather than a blank page or error. Graceful degradation requires that AI features are architected as enhancements to core functionality rather than dependencies of it.
 
 Reliability design for AI systems also includes testing: load testing inference endpoints to validate scaling behavior, chaos testing to verify fallback logic, and periodic drills to verify that disaster recovery procedures work as documented.
+
+## Sources
+
+- AWS. (2023). *AWS Well-Architected Framework: Reliability Pillar*. Amazon Web Services. (Definitive reference for the four reliability design principles: automatically recover from failure, test recovery procedures, scale horizontally, and manage change in automation.)
+- Nygard, M. T. (2018). *Release It!* (2nd ed.). Pragmatic Bookshelf. (Stability patterns: circuit breakers, bulkheads, timeouts, and fail-fast design — the engineering basis for reliable distributed systems.)
+- Beyer, B., Jones, C., Petoff, J., & Murphy, N. R. (Eds.). (2016). *Site Reliability Engineering*. O'Reilly Media. Chapter 3: Embracing Risk. (Error budgets and the tradeoff between reliability and development velocity; the framework underlying the reliability pillar.)

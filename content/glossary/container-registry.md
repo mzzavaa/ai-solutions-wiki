@@ -60,3 +60,9 @@ For AI applications, include the model version or configuration hash in the tag 
 - [Serverless Computing]({{< relref "serverless.md" >}}) - Lambda supports container image deployment
 - [Terraform]({{< relref "/tools/terraform.md" >}}) - IaC for ECR lifecycle policies and permissions
 - [Infrastructure as Code]({{< relref "infrastructure-as-code.md" >}}) - managing registry configuration
+
+## Sources
+
+- Merkel, D. (2014). Docker: Lightweight Linux containers for consistent development and deployment. *Linux Journal*, 239. (Docker container image format and registry architecture; the foundation for modern container registries.)
+- Burns, B., Grant, B., Oppenheimer, D., Brewer, E., & Wilkes, J. (2016). Borg, Omega, and Kubernetes. *ACM Queue*, 14(1), 70–93. (Container orchestration at scale; image distribution and registry requirements for cluster-scale deployments.)
+- AWS. (2024). *Amazon ECR User Guide*. Amazon Web Services. (ECR private registries, lifecycle policies, vulnerability scanning, and cross-account access configuration.)

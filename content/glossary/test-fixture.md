@@ -58,3 +58,9 @@ def test_pipeline_uses_chunks(sample_chunks, mock_model):
 ## Best Practices
 
 Keep fixtures small and focused. A fixture that creates an entire application state is hard to understand and maintain. Prefer composing small fixtures over creating large monolithic ones. Store large fixture data in files rather than inline in test code. Version fixture files alongside tests in source control so they evolve together.
+
+## Sources
+
+- Meszaros, G. (2007). *xUnit Test Patterns: Refactoring Test Code*. Addison-Wesley. Chapter 5: Test Fixtures. (Definitive taxonomy of test fixtures: fresh fixtures, shared fixtures, and inline setup vs. delegated setup patterns.)
+- Beck, K. (2003). *Test-Driven Development: By Example*. Addison-Wesley. (Test fixtures in the context of TDD; setUp and tearDown lifecycle; the relationship between fixtures and test isolation.)
+- Fowler, M. (2006). ObjectMother. *martinfowler.com*. (Object Mother pattern for building test fixtures; factory methods for creating test data in a consistent, reusable way.)

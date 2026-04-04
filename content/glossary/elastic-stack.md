@@ -31,3 +31,9 @@ Centralized logging is essential for troubleshooting distributed systems. When a
 ## Practical Guidance
 
 Use structured logging (JSON format) from applications to enable rich querying without complex parsing. Set index lifecycle policies to rotate and delete old data automatically, controlling storage costs. Use index patterns and Kibana saved searches to standardize how the team investigates issues. For most AWS workloads, Amazon OpenSearch Service reduces operational burden significantly compared to self-managed Elasticsearch clusters. Consider log sampling for high-volume, low-value logs (health checks, routine operations) to control costs.
+
+## Sources
+
+- Gormley, C., & Tong, Z. (2015). *Elasticsearch: The Definitive Guide*. O'Reilly Media. (Comprehensive reference for Elasticsearch; inverted index, distributed search, and aggregation framework.)
+- Shay Banon. (2010). Elasticsearch. *GitHub/elastic*. (Original release of Elasticsearch; distributed REST-based search engine built on Apache Lucene.)
+- Turnbull, J. (2014). *The Logstash Book*. James Turnbull. (Log collection, parsing, and enrichment with Logstash; structured logging pipeline design for distributed systems.)

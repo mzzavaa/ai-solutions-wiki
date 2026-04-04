@@ -45,3 +45,9 @@ Toil consumes engineering capacity that could improve the system. A team spendin
 ## Practical Guidance
 
 Track toil by having the team log manual operational tasks for a sprint. Categorize by time spent, frequency, and automation feasibility. Prioritize automating the highest-frequency, most-automatable tasks first. Use runbooks to document toil tasks, then convert runbooks into automation scripts, then into self-healing systems. Accept that some toil is irreducible - the goal is reduction, not elimination.
+
+## Sources
+
+- Beyer, B., Jones, C., Petoff, J., & Murphy, N. R. (Eds.). (2016). *Site Reliability Engineering: How Google Runs Production Systems*. O'Reilly Media. Chapter 5: Eliminating Toil. (Original SRE definition of toil; the 50% toil budget rule; distinction between toil and overhead work.)
+- Beyer, B., Murphy, N. R., Rensin, D. K., Kawahara, K., & Thorne, S. (Eds.). (2018). *The Site Reliability Workbook*. O'Reilly Media. Chapter 6: Eliminating Toil. (Practical toil tracking, categorization, and elimination strategies.)
+- Kim, G., Humble, J., Debois, P., & Willis, J. (2016). *The DevOps Handbook*. IT Revolution Press. (Automation as the antidote to toil; the relationship between toil elimination and delivery performance.)

@@ -46,3 +46,9 @@ For CI environments, use service containers or Docker Compose with `--abort-on-c
 ## Placement in the Test Pyramid
 
 Integration tests sit between unit tests and end-to-end tests. They are slower than unit tests (seconds to minutes vs milliseconds) but faster and cheaper than E2E tests. A typical AI application has hundreds of unit tests, tens of integration tests, and a handful of E2E tests. Integration tests should run on every pull request alongside unit tests, completing within 5 minutes.
+
+## Sources
+
+- Fowler, M. (2018). Integration testing. *martinfowler.com*. (Definition and scope of integration tests; distinction from unit and E2E tests; where to draw integration test boundaries.)
+- Cohn, M. (2009). *Succeeding with Agile: Software Development Using Scrum*. Addison-Wesley. (Test pyramid: integration tests as the middle layer balancing confidence and speed.)
+- Newman, S. (2015). *Building Microservices*. O'Reilly Media. Chapter 7: Testing. (Integration testing for microservices; contract testing and the challenge of testing distributed systems.)

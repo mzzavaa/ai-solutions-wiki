@@ -41,6 +41,8 @@ In practice, engineers often use Big-O loosely to mean tight bound, but understa
 
 Choosing an algorithm with a better asymptotic complexity can be the difference between a program that finishes in seconds and one that runs for days. A O(n log n) sort on one million elements performs roughly 20 million operations, while an O(n^2) sort on the same input requires one trillion. Big-O notation gives engineers a shared vocabulary to compare algorithms and reason about scalability before writing a single line of code.
 
-## Source
+## Sources
 
-Cormen, T. H., Leiserson, C. E., Rivest, R. L., and Stein, C. (2022). *Introduction to Algorithms* (4th ed.). MIT Press. (CLRS, Chapter 3: Characterizing Running Times)
+- Cormen, T. H., Leiserson, C. E., Rivest, R. L., & Stein, C. (2022). *Introduction to Algorithms* (4th ed.). MIT Press. Chapter 3: Characterizing Running Times. (CLRS; the definitive reference for Big-O, Big-Ω, and Big-Θ notation; worst-case, best-case, and average-case complexity analysis.)
+- Knuth, D. E. (1968). *The Art of Computer Programming*, Vol. 1: Fundamental Algorithms. Addison-Wesley. (Original formalization of algorithm analysis; introduced the O() notation as used in computer science.)
+- Sedgewick, R., & Wayne, K. (2011). *Algorithms* (4th ed.). Addison-Wesley. (Practical algorithm complexity analysis; tilde notation and the relationship between mathematical bounds and real performance.)
