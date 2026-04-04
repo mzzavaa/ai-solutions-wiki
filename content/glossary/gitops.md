@@ -30,3 +30,9 @@ For AI platforms with multiple services, models, and configurations, GitOps ensu
 ## Practical Guidance
 
 Use ArgoCD for Kubernetes-based deployments and Flux for lighter-weight setups. Store application configuration separately from application code (different repos or directories) so configuration changes do not trigger code rebuilds. Use pull requests for all changes, including infrastructure, enabling review before deployment. Implement progressive delivery (canary, blue-green) through GitOps tools rather than manual processes. Protect the main branch with required reviews and automated checks.
+
+## Sources
+
+- Limoncelli, T. A. (2018). GitOps: A path to more self-service IT. *ACM Queue, 16*(3). (Introduced and named GitOps; defined Git as the single source of truth for operational state.)
+- Weaveworks. (2017). Guide to GitOps. *Weaveworks blog*. (Foundational GitOps definition from the team that created Flux; defined pull-based reconciliation as the core pattern.)
+- Humble, J., & Farley, D. (2010). *Continuous Delivery*. Addison-Wesley. (Deployment pipeline practices GitOps implements; audit trails and rollback through version control.)

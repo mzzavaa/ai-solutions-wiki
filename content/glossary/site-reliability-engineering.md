@@ -32,3 +32,9 @@ For AI platforms, SRE practices are essential because AI systems have unique rel
 ## Practical Guidance
 
 Start with SLOs - define what "reliable" means for your AI service from the user's perspective (inference latency under 2 seconds for 99% of requests, availability of 99.9%). Instrument your system to measure SLIs accurately. Calculate error budgets monthly. When the budget is spent, shift priorities to reliability work. Identify your top sources of toil and automate the highest-impact ones first. You do not need a dedicated SRE team to adopt SRE practices - any engineering team can start with SLOs and error budgets.
+
+## Sources
+
+- Beyer, B., Jones, C., Petoff, J., & Murphy, N. R. (Eds.). (2016). *Site Reliability Engineering: How Google Runs Production Systems*. O'Reilly Media. (The foundational SRE book; defines SLOs, error budgets, toil, and the SRE role as originated at Google.)
+- Beyer, B., Murphy, N. R., Rensin, D. K., Kawahara, K., & Thorne, S. (Eds.). (2018). *The Site Reliability Workbook: Practical Ways to Implement SRE*. O'Reilly Media. (Practical implementation guide for SRE practices including SLO implementation and error budget policies.)
+- Forsgren, N., Humble, J., & Kim, G. (2018). *Accelerate: The Science of Lean Software and DevOps*. IT Revolution Press. (DORA research; empirical evidence for reliability engineering practices improving both deployment frequency and reliability.)

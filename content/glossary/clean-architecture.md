@@ -32,3 +32,9 @@ Clean architecture makes business logic testable without databases, APIs, or fra
 ## Practical Guidance
 
 Apply clean architecture to the core of your system where business logic is complex and likely to outlive specific technology choices. Do not over-architect simple CRUD services or Lambda functions with minimal business logic. The goal is protecting valuable business logic from technology churn, not adding layers to every piece of code. In practice, many teams find that hexagonal architecture (a closely related pattern) provides the same benefits with a simpler mental model.
+
+## Sources
+
+- Martin, R. C. (2012). The clean architecture. *The Clean Coder blog*. (Original post defining the clean architecture model; concentric layers with inward dependency rule.)
+- Martin, R. C. (2017). *Clean Architecture: A Craftsman's Guide to Software Structure and Design*. Prentice Hall. (Full book treatment of clean architecture; entities, use cases, interface adapters, and frameworks layers.)
+- Cockburn, A. (2005). Hexagonal architecture. *Alistair Cockburn's blog*. (Ports and adapters / hexagonal architecture; the closely related pattern mentioned; many teams find it equivalent with simpler terminology.)

@@ -65,3 +65,9 @@ Feature flags allow:
 ## Flag Hygiene
 
 Feature flags are technical debt if left indefinitely. When a rollout is complete and the old model is retired, remove the flag and the conditional logic from the codebase. A codebase with many stale flags is harder to understand and maintain, and flags that reference removed functionality cause confusion during incident response.
+
+## Sources
+
+- Hodgson, P. (2017). Feature toggles (aka feature flags). *martinfowler.com*. (Canonical feature flags reference; defines toggle types (release, experiment, ops, permission) and flag lifecycle management.)
+- Humble, J., & Farley, D. (2010). *Continuous Delivery*. Addison-Wesley. Chapter 10: Deploying and Releasing Applications. (Feature flags as a continuous delivery mechanism enabling trunk-based development.)
+- Kohavi, R., Tang, D., & Xu, Y. (2020). *Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing*. Cambridge University Press. (A/B testing methodology that feature flags enable; experimental design for gradual model rollouts.)

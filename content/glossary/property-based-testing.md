@@ -89,3 +89,9 @@ test("model response parser never throws", () => {
 Property-based tests run as standard test suite items. In CI, set the `max_examples` parameter to a higher value than in local development to increase coverage at the cost of longer CI times. A typical configuration runs 100 examples locally and 1,000 examples in CI.
 
 When Hypothesis or fast-check finds a failing case, it outputs the minimal shrunk example that triggers the failure. This is usually immediately actionable - the simplest input that breaks your property is often exactly what you need to understand the bug.
+
+## Sources
+
+- Claessen, K., & Hughes, J. (2000). QuickCheck: A lightweight tool for random testing of Haskell programs. *ICFP 2000*. (Original QuickCheck paper; defined property-based testing, shrinking, and the generator abstraction that Hypothesis and fast-check implement.)
+- MacIver, D., et al. (2019). Hypothesis: A new approach to property-based testing. *Journal of Open Source Software, 4*(43). (Hypothesis; the primary Python property-based testing library; describes the Conjecture algorithm for finding and shrinking counterexamples.)
+- Fink, G., & Bishop, M. (1997). Property-based testing: A new approach to testing for assurance. *ACM SIGSOFT Software Engineering Notes, 22*(4), 74–80. (Formal properties as test oracles; theoretical basis for testing non-deterministic systems like AI pipelines.)
