@@ -39,3 +39,9 @@ In organisations with hundreds of databases, data lakes, and streaming pipelines
 **Amundsen** (Lyft, open-source) - Focused on search and discovery with a simple, effective interface.
 
 For AI teams, a data catalog answers the most common question: "Is there data I can use for this, and can I trust it?"
+
+## Sources
+
+- Dama International. (2017). *DAMA-DMBOK: Data Management Body of Knowledge* (2nd ed.). Technics Publications. (Standard reference for data governance including catalog and metadata management practices.)
+- Terrizzano, I., Schwarz, P., Roth, M., & Colino, J. (2015). Data wrangling: The challenging journey from the wild to the lake. *CIDR 2015*. (Described data discovery challenges that motivated modern data catalog solutions.)
+- Hai, R., Geisler, S., & Quix, C. (2016). Constance: An intelligent data lake system. *SIGMOD 2016*. (Early academic data lake catalog system; foundation for modern automated metadata ingestion approaches.)

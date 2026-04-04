@@ -61,3 +61,9 @@ Voice selection criteria:
 - [Amazon Polly]({{< relref "/tools/amazon-polly.md" >}}) - detailed service guide
 - [Speech-to-Text (STT)]({{< relref "speech-to-text.md" >}}) - the reverse operation
 - [Remotion]({{< relref "/tools/remotion.md" >}}) - combining TTS audio with programmatic video
+
+## Sources
+
+- van den Oord, A., et al. (2016). WaveNet: A generative model for raw audio. *arXiv:1609.03499*. (WaveNet; breakthrough neural vocoder from DeepMind that enabled natural-sounding TTS; basis for current cloud TTS architectures.)
+- Shen, J., et al. (2018). Natural TTS synthesis by conditioning WaveNet on mel spectrogram predictions. *ICASSP 2018*. (Tacotron 2; end-to-end neural TTS model combining sequence-to-sequence mel spectrogram prediction with WaveNet.)
+- Kim, J., et al. (2021). Conditional variational autoencoder with adversarial learning for end-to-end text-to-speech. *ICML 2021*. (VITS; current state-of-the-art end-to-end TTS achieving single-model speech synthesis.)

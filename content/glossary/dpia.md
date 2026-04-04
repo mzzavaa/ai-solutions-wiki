@@ -29,3 +29,9 @@ The data controller is responsible for conducting the DPIA, though they should s
 ## AI-Specific Considerations
 
 AI systems present unique DPIA challenges. Training data may contain biases that lead to discriminatory outcomes. Model opacity makes it difficult to explain decisions to data subjects. Continuous learning systems may drift from their original processing purpose. A thorough DPIA for AI should address data provenance, bias testing results, explainability mechanisms, and ongoing monitoring plans.
+
+## Sources
+
+- European Parliament and Council. (2016). *Regulation (EU) 2016/679 (GDPR)*, Article 35: Data Protection Impact Assessment. Official Journal of the European Union. (Primary legal source; defines the mandatory DPIA requirement and minimum content.)
+- Article 29 Working Party. (2017). *Guidelines on Data Protection Impact Assessment (DPIA)*. WP248rev.01. (Authoritative supervisory authority guidance on when DPIAs are required and how to conduct them.)
+- Information Commissioner's Office. (2021). *Data Protection Impact Assessments for AI*. ICO. (Practical regulator guidance specifically addressing DPIA requirements for machine learning systems.)

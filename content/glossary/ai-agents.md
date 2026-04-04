@@ -52,3 +52,10 @@ This design enables agents to handle tasks that require information gathering, d
 ## When to Use Agents
 
 Use agents for tasks that genuinely require iteration, information gathering, or multi-step decision making that cannot be modeled as a fixed pipeline. Avoid agents for tasks that can be accomplished with one or two sequential LLM calls - the added complexity of agent loops introduces failure modes that are harder to debug and monitor than linear pipelines.
+
+## Sources
+
+- Yao, S., et al. (2022). ReAct: Synergizing reasoning and acting in language models. *ICLR 2023*. (ReAct; defined the reason-act-observe loop that underpins most modern agent architectures.)
+- Shinn, N., et al. (2023). Reflexion: Language agents with verbal reinforcement learning. *NeurIPS 2023*. (Reflexion; agents that improve through verbal self-reflection rather than gradient updates.)
+- Wang, L., et al. (2024). A survey on large language model based autonomous agents. *Frontiers of Computer Science, 18*(6). (Comprehensive survey of agent architectures, tools, planning, and memory mechanisms.)
+- Significant-Gravitas. (2023). AutoGPT: An autonomous GPT-4 experiment. *GitHub*. (AutoGPT; early influential autonomous agent demonstrating long-horizon task execution with LLMs.)
