@@ -55,3 +55,9 @@ Use a vector database when:
 - You need to find similar items by meaning rather than exact properties
 
 For small-scale RAG (under a few hundred documents), loading all content directly into the model context may be simpler than maintaining a vector database. The overhead of a vector database is justified when the content exceeds what fits in a context window or when sub-second retrieval latency matters.
+
+## Sources
+
+- Johnson, J., Douze, M., & Jégou, H. (2019). Billion-scale similarity search with GPUs. *IEEE Transactions on Big Data, 7*(3), 535–547. (FAISS; foundational ANN search library powering most vector databases.)
+- Malkov, Y.A., & Yashunin, D.A. (2020). Efficient and robust approximate nearest neighbor search using hierarchical navigable small world graphs. *IEEE TPAMI, 42*(4), 824–836. (HNSW; the primary indexing algorithm used in Pinecone, Weaviate, Qdrant, and pgvector.)
+- Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *NeurIPS 2020*. (RAG; established vector retrieval as the standard approach for grounding LLM responses.)

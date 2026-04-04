@@ -39,3 +39,9 @@ Feature stores also simplify compliance and auditing. Because feature computatio
 ## Tools
 
 Common feature store implementations include Amazon SageMaker Feature Store, Feast (open-source), Tecton, Hopsworks, and Databricks Feature Store. Each provides the core offline/online serving capability with varying levels of integration into the broader ML platform ecosystem.
+
+## Sources
+
+- Uber Engineering. (2017). Meet Michelangelo: Uber's machine learning platform. *Uber Engineering Blog*. (First major public description of a feature store in production.)
+- Gojek Tech. (2020). Feast: Feature Store for Machine Learning. *GitHub: feast-dev/feast*. (Open-source feature store; most widely adopted implementation.)
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *NeurIPS 2015*. (Training-serving skew as a key source of ML technical debt; the core problem feature stores address.)

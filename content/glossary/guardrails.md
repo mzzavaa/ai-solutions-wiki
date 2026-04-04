@@ -51,3 +51,9 @@ Guardrails are configured in the Bedrock console and applied by reference in API
 ## Guardrails and Compliance
 
 For regulated industries (financial services, healthcare, legal), guardrails are often required by regulatory frameworks or internal compliance policies. Bedrock Guardrails logs guardrail invocations and interventions, providing the audit trail needed to demonstrate compliance. Consult your compliance team when defining guardrail policies for regulated workloads.
+
+## Sources
+
+- Amodei, D., et al. (2016). Concrete problems in AI safety. *arXiv:1606.06565*. (Foundational taxonomy of AI safety problems that guardrails address.)
+- Inan, H., et al. (2023). Llama Guard: LLM-based input-output safeguard for human-AI conversations. *arXiv:2312.06674*. (Meta's classifier-based LLM guardrail system.)
+- European Parliament and Council. (2024). *Regulation (EU) 2024/1689 (EU AI Act)*, Articles 9 and 16. (Risk management and technical documentation requirements creating regulatory demand for guardrails.)

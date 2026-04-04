@@ -33,3 +33,10 @@ The most visible application of RL in modern AI is Reinforcement Learning from H
 ## Practical Considerations
 
 RL is harder to deploy than supervised learning. It requires a well-defined reward function (reward hacking is a real risk), a safe environment for exploration (you cannot let an RL agent experiment with production systems freely), and significant compute for training. Most enterprise teams encounter RL indirectly through RLHF-aligned language models rather than building RL systems from scratch.
+
+## Sources
+
+- Sutton, R.S., & Barto, A.G. (2018). *Reinforcement Learning: An Introduction*, 2nd ed. MIT Press. (Standard RL textbook; free online at incompleteideas.net.)
+- Mnih, V., et al. (2015). Human-level control through deep reinforcement learning. *Nature, 518*, 529–533. (DQN; landmark deep RL result on Atari games.)
+- Schulman, J., et al. (2017). Proximal policy optimization algorithms. *arXiv:1707.06347*. (PPO; de facto standard policy gradient algorithm for RLHF.)
+- Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. *NeurIPS 2022*. (RLHF applied to LLMs; InstructGPT.)
