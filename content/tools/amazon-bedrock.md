@@ -15,6 +15,17 @@ related:
   - tools/google-vertex-ai
   - tools/ollama
   - tools/vllm
+alternatives:
+  open_source:
+    - tools/ollama
+    - tools/vllm
+  azure: tools/azure-openai
+  gcp: tools/google-vertex-ai
+solutions:
+  - solutions/finance/fraud-detection
+  - solutions/finance/credit-scoring
+  - solutions/retail/recommendation-engine
+  - solutions/healthcare/medical-imaging
 ---
 
 Amazon Bedrock is AWS's managed service for foundation model access. It provides a single API to call multiple large language models from different providers, alongside managed infrastructure for knowledge bases, agents, and output safety controls. For enterprise teams building on AWS, it is the primary integration point for generative AI capabilities.

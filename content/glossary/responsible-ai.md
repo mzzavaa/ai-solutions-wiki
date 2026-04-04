@@ -36,3 +36,11 @@ Organizations typically establish an AI ethics review process that evaluates new
 ## Regulatory Context
 
 Responsible AI principles are increasingly codified in regulation. The EU AI Act, NIST AI RMF, and ISO/IEC 42001 all formalize requirements around transparency, fairness, accountability, and risk management. Organizations that embed responsible AI practices early are better positioned for regulatory compliance than those that treat it as an afterthought.
+
+## Sources
+
+- Jobin, A., Ienca, M., & Vayena, E. (2019). The global landscape of AI ethics guidelines. *Nature Machine Intelligence, 1*(9), 389–399. (Systematic review of 84 AI ethics guidelines; identifies convergent principles.)
+- Gebru, T., et al. (2021). Datasheets for datasets. *Communications of the ACM, 64*(12), 86–92. (Dataset documentation standard; enables transparency about training data.)
+- Mitchell, M., et al. (2019). Model cards for model reporting. *FAT* 2019*. (Model cards; standardized AI system documentation for transparency.)
+- National Institute of Standards and Technology. (2023). *AI Risk Management Framework (AI RMF 1.0)*. NIST.
+- European Parliament and Council. (2024). *Regulation (EU) 2024/1689 (EU AI Act)*. (Binding regulation operationalizing responsible AI principles.)

@@ -35,3 +35,10 @@ Data drift is about the inputs changing. Concept drift is about the relationship
 ## Response Strategies
 
 When data drift is detected, evaluate whether model performance has actually degraded. Not all drift is harmful; the model may generalize well to the new distribution. If performance has degraded, retrain on data that includes the new distribution. If drift is temporary or seasonal, consider maintaining multiple model versions or using a windowed training approach. Investigate the root cause of the drift to determine whether it represents a genuine change in the operating environment or a data quality issue that should be fixed upstream.
+
+## Sources
+
+- Quiñonero-Candela, J., et al. (Eds.). (2009). *Dataset Shift in Machine Learning.* MIT Press. (Comprehensive treatment of covariate, prior probability, and concept shifts.)
+- Sugiyama, M., & Kawanabe, M. (2012). *Machine Learning in Non-Stationary Environments.* MIT Press.
+- Gretton, A., et al. (2012). A kernel two-sample test. *JMLR, 13*, 723–773. (Maximum Mean Discrepancy; standard multivariate drift detection test.)
+- Klaise, J., et al. (2020). Alibi Detect: Algorithms for outlier, adversarial and drift detection. *JMLR, 23*(1). (Open-source drift detection library with reference implementations.)

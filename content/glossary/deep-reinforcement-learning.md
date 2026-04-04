@@ -28,3 +28,11 @@ Deep RL is the primary technique for producing AI systems that act in complex en
 ## Practical Considerations
 
 Deep RL is notoriously sample-inefficient and sensitive to hyperparameters. For LLM alignment, RLHF requires high-quality preference data and careful reward model design to avoid reward hacking. Teams should consider whether DPO or other simpler alignment methods suffice before investing in full RLHF pipelines. For non-language applications, simulation environments are essential since real-world data collection is too slow and expensive for deep RL's data requirements.
+
+## Sources
+
+- Mnih, V., et al. (2015). Human-level control through deep reinforcement learning. *Nature, 518*, 529–533. (DQN; first deep RL system achieving human-level Atari game performance.)
+- Mnih, V., et al. (2016). Asynchronous methods for deep reinforcement learning. *ICML 2016*. (A3C.)
+- Schulman, J., et al. (2017). Proximal policy optimization algorithms. *arXiv:1707.06347*. (PPO; widely-used policy gradient method for LLM alignment and robotics.)
+- Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. *NeurIPS 2022*. (InstructGPT/RLHF applied to LLMs.)
+- Rafailov, R., et al. (2023). Direct preference optimization: Your language model is secretly a reward model. *NeurIPS 2023*. (DPO; eliminates separate reward model step.)

@@ -41,3 +41,8 @@ For technical leaders, the confusion matrix drives the business conversation abo
 ## Practical Guidance
 
 Always examine the confusion matrix, not just summary metrics. For multi-class problems, the confusion matrix extends to NxN dimensions, revealing which classes the model confuses with each other. These confusion patterns often suggest specific improvements: better training data for confused classes, additional features that distinguish them, or hierarchical classification approaches.
+
+## Sources
+
+- Powers, D.M.W. (2011). Evaluation: From precision, recall and F-measure to ROC, informedness, markedness and correlation. *Journal of Machine Learning Technologies, 2*(1), 37–63. (Systematic treatment of confusion matrix-derived metrics including F1, MCC.)
+- Fawcett, T. (2006). An introduction to ROC analysis. *Pattern Recognition Letters, 27*(8), 861–874. (Connects confusion matrix thresholding to ROC curves.)

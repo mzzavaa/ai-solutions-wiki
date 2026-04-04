@@ -40,3 +40,9 @@ Redundant and trivial rules are a common problem. Filtering by lift (typically >
 ## When to Use It
 
 Use association rule mining for market basket analysis, recommendation systems, cross-selling strategies, and any scenario where discovering co-occurrence patterns adds business value. It is also useful for feature engineering - discovered associations can become input features for predictive models.
+
+## Sources
+
+- Agrawal, R., Imielinski, T., & Swami, A. (1993). Mining association rules between sets of items in large databases. *ACM SIGMOD 1993*. (Original association rules paper; introduced support and confidence metrics.)
+- Agrawal, R., & Srikant, R. (1994). Fast algorithms for mining association rules. *VLDB 1994*. (Apriori algorithm.)
+- Han, J., Pei, J., & Yin, Y. (2000). Mining frequent patterns without candidate generation. *ACM SIGMOD 2000*. (FP-Growth algorithm; practical improvement over Apriori.)

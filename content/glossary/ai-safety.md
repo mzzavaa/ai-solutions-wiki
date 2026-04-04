@@ -37,3 +37,11 @@ AI safety is the field concerned with preventing AI systems from causing harm, w
 ## Organizational Practices
 
 AI safety requires organizational commitment beyond technical measures. Safety review processes before deployment, incident response procedures for safety failures, clear accountability for safety decisions, and a culture that prioritizes safety over speed-to-market are all necessary components. Regulatory frameworks like the EU AI Act are formalizing these requirements into law.
+
+## Sources
+
+- Russell, S. (2019). *Human Compatible: Artificial Intelligence and the Problem of Control.* Viking. (Accessible treatment of alignment and value misalignment risks.)
+- Amodei, D., et al. (2016). Concrete problems in AI safety. *arXiv:1606.06565*. (Foundational taxonomy of AI safety problems: reward hacking, side effects, safe exploration, distributional shift.)
+- Ouyang, L., et al. (2022). Training language models to follow instructions with human feedback. *NeurIPS 2022*. (InstructGPT/RLHF; alignment via human preference.)
+- Bai, Y., et al. (2022). Constitutional AI: Harmlessness from AI feedback. *arXiv:2212.08073*. (Anthropic's Constitutional AI method.)
+- National Institute of Standards and Technology. (2023). *AI Risk Management Framework (AI RMF 1.0)*. NIST. (US government framework for AI safety and risk management.)

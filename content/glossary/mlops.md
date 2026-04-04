@@ -39,3 +39,10 @@ Without MLOps practices, organizations experience a common failure pattern. A da
 MLOps maturity is often described in levels. Level 0 is manual: models are trained in notebooks and deployed manually. Level 1 automates the training pipeline but deploys manually. Level 2 automates both training and deployment with CI/CD for ML. Level 3 adds automated monitoring, drift detection, and continuous retraining, creating a fully autonomous ML lifecycle.
 
 Most organizations operate at Level 0 or 1. Reaching Level 2 or 3 requires investment in infrastructure, tooling, and organizational processes, but it is the difference between ML as a one-off experiment and ML as a reliable production capability.
+
+## Sources
+
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *NeurIPS 2015*. (Identified the engineering challenges motivating MLOps: entanglement, pipeline jungle, dead experimental code paths.)
+- Baylor, D., et al. (2017). TFX: A TensorFlow-based production-scale machine learning platform. *KDD 2017*. (Google's end-to-end ML platform; influenced MLOps tooling design.)
+- Alla, S., & Adari, S.K. (2021). *Beginning MLOps with MLFlow.* Apress. (Practitioner reference for MLOps with MLflow.)
+- Google Cloud. (2021). *MLOps: Continuous delivery and automation pipelines in machine learning*. cloud.google.com. (MLOps maturity level model.)

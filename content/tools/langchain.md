@@ -9,6 +9,16 @@ related:
   - tools/llamaindex
   - tools/amazon-bedrock
   - tools/openai-api
+alternatives:
+  open_source:
+    - tools/llamaindex
+    - tools/dspy
+  aws: tools/amazon-bedrock
+  azure: tools/azure-openai
+  gcp: tools/google-vertex-ai
+solutions:
+  - solutions/finance/document-processing
+  - solutions/retail/recommendation-engine
 ---
 
 LangChain is the most widely adopted framework for building applications powered by large language models. It provides abstractions for common LLM patterns (retrieval-augmented generation, agents, chains) and integrations with hundreds of models, vector stores, document loaders, and tools. For enterprise AI projects, LangChain accelerates development by providing tested patterns for common workflows and a consistent interface across different LLM providers.

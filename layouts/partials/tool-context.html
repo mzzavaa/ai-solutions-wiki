@@ -1,0 +1,118 @@
+{{/* Tool Context Sidebar Partial
+     Renders on /tools/* pages.
+     Frontmatter fields read:
+       alternatives.open_source  — list of tool page paths (e.g. ["tools/ollama","tools/vllm"])
+       alternatives.aws          — single tool page path
+       alternatives.azure        — single tool page path
+       alternatives.gcp          — single tool page path
+       solutions                 — list of solution page paths
+*/}}
+{{ $isTools := eq .Section "tools" }}
+{{ if $isTools }}
+
+{{/* ── 1. Solutions using this tool ── */}}
+{{ $solutions := slice }}
+{{ with .Params.solutions }}
+  {{ range . }}
+    {{ $p := $.Site.GetPage . }}
+    {{ if $p }}{{ $solutions = $solutions | append $p }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $solutions }}
+<aside class="tool-context-box tool-solutions-box">
+  <h3 class="tool-context-heading">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+    Used In Solutions
+  </h3>
+  <ul class="tool-context-list">
+    {{ range $solutions }}
+    <li>
+      <a href="{{ .Permalink }}">
+        <span class="tool-context-title">{{ .Title }}</span>
+        {{ with .Description }}<span class="tool-context-desc">{{ . | truncate 70 }}</span>{{ end }}
+      </a>
+    </li>
+    {{ end }}
+  </ul>
+</aside>
+{{ else }}
+<aside class="tool-context-box tool-contribute-box">
+  <h3 class="tool-context-heading">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="16"/><line x1="8" x2="16" y1="12" y2="12"/></svg>
+    Add a Solution
+  </h3>
+  <p class="tool-context-body">Know a use case where this tool solves a real problem? Add a solution article and link it here.</p>
+  <a class="tool-context-contribute-link" href="https://github.com/mzzavaa/ai-solutions-wiki/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener">
+    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+    Contribute on GitHub
+  </a>
+</aside>
+{{ end }}
+
+{{/* ── 2. Alternatives ── */}}
+{{ $hasAlt := or .Params.alternatives.open_source (or .Params.alternatives.aws (or .Params.alternatives.azure .Params.alternatives.gcp)) }}
+{{ if $hasAlt }}
+<aside class="tool-context-box tool-alternatives-box">
+  <h3 class="tool-context-heading">
+    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="17 1 21 5 17 9"/><path d="M3 11V9a4 4 0 0 1 4-4h14"/><polyline points="7 23 3 19 7 15"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></svg>
+    Alternatives
+  </h3>
+  <dl class="tool-alt-list">
+
+    {{ with .Params.alternatives.open_source }}
+    <dt class="tool-alt-category">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+      Open Source
+    </dt>
+    <dd class="tool-alt-entries">
+      {{ if reflect.IsSlice . }}
+        {{ range . }}
+          {{ $p := $.Site.GetPage . }}
+          {{ if $p }}<a href="{{ $p.Permalink }}">{{ $p.Title }}</a>{{ end }}
+        {{ end }}
+      {{ else }}
+        {{ $p := $.Site.GetPage . }}
+        {{ if $p }}<a href="{{ $p.Permalink }}">{{ $p.Title }}</a>{{ end }}
+      {{ end }}
+    </dd>
+    {{ end }}
+
+    {{ with .Params.alternatives.aws }}
+    {{ $p := $.Site.GetPage . }}
+    {{ if $p }}
+    <dt class="tool-alt-category">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+      AWS
+    </dt>
+    <dd class="tool-alt-entries"><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></dd>
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.alternatives.azure }}
+    {{ $p := $.Site.GetPage . }}
+    {{ if $p }}
+    <dt class="tool-alt-category">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+      Azure
+    </dt>
+    <dd class="tool-alt-entries"><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></dd>
+    {{ end }}
+    {{ end }}
+
+    {{ with .Params.alternatives.gcp }}
+    {{ $p := $.Site.GetPage . }}
+    {{ if $p }}
+    <dt class="tool-alt-category">
+      <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" x2="22" y1="10" y2="10"/></svg>
+      GCP
+    </dt>
+    <dd class="tool-alt-entries"><a href="{{ $p.Permalink }}">{{ $p.Title }}</a></dd>
+    {{ end }}
+    {{ end }}
+
+  </dl>
+</aside>
+{{ end }}
+
+{{ end }}{{/* end isTools */}}

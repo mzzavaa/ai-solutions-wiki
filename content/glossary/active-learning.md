@@ -45,3 +45,10 @@ Integration with annotation workflows is important. Annotators need a smooth int
 ## When to Use It
 
 Use active learning when labeling is expensive (medical imaging, legal document review, specialized domains) and you have a large pool of unlabeled data. It is most effective early in the labeling process when each new label provides maximum information gain. Combine with semi-supervised learning to leverage both labeled and unlabeled data.
+
+## Sources
+
+- Settles, B. (2010). Active learning literature survey. *University of Wisconsin–Madison Computer Sciences Technical Report 1648*. (Comprehensive survey; standard reference for query strategies.)
+- Lewis, D.D., & Gale, W.A. (1994). A sequential algorithm for training text classifiers. *ACM SIGIR 1994*. (Uncertainty sampling; original formulation.)
+- Seung, H.S., Opper, M., & Sompolinsky, H. (1992). Query by committee. *ACM Workshop on Computational Learning Theory*. (QBC original paper.)
+- Ren, P., et al. (2021). A survey of deep active learning. *ACM Computing Surveys, 54*(9). (Extension of classical methods to deep learning settings.)

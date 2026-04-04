@@ -30,3 +30,9 @@ Transfer learning is the reason modern AI is accessible to organizations without
 Most enterprise AI work today is transfer learning in some form. When you use Amazon Bedrock to call Claude or use a pre-trained embedding model for RAG, you are leveraging transfer learning - someone else invested the compute to pre-train the model, and you adapt its capabilities to your use case through prompting, fine-tuning, or retrieval augmentation.
 
 The decision framework: start with prompt engineering (zero transfer learning cost), move to few-shot prompting, then RAG, then fine-tuning, and only train from scratch if none of those approaches meet your quality requirements.
+
+## Sources
+
+- Pan, S.J., & Yang, Q. (2010). A survey on transfer learning. *IEEE Transactions on Knowledge and Data Engineering, 22*(10), 1345–1359. (Comprehensive survey formalizing transfer learning terminology and taxonomy.)
+- Yosinski, J., et al. (2014). How transferable are features in deep neural networks? *NeurIPS 2014*. (Empirical analysis of which layers transfer and which are task-specific.)
+- Howard, J., & Ruder, S. (2018). Universal language model fine-tuning for text classification. *ACL 2018*. (ULMFiT; established fine-tuning pre-trained LMs as the standard NLP transfer learning paradigm.)

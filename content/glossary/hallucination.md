@@ -41,3 +41,10 @@ Hallucination is more likely when the model is asked about topics with sparse tr
 **Constrained generation** - Limit the model's output to structured formats or predefined options where possible, reducing the opportunity for open-ended fabrication.
 
 Hallucination cannot be fully eliminated from current language models. System design must assume hallucinations will occur and incorporate verification, source attribution, and user education as defense layers.
+
+## Sources
+
+- Ji, Z., et al. (2023). Survey of hallucination in natural language generation. *ACM Computing Surveys, 55*(12). (Comprehensive survey of hallucination types and mitigation approaches.)
+- Maynez, J., et al. (2020). On faithfulness and factuality in abstractive summarization. *ACL 2020*. (Early systematic study of faithfulness failures in neural generation.)
+- Lewis, P., et al. (2020). Retrieval-augmented generation for knowledge-intensive NLP tasks. *NeurIPS 2020*. (RAG; primary mitigation technique grounding generation in retrieved evidence.)
+- Manakul, P., Liusie, A., & Gales, M.J.F. (2023). SelfCheckGPT: Zero-resource black-box hallucination detection for generative large language models. *EMNLP 2023*. (Sampling-based hallucination detection without ground truth.)

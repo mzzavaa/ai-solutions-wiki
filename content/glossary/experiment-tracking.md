@@ -44,3 +44,9 @@ Experiment tracking also supports collaboration. When multiple team members run 
 ## Best Practices
 
 Log everything automatically rather than relying on manual logging. Integrate tracking calls into training scripts so that every run is captured by default. Use consistent naming conventions and tags to make experiments searchable. Compare experiments systematically using the tracking tool's comparison features rather than eyeballing individual results. Archive completed experiment groups with summary notes documenting conclusions.
+
+## Sources
+
+- Chen, T., et al. (2016). Training deep nets with sublinear memory cost. *arXiv:1604.06174*. (Gradient checkpointing; highlights the need for systematic tracking of training configurations.)
+- Zaharia, M., et al. (2018). Accelerating the machine learning lifecycle with MLflow. *VLDB SIGMOD Workshop on Human-In-the-Loop Data Analytics*. (MLflow introduction by Databricks.)
+- Bender, E.M., et al. (2021). On the dangers of stochastic parrots. *FAccT 2021*. (Model documentation and reproducibility imperatives; motivates systematic experiment tracking.)

@@ -28,3 +28,8 @@ MoA demonstrates that model collaboration can surpass individual model capabilit
 ## Practical Considerations
 
 MoA increases latency and cost proportionally to the number of models and layers. A two-layer MoA with three proposers and one aggregator requires four LLM calls per query. This is best suited for high-value, latency-tolerant applications like report generation, complex analysis, or quality-critical content. For real-time applications, single-model inference is usually more practical. Consider MoA when quality improvement justifies the cost multiplier, and start with a simple two-model setup before scaling to more complex configurations.
+
+## Sources
+
+- Wang, J., et al. (2024). Mixture-of-Agents enhances large language model capabilities. *arXiv:2406.04692*. (Original MoA paper; demonstrated collaborative LLM systems surpassing individual models.)
+- Schuster, T., et al. (2022). Confident adaptive language modeling. *NeurIPS 2022*. (Adaptive compute allocation across multiple model tiers; conceptually related to MoA.)

@@ -26,3 +26,9 @@ Flash Attention is one of the most impactful practical optimizations in modern A
 ## Practical Considerations
 
 Flash Attention is available in PyTorch (via torch.nn.functional.scaled_dot_product_attention), Hugging Face Transformers, vLLM, and TensorRT-LLM. It requires compatible GPU hardware (Ampere or newer for full benefits). When deploying long-context models, Flash Attention is effectively required to keep memory costs manageable. Teams should ensure their inference stack supports it, as it is one of the highest-impact optimizations available with zero accuracy tradeoff.
+
+## Sources
+
+- Dao, T., Fu, D.Y., Ermon, S., Rudra, A., & Ré, C. (2022). FlashAttention: Fast and memory-efficient exact attention with IO-awareness. *NeurIPS 2022*. (Flash Attention 1; introduced tiling approach.)
+- Dao, T. (2023). FlashAttention-2: Faster attention with better parallelism and work partitioning. *ICLR 2024*. (Flash Attention 2; 2x throughput improvement.)
+- Shah, J., et al. (2024). FlashAttention-3: Fast and accurate attention for H100 GPUs. *NeurIPS 2024 Workshop*. (Flash Attention 3; FP8 and asynchronous compute for Hopper architecture.)

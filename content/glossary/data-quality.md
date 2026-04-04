@@ -39,3 +39,10 @@ The phrase "garbage in, garbage out" understates the problem. With AI, garbage i
 **Schema Enforcement** - Rejecting data that does not match the expected schema. Schema-on-read approaches defer this validation and frequently result in late discovery of breaking changes.
 
 Data quality is not a one-time cleanup project. It is a continuous process that requires tooling, ownership, and cultural commitment.
+
+## Sources
+
+- Redman, T.C. (1998). The impact of poor data quality on the typical enterprise. *Communications of the ACM, 41*(2), 79–82. (Early quantification of data quality costs.)
+- Wang, R.Y., & Strong, D.M. (1996). Beyond accuracy: What data quality means to data consumers. *Journal of Management Information Systems, 12*(4), 5–33. (Foundational four-dimension framework: accuracy, completeness, consistency, timeliness.)
+- Polyzotis, N., et al. (2019). Data lifecycle challenges in production machine learning. *ACM SIGMOD Record, 47*(2), 17–28. (Google TFX team on data quality in ML production pipelines.)
+- Breck, E., et al. (2019). Data validation for machine learning. *MLSys 2019*. (TensorFlow Data Validation; automated validation in continuous training.)

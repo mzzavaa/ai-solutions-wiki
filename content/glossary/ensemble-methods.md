@@ -30,3 +30,11 @@ For technical leaders, this means deep learning is not always the answer. Many e
 ## Practical Guidance
 
 Start with gradient-boosted trees (XGBoost or LightGBM) for any structured data problem. They are fast to train, handle missing data gracefully, provide feature importance rankings, and achieve strong performance with minimal hyperparameter tuning. Move to neural networks only if the data is unstructured, the dataset is very large, or gradient boosting proves insufficient for your accuracy requirements.
+
+## Sources
+
+- Breiman, L. (1996). Bagging predictors. *Machine Learning, 24*(2), 123–140. (Bagging / Bootstrap Aggregating original paper.)
+- Schapire, R.E. (1990). The strength of weak learnability. *Machine Learning, 5*(2), 197–227. (Theoretical foundation of boosting.)
+- Freund, Y., & Schapire, R.E. (1997). A decision-theoretic generalization of on-line learning and an application to boosting. *Journal of Computer and System Sciences, 55*(1), 119–139. (AdaBoost algorithm.)
+- Breiman, L. (2001). Random forests. *Machine Learning, 45*(1), 5–32. (Random Forest; most influential bagging ensemble.)
+- Friedman, J.H. (2001). Greedy function approximation: A gradient boosting machine. *The Annals of Statistics, 29*(5), 1189–1232. (Gradient Boosting Machines; foundation for XGBoost/LightGBM.)

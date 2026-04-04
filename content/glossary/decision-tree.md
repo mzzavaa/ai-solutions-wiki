@@ -33,3 +33,9 @@ Individual decision trees tend to overfit. They are highly sensitive to small ch
 ## Practical Guidance
 
 Use individual decision trees when interpretability is the primary requirement and accuracy is secondary. For prediction accuracy, use decision trees as building blocks within ensemble methods: random forests (bagging many trees) or gradient-boosted trees (XGBoost, LightGBM). These ensembles retain many of the decision tree's advantages (handling mixed data, no preprocessing, feature importance) while achieving much higher accuracy and stability.
+
+## Sources
+
+- Quinlan, J.R. (1986). Induction of decision trees. *Machine Learning, 1*(1), 81–106. (ID3 algorithm; foundational decision tree induction method.)
+- Quinlan, J.R. (1993). *C4.5: Programs for Machine Learning.* Morgan Kaufmann. (C4.5; introduced continuous features, pruning, and missing value handling.)
+- Breiman, L., Friedman, J., Stone, C.J., & Olshen, R.A. (1984). *Classification and Regression Trees.* Wadsworth. (CART algorithm; Gini impurity criterion.)

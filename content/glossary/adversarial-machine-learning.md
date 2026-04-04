@@ -28,3 +28,12 @@ As ML systems are deployed in safety-critical and security-sensitive contexts (a
 ## Practical Considerations
 
 Defense starts with threat modeling: identify which attack types are realistic for your deployment. Adversarial training (including adversarial examples during training) is the most established defense against evasion attacks. Input preprocessing, certified defenses, and ensemble methods add additional layers. For model extraction, implement rate limiting, query monitoring, and watermarking. For poisoning, invest in data provenance and validation. Tools like IBM ART, Foolbox, and CleverHans support adversarial robustness evaluation. Include adversarial testing in your ML deployment pipeline alongside standard accuracy metrics.
+
+## Sources
+
+- Goodfellow, I., Shlens, J., & Szegedy, C. (2015). Explaining and harnessing adversarial examples. *International Conference on Learning Representations (ICLR)*. (Introduced FGSM; foundational evasion attack paper.)
+- Szegedy, C., et al. (2014). Intriguing properties of neural networks. *ICLR 2014*. (First demonstration that imperceptible perturbations cause deep network misclassification.)
+- Carlini, N., & Wagner, D. (2017). Towards evaluating the robustness of neural networks. *IEEE S&P 2017*. (C&W attack; benchmark for adversarial example strength.)
+- Madry, A., et al. (2018). Towards deep learning models resistant to adversarial attacks. *ICLR 2018*. (PGD adversarial training; widely used robust training standard.)
+- Chen, P.Y., et al. (2017). ZOO: Zeroth Order Optimization based black-box attacks. *ACM CCS Workshop on AISec 2017*.
+- Tramèr, F., et al. (2016). Stealing machine learning models via prediction APIs. *USENIX Security 2016*. (Model extraction attacks.)

@@ -9,6 +9,18 @@ related:
   - tools/pgvector
   - tools/amazon-opensearch
   - tools/amazon-bedrock
+alternatives:
+  open_source:
+    - tools/qdrant
+    - tools/weaviate
+    - tools/pgvector
+    - tools/chroma-db
+  aws: tools/amazon-opensearch
+  azure: tools/azure-search
+  gcp: tools/google-vertex-ai
+solutions:
+  - solutions/finance/fraud-detection
+  - solutions/retail/recommendation-engine
 ---
 
 Pinecone is a fully managed vector database designed for similarity search at scale. You store vector embeddings (numerical representations of text, images, or any data), and Pinecone indexes them for fast nearest-neighbor retrieval. For AI projects, Pinecone is primarily used as the retrieval layer in RAG (Retrieval-Augmented Generation) systems: embed your documents, store them in Pinecone, and retrieve relevant context to ground LLM responses.

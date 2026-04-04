@@ -28,3 +28,10 @@ Quantization is one of the most practical levers for reducing AI inference costs
 ## Practical Considerations
 
 Modern inference frameworks (vLLM, TensorRT-LLM, llama.cpp) support quantized models natively. For LLMs, 4-bit weight-only quantization (GPTQ, AWQ) typically preserves over 95% of the original model's quality on benchmarks. Always evaluate quantized models on your specific task, as accuracy degradation varies by domain. INT8 quantization is safe for most applications; INT4 requires more careful validation. Combine quantization with Flash Attention and batching for maximum inference efficiency.
+
+## Sources
+
+- Jacob, B., et al. (2018). Quantization and training of neural networks for efficient integer-arithmetic-only inference. *CVPR 2018*. (QAT for integer arithmetic; standard reference for quantization-aware training.)
+- Frantar, E., et al. (2022). GPTQ: Accurate post-training quantization for generative pre-trained transformers. *arXiv:2210.17323*. (GPTQ; 4-bit weight-only quantization for LLMs.)
+- Lin, J., et al. (2023). AWQ: Activation-aware weight quantization for LLM compression and acceleration. *MLSys 2024*. (AWQ; weight-only quantization that preserves salient weights.)
+- Dettmers, T., et al. (2022). LLM.int8(): 8-bit matrix multiplication for transformers at scale. *NeurIPS 2022*. (INT8 quantization for large language models.)

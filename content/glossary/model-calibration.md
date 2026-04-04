@@ -45,3 +45,9 @@ Always calibrate on a held-out set, never on training data. If data is scarce, u
 ## When to Use It
 
 Apply calibration whenever probability scores inform decisions. Use Platt scaling as the default, isotonic regression when you have sufficient validation data and the calibration curve is non-sigmoid, and temperature scaling for deep learning models. Always evaluate calibration alongside discrimination metrics (AUC, F1) for a complete picture of model quality.
+
+## Sources
+
+- Platt, J. (1999). Probabilistic outputs for support vector machines and comparisons to regularized likelihood methods. *Advances in Large Margin Classifiers*. (Platt scaling; sigmoid calibration for SVM outputs.)
+- Zadrozny, B., & Elkan, C. (2002). Transforming classifier scores into accurate multiclass probability estimates. *KDD 2002*. (Isotonic regression calibration; comprehensive comparison of calibration methods.)
+- Guo, C., et al. (2017). On calibration of modern neural networks. *ICML 2017*. (Documents overconfidence in deep networks; introduces temperature scaling.)

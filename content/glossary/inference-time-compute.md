@@ -29,3 +29,10 @@ Inference-time compute creates a cost-quality tradeoff that organizations can tu
 ## Production Considerations
 
 More inference-time compute means higher latency and cost per request. Organizations must balance quality improvements against response time requirements and budget constraints. Token budgets, caching, and adaptive compute allocation strategies help manage this tradeoff. The emergence of reasoning-optimized models (like OpenAI's o-series) makes inference-time compute an explicit architectural choice rather than an afterthought.
+
+## Sources
+
+- Wei, J., et al. (2022). Chain-of-thought prompting elicits reasoning in large language models. *NeurIPS 2022*. (Chain-of-thought; foundational inference-time compute technique.)
+- Wang, X., et al. (2023). Self-consistency improves chain of thought reasoning in language models. *ICLR 2023*. (Self-consistency sampling as inference-time compute scaling.)
+- Snell, C., et al. (2024). Scaling LLM test-time compute optimally is more effective than scaling model parameters for reasoning. *arXiv:2408.03314*. (Test-time compute scaling laws; shows inference compute can substitute for training compute.)
+- OpenAI. (2024). *Learning to Reason with LLMs.* OpenAI Blog. (o1 model; training models to use extended thinking at inference time.)

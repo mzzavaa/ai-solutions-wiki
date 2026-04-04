@@ -8,6 +8,12 @@ related:
   - tools/weights-and-biases
   - tools/amazon-sagemaker
   - tools/ray
+alternatives:
+  aws: tools/amazon-sagemaker
+  azure: tools/azure-machine-learning
+  gcp: tools/google-vertex-ai
+solutions:
+  - solutions/finance/credit-scoring
 ---
 
 MLflow is an open-source platform for managing the end-to-end machine learning lifecycle. It covers experiment tracking (logging parameters, metrics, and artifacts during training), a model registry (versioning and staging trained models), model deployment (serving models as REST endpoints), and project packaging (reproducible ML workflows). For AI projects, MLflow provides the operational backbone that takes ML from notebook experiments to production systems with governance and reproducibility.

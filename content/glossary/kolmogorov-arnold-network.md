@@ -26,3 +26,9 @@ KANs offer two potential advantages: better parameter efficiency and improved in
 ## Practical Considerations
 
 KANs are still early-stage technology. Training is slower than MLPs due to the overhead of B-spline computation, and scaling to the sizes used in modern deep learning remains an open research question. Current implementations (pykan, efficient-kan) work well for small to medium-scale problems. For production systems, KANs are most promising as components within larger architectures or for scientific modeling tasks where interpretability is essential. They are not yet a practical replacement for MLPs in large-scale language or vision models.
+
+## Sources
+
+- Kolmogorov, A.N. (1957). On the representation of continuous functions of many variables by superposition of continuous functions of one variable and addition. *Doklady Akademii Nauk SSSR, 114*(5), 953–956. (Kolmogorov's original representation theorem.)
+- Arnold, V.I. (1963). On functions of three variables. *American Mathematical Society Translations, 28*, 51–54. (Arnold's completion of the Kolmogorov-Arnold theorem.)
+- Liu, Z., et al. (2024). KAN: Kolmogorov-Arnold Networks. *arXiv:2404.19756*. (Original KAN paper introducing learnable B-spline activations on edges.)

@@ -35,3 +35,11 @@ Diffusion models have largely replaced GANs for text-to-image generation due to 
 ## Practical Considerations
 
 For most enterprise use cases, pre-trained generative models (diffusion-based or GAN-based) available through APIs are more practical than training custom GANs. Custom GAN training requires deep expertise in training stabilization, significant GPU compute, and careful evaluation of output quality and diversity.
+
+## Sources
+
+- Goodfellow, I., et al. (2014). Generative adversarial nets. *NeurIPS 2014*. (GAN original paper.)
+- Radford, A., Metz, L., & Chintala, S. (2016). Unsupervised representation learning with deep convolutional generative adversarial networks. *ICLR 2016*. (DCGAN; first stable large-scale GAN training.)
+- Isola, P., et al. (2017). Image-to-image translation with conditional adversarial networks. *CVPR 2017*. (Pix2Pix.)
+- Zhu, J.Y., et al. (2017). Unpaired image-to-image translation using cycle-consistent adversarial networks. *ICCV 2017*. (CycleGAN.)
+- Karras, T., Laine, S., & Aila, T. (2019). A style-based generator architecture for generative adversarial networks. *CVPR 2019*. (StyleGAN; high-quality face and texture generation.)

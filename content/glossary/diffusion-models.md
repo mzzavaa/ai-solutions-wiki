@@ -31,3 +31,11 @@ Diffusion models have become the dominant approach for image generation, surpass
 **Quality control** - diffusion models can produce artifacts, anatomical errors, or text rendering failures. Human review workflows are necessary for customer-facing content.
 
 **Intellectual property** - understand the training data provenance of the model you use. Some models are trained on licensed data; others face ongoing legal challenges regarding training data usage.
+
+## Sources
+
+- Sohl-Dickstein, J., et al. (2015). Deep unsupervised learning using nonequilibrium thermodynamics. *ICML 2015*. (First diffusion generative model based on thermodynamic noising process.)
+- Ho, J., Jain, A., & Abbeel, P. (2020). Denoising diffusion probabilistic models. *NeurIPS 2020*. (DDPM; modern formulation of diffusion models for image generation.)
+- Song, Y., & Ermon, S. (2019). Generative modeling by estimating gradients of the data distribution. *NeurIPS 2019*. (Score matching approach; foundation for DDIM and flow matching.)
+- Rombach, R., et al. (2022). High-resolution image synthesis with latent diffusion models. *CVPR 2022*. (Stable Diffusion; latent-space diffusion reducing compute cost.)
+- Ramesh, A., et al. (2022). Hierarchical text-conditional image generation with CLIP latents. *arXiv:2204.06125*. (DALL-E 2.)

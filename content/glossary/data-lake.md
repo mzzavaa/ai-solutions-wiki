@@ -32,3 +32,9 @@ Data lakes store raw, multi-format data with schema-on-read. They excel at flexi
 ## Practical Guidance
 
 Use S3 with intelligent tiering for cost-effective storage. Implement data cataloging (AWS Glue Data Catalog) from the start - a data lake without a catalog becomes a "data swamp" where nobody can find anything. Enforce access controls via Lake Formation. Partition data by date and key dimensions to enable efficient querying. Use columnar formats (Parquet, ORC) for structured data to reduce query costs and improve performance.
+
+## Sources
+
+- Dixon, J. (2010). Pentaho, Hadoop, and Data Lakes. *James Dixon's Blog*. (Coined the term "data lake".)
+- Armbrust, M., et al. (2021). Lakehouse: A new generation of open platforms that unify data warehousing and advanced analytics. *CIDR 2021*. (Databricks lakehouse architecture; describes the evolution from data lake toward lakehouse.)
+- Inmon, W.H., & Linstedt, D. (2014). *Data Architecture: A Primer for the Data Scientist.* Morgan Kaufmann. (Data warehouse vs. data lake architectural contrast.)

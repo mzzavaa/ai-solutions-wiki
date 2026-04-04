@@ -36,3 +36,9 @@ Few-shot learning dramatically reduces the barrier to deploying AI for new tasks
 ## When to Move Beyond Few-Shot
 
 Few-shot prompting has limits. If accuracy is insufficient, the logical progression is: add more examples (up to context window limits), implement RAG to dynamically select the most relevant examples, fine-tune the model on your labeled data, or train a task-specific model. Each step increases accuracy but also increases cost and complexity.
+
+## Sources
+
+- Brown, T., et al. (2020). Language models are few-shot learners. *NeurIPS 2020*. (GPT-3; demonstrated in-context few-shot learning as an emergent capability of large models.)
+- Snell, J., Swersky, K., & Zemel, R. (2017). Prototypical networks for few-shot learning. *NeurIPS 2017*. (Metric-learning approach to classical few-shot learning.)
+- Finn, C., Abbeel, P., & Levine, S. (2017). Model-agnostic meta-learning for fast adaptation of deep networks. *ICML 2017*. (MAML; gradient-based meta-learning for few-shot generalization.)

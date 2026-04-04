@@ -37,3 +37,9 @@ Maintain the ability to roll back to the previous model version instantly if the
 ## Implementation Considerations
 
 Continuous training pipelines must handle data versioning, compute provisioning, experiment tracking, model validation, and deployment orchestration. Tools like MLflow, SageMaker Pipelines, Kubeflow, and Vertex AI Pipelines provide the infrastructure for building these pipelines. The organizational challenge is often greater than the technical one: establishing clear ownership, approval processes, and monitoring responsibilities for automated model updates.
+
+## Sources
+
+- Sculley, D., et al. (2015). Hidden technical debt in machine learning systems. *NeurIPS 2015*. (Pipeline jungle and training-serving skew as debt sources requiring continuous integration.)
+- Baylor, D., et al. (2017). TFX: A TensorFlow-based production-scale machine learning platform. *KDD 2017*. (Google's continuous training architecture; standard reference for production ML pipelines.)
+- Paleyes, A., Urma, R.G., & Lawrence, N.D. (2022). Challenges in deploying machine learning: A survey of case studies. *ACM Computing Surveys, 55*(6). (Documents real-world challenges including drift and retraining frequency.)

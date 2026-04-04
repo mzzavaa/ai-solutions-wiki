@@ -40,3 +40,9 @@ Claude's API returns token counts in response metadata. For pre-call estimation,
 ## Special Tokens
 
 Tokenizers include special tokens beyond regular text tokens: beginning-of-sequence tokens, end-of-sequence tokens, role markers for multi-turn conversations, and tool-use formatting tokens. These consume context and cost, even though they do not represent user-provided text. System prompts and conversation formatting (the role markers around each message) typically add 50-200 tokens of overhead per request.
+
+## Sources
+
+- Sennrich, R., Haddow, B., & Birch, A. (2016). Neural machine translation of rare words with subword units. *ACL 2016*. (BPE tokenization; introduced subword tokenization for NMT, now standard for LLMs.)
+- Schuster, M., & Nakamura, K. (2012). Japanese and Korean voice search. *ICASSP 2012*. (WordPiece tokenization; used in BERT.)
+- Kudo, T., & Richardson, J. (2018). SentencePiece: A simple and language independent subword tokenizer and detokenizer for neural text processing. *EMNLP 2018*. (SentencePiece; language-agnostic tokenizer used in T5, LLaMA, and others.)

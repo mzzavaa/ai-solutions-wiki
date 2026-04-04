@@ -45,3 +45,10 @@ Performance can degrade if the unlabeled data distribution differs from the labe
 ## When to Use It
 
 Use semi-supervised learning when labeling is expensive but unlabeled data is plentiful. Start with self-training for simplicity, try label propagation when the data has clear cluster structure, and use consistency regularization methods for image and text tasks. Combine with active learning to intelligently select which examples to label next.
+
+## Sources
+
+- Chapelle, O., Schölkopf, B., & Zien, A. (Eds.). (2006). *Semi-Supervised Learning.* MIT Press. (Standard reference text; free online at mitpress.mit.edu.)
+- Sohn, K., et al. (2020). FixMatch: Simplifying semi-supervised learning with consistency and confidence. *NeurIPS 2020*. (FixMatch; state-of-the-art semi-supervised classification with few labels.)
+- Berthelot, D., et al. (2019). MixMatch: A holistic approach to semi-supervised learning. *NeurIPS 2019*. (MixMatch; combined pseudo-labeling and consistency regularization.)
+- Zhu, X., & Ghahramani, Z. (2002). Learning from labeled and unlabeled data with label propagation. *Carnegie Mellon University Technical Report CMU-CALD-02-107*.

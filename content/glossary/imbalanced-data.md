@@ -47,3 +47,9 @@ Start with class weighting - it requires no data manipulation and works with any
 ## When to Use It
 
 Address class imbalance whenever the minority class is the class of interest and the imbalance ratio exceeds roughly 1:10. The severity of the problem depends on the degree of imbalance, the dataset size, and how well-separated the classes are. Mild imbalance (1:5) may not require special treatment if the dataset is large enough.
+
+## Sources
+
+- Chawla, N.V., Bowyer, K.W., Hall, L.O., & Kegelmeyer, W.P. (2002). SMOTE: Synthetic minority over-sampling technique. *JMLR, 3*, 321–357. (SMOTE original paper.)
+- He, H., & Garcia, E.A. (2009). Learning from imbalanced data. *IEEE Transactions on Knowledge and Data Engineering, 21*(9), 1263–1284. (Survey of sampling, algorithm-level, and cost-sensitive approaches.)
+- Davis, J., & Goadrich, M. (2006). The relationship between precision-recall and ROC curves. *ICML 2006*. (AUPRC as preferred metric over AUC-ROC for imbalanced datasets.)

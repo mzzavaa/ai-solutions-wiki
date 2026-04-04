@@ -39,3 +39,8 @@ The main limitation is handling datasets with varying density. Clusters of diffe
 ## When to Use It
 
 Use DBSCAN when you expect non-convex cluster shapes, do not know the number of clusters, or need to identify outliers as part of clustering. It works well for geographic data, image segmentation, and anomaly detection. For clusters of varying density, prefer HDBSCAN. For well-separated spherical clusters where K is known, K-Means is faster and simpler.
+
+## Sources
+
+- Ester, M., Kriegel, H.P., Sander, J., & Xu, X. (1996). A density-based algorithm for discovering clusters in large spatial databases with noise. *KDD 1996*. (DBSCAN original paper.)
+- Campello, R.J.G.B., Moulavi, D., & Sander, J. (2013). Density-based clustering based on hierarchical density estimates. *PAKDD 2013*. (HDBSCAN; hierarchical extension addressing varying density.)

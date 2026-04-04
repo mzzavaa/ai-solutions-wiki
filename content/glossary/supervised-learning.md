@@ -34,3 +34,9 @@ The primary constraint is labeled data. Labeling is expensive and time-consuming
 Data quality matters more than model complexity. A simple model trained on clean, well-labeled data typically outperforms a complex model trained on noisy labels. Invest in data labeling quality, establish labeling guidelines, and measure inter-annotator agreement before scaling up labeling efforts.
 
 Always hold out a test set that the model never sees during training. Evaluate on this test set to get an honest estimate of real-world performance. Cross-validation provides even more robust performance estimates, especially with smaller datasets.
+
+## Sources
+
+1. Vapnik, V.N. (1998). *Statistical Learning Theory.* Wiley. — Foundational theoretical framework for supervised learning, introducing VC dimension, structural risk minimization, and support vector machines.
+2. Mitchell, T. (1997). *Machine Learning.* McGraw-Hill. — Canonical graduate-level textbook defining the formal problem setup for supervised learning; introduced the definition of learning algorithms that most textbooks still cite.
+3. Goodfellow, I., Bengio, Y., and Courville, A. (2016). *Deep Learning.* MIT Press, Chapter 5 ("Machine Learning Basics"). — Modern treatment of supervised learning covering bias-variance tradeoff, generalization, and the connection to neural network training. [https://www.deeplearningbook.org/](https://www.deeplearningbook.org/)

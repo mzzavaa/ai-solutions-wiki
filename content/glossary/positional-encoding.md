@@ -30,3 +30,10 @@ Positional encoding determines a model's effective context window. The shift fro
 ## Practical Considerations
 
 When selecting or fine-tuning models, check which positional encoding is used. RoPE-based models can often be extended to longer contexts with relatively cheap fine-tuning using scaling techniques. ALiBi models generalize to moderate length extensions without any fine-tuning. These properties influence total cost of ownership for applications requiring long-context processing.
+
+## Sources
+
+- Vaswani, A., et al. (2017). Attention is all you need. *NeurIPS 2017*. (Introduced sinusoidal positional encodings in the original transformer.)
+- Su, J., et al. (2024). RoFormer: Enhanced transformer with rotary position embedding. *Neurocomputing, 568*. (RoPE; relative position encoding through rotation.)
+- Press, O., Smith, N.A., & Lewis, M. (2022). Train short, test long: Attention with linear biases enables input length extrapolation. *ICLR 2022*. (ALiBi; position-based attention bias for length generalization.)
+- Peng, B., et al. (2023). YaRN: Efficient context window extension of large language models. *arXiv:2309.00071*. (YaRN; RoPE scaling technique for extending trained context limits.)

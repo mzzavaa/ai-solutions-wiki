@@ -26,3 +26,9 @@ Distillation enables deploying powerful AI capabilities on resource-constrained 
 ## Practical Considerations
 
 Effective distillation requires a well-trained teacher and careful selection of the temperature parameter (typically 2-20). The student architecture should be chosen to match deployment constraints. Distillation can be combined with quantization and pruning for compounding compression gains. For LLM deployments, distillation is increasingly used to create task-specific smaller models from general-purpose large models, reducing per-query inference costs while maintaining acceptable quality for specific use cases.
+
+## Sources
+
+- Hinton, G., Vinyals, O., & Dean, J. (2015). Distilling the knowledge in a neural network. *NeurIPS Deep Learning Workshop 2015*. (Original knowledge distillation paper; introduced soft targets and temperature scaling.)
+- Sanh, V., et al. (2019). DistilBERT, a distilled version of BERT: Smaller, faster, cheaper and lighter. *NeurIPS Energy Efficient NLP Workshop 2019*. (DistilBERT; prominent LM distillation example.)
+- Romero, A., et al. (2015). FitNets: Hints for thin deep nets. *ICLR 2015*. (Intermediate representation distillation beyond soft output targets.)

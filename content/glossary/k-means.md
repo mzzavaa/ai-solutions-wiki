@@ -38,3 +38,8 @@ K-means assumes clusters are spherical and roughly equal in size. It struggles w
 ## Practical Applications
 
 K-means is used for customer segmentation (grouping users by behavior), image compression (reducing color palettes), document clustering (grouping similar text), and as a preprocessing step for more complex analyses. For datasets where K-means assumptions hold, it is fast, simple, and effective. When clusters are non-spherical or vary significantly in density, consider DBSCAN or Gaussian Mixture Models instead.
+
+## Sources
+
+- Lloyd, S.P. (1982). Least squares quantization in PCM. *IEEE Transactions on Information Theory, 28*(2), 129–137. (K-means algorithm; original publication predating the 1982 journal article.)
+- Arthur, D., & Vassilvitskii, S. (2007). K-means++: The advantages of careful seeding. *ACM SODA 2007*. (K-means++ initialization; reduces sensitivity to random starting points.)

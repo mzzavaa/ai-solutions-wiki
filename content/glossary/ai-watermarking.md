@@ -28,3 +28,10 @@ Watermarking addresses the growing challenge of distinguishing AI-generated cont
 ## Practical Considerations
 
 No watermark is perfectly robust. Text watermarks can be removed by paraphrasing, and image watermarks can be degraded by heavy editing. Watermarking works best as one layer in a multi-layered content authenticity strategy that includes metadata standards (C2PA), model-level logging, and platform-level detection. Evaluate watermark robustness against the specific attacks relevant to your deployment. For text, expect tradeoffs between watermark strength and output quality. For images, modern methods achieve high robustness against common transformations while maintaining visual quality.
+
+## Sources
+
+- Kirchenbauer, J., et al. (2023). A watermark for large language models. *ICML 2023*. (Foundational green/red list text watermarking method.)
+- Fernandez, P., et al. (2023). The Stable Signature: Rooting watermarks in latent diffusion models. *ICCV 2023*. (Image watermarking via diffusion model decoder fine-tuning.)
+- Wen, Y., et al. (2023). Tree-Ring watermarks: Fingerprints for diffusion images that are invisible and robust. *NeurIPS 2023*.
+- Coalition for Content Provenance and Authenticity. (2021). *C2PA Technical Specification*. (Standards body for content provenance; complements watermarking.)

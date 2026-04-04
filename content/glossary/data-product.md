@@ -29,3 +29,8 @@ A dataset is a static collection of records. A data product is an actively manag
 ## Implementation
 
 Data products are typically implemented as curated tables or views in a lakehouse or data warehouse, exposed through standardized APIs or query interfaces, registered in a data catalog, and monitored for quality using automated checks.
+
+## Sources
+
+- Dehghani, Z. (2022). *Data Mesh: Delivering Data-Driven Value at Scale.* O'Reilly Media. (Chapters 3–4 define data-as-a-product and the eight data product characteristics.)
+- Dehghani, Z. (2019). How to move beyond a monolithic data lake to a distributed data mesh. *martinfowler.com*. (Original introduction of the data product concept.)
