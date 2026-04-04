@@ -29,3 +29,9 @@ For AI pipelines that span multiple services (document ingestion, embedding gene
 ## Practical Guidance
 
 Use orchestration (Step Functions) for complex sagas with many steps - the explicit flow is easier to understand, debug, and modify. Use choreography for simple, two-to-three step sagas where the overhead of an orchestrator is not justified. Always define compensating transactions explicitly for each step. Implement idempotency in each service to handle retries safely. Log saga state transitions for debugging and audit purposes.
+
+## Sources
+
+- Garcia-Molina, H., & Salem, K. (1987). Sagas. *ACM SIGMOD 1987*. (Original saga paper; defined long-lived transactions with compensating transactions as the alternative to distributed ACID transactions.)
+- Richardson, C. (2018). *Microservices Patterns: With Examples in Java*. Manning Publications. Chapter 4: Managing transactions with sagas. (Definitive implementation reference for orchestration vs. choreography sagas in microservices.)
+- Hohpe, G., & Woolf, B. (2003). *Enterprise Integration Patterns*. Addison-Wesley. (Process manager pattern; the orchestration saga is an instance of the process manager pattern.)

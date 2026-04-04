@@ -37,3 +37,9 @@ Traditional perimeter security creates a hard outer shell and a soft interior. O
 ## Zero Trust for AI
 
 AI systems present unique security challenges. Models may contain memorised training data. Inference endpoints accept free-form input (prompt injection). Model artifacts are valuable intellectual property. Training data often includes sensitive information. Zero trust principles applied to AI systems ensure that model access, data access, and inference endpoints are protected at every layer.
+
+## Sources
+
+- Rose, S., et al. (2020). *Zero Trust Architecture*. NIST SP 800-207. (US government definition and architecture principles for zero trust; the authoritative framework reference.)
+- Kindervag, J. (2010). *Build security into your network's DNA: The zero trust network architecture*. Forrester Research. (Coined "zero trust" and defined the "never trust, always verify" principle.)
+- National Security Agency. (2021). *Embracing a zero trust security model*. NSA. (NSA guidance on zero trust implementation for critical systems; directly relevant for AI infrastructure handling sensitive data.)

@@ -31,3 +31,9 @@ AI systems have failure modes that standard integration tests cannot catch. A mo
 Progressive delivery catches these issues by exposing the new version to real traffic and real users before full rollout. Combined with AI-specific metrics (response relevance scores, hallucination rates, token costs), progressive delivery provides a safety net that testing alone cannot.
 
 The cost of a bad AI deployment is often higher than a bad backend deployment. Users lose trust in AI systems faster than in traditional software. Progressive delivery reduces that risk.
+
+## Sources
+
+- Governor, J. (2018). Progressive delivery: The next step after CI/CD. *RedMonk*. (Coined "progressive delivery"; defined the combination of feature flags, canary releases, and automated rollback.)
+- Humble, J., & Farley, D. (2010). *Continuous Delivery*. Addison-Wesley. Chapter 10: Deploying and Releasing Applications. (Blue-green deployments and canary releases as continuous delivery patterns; foundational for progressive delivery.)
+- Kohavi, R., Tang, D., & Xu, Y. (2020). *Trustworthy Online Controlled Experiments: A Practical Guide to A/B Testing*. Cambridge University Press. (Experimental design for traffic splitting; methodology behind automated canary success criteria.)

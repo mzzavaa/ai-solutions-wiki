@@ -36,3 +36,8 @@ AI services need SLIs that capture what users experience:
 ## Practical Guidance
 
 Start with 2-3 SLIs that directly reflect user experience. Avoid too many SLIs - they become impossible to reason about. Set SLOs based on user needs, not technical capabilities (users do not care about CPU utilization). Measure SLIs continuously and automatically. Review SLOs quarterly and adjust based on operational experience. Only commit to SLAs when you have a track record of meeting the corresponding SLOs with margin to spare.
+
+## Sources
+
+- Beyer, B., Jones, C., Petoff, J., & Murphy, N. R. (Eds.). (2016). *Site Reliability Engineering: How Google Runs Production Systems*. O'Reilly Media. Chapter 4: Service Level Objectives. (Primary reference defining SLI, SLO, and SLA and their relationships; the foundation of reliability engineering practice.)
+- Beyer, B., Murphy, N. R., Rensin, D. K., Kawahara, K., & Thorne, S. (Eds.). (2018). *The Site Reliability Workbook*. O'Reilly Media. Chapter 2: Implementing SLOs. (Practical guidance on choosing SLIs, setting SLO targets, and creating measurement infrastructure.)
