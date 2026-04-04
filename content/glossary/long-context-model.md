@@ -30,3 +30,10 @@ Long context transforms what AI systems can do in a single inference call. Inste
 ## Practical Considerations
 
 Longer contexts cost more per query -- both in latency and compute. A 200K-token query costs roughly 50x more than a 4K-token query. Evaluate whether your use case genuinely benefits from long context or whether retrieval-augmented generation with shorter context is more cost-effective. Many models show degraded performance in the middle of very long contexts ("lost in the middle" phenomenon). Test with your actual data at the lengths you plan to use, and consider that KV cache memory scales linearly with context length, impacting concurrent request capacity.
+
+## Sources
+
+- Liu, N.F., et al. (2024). Lost in the middle: How language models use long contexts. *TACL, 12*, 157–173. (Documents degraded performance on information in the middle of long contexts.)
+- Su, J., et al. (2024). RoFormer: Enhanced transformer with rotary position embedding. *Neurocomputing, 568*. (RoPE; foundational positional encoding enabling context length extension.)
+- Peng, B., et al. (2023). YaRN: Efficient context window extension of large language models. *arXiv:2309.00071*. (YaRN; practical RoPE scaling to extend trained context windows.)
+- Dao, T., Fu, D.Y., Ermon, S., Rudra, A., & Ré, C. (2022). FlashAttention: Fast and memory-efficient exact attention with IO-awareness. *NeurIPS 2022*. (Flash Attention; required infrastructure for long-context efficiency.)
